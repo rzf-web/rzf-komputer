@@ -1,0 +1,96 @@
+//-------------------------------------------------------------------------------
+  @name: Header
+  -------------------------------------------------------------------------------//
+
+-
+  dataHeader = {
+    logoSrc: 'rzf-komputer-logo.png',
+    logoLink: 'index.html',
+    logoAlt: 'RZF Komputer',
+    menu: [
+      {
+        link: 'index.html',
+        text: 'Beranda',
+        classActive: 'beranda'
+      },
+      {
+        link: 'produk.html',
+        text: 'Produk',
+        classActive: 'produk'
+      },
+      {
+        link: 'promo.html',
+        text: 'Promo',
+        classActive: 'promo'
+      },
+      {
+        link: 'cara-pemesanan.html',
+        text: 'Cara Pemesanan',
+        classActive: 'cara-pemesanan'
+      },
+      {
+        link: 'kontak-kami.html',
+        text: 'Kontak Kami',
+        classActive: 'kontak-kami'
+      },
+    ],
+
+  sosmed: [
+  {
+    link: '#',
+    title: 'Facebook',
+    class: 'facebook'
+    },
+  {
+    link: '#',
+    title: 'Instagram',
+    class: 'instagram'
+    },
+    {
+      link: '#',
+      title: 'Twitter',
+      class: 'twitter'
+    }
+    ],
+  }
+
+//header
+.header
+  .container
+    .header__content
+      ='\n'
+      a.header__logo(href=dataHeader.logoLink)
+        ='\n'
+        img.header__logo__el(src='assets/img/logo/'+dataHeader.logoSrc, alt=dataHeader.logoAlt)/
+        ='\n'
+      ='\n'
+      button.burger-menu.js-nav(type='button')
+        each val in [1, 2, 3]
+          ='\n'
+          span.burger-menu__bar
+        ='\n'
+      .header__mobile.js-mobile-menu
+        .header__menu
+          ul.header__nav
+            each val in dataHeader.menu
+              li.header__nav__item.js-nav-items(class=(navActive == val.classActive ? 'header__nav__item--active' : ''))
+                ='\n'
+                a.header__nav__link(href=val.link) !{val.text}
+      ='\n'
+      button.search.js-button-search(type='button')
+        ='\n'
+        i.rzfkomputer-search
+        ='\n'
+    .header__search
+      .header__search__section
+        .header__search-section__form-wrapper
+          form.header-search-section__form.js-search-form
+            button.header-search-section__submit(type='submit')
+              ='\n' 
+              i.rzfkomputer-clear
+            input.header-search__input.js-search-input(type='text' placeholder='Masukkan Pencarian')/
+            button.header-search-section__close.js-header-search-section__close(type='button' onclick='alert("tess")')
+              ='\n'
+              i.rzfkomputer-search
+    .overlay
+='\n'

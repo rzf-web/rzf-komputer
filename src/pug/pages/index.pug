@@ -1,0 +1,20 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    navActive = "beranda";
+    siteTitle = 'Home';
+
+//- Body
+block siteContent
+  //- Hero Banner
+  include home/hero-banner.pug
+  //- Why Choose Us
+  //- include home/why-choose-us.pug
+  //- Best Product
+  //- include home/best-product.pug
+  //- Sale
+  //- include home/sale.pug
+  //- New Product
+  //- include home/new-product.pug

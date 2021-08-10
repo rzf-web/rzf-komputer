@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Components: Hero Banner
+   ========================================================================== */
+
+.hero-banner {
+  &__item {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    position: relative; 
+    z-index: zi(banner-item);
+    @include medium {
+      height: 620px;
+    }
+    @include mq(540px) {
+      height: 640px;
+    }
+  }
+  &__img {
+    position: absolute;
+    right: 0;
+    z-index: zi(banner-img);
+    width: 40%;
+    height: 100%;
+    // top: -60px;
+    right: 120px;
+    @include large {
+      height: 100%;
+      width: 60%;
+    }
+    @include small {
+      padding: 20px 0;
+      width: 100%;
+      right: 0;
+      position: relative;
+      max-height: 320px;
+    }
+    @include extra-small {
+      max-height: 280px;
+    }
+    &__el {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+  &__txt {
+    display: table;
+    table-layout: fixed;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 120px 0;
+    z-index: zi(banner-text);
+    @include medium {
+      padding: 68px 0 64px;
+    }
+    @include small {
+      float: none;
+      width: 100%;
+      height: auto;
+      padding: 48px 0;
+    }
+    @include extra-small {
+      padding: 48px 0;
+    }
+
+    @include retina {
+      padding: 28px 0;
+    }
+    &__wrapper {
+      max-width: 500px;
+      word-wrap: break-word;
+      @include large {
+        max-width: 460px;
+      }
+      @include medium {
+        max-width: 364px;
+      }
+      @include small {
+        max-width: 680px;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+    &__middle-align {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+  &__title {
+    font-family: $font-title;
+    @include font-size(40);
+    font-weight: fw(bold);
+    margin-bottom: 8px;
+    // color: color(white);
+    color: color(black, 1);
+
+    @include medium {
+      @include font-size(32);
+      margin-bottom: 12px;
+    }
+
+    @include mq(480px) {
+      @include font-size(24);
+    }
+  }
+
+  &__desc {
+    @include font-size(18);
+    font-weight: fw(regular);
+    margin-bottom: 32px;
+    color: color(grey, 2);
+    @include medium {
+      @include font-size(16);
+    }
+    @include small {
+      @include font-size(14);
+    }
+  }
+  &__btn {
+    @include font-size(14);
+    font-weight: fw(regular);
+  }
+}

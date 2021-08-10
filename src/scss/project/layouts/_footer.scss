@@ -1,0 +1,264 @@
+/* ==========================================================================
+   Layouts Footer
+   ========================================================================== */
+
+.footer {
+  $f: &;
+  position: absolute;
+  z-index: zi(footer);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 96px 0 104px;
+  background-color: color(black, 5);
+  @include large {
+    padding: 80px 0 88px;
+  }
+  @include medium {
+    padding: 64px 0 72px;
+  }
+  @include small {
+    position: relative;
+    padding: 48px 0;
+  }
+  &__wrapper {
+    @include clearfix;
+  }
+  &__logo {
+    display: inline-block;
+    margin-bottom: 24px;
+    &__img {
+      display: block;
+      width: auto;
+      height: 88px;
+      @include small {
+        height: 60px;
+      }
+    }
+  }
+  &__description {
+    @include font-size(16);
+    font-weight: fw(regular);
+    color: color(white);
+    margin: 0;
+  }
+  &__bottom {
+    @include font-size(14);
+    font-weight: fw(regular);
+    color: color(white);
+    margin-bottom: 0;
+    display: block;
+    padding: 18px 0;
+    margin-top: 28px;
+    border-top: solid 1px color(white);
+    border-bottom: solid 1px color(white);
+    text-align: center;
+    &__copyright {
+      margin: 0;
+    }
+    @include small {
+      margin-top: 48px;
+    }
+  }
+  &__title {
+    position: relative;
+    @include font-size(18);
+    font-weight: fw(semi-bold);
+    margin-bottom: 16px;
+    color: color(white);
+    text-transform: uppercase;
+    @include small {
+      &::after {
+        content: "\e914";
+        font-family: 'rzfkomputer-icons';
+        position: absolute;
+        top: 4px;
+        right: 0;
+        @include font-size(14);
+        transition: all .35s ease;
+      }
+    }
+  }
+  &__about {
+    float: left;
+    max-width: 35%;
+    padding-right: 48px;
+    @include large {
+      max-width: 30%;
+      padding-right: 24px;
+    }
+    @include medium {
+      max-width: 60%;
+      padding-right: 0;
+    }
+    @include small {
+      float: none;
+      max-width: initial;
+    }
+  }
+  &__menu {
+    float: right;
+    @include medium {
+      float: left;
+      padding-bottom: 24px;
+    }
+    @include small {
+      float: none;
+      width: 100%;
+      padding-bottom: 24px;
+    }
+    &__item {
+      float: left;
+      margin-right: 64px;
+      &:last-child {
+        margin-right: 0;
+      }
+      @include large {
+        margin-right: 36px;
+      }
+      @include medium {
+        margin-right: 40px;
+      }
+      @include small {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        padding-bottom: 8px;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+      &--show {
+        @include small {
+          #{$f} {
+            &__title {
+              &::after {
+                transform: rotateX(180deg);
+              }
+            }
+            &__nav__item {
+              opacity: 1;
+              transform: none;
+              transition: all .35s ease .3s;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include small {
+      display: none;
+    }
+    &__item {
+      @include font-size(16);
+      font-weight: fw(regular);
+      color: color(white);
+      margin-bottom: 16px;
+      @include small {
+        @include font-size(14);
+        opacity: 0;
+        margin-bottom: 14px;
+        transform: translateX(24px);
+        transition: all .35s ease 0s;
+        &:last-child {
+          margin-bottom: 16px;
+        }
+      }
+    }
+    &__link {
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      color: color(white);
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 1px;
+        background-color: color(white);
+        transform: scaleX(0);
+        transform-origin: right center;
+        transition: transform .35s ease;
+      }
+      &:hover {
+        &::after {
+          transform: none;
+          transform-origin: left center;
+        }
+      }
+    }
+    &__img {
+      display: inline-block;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform .35s ease;
+      &:hover {
+        transform: translateY(-4px);
+      }
+      &__el {
+        display: block;
+        width: auto;
+        height: 48px;
+      }
+    }
+    &__desc {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &__icon {
+      text-decoration: none;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      width: 32px;
+      height: 32px;
+      padding: 4px;
+      @include font-size(16);
+      margin-right: 8px;
+      border-radius: 50%;
+      color: color(black, 1);
+      background-color: color(white);
+      transition: all .35s ease;
+      &:last-child {
+        margin-right: 0;
+      }
+      &__link {
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .facebook {
+      &:hover i {
+        background-color: color(facebook);
+        color: color(white);
+      }
+    }
+    .instagram {
+      &:hover i {
+        background-color: color(instagram);
+        color: color(white);
+      }
+    }
+    .whatsapp {
+      &:hover i {
+        background-color: color(whatsapp);
+        color: color(white);
+      }
+    }
+    .youtube {
+      &:hover i {
+        background-color: color(youtube);
+        color: color(white);
+      }
+    }
+  }
+}

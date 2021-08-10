@@ -1,0 +1,2 @@
+npm install gulp ansi-colors browser-sync gulp-notify gulp-error-handle gulp-pug gulp-html-beautify gulp-sass gulp-postcss postcss-scss autoprefixer gulp-strip-css-comments postcss-combine-media-query gulp-clean-css gulp-rename gulp-sourcemaps babelify browserify vinyl-source-stream vinyl-buffer gulp-concat gulp-uglify gulp-imagemin imagemin-pngquant imagemin-mozjpeg imagemin-giflossy gulp-changed del gulp-delete-file gulp-multi-dest
+npm install postcss @babel/preset-env babel-plugin-module-resolver  @babel/register @babel/core

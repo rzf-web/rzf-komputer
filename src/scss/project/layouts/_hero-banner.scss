@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Layouts: Hero Banner
+   ========================================================================== */
+
+.hero-banner {
+  $hb: &;
+  position: relative;
+
+  #{$hb}__item {
+    opacity: 0;
+    transition: opacity 2000ms ease;
+    @include medium {
+      opacity: 1;
+      transition: none;
+    }
+  }
+  #{$hb}__img {
+    &__el {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 800ms ease, transform 3000ms ease;
+      transition-delay: 0ms;
+    }
+  }
+
+  #{$hb}__title {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: all 1250ms ease;
+    transition-delay: 0s;
+  }
+
+  #{$hb}__desc {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: all 1200ms ease;
+    transition-delay: 0s;
+  }
+
+  #{$hb}__btn {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 1250ms ease, transform 1200ms ease, background-color 350ms ease, color 350ms ease;
+    transition-delay: 0ms;
+  }
+
+  &--single,
+  .owl-item.active {
+    #{$hb} {
+      &__item {
+        opacity: 1;
+        &::before,
+        &::after {
+          transform: none;
+          opacity: 1;
+        }
+      }
+
+      &__img {
+        &::before,
+        &::after {
+          transform: none;
+          opacity: 1;
+        }
+
+        &__el {
+          transform: none;
+          opacity: 1;
+          transition: opacity 3500ms ease, transform 1750ms ease;
+          transition-delay: 750ms;
+        }
+      }
+
+      &__title {
+        transform: translateY(0);
+        opacity: 1;
+        transition: all 1750ms ease;
+        transition-delay: 750ms;
+      }
+
+      &__desc {
+        transform: translateY(0);
+        opacity: 1;
+        transition: all 1750ms ease;
+        transition-delay: 1500ms;
+      }
+
+      &__btn {
+        transform: translateY(0);
+        opacity: 1;
+        transition: opacity 1750ms ease 2000ms, transform 1750ms ease 2000ms, background-color 350ms ease 0ms, color 350ms ease 0ms;
+      }
+    }
+  }
+  @include banner-carousel;
+}

@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Mixin: Banner Carousel
+   ========================================================================== */
+
+@mixin banner-carousel {
+  &.owl-carousel {
+    display: block;
+    .owl-item img {
+      width: 100%;
+    }
+    .owl-dot {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+      width: 24px;
+      height: 6px;
+      border-radius: 4px;
+      background-color: #ddd;
+      transition: all 400ms ease;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        width: 24px;
+        background-color: color(green, 1);
+      }
+      &s {
+        position: absolute;
+        bottom: 28px;
+        line-height: 0;
+        transform: translateX(-50%);
+        left: 50%;
+        @include small {
+          bottom: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+Switch Node Versions
+
+LINUX BASE
+sudo n Versions
+version: stable | 11.15.0
+
+jika tidak ada
+sudo npm install -g n
+
+WINDOWS BASE
+npm use Versions
+
+INIT PROJECT
+--
+
+1. npm init
+2. npm install package name yang di import di gulpfile.babel.js
+3. npm install postcss @babel/preset-env babel-plugin-module-resolver @babel/register @babel/core
+4. npm install harus ditambahkan node-sass --unsafe-perm
+5. add .browserslistsrc (prefix browsers CSS, JS), .babelsrc
+
+gulp-postcss postcss-scss autoprefixer gulp-strip-css-comments postcss-combine-media-query gulp-clean-css

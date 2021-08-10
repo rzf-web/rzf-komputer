@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Components: Why Choose Us
+   ========================================================================== */
+
+.features {
+  &__img {
+    margin: 0 auto 20px;
+    text-align: center;
+    width: 64px;
+    height: 64px;
+    &__el {
+      display: block;
+      margin: 0 auto;
+    }
+    @include medium {
+      margin-bottom: 12px;
+    }
+  }
+  &__txt {
+    &__title {
+      @include font-size(16);
+      margin: 0;
+      color: color(black, 1);
+      font-weight: fw(bold);
+      text-transform: uppercase;
+      @include large {
+         @include font-size(14);
+     }
+      @include medium {
+        @include font-size(14);
+      }
+    }
+  }
+}

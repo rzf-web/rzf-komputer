@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Init: Default
+   ========================================================================== */
+
+body {
+  font-family: ff(family-main);
+  font-weight: fw(regular);
+  background-color: color(white);
+  color: color(black, 2);
+  @include font-size(16);
+  &.rm-scroll {
+    overflow: hidden;
+    touch-action: none;
+  }
+  &.hold-transition {
+    *,
+    *::before,
+    *::after {
+      transition: none !important;
+    }
+  }
+}
+
+h1 {
+  font-weight: fw(semi-bold);
+  @include font-size(40);
+}
+
+h2 {
+  font-weight: fw(semi-bold);
+  @include font-size(32);
+}
+
+h3 {
+  font-weight: fw(semi-bold);
+  @include font-size(24);
+}
+
+h4 {
+  font-weight: fw(semi-bold);
+  @include font-size(20);
+}
+
+h5 {
+  font-weight: fw(semi-bold);
+  @include font-size(18);
+}
+
+h6 {
+  font-weight: fw(semi-bold);
+  @include font-size(16);
+}
+
+p,
+li,
+td,
+label {
+  @include font-size(16);
+}
+
+strong,
+b {
+  font-weight: fw(semi-bold);
+}

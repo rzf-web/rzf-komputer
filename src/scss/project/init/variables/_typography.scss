@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Variable: Typography
+   ========================================================================== */
+
+$font-main: 'Poppins', sans-serif;
+$font-title: 'Source Sans Pro', serif;
+
+// Font
+$font: (
+  family-main: $font-main,
+  family-title: $font-title,
+  f40: (
+    font-size: 4rem,
+    line-height: 5.6rem
+  ),
+  f32: (
+    font-size: 3.2rem,
+    line-height: 4.4rem
+  ),
+  f24: (
+    font-size: 2.4rem,
+    line-height: 3.2rem
+  ),
+  f20: (
+    font-size: 2rem,
+    line-height: 2.8rem
+  ),
+  f18: (
+    font-size: 1.8rem,
+    line-height: 2.6rem
+  ),
+  f16: (
+    font-size: 1.6rem,
+    line-height: 2.4rem
+  ),
+  f14: (
+    font-size: 1.4rem,
+    line-height: 2rem
+  ),
+  f12: (
+    font-size: 1.2rem,
+    line-height: 1.7rem
+  ),
+  weight: (
+    regular: 400,
+    semi-bold: 600,
+    bold: 700
+  )
+);

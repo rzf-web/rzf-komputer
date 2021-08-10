@@ -1,0 +1,153 @@
+//-------------------------------------------------------------------------------
+  @name: Footer
+  -------------------------------------------------------------------------------//
+
+-
+  dataFooter = {
+    logoSrc: 'rzf-komputer-logo-white.png',
+    logoLink: 'index.html',
+    logoAlt: 'RZF Komputer',
+    description: 'Jalan Raya Darma KM. 11 Dsn Gunungluhur Darma Kab. Kuningan Jawa Barat 45562',
+    menu: [
+      {
+        title: 'Navigasi',
+        nav: [
+          {
+            link: 'index.html',
+            title: 'Beranda'
+          },
+          {
+            link: 'produk.html',
+            title: 'Produk'
+          },
+          {
+            link: 'promo.html',
+            title: 'Promo'
+          },
+        ]
+      },
+      {
+        title: 'Produk',
+        nav: [
+          {
+            title: 'Komputer',
+            link: 'komputer.html'
+          },
+          {
+            title: 'Printer',
+            link: 'printer.html'
+          },
+          {
+            title: 'Laptop',
+            link: 'laptop.html'
+          },
+          {
+            title: 'Lainnya',
+            link: 'lainnya.html'
+          }
+        ]
+      },
+      {
+        title: 'Lainnya',
+        nav: [
+          {
+            title: 'Promo',
+            link: 'promo.html'
+          },
+          {
+            title: 'Cara Pemesanan',
+            link: 'cara-pemesanan.html'
+          },
+          {
+            title: 'Kontak Kami',
+            link: 'kontak-kami.html'
+          },
+        ]
+      },
+      {
+        title: 'Hubungi Kami',
+        sosmed: [
+          {
+            link: '#',
+            text: 'Facebook',
+            class: 'facebook'
+          },
+          {
+            link: '#',
+            text: 'Instagram',
+            class: 'instagram'
+          },
+          {
+            link: '#',
+            text: 'Whatsapp',
+            class: 'whatsapp'
+          },
+          {
+            link: '#',
+            text: 'Youtube',
+            class: 'youtube'
+          }
+        ],
+      },
+      //- {
+      //-   title: 'Layanan Gawat Darurat',
+      //-   contact: [
+      //-     {
+      //-       link: '#',
+      //-       image: 'emc-3.png'
+      //-     },
+      //-     {
+      //-       link: '#',
+      //-       image: 'emc-3.png'
+      //-     },
+      //-     {
+      //-       link: '#',
+      //-       image: 'emc-3.png'
+      //-     }
+      //-   ],
+      //- },
+    ],
+    copyright: '&copy; 2021 RZF Komputer. All Rights Reserved'
+  }
+
+//footer
+.footer
+  .container
+    .footer__wrapper
+      .footer__menu.js-footer-accordion
+        each val in dataFooter.menu
+          .footer__menu__item
+            h3.footer__title !{val.title}
+            ul.footer__nav
+              if val.nav !== undefined
+                each item in val.nav
+                  li.footer__nav__item
+                    ='\n'
+                    a.footer__nav__link(href=item.link) !{item.title}
+              if val.sosmed !== undefined
+                each itemSosmed in val.sosmed
+                  li.footer__nav__item
+                    ='\n'
+                    a.footer__nav__icon__link(href=itemSosmed.link class=itemSosmed.class)
+                      ='\n'
+                      i.footer__nav__icon(class='rzfkomputer-'+itemSosmed.class)
+                      ='\n'
+                      span !{itemSosmed.text}
+                    ='\n'
+              if val.contact !== undefined
+                each itemContact in val.contact
+                  li.footer__nav__item
+                    ='\n'
+                    a.footer__nav__img(href=itemContact.link)
+                      ='\n'
+                      img.footer__nav__img__el(src='assets/img/dummy/'+itemContact.image)
+                    ='\n'
+      .footer__about
+        ='\n'
+        a.footer__logo(href=dataFooter.logoLink)
+          ='\n'
+          img.footer__logo__img(src='assets/img/logo/'+dataFooter.logoSrc, alt=dataFooter.logoAlt)/
+          ='\n'
+        p.footer__description !{dataFooter.description}
+    .footer__bottom
+      p.footer__bottom__copyright !{dataFooter.copyright}

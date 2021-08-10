@@ -1,0 +1,21 @@
+//-------------------------------------------------------------------------------
+  @name: Hero Banner
+  -------------------------------------------------------------------------------//
+
+//hero-banner__item
+.hero-banner__item
+  .hero-banner__img
+    ='\n'
+    img.hero-banner__img__el(src='assets/img/dummy/'+data.img alt=data.title)/
+  .hero-banner__txt
+    .hero-banner__middle-align
+      .container
+        .hero-banner__txt__wrapper
+          p.hero-banner__label !{data.label}
+          h2.hero-banner__title !{data.title}
+          p.hero-banner__desc !{data.desc}
+        if data.button.status
+          .hero-banner__btn
+            ='\n'
+            a.btn.btn--primary(href=data.button.to) !{data.button.text}
+='\n'
