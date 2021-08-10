@@ -18,7 +18,7 @@
     &::before {
       content: '';
       position: fixed;
-      top: 64px;
+      top: 72px;
       left: 0;
       bottom: 0;
       width: 100%;
@@ -48,7 +48,7 @@
         top: 0;
         display: block;
         width: 100%;
-        height: 64px;
+        height: 72px;
         opacity: 0;
         transition: all .3s ease;
         @include shadow(8);
@@ -107,11 +107,16 @@
       transform: none;
     }
     @include medium {
-      visibillity: hidden;
-      opacity: 0;
+      // visibillity: hidden;
+      // opacity: 0;
+      left: 50%;
+      transform: translatex(-50%);
     }
     &__el {
       height: 100%;
+      @include small {
+        height: 40px;
+      }
     }
   }
   &__mobile {
@@ -312,6 +317,9 @@
       z-index: zi(header-burger-menu);
       right: -12px;
       top: 8px;
+      @include small {
+        left: -12px;
+      }
       &__bar {
         transition: all .3s ease .6s;
         .show-nav & {
@@ -336,7 +344,6 @@
   
   .search {
     position: absolute;
-    right: 0;
     top: 20px;
     right: 120px;
     color: color(black, 1);
@@ -354,12 +361,42 @@
     transition: all 350ms ease;
     transition-delay: 550ms ease;
     @include medium {
-      right: 46px;
+      right: 32px;
       top: 16px;
       font-size: 20px;
     }
     &:hover {
       color: color(green, 1);
+    }
+  }
+  .cart {
+    position: absolute;
+    top: 28px;
+    right: 90px;
+    z-index: 2;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    &::after {
+      position: absolute;
+      content: '1';
+      display: block;
+      background-color: color(green, 1);
+      color: color(white);
+      border-radius: 20%;
+      width: 16px;
+      height: 16px;
+      padding: 0 4px;
+      top: -12px;
+      right: -14px;
+      @include font-size(12);
+      font-family: sans-serif;
+    }
+    @include medium {
+      right: 12px;
+      top: 24px;
     }
   }
 }
