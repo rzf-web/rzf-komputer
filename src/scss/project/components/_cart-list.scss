@@ -4,7 +4,7 @@
 
 .cart-list {
   position: relative;
-  &__items { 
+  &__items {
     background-color: color(white);
     position: absolute;
     right: 0;
@@ -16,13 +16,25 @@
     overflow-x: hidden;
     max-height: 400px;
     @include scroll(y, no-touch, show);
+    scrollbar-width: thin;
     box-shadow: 0 0 16px 12px rgba(0,0,0,.4);
     @include shadow(16);
+    transform: translateY(16px);
+    transition: all 350ms ease;
+    opacity: 0;
+    visibility: hidden;
     @include extra-small {
       width: 90%;
     }
     @include retina {
       width: 100%;
+    }
+    &.showed .card__List__items {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-14px);
+      transition: transform 350ms ease opacity 150ms ease;
+      transition-delay: 150ms;
     }
   }
 
@@ -30,6 +42,7 @@
     width: 100%;
     padding-bottom: 20px;
   }
+
   &__row {
     width: 100%;
     padding-bottom: 20px;
@@ -38,8 +51,6 @@
 
   &__img-wrapper {
     width: 120px;
-    margin-bottom: 20px;
-    // border: solid 1px color(green, 1);
     @include extra-small {
       width: 80px;
     }
@@ -51,10 +62,11 @@
   &__product {
     padding-left: 12px;
     &-name {
-      margin-bottom: 14px;
+      color: color(green, 1);
+      margin-bottom: 8px;
     }
     &-price {
-      margin-bottom: 14px;
+      margin-bottom: 8px;
     }
     &-count {
       margin: 0;
@@ -70,14 +82,13 @@
     outline: none;
     cursor: pointer;
     color: color(green, 1);
-    @include font-size(20);
+    @include font-size(16);
   }
 }
 
 &__total {
   padding: 20px 0;
   overflow: hidden;
-  // border-top: solid 1px #999;
   @include clearfix;
   &-name {
     float: left;
@@ -89,11 +100,11 @@
   }
 }
 
-  &__button {
-    margin-top: 16px;
-    text-align: center;
-    display: block;
-    width: 100%;
+&__button {
+  margin-top: 16px;
+  text-align: center;
+  display: block;
+  width: 100%;
     &--row {
       margin-bottom: 14px;
       &:last-child {

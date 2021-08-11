@@ -406,6 +406,7 @@
   }
 
   .cart {
+    $c: &;
     visibillity: visible;
     opacity: 1;
     position: absolute;
@@ -439,11 +440,16 @@
       top: 24px;
     }
   }
+
+  &:hover .cart-list__items {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.8);
-  opacity: .6;
   position: fixed;
   z-index: 2;
   top: 72px;
@@ -452,7 +458,9 @@
   height: 100%;
   bottom: 0;
   overflow: hidden;
+  opacity: .6;
   visibility: hidden;
+  opacity: 0;
   transition: opacity 350ms ease;
   &.showed {
     opacity: 1;
