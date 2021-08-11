@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Components Cart Lists
+   ========================================================================== */
+
+.cart-list {
+  position: relative;
+  &__items { 
+    background-color: color(white);
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 35%;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 400px;
+    @include scroll(y, no-touch, show);
+    box-shadow: 0 0 16px 12px rgba(0,0,0,.4);
+    @include shadow(16);
+    @include extra-small {
+      width: 90%;
+    }
+    @include retina {
+      width: 100%;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  &__row {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: solid 1px color(grey, 1);
+  }
+
+  &__img-wrapper {
+    width: 120px;
+    margin-bottom: 20px;
+    // border: solid 1px color(green, 1);
+    @include extra-small {
+      width: 80px;
+    }
+    &__img-el {
+      display: block;
+    }
+  }
+
+  &__product {
+    padding-left: 12px;
+    &-name {
+      margin-bottom: 14px;
+    }
+    &-price {
+      margin-bottom: 14px;
+    }
+    &-count {
+      margin: 0;
+    }
+  }
+
+&__delete {
+  &-btn {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: color(green, 1);
+    @include font-size(20);
+  }
+}
+
+&__total {
+  padding: 20px 0;
+  overflow: hidden;
+  // border-top: solid 1px #999;
+  @include clearfix;
+  &-name {
+    float: left;
+  }
+  &-price {
+    font-family: source sans pro;
+    float: right;
+    margin: 0;
+  }
+}
+
+  &__button {
+    margin-top: 16px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    &--row {
+      margin-bottom: 14px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .btn--views,
+      .btn--checkout {
+        width: 100%;
+      }
+    }
+  }
+}

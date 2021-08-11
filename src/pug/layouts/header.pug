@@ -7,6 +7,7 @@
     logoSrc: 'rzf-komputer-logo.png',
     logoLink: 'index.html',
     logoAlt: 'RZF Komputer',
+
     menu: [
       {
         link: 'index.html',
@@ -54,6 +55,41 @@
     ],
   }
 
+
+-
+  dataTable = {
+    list: [
+      {
+        img: 'lenovo-1.png',
+        title: 'Lenovo',
+        name: 'Tes',
+        price: 'Rp 4.500.000',
+        count: '1'
+      },
+      {
+        img: 'printer.png',
+        title: 'Lenovo',
+        name: 'Printer Epson',
+        price: 'Rp 2.500.000',
+        count: '1'
+      },
+      {
+        img: 'lenovo-1.png',
+        title: 'Lenovo',
+        name: 'Tes',
+        price: 'Rp 4.500.000',
+        count: '1'
+      },
+      {
+        img: 'lenovo-1.png',
+        title: 'Lenovo',
+        name: 'Tes',
+        price: 'Rp 4.500.000',
+        count: '1'
+      },
+    ],
+  }
+
 //header
 .header
   .container
@@ -81,20 +117,56 @@
         ='\n'
         i.rzfkomputer-search
         ='\n'
+      ='\n'
       button.cart.js-button-cart(type='button')
         ='\n'
         i.rzfkomputer-cart
-        span(1)
         ='\n'
+      ='\n'
+      .cart-list
+        .cart-list__items
+          table.cart-list__table
+            each val in dataTable.list
+              tbody
+                tr.cart-list__row
+                  td.cart-list__img-wrapper
+                    img.cart-list__img-el(src='assets/img/dummy/'+val.img alt=val.title)/
+                  td.cart-list__product
+                    h6.cart-list__product-name !{val.name}
+                    p.cart-list__product-price !{val.price}
+                    p.cart-list__product-count Total: !{val.count}
+                  td.cart-list__delete
+                    ='\n'
+                    button.cart-list__delete-btn(type='button')
+                      ='\n'
+                      i.rzfkomputer-trashcan
+                      ='\n'
+                    ='\n'
+          .cart-list__total
+            ='\n'
+            span.cart-list__total-name Total:
+            h5.cart-list__total-price Rp. 4.500.000-,
+          .cart-list__button
+            .cart-list__button--row
+              ='\n'
+              a.btn.btn--primary.btn--views(href='#') Lihat Keranjang
+            .cart-list__button--row
+              ='\n'
+              a.btn.btn--primary.btn--checkout(href='#') Checkout
     .header__search-section
       .header__search-section__form-wrapper
         form.header-search-section__form.js-search-form
+          ='\n'
           button.header-search-section__submit(type='submit')
             ='\n' 
             i.rzfkomputer-search
+            ='\n'
+          ='\n'
           input.header-search__input.js-search-input(type='text' placeholder='Cari Produk')/
-          button.header-search-section__close.js-header-search-section__close(type='button' onclick='alert("tess")')
+          ='\n'
+          button.header-search-section__close.js-header-search-section__close(type='button')
             ='\n'
             i.rzfkomputer-clear
+            ='\n'
     .overlay
 ='\n'

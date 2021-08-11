@@ -27,7 +27,8 @@ const HeaderSearch = (() => {
             $(_headerContent).removeClass('showed');
             $(_overlaySearch).removeClass('showed');
             $(_showForm).removeClass('showed');
-            $('body').addClass('rm-scroll');
+            // $('body').addClass('rm-scroll');
+            Scrolllable.disable();
           }
         });
 
