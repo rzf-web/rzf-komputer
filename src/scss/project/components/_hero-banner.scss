@@ -3,18 +3,50 @@
    ========================================================================== */
 
 .hero-banner {
+  background-color: color(green, 3);
   &__item {
     width: 100%;
     padding: 20px 0;
     overflow: hidden;
     min-height: 620px;
     position: relative; 
+    height: auto;
     z-index: zi(banner-item);
     @include medium {
       height: 620px;
     }
     @include mq(540px) {
       height: 640px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      background: url(../img/bg/dots.svg) no-repeat center/100%;
+      left: -34px;
+      top: -108px;
+      display: block;
+      width: 100%;
+      z-index: zi(banner-item);
+      width: 300px;
+      height: 300px;
+      @include small {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      background-image: linear-gradient(to right, rgb(56, 142, 60) 40%, rgb(134, 233, 65));
+      left: -134px;
+      bottom: -360px;
+      z-index: -1;
+      width: 500px;
+      height: 500px;
+      @include extra-small {
+        display: none;
+      }
     }
   }
   &__img {
@@ -46,6 +78,20 @@
       object-fit: cover;
       object-position: center center;
     }
+    &:after {
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      background-image: linear-gradient(to right, rgb(56, 142, 60) 40%, rgb(134, 233, 65));
+      right: -184px;
+      bottom: -280px;
+      z-index: -1;
+      width: 500px;
+      height: 500px;
+      @include small {
+        display: none;
+      }
+    }
   }
   &__txt {
     display: table;
@@ -61,16 +107,11 @@
     @include small {
       float: none;
       width: 100%;
+      bottom: 60px;
       height: auto;
       padding: 48px 0;
     }
-    @include extra-small {
-      padding: 48px 0;
-    }
 
-    @include retina {
-      padding: 28px 0;
-    }
     &__wrapper {
       max-width: 500px;
       word-wrap: break-word;

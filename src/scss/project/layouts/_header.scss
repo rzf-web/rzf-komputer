@@ -419,12 +419,12 @@
     margin: 0;
     // transition: all 250ms ease;
     // transition-delay: 450ms;
-    &:hover .card__List__items {
-      background-color: red;
-      visibility: visible;
-      opacity: 1;
-      transform: none;
-    }
+    // &:hover .card__List__items {
+    //   background-color: red;
+    //   visibility: visible;
+    //   opacity: 1;
+    //   transform: none;
+    // }
     &::after {
       position: absolute;
       content: '1';

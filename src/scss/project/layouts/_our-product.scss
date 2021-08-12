@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Layouts: Our Product
+   ========================================================================== */
+
+.our-product {
+  &__stories {
+    padding: 80px 0;
+    background-color: color(grey-light);
+    @include mq(480px) { 
+      padding: 40px 0;
+    }
+    &__box {
+      width: 100%;
+      min-height: 600px;
+      overflow: hidden;
+      position: relative;
+      margin-top: 40px;
+      @include large {
+        min-height: initial;
+      }
+      @include small {
+        min-height: 500px;
+      }
+      @include extra-small {
+        min-height: 400px;
+      }
+    }
+
+    &__container {
+      position: absolute;
+      top: 0;
+      left: calc(50% - 585px);
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      z-index: zi(half-container);
+      @include large {
+        position: static;
+        margin-left: 24px;
+      }
+      @include small {
+        margin-left: 16px;
+      }
+      @include extra-small {
+        margin-left: 0;
+      }
+    }
+
+    &__content {
+      position: relative;
+      padding: 0;
+    }
+
+    &__list {
+      line-height: 1;
+      font-size: 0;
+      overflow: hidden;
+      border-radius: 8px 0 0 8px;
+      @include extra-small {
+        display: block;
+        width: auto;
+        @include scroll('x', 'touch', 'hide');
+        margin-left: -24px;
+        padding-left: 24px;
+        border-radius: 0;
+      }
+    }
+
+    .our-product-card {
+      display: inline-block;
+      float: none;
+      width: 460px;
+      overflow: hidden;
+      @include small {
+        height: 500px;
+      }
+      @include extra-small {
+        width: 80%;
+        height: 400px;
+     }
+  }
+}
+}

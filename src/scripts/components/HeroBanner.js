@@ -28,7 +28,7 @@ const HeroBanner = (() => {
         nav: false,
         loop: true,
         touchDrag: true,
-        mouseDrag: true,
+        mouseDrag: false,
         autoplayHoverPause: true,
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',

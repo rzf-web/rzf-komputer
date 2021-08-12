@@ -15,10 +15,17 @@
   &__box {
     min-height: 260px;
     padding: 44px 16px;
-    margin: 12px;
-    border-radius: 12px;
+    margin-right: 24px;
+    border-radius: 16px;
+    margin: 24px;
     @include shadow(30);
     transition: all 350ms ease;
+    @include small {
+      float: none;
+      max-width: 420px;
+      background-color: red;
+      margin: 12px;
+    }
   }
 
   &__img {
@@ -37,7 +44,7 @@
 
   &__title {
     font-family: $font-title;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     @include font-size(18);
     font-weight: fw(bold);
     text-transform: uppercase;

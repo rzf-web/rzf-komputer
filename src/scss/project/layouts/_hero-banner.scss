@@ -13,12 +13,31 @@
       opacity: 1;
       transition: none;
     }
+
+     &::before {
+      opacity: 0;
+      transform: translateY(-32px);
+      transition: all 4000ms ease;
+    }
+
+    &::after {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: all 4000ms ease-in-out;
+    }
   }
+
   #{$hb}__img {
     &__el {
       opacity: 0;
       transform: translateY(24px);
       transition: opacity 800ms ease, transform 3000ms ease;
+      transition-delay: 0ms;
+    }
+    &::after {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 4000ms ease-in-out, transform 3000ms ease;
       transition-delay: 0ms;
     }
   }

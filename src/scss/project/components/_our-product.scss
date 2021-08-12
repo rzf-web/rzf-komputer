@@ -1,0 +1,200 @@
+/* ==========================================================================
+   Components: Our Product
+   ========================================================================== */
+
+.our-product {
+   padding: 72px 0;
+   background-color: color(grey, 3);
+  &__galery {
+    padding: 80px 0 56px;
+    background-color: color(white);
+    @include mq(480px) { 
+      padding: 40px 0 24px;
+    }
+    &__list {
+      margin-left: -12px;
+      margin-right: -12px;
+      font-size: 0;
+      text-align: center;
+      @include clearfix;
+      @include small {
+        margin-left: -8px;
+        margin-right: -8px;
+      }
+      @include mq(480px) {
+        margin: 0;
+      }
+    }
+
+    &__card {
+      $dc: &;
+      display: inline-block;
+      width: 55%;
+      max-width: initial;
+      @include small {
+         width: 100%;
+      }
+      @include mq(480px) {
+        &:last-child {
+          #{$dc}__box {
+            margin-bottom: 0;
+          }
+        }
+      }
+      &:nth-child(3n-2) {
+        width: 44%;
+        @include small {
+         width: 100%;
+        }
+      }
+      &__box {
+        height: 300px;
+        margin: 0 12px 24px;
+        @include medium {
+          height: 200px;
+        }
+        @include small {
+          height: 400px;
+        }
+        @include mq(620px) {
+         height: 300px;
+        }
+        @include mq(480px) {
+          margin: 0 0 16px;
+        }
+      }
+
+      &__img {
+          border-radius: 20px;
+        &-wrapper {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          transition: all 350ms ease-in-out;
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            z-index: 4;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.60) 20%, rgba(0, 0, 0, 0));
+            border-radius: 20px;
+            z-index: 0;
+
+          }
+          // &::after {
+          //   position: absolute;
+          //   content: '';
+          //   background-image: linear-gradient(to top, rgba(56, 142, 60, 0.40) 40%, rgba(134, 233, 65, 0.40));
+          //   // border: solid 12px color(grey, 3);
+          //   z-index: 6;
+          //   display: block;
+          //   top: 0;
+          //   left: 0;
+          //   width: 100%;
+          //   height: 100%;
+          //   // opacity: 0;
+          //   // visibility: hidden;
+          //   // transform: scale(0.8);
+          //   transition: all 350ms ease-in-out;
+          //   overflow: hidden;
+          //   border-radius: 20px;
+          // }
+          &:hover {
+            // &::after {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            // }
+          }
+        }
+
+        &__link {
+         z-index: 7;
+         position: absolute;
+        }
+        &-el {
+          border-radius: 20px;
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    &--temp {
+      .our-product__galery {
+        &__card {
+          $gc: &;
+          display: inline-block;
+          width: 35%;
+          @include medium {
+            width: 50%;
+          }
+          @include mq(480px) {
+            width: 100%;
+          }
+          &:nth-child(7n) {
+            width: 50%;
+            @include mq(480px) {
+              width: 100%;
+            }
+          }
+          &:nth-child(7n-2) {
+            float: left;
+            width: 50%;
+            @include mq(480px) {
+              width: 100%;
+            }
+          }
+          &:nth-child(7n-1) {
+            float: right;
+            width: 50%;
+            height: 600px;
+            @include large {
+              height: 520px;
+            }
+            @include mq(480px) {
+              width: 100%;
+              height: auto;
+            }
+            .our-product__galery__card__box {
+              height: 624px;
+              @include large {
+                height: 545px;
+              }
+              @include mq(480px) {
+                height: 400px;
+              }
+            }
+          }
+          &__box {
+            height: 300px;
+            max-height: 655px;
+            @include large {
+              height: 260px;
+            }
+            @include mq(480px) {
+              height: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+   margin-left: -18px;
+   margin-right: -18px;
+   max-width: initial;
+   @include extra-small {
+      margin-left: 0;
+      margin-right: 0;
+   }
+  }
+}

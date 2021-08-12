@@ -16,7 +16,6 @@
     overflow-x: hidden;
     max-height: 400px;
     @include scroll(y, no-touch, show);
-    scrollbar-width: thin;
     box-shadow: 0 0 16px 12px rgba(0,0,0,.4);
     @include shadow(16);
     transform: translateY(16px);
@@ -29,13 +28,20 @@
     @include retina {
       width: 100%;
     }
-    &.showed .card__List__items {
+    &:hover .card__List__items {
       opacity: 1;
       visibility: visible;
       transform: translateX(-14px);
       transition: transform 350ms ease opacity 150ms ease;
       transition-delay: 150ms;
     }
+    // &.showed .card__List__items {
+    //   opacity: 1;
+    //   visibility: visible;
+    //   transform: translateX(-14px);
+    //   transition: transform 350ms ease opacity 150ms ease;
+    //   transition-delay: 150ms;
+    // }
   }
 
   &__table {
@@ -116,5 +122,4 @@
       }
     }
   }
-
 }

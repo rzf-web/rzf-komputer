@@ -1,0 +1,13 @@
+//-------------------------------------------------------------------------------
+  @name: Layouts Our Product
+  -------------------------------------------------------------------------------//
+
+//our-product
+.our-product
+  .container
+    h3.text-title !{ourProduct.title}
+    .our-product__wrapper
+      each val in ourProduct.list
+        -
+          data = val
+        include ../components/our-product.pug
