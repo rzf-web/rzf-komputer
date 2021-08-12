@@ -5,8 +5,10 @@
 //why-choose-us
 .features
   .container
+    h3.text-title
+      | !{dataFeatures.title}
     .features__wrapper
-      each val in dataFeatures
+      each val in dataFeatures.list
         -
           data = val
         include ../components/why-choose-us.pug
