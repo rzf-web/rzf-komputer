@@ -1,34 +1,57 @@
 /* ==========================================================================
-   Components: Why Choose Us
+   Components Why Choose Us
    ========================================================================== */
 
-.features {
-  &__img {
-    margin: 0 auto 20px;
-    text-align: center;
-    width: 64px;
-    height: 64px;
-    &__el {
-      display: block;
-      margin: 0 auto;
-    }
-    @include medium {
-      margin-bottom: 12px;
+
+.features__card {
+  $f: &;
+  &:hover #{$f}__box {
+    color: color(green, 1);
+    &:hover #{$f}__img-el {
+      transform: translateY(-4px);
     }
   }
-  &__txt {
-    &__title {
-      @include font-size(16);
-      margin: 0;
-      color: color(black, 1);
-      font-weight: fw(bold);
-      text-transform: uppercase;
-      @include large {
-         @include font-size(14);
-     }
-      @include medium {
-        @include font-size(14);
-      }
+
+  &__box {
+    min-height: 260px;
+    padding: 44px 16px;
+    margin: 12px;
+    border-radius: 12px;
+    @include shadow(30);
+    transition: all 350ms ease;
+  }
+
+  &__img {
+    margin-bottom: 24px;
+    &-el {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      transition: all 350ms ease;
     }
+  }
+
+  &__txt {
+
+  }
+
+  &__title {
+    font-family: $font-title;
+    margin-bottom: 20px;
+    @include font-size(18);
+    font-weight: fw(bold);
+    text-transform: uppercase;
+    @include large {
+      margin-bottom: 16px;
+    }
+    @include small {
+      @include font-size(18);
+    }
+  }
+  &__desc {
+    @include multiline-ellipsis(3);
+    @include font-size(14);
+    font-weight: fw(regular);
+    margin: 0;
   }
 }

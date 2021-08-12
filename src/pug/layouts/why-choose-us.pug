@@ -1,0 +1,12 @@
+//-------------------------------------------------------------------------------
+  @name: Why Choose Us
+  -------------------------------------------------------------------------------//
+
+//why-choose-us
+.features
+  .container
+    .features__wrapper
+      each val in dataFeatures
+        -
+          data = val
+        include ../components/why-choose-us.pug
