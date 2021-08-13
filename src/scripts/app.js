@@ -18,7 +18,8 @@ import {
   BlogBanner,
   Validation,
   InputForm,
-  HeaderSearch
+  HeaderSearch,
+  SaleCarousel
 } from 'components';
 
 // --- App
@@ -60,6 +61,7 @@ const App = (() => {
       Validation.init();
       InputForm.init();
       HeaderSearch.init();
+      // SaleCarousel.init();
 
     })(jQuery);
   }

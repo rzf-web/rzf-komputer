@@ -7,7 +7,7 @@
    color: color(white);
    width: 50%;
    position: absolute;
-   top: 40px;
+   top: 80px;
    left: 0;
    z-index: 4;
    padding: 120px;
@@ -25,27 +25,24 @@
       transform: translate(-50%, -10%);
    }
    @include small {
-      top: 20%;
+      top: 15%;
    }
    @include extra-small {
-      top: 10%;
+      top: 15%;
    }
    &__title {
       text-transform: uppercase;
       @include font-size(24);
+      @include retina {
+         @include font-size(18);
+      }
    }
    &__desc {
       @include font-size(18);
+      @include retina {
+         @include font-size(16);
+      }
    }
-}
-
-.sale__content___form {
-   width: 50%;
-   top: 40px;
-   right: 0;
-   position: absolute;
-   float: right;
-   background-color: red;
 }
 
 .sale__content__countdown {
@@ -73,11 +70,20 @@
          padding: 0;
          margin-right: 24px;
       }
+      @include retina {
+         margin-right: 12px;
+      }
       &__number {
          @include font-size(24);
+         @include retina {
+            @include font-size(18);
+         }
       }
       &__text {
          @include font-size(16);
+         @include retina {
+            @include font-size(12);
+         }
       }
    }
 }

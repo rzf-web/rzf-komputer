@@ -5,6 +5,7 @@
 .sale {
   text-align: center;
   position: relative;
+  padding: 72px 0;
   &__logo {
     margin: 0 0 36px;
     img {
@@ -68,25 +69,28 @@
     z-index: 3;
     width: 50%;
     height: 100%;
-    &::before {
-      position: absolute;
+    &::after {
       left: 0;
       top: 0;
+      bottom: 0;
+      right: 0;
       height: 100%;
       width: 100%;
       content: '';
+      position: absolute;
       background: color(overlay);
-      @include medium {
-        height: 52.8%;
-      }
-      @include small {
-        height: 55%;
-      }
-      @include extra-small {
-        height: 55.5%;
-      }
+      // @include medium {
+      //   height: 52.8%;
+      // }
+      // @include small {
+      //   height: 55%;
+      // }
+      // @include extra-small {
+      //   height: 55.5%;
+      // }
     }
     &-el {
+      position: absolute;
       left: 0;
       top: 0;
       width: 100%;
@@ -108,13 +112,16 @@
     float: right;
     width: 50%;
     height: 100%;
-    background-color: salmon;
+    background-color: color(green, 3);
     padding: 20px;
     @include medium {
-      float: none;
       width: 100%;
       padding: 40px 0 0;
     }
+  }
+  &__middle-align {
+    display: table-cell;
+    vertical-align: middle;
   }
   &__txt {
    background-color: red;
