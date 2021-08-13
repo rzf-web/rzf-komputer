@@ -53,13 +53,14 @@
     position: absolute;
     right: 0;
     z-index: zi(banner-img);
-    width: 40%;
     height: 100%;
+    width: 40%;
     // top: -60px;
     right: 120px;
     @include large {
       height: 100%;
-      width: 60%;
+      width: 50%;
+      right: 0;
     }
     @include small {
       padding: 20px 0;
@@ -77,6 +78,18 @@
       width: 100%;
       object-fit: cover;
       object-position: center center;
+      @include medium {
+        position: relative;
+        transform: translate(-50%);
+        width: 440px;
+        height: 440px;
+        top: 10%;
+      }
+      @include small {
+        transform: none;
+        width: 100%;
+        height: 100%;
+      }
     }
     &:after {
       position: absolute;
@@ -101,9 +114,9 @@
     height: 100%;
     padding: 120px 0;
     z-index: zi(banner-text);
-    @include medium {
-      padding: 68px 0 64px;
-    }
+    // @include medium {
+    //   padding: 68px 0 64px;
+    // }
     @include small {
       float: none;
       width: 100%;
