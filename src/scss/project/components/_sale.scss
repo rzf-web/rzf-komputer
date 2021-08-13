@@ -4,12 +4,10 @@
 
 .sale__content__txt {
    position: relative;
-   // background-color: lightblue;
    color: color(white);
    width: 50%;
    position: absolute;
    top: 40px;
-   bottom: 40px;
    left: 0;
    z-index: 4;
    padding: 120px;
@@ -28,21 +26,43 @@
    }
    @include small {
       top: 20%;
-      // transform: translate(-50%, -20%);
+   }
+   @include extra-small {
+      top: 10%;
+   }
+   &__title {
+      text-transform: uppercase;
+      @include font-size(24);
+   }
+   &__desc {
+      @include font-size(18);
    }
 }
+
+.sale__content___form {
+   width: 50%;
+   top: 40px;
+   right: 0;
+   position: absolute;
+   float: right;
+   background-color: red;
+}
+
 .sale__content__countdown {
    &__list {
       background-color: color(white);
       list-style: none;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0;
       border-radius: 8px;
       max-width: 480px;
       color: color(black, 1);
+      margin-bottom: 24px;
+      @include extra-small {
+         padding: 12px 0;
+      }
    }
    &__item {
-      // background-color: salmon;
       display: inline-block;
       margin-right: 24px;
       padding: 20px;
@@ -53,8 +73,11 @@
          padding: 0;
          margin-right: 24px;
       }
-      h5, span {
-         @include font-size(18);
+      &__number {
+         @include font-size(24);
+      }
+      &__text {
+         @include font-size(16);
       }
    }
 }

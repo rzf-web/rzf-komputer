@@ -76,6 +76,15 @@
       width: 100%;
       content: '';
       background: color(overlay);
+      @include medium {
+        height: 52.8%;
+      }
+      @include small {
+        height: 55%;
+      }
+      @include extra-small {
+        height: 55.5%;
+      }
     }
     &-el {
       left: 0;
@@ -91,28 +100,31 @@
       width: 100%;
       height: 380px;
     }
+    @include small {
+      height: 420px;
+    }
   }
   &__img-detail {
     float: right;
     width: 50%;
     height: 100%;
-    padding: 40px 0 40px 40px;
     background-color: salmon;
+    padding: 20px;
     @include medium {
       float: none;
       width: 100%;
       padding: 40px 0 0;
     }
   }
-  // &__txt {
-  //  background-color: red;
-  //  width: 20%;
-  //  position: absolute;
-  //  content: '';
-  //  display: block;
-  //  z-index: 6;
-  //     top: -50px;
-  //     left: 0;
-  //     height: 100%;
-  //  }
+  &__txt {
+   background-color: red;
+   width: 20%;
+   position: absolute;
+   content: '';
+   display: block;
+   z-index: 6;
+      top: -50px;
+      left: 0;
+      height: 100%;
+   }
 }

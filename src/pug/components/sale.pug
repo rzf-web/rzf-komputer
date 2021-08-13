@@ -1,27 +1,37 @@
 //-------------------------------------------------------------------------------
   @name: Component Sale
   -------------------------------------------------------------------------------//
-//sale-utems
+//sale-items
 .sale__content
   .sale__img
     ='\n'
     img.sale__img-el(src='assets/img/dummy/'+data.img alt=data.title)/
     ='\n'
   .sale__img-detail
-.sale__content__txt
-  h3 Exclusive Hot Deal and Soon
-  p Who are in extremely love with eco friendly system.
-  .sale__content__countdown
-    ul.sale__content__countdown__list
-      li.sale__content__countdown__item
-        h5 29
-        span Hari
-      li.sale__content__countdown__item
-        h5 12
-        span Jam
-      li.sale__content__countdown__item
-        h5 10
-        span Menit
-      li.sale__content__countdown__item
-        h5 30
-        span Detik
+    //- .sale__content__form
+    //-   h2.contact__title Contact Us
+    //-   form.zeals-form(action='contact.html' method='GET' autocomplete="off")
+    //-     .zeal-form__control
+    //-       ='\n'
+    //-       label.zeal-form__label(for='name') Name
+    //-       ='\n'
+    //-       input.zeal-form__input(type='text' id='name' name='name' placeholder="Input name" data-target="alertName" required)/
+    //-       p(class="zeal-form__alert" id="alertName" data-req="Name is required!")
+    //-       ='\n'
+    //-     .zeal-form__control
+    //-       ='\n'
+    //-       label.zeal-form__label(for='email') Email
+    //-       ='\n'
+    //-       input.zeal-form__input(type='text' id='email' name='email' placeholder="Input email" data-target="alertEmail" required)/
+    //-       p(class="zeal-form__alert" id="alertEmail" data-req="Email is required!" data-invalid-email="Please enter a vaild email address")
+    //-       ='\n'
+    //-     .zeal-form__control
+    //-       ='\n'
+    //-       label.zeal-form__label(for='message') Message
+    //-       ='\n'
+    //-       textarea.zeal-form__input(id="message" name='message' placeholder='Input message' data-target="alertMessage" required)
+    //-       p(class="zeal-form__alert" id="alertMessage" data-req="Message is required!")
+    //-       ='\n'
+    //-     .zeal-form__control
+    //-       ='\n'
+    //-       button.btn.btn--block.btn--primary(type="submit" class='js-alert') Send
