@@ -1,0 +1,13 @@
+//-------------------------------------------------------------------------------
+  @name: Layouts Sale
+  -------------------------------------------------------------------------------//
+// sale
+.sale
+  each val in dataSale.list
+    -
+      data = val
+    include ../components/sale.pug
+  .container
+    .row
+='\n'
+// End sale

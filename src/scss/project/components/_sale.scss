@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Components: Sale
+   ========================================================================== */
+
+.sale__content__txt {
+   position: relative;
+   // background-color: lightblue;
+   color: color(white);
+   width: 50%;
+   position: absolute;
+   top: 40px;
+   bottom: 40px;
+   left: 0;
+   z-index: 4;
+   padding: 120px;
+   @include mq(1400px) {
+      padding: 120px 0;
+   }
+   @include large {
+      padding: 120px 0;
+   }
+   @include medium {
+      padding: 0 20px;
+      width: 100%;
+      left: 50%;
+      right: 50%;
+      transform: translate(-50%, -10%);
+   }
+   @include small {
+      top: 20%;
+      // transform: translate(-50%, -20%);
+   }
+}
+.sale__content__countdown {
+   &__list {
+      background-color: color(white);
+      list-style: none;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 480px;
+      color: color(black, 1);
+   }
+   &__item {
+      // background-color: salmon;
+      display: inline-block;
+      margin-right: 24px;
+      padding: 20px;
+      &:last-child {
+         margin-right: 0;
+      }
+      @include small {
+         padding: 0;
+         margin-right: 24px;
+      }
+      h5, span {
+         @include font-size(18);
+      }
+   }
+}
