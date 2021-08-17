@@ -16,6 +16,7 @@ import BlogBanner from "./BlogBanner";
 import Validation from "./Validation";
 import InputForm from "./InputForm";
 import HeaderSearch from "./HeaderSearch";
+import Contact from "./Contact";
 
 export {
   WindowScroll,
@@ -30,5 +31,6 @@ export {
   BlogBanner,
   Validation,
   InputForm,
-  HeaderSearch
+  HeaderSearch,
+  Contact
 };

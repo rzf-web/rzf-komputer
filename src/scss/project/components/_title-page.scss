@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Components: Title Page
+   ========================================================================== */
+
+.title-page {
+  $tp: &;
+  padding: 72px 0;
+  background-color: color(green, 3);
+  text-align: center;
+  color: color(black, 1);
+  @include large {
+    padding: 64px 0;
+  }
+  &__title {
+    font-weight: fw(bold);
+    margin-bottom: 0;
+    @include small {
+      @include font-size(24);
+    }
+  }
+  &__desc {
+    @include font-size(18);
+    font-weight: fw(medium);
+    margin: 24px auto 0;
+    max-width: 700px;
+    @include small {
+      @include font-size(14);
+      margin-top: 16px;
+    }
+  }
+
+  &--pattern {
+    position: relative;
+    overflow: hidden;
+    padding: 96px 0;
+    z-index: zi(title-page-desc);
+    @include large {
+      padding: 88px 0;
+    }
+    @include medium {
+      padding: 72px 0;
+    }
+    @include small {
+      padding: 80px 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: -128px;
+      left: -108px;
+      z-index: zi(title-page-desc-pc);
+      width: 300px;
+      height: 282px;
+      background: url(../img/bg/dots.svg) no-repeat center/100%;
+      @include medium {
+        top: -112px;
+        left: -88px;
+        width: 200px;
+        height: 188px;
+      }
+      @include small {
+        top: -84px;
+        left: -66px;
+        width: 150px;
+        height: 141px;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: -240px;
+      bottom: -380px;
+      z-index: zi(title-page-desc-pc);
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      transform: rotate(165deg);
+      background: linear-gradient(179deg, color(green, 1) -79.77%, color(green, 2) 102.91%);
+      @include medium {
+        left: -160px;
+        bottom: -280px;
+        width: 350px;
+        height: 350px;
+      }
+      @include small {
+        left: -140px;
+        bottom: -220px;
+        width: 280px;
+        height: 280px;
+      }
+    }
+
+    #{$tp} {
+      &__title {
+        font-family: ff(family-title);
+      }
+      &__txt {
+        &::after {
+          content: '';
+          position: absolute;
+          right: -240px;
+          bottom: -380px;
+          z-index: zi(title-page-txt-pc);
+          width: 540px;
+          height: 540px;
+          border-radius: 50%;
+          background: linear-gradient(179deg, color(green, 1) -79.77%, color(green, 2) 102.91%);
+          @include large {
+            bottom: -360px;
+          }
+          @include medium {
+            right: -160px;
+            bottom: -220px;
+            width: 370px;
+            height: 370px;
+          }
+          @include small {
+            right: -160px;
+            bottom: -180px;
+            width: 300px;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+}

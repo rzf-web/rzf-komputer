@@ -3,11 +3,13 @@
   -------------------------------------------------------------------------------//
 
 //our-product-items
-.our-product__gallery__card
-  .our-product__gallery__card__box
-    .our-product__gallery__card__img-wrapper
+.our-product__card
+  .our-product__card__box
+    .our-product__card__img-wrapper
       ='\n'
-      a.our-product__gallery__card__link(href=data.to)
+      a.our-product__card__img-link(href=data.to)
         ='\n'
-        img.our-product__gallery__card__img-el(src='assets/img/dummy/'+data.img alt=data.alt)/
+        img.our-product__card__img-el(src='assets/img/dummy/'+data.img alt=data.title)/
+      .our-product__card__img-detail
+        h3.our-product__card__img-name !{data.title}
 ='\n'

@@ -19,7 +19,8 @@ import {
   Validation,
   InputForm,
   HeaderSearch,
-  SaleCarousel
+  SaleCarousel,
+  Contact
 } from 'components';
 
 // --- App
@@ -61,6 +62,7 @@ const App = (() => {
       Validation.init();
       InputForm.init();
       HeaderSearch.init();
+      Contact.init();
       // SaleCarousel.init();
 
     })(jQuery);

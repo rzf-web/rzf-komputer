@@ -1,0 +1,73 @@
+//-------------------------------------------------------------------------------
+  @name: Product Detail
+  -------------------------------------------------------------------------------//
+  
+//product-detail
+.pdetail
+  .container
+    .pdetail__wrapper
+      .pdetail__row
+        .pdetail__img
+          .pdetail__img-wrapper
+            img.pdetail__img-el(src='assets/img/dummy/our-product-1.png' alt='Tes')/
+
+        //product-detail-form
+        .pdetail__form
+          form(action='#' method='POST')
+            h3.pdetail__form__name Asus Ryzen 3 AMD
+            .pdetail__form__summary Loewm dsdada bbdadbuadb bdaubaudbd dadbaudbuad qhwubsSASBU DADBAUDB ADBUB
+            .pdetail__form__count-wrapper
+              h3.pdetail__form__price Harga :
+              p Rp 4.500.000-,
+              h3.pdetail__form__count Jumlah :
+              button.pdetail__form__min(type='button')
+                ='\n'
+                i.rzfkomputer-arrow-left1
+              input.pdetail__form__quantity(type='number' value='1' min='1' name='qty')/
+              button.pdetail__form__max(type='button')
+                ='\n'
+                i.rzfkomputer-arrow-right1
+            .pdetail__form__row
+              button.btn.btn--primary.btn--cart(type='button')
+                ='\n'
+                i.rzfkomputer-cart
+                | Masukkan Keranjang
+
+//product-detail-tabs
+.tabs.js-tabs
+  ul.nav-tab
+    li.tab-item.active(data-target='tabs-1') Deskripsi
+    li.tab-item(data-target='tabs-2') Spesifikasi
+  .container
+    .tab-content
+      .tab-pane.active(data-pane='tabs-1')
+        h3.tab-pane__name Asus Ryzen 3 AMD
+        p.tab-pane__desc Dengan bangga  Lenovo Indonesia kembali mengeluarkan produk terbaru di awal 2020. All-in-One MyPC U23 dengan tampilan  disign yang sangat elegan ringan dan  ramping,  body nya yang sangat slim hanya dengan ketebalan 0.7 cm. Ditambah lagi dengan layar slim-bezel sebesar 21.5” FHD IPS yang sangat luas membuat aktivitas semakin bersemangat ,memanjakan mata anda dengan kualitas grafik yang bagus. PC ini sangat cocok untuk semua kalangan  baik untuk pemula, pelajar mahasiswa  gamer bahkan  disign grafis  dengan di tunjang dengan spesifikasi hebat sbb:
+      .tab-pane(data-pane='tabs-2')
+        table
+          thead
+            tr
+              th.skin-light(scope='row') Merek
+              td.skin-light ASUS
+          tbody
+          tr
+            th.skin-grey(scope='row') Operating System
+              td.skin-grey Windows 10
+          tr
+            th.skin-light(scope='row') Prosesor
+              td.skin-light ASUS
+          tr
+          th.skin-grey(scope='row') Mainboard
+              td.skin-grey ASUS
+          tr
+            th.skin-light(scope='row') RAM
+              td.skin-light ASUS
+          tr
+            th.skin-grey(scope='row') Harddisk
+              td.skin-grey ASUS
+          tr
+            th.skin-light(scope='row') Berat
+              td.skin-light ASUS
+          tr
+            th.skin-grey(scope='row') Casing
+              td.skin-grey ASUS

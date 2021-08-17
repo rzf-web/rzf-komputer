@@ -60,7 +60,7 @@
   &__title {
     font-size: 24px;
     margin: 0 0 24px;
-    text-align: left
+    text-align: left;
   }
   &__img {
     position: absolute;
@@ -114,23 +114,14 @@
     height: 100%;
     background-color: color(green, 3);
     padding: 20px;
+    text-transform: uppercase;
     @include medium {
       width: 100%;
       padding: 40px 0 0;
     }
   }
-  &__middle-align {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  &__txt {
-   background-color: red;
-   width: 20%;
-   position: absolute;
-   content: '';
-   display: block;
-   top: -50px;
-   left: 0;
-   height: 100%;
-   }
+  // &__middle-align {
+  //   display: table-cell;
+  //   vertical-align: middle;
+  // }
 }

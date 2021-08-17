@@ -1,0 +1,12 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    navActive = "produk";
+    siteTitle = 'Detail Produk';
+
+//- Body
+block siteContent
+  include ../layouts/product-detail.pug
+  include detail-produk/detail-produk.pug

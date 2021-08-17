@@ -1,0 +1,11 @@
+//-------------------------------------------------------------------------------
+  @name: Title Page
+  -------------------------------------------------------------------------------//
+
+//title-page
+.title-page(class=dataTitle.pattern !== undefined ? 'title-page--pattern' : '')
+  .container
+    .title-page__txt
+      h2.title-page__title !{dataTitle.title}
+      if dataTitle.desc
+        p.title-page__desc !{dataTitle.desc}

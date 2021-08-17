@@ -29,7 +29,7 @@
          margin-right: -24px;
       }
       @include small {
-         float: none;
+         // float: none;
          white-space: nowrap;
          @include scroll(x, no-touch, hide);
          font-size: 0;
@@ -44,9 +44,8 @@
       @include medium {
          width: 50%;
       }
-      @include extra-small {
-         float: none;
-         display: inline-block;
+      @include small {
+         width: 100%;
       }
    }
 }

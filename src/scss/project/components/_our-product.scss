@@ -5,12 +5,6 @@
 .our-product {
    padding: 72px 0;
    background-color: color(grey, 3);
-  &__gallery {
-    padding: 80px 0 56px;
-    background-color: color(white);
-    @include mq(480px) { 
-      padding: 40px 0 24px;
-    }
     &__list {
       margin-left: -12px;
       margin-right: -12px;
@@ -30,7 +24,6 @@
       $dc: &;
       display: inline-block;
       width: 55%;
-      max-width: initial;
       @include small {
          width: 100%;
       }
@@ -48,8 +41,11 @@
         }
       }
       &__box {
-        height: 300px;
-        margin: 0 12px 24px;
+        height: 280px;
+        // margin: 0 12px 24px;
+        margin: 12px;
+        background-color: color(overlay);
+        position: relative;
         @include medium {
           height: 200px;
         }
@@ -68,37 +64,46 @@
         &-wrapper {
           width: 100%;
           height: 100%;
-          position: relative;
+          // position: relative;
           transition: all 350ms ease-in-out;
           &::after {
             position: absolute;
             content: '';
-            background-image: linear-gradient(to top, rgba(56, 142, 60, 0.40) 40%, rgba(134, 233, 65, 0.40));
-            z-index: 6;
+            // background-image: linear-gradient(to bottom, rgba(56, 142, 60, 0.40) 40%, rgba(134, 233, 65, 0.40) 20%);
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 50%);
             display: block;
-            top: 0;
+            bottom: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            opacity: 0;
-            visibility: hidden;
+            height: 30%;
+            // opacity: 0;
+            // visibility: hidden;
             transition: all 350ms ease-in-out;
             overflow: hidden;
-            // border: solid 12px color(grey, 3);
-            // transform: scale(0.8);
-            // border-radius: 20px;
+            z-index: 5;
           }
-          &:hover {
-            &::after {
-            opacity: 1;
-            visibility: visible;
-            transform: none;
-            }
+        }
+        &-detail {
+          position: absolute;
+          bottom: 40px;
+          left: 50%;
+          transform: translate(-50%, 50%);
+          z-index: 6;
+        }
+        &-name {
+          color: color(white);
+          z-index: 8;
+          text-transform: uppercase;
+          width: 100%;
+          display: inline-block;
+          @include font-size(20);
+          margin: 0;
+          @include medium {
+            @include font-size(16);
           }
         }
 
         &-el {
-          // border-radius: 20px;
           display: block;
           width: 100%;
           height: 100%;
@@ -106,6 +111,13 @@
           object-position: center;
         }
       }
+        &__link {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
     }
 
     &--temp {
@@ -144,7 +156,7 @@
               width: 100%;
               height: auto;
             }
-            .our-product__gallery__card__box {
+            .our-product__card__box {
               height: 624px;
               @include large {
                 height: 545px;
@@ -167,7 +179,6 @@
         }
       }
     }
-  }
 
   &__wrapper {
    margin-left: -18px;
@@ -176,6 +187,10 @@
    @include extra-small {
       margin-left: -16px;
       margin-right: -16px;
+   }
+   @include extra-small {
+      margin-left: 0;
+      margin-right: 0;
    }
   }
 }

@@ -55,8 +55,9 @@
     &__copyright {
       margin: 0;
     }
-    @include small {
+    @include medium {
       margin-top: 48px;
+      text-align: left;
     }
   }
   &__title {
@@ -108,15 +109,10 @@
     }
     &__item {
       float: left;
-      margin-right: 64px;
-      &:last-child {
-        margin-right: 0;
-      }
-      @include large {
-        margin-right: 36px;
-      }
+      padding: 0 36px;
       @include medium {
         margin-right: 40px;
+        padding: 0;
       }
       @include small {
         float: none;

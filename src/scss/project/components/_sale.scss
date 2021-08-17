@@ -3,7 +3,6 @@
    ========================================================================== */
 
 .sale__content__txt {
-   position: relative;
    color: color(white);
    width: 50%;
    position: absolute;
@@ -63,7 +62,7 @@
    &__item {
       display: inline-block;
       margin-right: 24px;
-      padding: 20px;
+      padding: 12px;
       &:last-child {
          margin-right: 0;
       }
