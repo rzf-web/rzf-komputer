@@ -1,14 +1,26 @@
-extends ../templates/default.pug
+//-------------------------------------------------------------------------------
+  @name: Contact List
+  -------------------------------------------------------------------------------//
 
-//- Head
-block siteHeader
-  -
-    navActive = "kontak-kami";
-    siteTitle = 'Kontak Kami';
+-
+  contactList = {
+    icons: [
+      {
+        class: 'product-detail.html',
+        text: 'Alamat',
+        address: 'Jl. Raya Darma KM. 11, Dusun Gunungluhur, Desa Darma Kec. Darma, Kab. Kuningan Jawa Barat 45562'
+      },
+      {
+        class: 'our-product-2.jpg',
+        text: 'Telepon',
+        address: 'Jl. Raya Darma KM. 11, Dusun Gunungluhur, Desa Darma Kec. Darma, Kab. Kuningan Jawa Barat 45562'
+      },
+      {
+        class: 'our-product-3.jpg',
+        text: 'Email',
+        address: 'Jl. Raya Darma KM. 11, Dusun Gunungluhur, Desa Darma Kec. Darma, Kab. Kuningan Jawa Barat 45562'
+      },
+    ]
+  };
 
-//- Body
-block siteContent
-  //- Page title
-  include kontak-kami/title-page.pug
-  //- Hero Banner
-  include home/hero-banner.pug
+include ../../layouts/contact-us.pug
