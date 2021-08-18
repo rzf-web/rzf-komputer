@@ -102,117 +102,120 @@
       opacity: 1;
    }
 }
-.nav-tab {
-   margin: 0 auto;
-   padding: 0 20px;
-   list-style: none;
-   font-size: 0;
-   text-align: center;
-   position: relative;
-   @include shadow(10);
-   @include remove-tap-highlight;
-}
-.tab-item {
-   display: inline-block;
-   position: relative;
-   padding: 20px 0;
-   margin: 0 46px;
-   cursor: pointer;
-   @include font-size(18);
-   font-weight: 600;
-   color: color(black, 2);
-   text-decoration: none;
-   transition: all .2s ease;
-   text-align: left;
-   text-transform: uppercase;
-   &::after {
-      content: '';
-      position: absolute;
-      left: 28px;
-      right: 0;
-      bottom: 0;
-      transform: scale(0);
-      display: block;
-      width: 36px;
-      height: 2px;
-      transition: all .4s ease;
-      background-color: color(green, 1);
+
+.pdetail__tab {
+   &__nav-tab {
+      margin: 0 auto;
+      padding: 0 20px;
+      list-style: none;
+      font-size: 0;
+      text-align: center;
+      position: relative;
+      @include shadow(10);
+      @include remove-tap-highlight;
    }
-   &:hover {
-      color: color(green, 1);
-   }
-   &.active {
-      color: color(green, 1);
+   .tab-item {
+      display: inline-block;
+      position: relative;
+      padding: 20px 0;
+      margin: 0 46px;
+      cursor: pointer;
+      @include font-size(18);
+      font-weight: 600;
+      color: color(black, 2);
+      text-decoration: none;
+      transition: all .2s ease;
+      text-align: left;
+      text-transform: uppercase;
       &::after {
-         transform: scale(1);
+         content: '';
+         position: absolute;
+         left: 28px;
+         right: 0;
+         bottom: 0;
+         transform: scale(0);
+         display: block;
+         width: 36px;
+         height: 2px;
+         transition: all .4s ease;
+         background-color: color(green, 1);
+      }
+      &:hover {
+         color: color(green, 1);
+      }
+      &.active {
+         color: color(green, 1);
+         &::after {
+            transform: scale(1);
+         }
+      }
+      @include extra-small {
+         margin: 0 20px;
+         @include font-size(16);
+      }
+      @include retina {
+         margin: 0 10px;
       }
    }
-   @include extra-small {
-      margin: 0 20px;
-      @include font-size(16);
+   .tab-content {
+      position: relative;
+      display: inline-block;
+      text-align: left;
+      width: 100%;
+      padding: 44px 0;
    }
-   @include retina {
-      margin: 0 10px;
-   }
-}
-.tab-content {
-   position: relative;
-   display: inline-block;
-   text-align: left;
-   width: 100%;
-   padding: 44px 0;
-}
-.tab-pane {
-   display: none;
-   transition: all .4s ease;
-   &__name {
-      @include font-size(24);
-      text-transform: uppercase;
-      @include extra-small {
+   .tab-pane {
+      display: none;
+      transition: all .4s ease;
+      &__name {
+         @include font-size(24);
+         text-transform: uppercase;
+         @include extra-small {
+            @include font-size(18);
+         }
+      }
+      &__desc {
+         margin: 0;
+         @include font-size(18);
+         @include extra-small {
+            @include font-size(14);
+         }
+      }
+      &.active {
+         display: block;
+         animation: accordion .4s ease-in-out .2s both;
+      }
+      &__list {
+         list-style: none;
+         padding: 0;
+         margin: 0;
+      }
+      &__item {
+         margin-bottom: 20px;
          @include font-size(18);
       }
    }
-   &__desc {
-      margin: 0;
-      @include font-size(18);
-      @include extra-small {
-         @include font-size(14);
+
+   //  ========================== //
+
+
+   table {
+      width: 100%;
+      border-radius: 8px;
+   th,
+   td {
+      border: solid 1px color(grey, 5);
+      padding: 11px 10px;
+   }
+   th, td {
+      width: 960px;
+      font-weight: 400;
+      &.skin-grey {
+         background-color: color(grey, 4);
       }
-   }
-   &.active {
-      display: block;
-      animation: accordion .4s ease-in-out .2s both;
-   }
-   &__list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-   }
-   &__item {
-      margin-bottom: 20px;
-      @include font-size(18);
-   }
-}
-
-//  ========================== //
-
-
-table {
-   width: 100%;
-   border-radius: 8px;
-th,
-td {
-   border: solid 1px color(grey, 5);
-   padding: 11px 10px;
-}
-th, td {
-   width: 960px;
-   font-weight: 400;
-   &.skin-grey {
-      background-color: color(grey, 4);
-   }
-   &.skin-light {
-      background-color: color(white);
+      &.skin-light {
+         background-color: color(white);
+         }
       }
    }
 }

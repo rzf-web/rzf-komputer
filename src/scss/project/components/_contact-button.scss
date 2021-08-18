@@ -36,6 +36,17 @@
       margin: 4px 0;
       @include font-size(20);
     }
+    &::after {
+      position: absolute;
+      z-index: -1;
+      content: '';
+      top: 100%;
+      left: 5%;
+      height: 10px;
+      width: 90%;
+      opacity: 1;
+      background-image: -webkit-radial-gradient(center,ellipse,rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 80%);
+    }
   }
 
   &__menu {

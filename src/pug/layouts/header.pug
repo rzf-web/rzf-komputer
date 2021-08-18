@@ -124,6 +124,7 @@
               tbody
                 tr.cart-list__row
                   td.cart-list__img-wrapper
+                    ='\n'
                     img.cart-list__img-el(src='assets/img/dummy/'+val.img alt=val.title)/
                   td.cart-list__product
                     h6.cart-list__product-name !{val.name}
@@ -149,7 +150,7 @@
               a.btn.btn--primary.btn--checkout(href='#') Checkout
     .header__search-section
       .header__search-section__form-wrapper
-        form.header-search-section__form.js-search-form
+        form.header-search-section__form.js-search-form(action='#' method='POST')
           ='\n'
           button.header-search-section__submit(type='submit')
             ='\n' 
