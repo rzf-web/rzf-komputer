@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .features {
-   $f: &;
+   $fc: &;
    padding: 72px 0;
    text-align: center;
    position: relative;
@@ -28,14 +28,8 @@
          margin-left: -24px;
          margin-right: -24px;
       }
-      @include small {
-         // float: none;
-         white-space: nowrap;
-         @include scroll(x, no-touch, hide);
-         font-size: 0;
-      }
    }
-   #{$f}__card {
+   #{$fc}__card {
       float: left;
       width: 25%;
       &:last-child {

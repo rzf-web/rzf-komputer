@@ -27,6 +27,7 @@
   &__logo {
     display: inline-block;
     margin-bottom: 24px;
+    @include remove-tap-highlight;
     &__img {
       display: block;
       width: auto;
@@ -41,9 +42,12 @@
     font-weight: fw(regular);
     color: color(white);
     margin: 0;
+    @include extra-small {
+      @include font-size(14);
+    }
   }
   &__bottom {
-    @include font-size(14);
+    @include font-size(16);
     font-weight: fw(regular);
     color: color(white);
     margin-bottom: 0;
@@ -54,6 +58,7 @@
     text-align: center;
     &__copyright {
       margin: 0;
+      @include font-size(14);
     }
     @include medium {
       margin-top: 48px;

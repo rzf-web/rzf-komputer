@@ -60,7 +60,7 @@
   &__title {
     font-size: 24px;
     margin: 0 0 24px;
-    text-align: left;
+    text-align: center;
   }
   &__img {
     position: absolute;
@@ -113,15 +113,18 @@
     width: 50%;
     height: 100%;
     background-color: color(green, 3);
-    padding: 20px;
-    text-transform: uppercase;
+    padding: 24px 0;
     @include medium {
       width: 100%;
       padding: 40px 0 0;
     }
   }
-  // &__middle-align {
-  //   display: table-cell;
-  //   vertical-align: middle;
-  // }
+  &__img-detail__wrapper {
+    @include clearfix;
+  }
+  &__img-detail__img {
+    background-color: salmon;
+    width: 50%;
+    margin: 0 auto;
+  }
 }

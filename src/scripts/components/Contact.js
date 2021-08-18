@@ -15,21 +15,21 @@ const Contact = (() => {
     }
   }
 
-  const handleDropdown = () =>{
-    $('body').on('click', function() {
-      $('.js-contact-dd').removeClass('zeal-contact--show');
+  const handleDropdown = () => {
+    $(window).on('click', function() {
+      $('.js-contact-dd').removeClass('rzfk-contact--show');
     });
 
-    $('.zeal-contact').on('click', function(e) {
+    $('.rzfk-contact').on('click', function(e) {
       e.stopPropagation();
     });
 
-    $('.js-contact-dd .zeal-contact__btn').on('click', function() {
-      if ($(this).parents('.js-contact-dd').hasClass('zeal-contact--show')) {
-        $(this).parents('.js-contact-dd').removeClass('zeal-contact--show');
+    $('.js-contact-dd .rzfk-contact__btn').on('click', function() {
+      if ($(this).parents('.js-contact-dd').hasClass('rzfk-contact--show')) {
+        $(this).parents('.js-contact-dd').removeClass('rzfk-contact--show');
       } else {
-        $('.js-contact-dd').removeClass('zeal-contact--show');
-        $(this).parents('.js-contact-dd').addClass('zeal-contact--show');
+        $('.js-contact-dd').removeClass('rzfk-contact--show');
+        $(this).parents('.js-contact-dd').addClass('rzfk-contact--show');
       }
     });
   } 

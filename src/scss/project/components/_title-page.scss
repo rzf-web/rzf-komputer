@@ -59,7 +59,7 @@
         height: 188px;
       }
       @include small {
-        top: -84px;
+        top: -68px;
         left: -66px;
         width: 150px;
         height: 141px;
@@ -119,6 +119,9 @@
             bottom: -180px;
             width: 300px;
             height: 300px;
+          }
+          @include extra-small {
+            display: none;
           }
         }
       }

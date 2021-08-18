@@ -2,8 +2,8 @@
    Components Category Card
 ========================================================================== */
 
-.rzfkomputer-contact {
-  $kuy: &;
+.rzfk-contact {
+  $rzfk: &;
   position: fixed;
   bottom: 24px;
   right: 24px;
@@ -28,7 +28,7 @@
     background: color(whatsapp);
     color: color(white);
     @include font-size(14);
-    @include shadow(10);
+    @include shadow(12);
     @include remove-tap-highlight;
     transition: all .35s ease;
     &:hover {
@@ -38,13 +38,13 @@
     i {
       display: inline-block;
       margin: 4px 0;
-      @include font-size(18);
+      @include font-size(20);
     }
   }
 
   &__menu {
     list-style: none;
-    padding: 6px 0;
+    padding: 6px;
     margin: 0;
     width: 200px;
     overflow: hidden;
@@ -52,13 +52,17 @@
     visibility: hidden;
     position: absolute;
     bottom: 68px;
-    right: 0;
+    right: 10px;
     border-radius: 4px;
-    background-color: #fff;
-    @include shadow(4);
-    transform: translateX(16px);
+    background-color: color(white);
+    @include shadow(10);
+    transform: translateY(16px);
     transition: all .4s ease;
-  }
+    @include extra-small {
+      right: 8px;
+      bottom: 64px;
+    }
+}
 
   &__item {
     text-align: left;
@@ -73,24 +77,27 @@
     display: block;
     width: 100%;
     height: 100%;
-    padding: 8px 16px;
+    padding: 8px 14px;
     color: color(black, 1);
+    font-family: $font-main;
+    @include font-size(14);
     transition: all .35s ease;
     &:hover {
       background-color: color(whatsapp);
       color: color(white);
+      border-radius: 4px;
     }
   }
-
   &--show {
-    #{$kuy}__btn {
+    #{$rzfk}__btn {
       background-color: color(white);
       color: color(whatsapp);
     }
-    #{$kuy}__menu {
+    #{$rzfk}__menu {
       opacity: 1;
       visibility: visible;
       transform: none;
+      font-family: $font-main;
     }
   }
 }
