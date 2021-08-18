@@ -2,6 +2,7 @@
    Elements Icons
    ========================================================================== */
 
+
 [class^="rzfkomputer-"], [class*=" rzfkomputer-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'rzfkomputer-icons' !important;
@@ -17,59 +18,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.rzfkomputer-notice1:before {
-  content: "\e91d";
-}
-.rzfkomputer-minus:before {
-  content: "\e918";
-}
-.rzfkomputer-arrow-right1:before {
-  content: "\e910";
-}
-.rzfkomputer-arrow-left2:before {
-  content: "\e911";
-}
-.rzfkomputer-search:before {
-  content: "\e904";
-}
-.rzfkomputer-paper-plane:before {
-  content: "\e919";
-}
-.rzfkomputer-send:before {
-  content: "\e919";
-}
-.rzfkomputer-clear:before {
-  content: "\e917";
-}
-.rzfkomputer-chevrons-down:before {
-  content: "\e91a";
-}
-.rzfkomputer-chevron-right:before {
-  content: "\e912";
-}
-.rzfkomputer-add:before {
-  content: "\e91c";
-}
-.rzfkomputer-clear:before {
-  content: "\e917";
-}
-.rzfkomputer-chevrons-down:before {
-  content: "\e91a";
-}
-.rzfkomputer-chevron-right:before {
-  content: "\e912";
-}
-.rzfkomputer-chevron-left:before {
-  content: "\e913";
-}
-.rzfkomputer-chevron-down:before {
-  content: "\e914";
-}
-.rzfkomputer-chevron-up:before {
-  content: "\e915";
+.rzfkomputer-user1:before {
+  content: "\e920";
 }
 .rzfkomputer-envelope:before {
   content: "\e90a";
+}
+.rzfkomputer-person2:before {
+  content: "\e91f";
 }
 .rzfkomputer-notification:before {
   content: "\e91b";
@@ -110,9 +66,9 @@
 .rzfkomputer-telephone:before {
   content: "\e905";
 }
-// .rzfkomputer-contact:before {
-//   content: "\e905";
-// }
+.rzfkomputer-contact:before {
+  content: "\e905";
+}
 .rzfkomputer-support:before {
   content: "\e905";
 }
@@ -187,6 +143,69 @@
 }
 .rzfkomputer-youtube:before {
   content: "\e901";
+}
+.rzfkomputer-notice1:before {
+  content: "\e91d";
+}
+.rzfkomputer-arrow-right1:before {
+  content: "\e910";
+}
+.rzfkomputer-arrow-left2:before {
+  content: "\e911";
+}
+.rzfkomputer-search:before {
+  content: "\e904";
+}
+.rzfkomputer-minus:before {
+  content: "\e918";
+}
+.rzfkomputer-arrow-right1:before {
+  content: "\e910";
+}
+.rzfkomputer-arrow-left2:before {
+  content: "\e911";
+}
+.rzfkomputer-search:before {
+  content: "\e904";
+}
+.rzfkomputer-paper-plane:before {
+  content: "\e919";
+}
+.rzfkomputer-send:before {
+  content: "\e919";
+}
+.rzfkomputer-add:before {
+  content: "\e91c";
+}
+.rzfkomputer-clear:before {
+  content: "\e917";
+}
+.rzfkomputer-chevrons-down:before {
+  content: "\e91a";
+}
+.rzfkomputer-person:before {
+  content: "\e91e";
+}
+.rzfkomputer-add:before {
+  content: "\e91c";
+}
+.rzfkomputer-clear:before {
+  content: "\e917";
+}
+.rzfkomputer-chevrons-down:before {
+  content: "\e91a";
+}
+.rzfkomputer-chevron-right:before {
+  content: "\e912";
+}
+.rzfkomputer-chevron-left:before {
+  content: "\e913";
+}
+.rzfkomputer-chevron-down:before {
+  content: "\e914";
+}
+.rzfkomputer-chevron-up:before {
+  content: "\e915";
 }
 .rzfkomputer-facebook:before {
   content: "\e902";

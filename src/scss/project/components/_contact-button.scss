@@ -31,10 +31,6 @@
     @include shadow(12);
     @include remove-tap-highlight;
     transition: all .35s ease;
-    &:hover {
-      background-color: color(white);
-      color: color(whatsapp);
-    }
     i {
       display: inline-block;
       margin: 4px 0;
@@ -46,7 +42,7 @@
     list-style: none;
     padding: 6px;
     margin: 0;
-    width: 200px;
+    width: 160px;
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
@@ -58,6 +54,7 @@
     @include shadow(10);
     transform: translateY(16px);
     transition: all .4s ease;
+    color: color(grey, 5);
     @include extra-small {
       right: 8px;
       bottom: 64px;
@@ -65,7 +62,7 @@
 }
 
   &__item {
-    text-align: left;
+    text-align: center;
     margin-bottom: 4px;
     &:last-child {
       margin-bottom: 0;
@@ -87,17 +84,21 @@
       color: color(white);
       border-radius: 4px;
     }
+    &::before {
+      content: '\e91e';
+      font-family: rzfkomputer-icons;
+      padding-right: 6px;
+    }
   }
   &--show {
     #{$rzfk}__btn {
-      background-color: color(white);
-      color: color(whatsapp);
+      background-color: color(whatsapp);
+      color: color(white);
     }
     #{$rzfk}__menu {
       opacity: 1;
       visibility: visible;
       transform: none;
-      font-family: $font-main;
     }
   }
 }

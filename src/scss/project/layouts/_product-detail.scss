@@ -149,6 +149,7 @@
    }
    @include extra-small {
       margin: 0 20px;
+      @include font-size(16);
    }
    @include retina {
       margin: 0 10px;
@@ -167,9 +168,16 @@
    &__name {
       @include font-size(24);
       text-transform: uppercase;
+      @include extra-small {
+         @include font-size(18);
+      }
    }
    &__desc {
       margin: 0;
+      @include font-size(18);
+      @include extra-small {
+         @include font-size(14);
+      }
    }
    &.active {
       display: block;
