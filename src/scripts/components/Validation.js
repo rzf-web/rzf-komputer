@@ -21,37 +21,7 @@ const ElementSelector = [
     }
   },
   {
-    id: 'subdomain',
-    validation: {
-      required: true,
-    }
-  },
-  {
-    id: 'parent',
-    validation: {
-      required: true,
-    }
-  },
-  {
-    id: 'date',
-    validation: {
-      required: true,
-    }
-  },
-  {
-    id: 'time',
-    validation: {
-      required: true,
-    }
-  },
-  {
-    id: 'multiline',
-    validation: {
-      required: true,
-    }
-  },
-  {
-    id: 'file',
+    id: 'message',
     validation: {
       required: true,
     }

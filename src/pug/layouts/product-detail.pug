@@ -13,7 +13,7 @@
 
         //product-detail-form
         .pdetail__form
-          form(action='#' method='POST')
+          form(action='#' method='POST' autocomplete='off')
             h3.pdetail__form__name Asus Ryzen 3 AMD
             .pdetail__form__summary Loewm dsdada bbdadbuadb bdaubaudbd dadbaudbuad qhwubsSASBU DADBAUDB ADBUB
             .pdetail__form__count-wrapper
@@ -22,11 +22,11 @@
               h3.pdetail__form__count Jumlah :
               button.pdetail__form__min(type='button')
                 ='\n'
-                i.rzfkomputer-arrow-left1
+                i.rzfkomputer-minus
               input.pdetail__form__quantity(type='number' value='1' min='1' name='qty')/
               button.pdetail__form__max(type='button')
                 ='\n'
-                i.rzfkomputer-arrow-right1
+                i.rzfkomputer-add
             .pdetail__form__row
               button.btn.btn--primary.btn--cart(type='button')
                 ='\n'

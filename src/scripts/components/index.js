@@ -14,7 +14,6 @@ import TemplateBanner from "./TemplateBanner";
 import Footer from "./Footer";
 import BlogBanner from "./BlogBanner";
 import Validation from "./Validation";
-import InputForm from "./InputForm";
 import HeaderSearch from "./HeaderSearch";
 import Contact from "./Contact";
 
@@ -30,7 +29,6 @@ export {
   Footer,
   BlogBanner,
   Validation,
-  InputForm,
   HeaderSearch,
   Contact
 };

@@ -17,8 +17,44 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.rzfkomputer-notice1:before {
+  content: "\e91d";
+}
+.rzfkomputer-minus:before {
+  content: "\e918";
+}
+.rzfkomputer-arrow-right1:before {
+  content: "\e910";
+}
+.rzfkomputer-arrow-left2:before {
+  content: "\e911";
+}
+.rzfkomputer-search:before {
+  content: "\e904";
+}
+.rzfkomputer-paper-plane:before {
+  content: "\e919";
+}
+.rzfkomputer-send:before {
+  content: "\e919";
+}
 .rzfkomputer-clear:before {
   content: "\e917";
+}
+.rzfkomputer-chevrons-down:before {
+  content: "\e91a";
+}
+.rzfkomputer-chevron-right:before {
+  content: "\e912";
+}
+.rzfkomputer-add:before {
+  content: "\e91c";
+}
+.rzfkomputer-clear:before {
+  content: "\e917";
+}
+.rzfkomputer-chevrons-down:before {
+  content: "\e91a";
 }
 .rzfkomputer-chevron-right:before {
   content: "\e912";
@@ -34,6 +70,21 @@
 }
 .rzfkomputer-envelope:before {
   content: "\e90a";
+}
+.rzfkomputer-notification:before {
+  content: "\e91b";
+}
+.rzfkomputer-warning:before {
+  content: "\e91b";
+}
+.rzfkomputer-notice:before {
+  content: "\e91b";
+}
+.rzfkomputer-note:before {
+  content: "\e91b";
+}
+.rzfkomputer-exclamation:before {
+  content: "\e91b";
 }
 .rzfkomputer-whatsapp:before {
   content: "\e916";
@@ -59,9 +110,9 @@
 .rzfkomputer-telephone:before {
   content: "\e905";
 }
-// .rzfkomputer-contact:before {
-//   content: "\e905";
-// }
+.rzfkomputer-contact:before {
+  content: "\e905";
+}
 .rzfkomputer-support:before {
   content: "\e905";
 }
@@ -136,15 +187,6 @@
 }
 .rzfkomputer-youtube:before {
   content: "\e901";
-}
-.rzfkomputer-arrow-right1:before {
-  content: "\e910";
-}
-.rzfkomputer-arrow-left2:before {
-  content: "\e911";
-}
-.rzfkomputer-search:before {
-  content: "\e904";
 }
 .rzfkomputer-facebook:before {
   content: "\e902";

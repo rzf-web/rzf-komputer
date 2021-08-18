@@ -47,29 +47,12 @@
     }
   }
 
-  &--payment {
+  &--block {
     background-color: transparent;
-    color: color(green, 1);
-    border-color: color(green, 1);
     box-shadow: none;
-
-    &:after {
-      content: '\e900';
-      color: color(grey, 1);
-      margin-right: 8px;
-    }
-  }
-
-  &--demo {
-    min-width: 138px;
-    padding: 10px;
-    background-color: color(green, 2);
-    color: color(white);
-    background-image: none;
-    box-shadow: none;
-
-    &:hover {
-      background-color: color(green, 1);
+    width: 100%;
+    i {
+      padding-left: 8px;
     }
   }
 

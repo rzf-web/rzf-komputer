@@ -17,7 +17,6 @@ import {
   Footer,
   BlogBanner,
   Validation,
-  InputForm,
   HeaderSearch,
   SaleCarousel,
   Contact
@@ -60,7 +59,6 @@ const App = (() => {
       Footer.init();
       BlogBanner.init();
       Validation.init();
-      InputForm.init();
       HeaderSearch.init();
       Contact.init();
       // SaleCarousel.init();
