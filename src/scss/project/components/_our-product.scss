@@ -40,23 +40,23 @@
          width: 100%;
         }
       }
+      &:nth-child(3n+5) {
+        width: 44%;
+        @include small {
+         width: 100%;
+        }
+      }
       &__box {
-        height: 280px;
-        // margin: 0 12px 24px;
-        margin: 12px;
+        height: 200px;
+        margin: 0 12px 24px;
         background-color: color(overlay);
         position: relative;
         @include medium {
           height: 200px;
         }
         @include small {
-          height: 400px;
-        }
-        @include mq(620px) {
-         height: 300px;
-        }
-        @include mq(480px) {
-          margin: 0 0 16px;
+          height: 240px;
+          margin: 0;
         }
       }
 
@@ -64,20 +64,16 @@
         &-wrapper {
           width: 100%;
           height: 100%;
-          // position: relative;
           transition: all 350ms ease-in-out;
           &::after {
             position: absolute;
             content: '';
-            // background-image: linear-gradient(to bottom, rgba(56, 142, 60, 0.40) 40%, rgba(134, 233, 65, 0.40) 20%);
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 50%);
             display: block;
             bottom: 0;
             left: 0;
             width: 100%;
             height: 30%;
-            // opacity: 0;
-            // visibility: hidden;
             transition: all 350ms ease-in-out;
             overflow: hidden;
             z-index: 5;
@@ -111,74 +107,14 @@
           object-position: center;
         }
       }
-        &__link {
-          position: absolute;
-          content: '';
-          width: 100%;
-          height: 100%;
-          display: block;
-        }
+    &__link {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
     }
-
-    &--temp {
-      .our-product__gallery {
-        &__card {
-          $gc: &;
-          display: inline-block;
-          width: 35%;
-          @include medium {
-            width: 50%;
-          }
-          @include mq(480px) {
-            width: 100%;
-          }
-          &:nth-child(7n) {
-            width: 50%;
-            @include mq(480px) {
-              width: 100%;
-            }
-          }
-          &:nth-child(7n-2) {
-            float: left;
-            width: 50%;
-            @include mq(480px) {
-              width: 100%;
-            }
-          }
-          &:nth-child(7n-1) {
-            float: right;
-            width: 50%;
-            height: 600px;
-            @include large {
-              height: 520px;
-            }
-            @include mq(480px) {
-              width: 100%;
-              height: auto;
-            }
-            .our-product__card__box {
-              height: 624px;
-              @include large {
-                height: 545px;
-              }
-              @include mq(480px) {
-                height: 400px;
-              }
-            }
-          }
-          &__box {
-            height: 300px;
-            max-height: 655px;
-            @include large {
-              height: 260px;
-            }
-            @include mq(480px) {
-              height: 400px;
-            }
-          }
-        }
-      }
-    }
+  }
 
   &__wrapper {
    margin-left: -18px;
@@ -189,8 +125,25 @@
       margin-right: -16px;
    }
    @include extra-small {
-      margin-left: 0;
-      margin-right: 0;
-   }
-  }
+      margin-left: -24px;
+      margin-right: -24px;
+      padding: 20px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      float: none;
+      @include scroll(x, no-touch, hide);
+      &:nth-child(3n-2) {
+        width: 44%;
+        @include small {
+         // width: 100%;
+       }
+      }
+       &:nth-child(3n+5) {
+        width: 44%;
+        @include small {
+         // width: 100%;
+        }
+      }
+    }
+  } 
 }

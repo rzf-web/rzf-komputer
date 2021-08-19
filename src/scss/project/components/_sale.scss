@@ -54,7 +54,7 @@
       max-width: 480px;
       color: color(black, 1);
       margin-bottom: 24px;
-      @include extra-small {
+      @include small {
          padding: 12px 0;
       }
    }

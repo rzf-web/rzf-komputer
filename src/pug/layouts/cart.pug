@@ -1,0 +1,45 @@
+//-------------------------------------------------------------------------------
+  @name: Cart
+  -------------------------------------------------------------------------------//
+
+.cart
+  .container
+    .cart__wrapper
+      .form(action='#' method='POST')
+        table.cart__table
+          thead
+            tr
+              th.cart__table-head(scope='col') Produk
+              th.cart__table-head(scope='col') Harga
+              th.cart__table-head(scope='col') Jumlah
+          tbody
+            tr
+              td
+                .cart__media
+                  .cart__media__content
+                    button.cart__media__delete-btn(type='button')
+                      ='\n'
+                      i.rzfkomputer-trashcan
+                    .cart__media__img-wrapper
+                      img.cart__media__img-el(src='assets/img/dummy/our-product-1.png' alt='Image')/
+                    p.cart__media__name ASUS PX-5402
+              td
+                h4 5.400.000-,
+              td
+                .cart__media__product-count
+                  input.cart__media__input-qty(type='number' name='cart' id='quantity' max-length='12' title='quantity' value='1' min='1')/
+                  button.cart__media__btn-plus(type='button')
+                    ='\n'
+                    i.rzfkomputer-chevron-down
+                  button.cart__media__btn-min(type='button')
+                    ='\n'
+                    i.rzfkomputer-chevron-up
+            tr
+              td
+                h5 Order Total :
+              td
+                h5 Rp 5.400.000-,
+              td.cart__button
+                button.btn-btn--primary(type='button' title='Update')
+                  ='\n'
+                  i.rzfkomputer-update
