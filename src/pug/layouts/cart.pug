@@ -17,29 +17,91 @@
               td
                 .cart__media
                   .cart__media__content
+                    ='\n'
                     button.cart__media__delete-btn(type='button' title='Delete')
                       ='\n'
                       i.rzfkomputer-trashcan
+                      ='\n'
                     .cart__media__img-wrapper
+                      ='\n'
                       img.cart__media__img-el(src='assets/img/dummy/our-product-1.png' alt='Image')/
                     p.cart__media__name ASUS PX-5402
               td
-                h4.cart__media__price Rp 5.400.000-,
+                p.cart__media__price Rp 5.400.000-,
               td
                 .cart__media__product-count
+                  ='\n'
                   input.cart__media__input-qty(type='number' name='cart' id='quantity' max-length='12' title='quantity' value='1' min='1')/
+                  ='\n'
                   button.cart__media__btn-chevron-down(type='button')
                     ='\n'
                     i.rzfkomputer-chevron-down
+                    ='\n'
+                  ='\n'
                   button.cart__media__btn-chevron-up(type='button')
                     ='\n'
                     i.rzfkomputer-chevron-up
+                    ='\n'
             tr
               td
-                h5.cart__media__total Order Total :
+                p.cart__media__total Order Total :
               td
-                h5.cart__media__price Rp 5.400.000-,
+                p.cart__media__price Rp 5.400.000-,
               td.cart__button
+                ='\n'
                 button.btn.btn--primary.btn--update(type='button' title='Update')
                   ='\n'
                   i.rzfkomputer-update
+                  ='\n'
+//checkout-form
+.checkout
+  .container
+    .checkout__wrapper
+      .checkout__form
+        form(action='#' method='POST' autocomplete='off')
+          h3.checkout__form-title Form Checkout
+          .form__control
+            ='\n'
+            label.form__label(for='name') Nama
+            ='\n'
+            input.form__input(type='text' id='name' name='name' placeholder="Masukkan Nama" data-target="alertName" required)/
+            p(class="form__alert" id="alertName" data-req="Nama tidak boleh kosong")
+          ='\n'
+          .form__control
+            ='\n'
+            label.form__label(for='email') Email
+            ='\n'
+            input.form__input(type='text' id='email' name='email' placeholder="Masukkan Email" data-target="alertEmail" required)/
+            p(class="form__alert" id="alertEmail" data-req="Email tidak boleh kosong" data-invalid-email="Masukkan email yang valid")
+            ='\n'
+          .form__control
+            ='\n'
+            label.form__label(for='phone') Nomor Telepon
+            ='\n'
+            input.form__input(id="phone" name='phone' placeholder='Masukkan Nomor' data-target="alertPhone" required)
+            p(class="form__alert" id="alertPhone" data-req="Nomor tidak boleh kosong" data-invalid-phone="Masukkan Nomor yang valid")
+            ='\n'
+          .form__control
+            ='\n'
+            label.form__label(for='address') Alamat Rumah/Kantor
+            ='\n'
+            textarea.form__input(id="address" name='address' placeholder='Masukkan Alamat' data-target="alertAddress" rows='5' required)
+            p(class="form__alert" id="alertAddress" data-req="Alamat tidak boleh kosong")
+            ='\n'
+          .form__control
+            button.btn.btn--block.btn--primary(type='submit')
+              | Pesan Sekarang
+      .checkout__summary
+        .checkout__box
+          h3.checkout__title Pesanan Anda
+          table.checkout__table
+            thead
+              tr.checkout__table-list
+                th(scope='col') Produk
+                th(scope='col') Jumlah
+                th(scope='col') Harga
+            tbody
+              tr
+                th Total :
+                td 1
+                td Rp 0

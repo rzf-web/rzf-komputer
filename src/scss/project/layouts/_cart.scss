@@ -79,7 +79,6 @@
          font-weight: fw(regular);
       }
       &__product-count {
-         // background-color: salmon;
          padding: 12px 0;
          position: relative;
       }
@@ -91,6 +90,7 @@
          border: solid 1px color(grey, 5);
          margin-right: 8px;
          text-align: center;
+         border-radius: 4px;
       }
       &__btn-chevron-down, &__btn-chevron-up {
          width: 40px;
@@ -98,6 +98,7 @@
          border: none;
          outline: 0;
          margin-right: 4px;
+         border-radius: 4px;
          &:last-child {
             margin-right: 0;
          }
@@ -110,3 +111,46 @@
       }
    }
 }   
+
+
+.checkout {
+   padding: 20px 0;
+   &__wrapper {
+      @include clearfix;
+   }
+   &__form {
+      float: left;
+      width: 50%;
+      &-title {
+         margin-bottom: 16px;
+      }
+   }
+
+   &__summary {
+      float: left;
+      padding-left: 40px;
+      width: 50%;
+   }
+   &__box {
+      padding: 56px 32px;
+      background-color: color(green, 3);
+      text-align: left;
+   }
+   &__title {
+      text-align: center;
+      margin-bottom: 24px;
+   }
+   &__table, td {
+      width: 80%;
+      padding: 12px;
+      &-list {
+         padding-bottom: 18px;
+      }
+      th {
+         padding: 12px;
+         width: 100%;
+         font-weight: fw(semi-bold);
+      }
+   }
+}
+
