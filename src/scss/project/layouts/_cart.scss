@@ -4,7 +4,7 @@
 
 .cart {
    padding: 120px 0;
-   background-color: color(green, 3);
+   background-color: color(white);
    @include large {
       padding: 88px 0;
    }
@@ -12,7 +12,7 @@
       padding: 64px 0;
    }
    &__wrapper {
-      // background-color: salmon;
+
    }
 
    &__table,
@@ -26,40 +26,87 @@
          padding: 20px 0;
          border-bottom: solid 1px color(grey, 6);
       }
+      &-title {
+         font-weight: fw(semi-bold);
+         padding-bottom: 12px;
+         border-bottom: solid 1px color(grey, 6);
+      }
    }
    &__media {
       max-width: 546px;
+      position: relative;
       &__content {
          @include clearfix;
       }
       &__delete-btn {
-         display: inline-block;
-         width: 40px;
-         float: left;
+         position: absolute;
+         top: 0;
+         left: 8px;
+         bottom: 0;
+         width: 45px;
+         height: 40px;
+         border-radius: 50%;
          background-color: color(danger);
+         width: 40px;
+         color: color(white);
          outline: 0;
          border: none;
          padding: 0;
          margin: 0;
          cursor: pointer;
-         height: 100px;
-         color: color(white);
-
       }
       &__img-wrapper {
-         width: 146px;
+         // width: 146px;
          float: left;
+      }
+      &__img-el {
+         width: 210px;
+         display: block;
       }
       &__name {
          float: left;
          padding: 34px 0;
          margin-bottom: 0;
+         padding-left: 20px;
          @include medium {
             display: none;
          }
       }
-      &__price {
-         background-color: red;
+      &__price, 
+      &__total {
+         margin-bottom: 0;
+         @include font-size(16);
+         font-weight: fw(regular);
+      }
+      &__product-count {
+         // background-color: salmon;
+         padding: 12px 0;
+         position: relative;
+      }
+      &__input-qty {
+         width: 10%;
+         height: 40px;
+         padding: 8px 6px;
+         outline: 0;
+         border: solid 1px color(grey, 5);
+         margin-right: 8px;
+         text-align: center;
+      }
+      &__btn-chevron-down, &__btn-chevron-up {
+         width: 40px;
+         height: 40px;
+         border: none;
+         outline: 0;
+         margin-right: 4px;
+         &:last-child {
+            margin-right: 0;
+         }
+      }
+      &__btn-min {
+         top: 0;
+      }
+      &__btn-plus {
+         bottom: 0;
       }
    }
 }   

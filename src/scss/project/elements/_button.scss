@@ -56,6 +56,13 @@
     }
   }
 
+  &--update {
+    box-shadow: none;
+    width: auto;
+    border-radius: 4px;
+    min-width: 40px;
+  }
+
   &--small {
     @include small {
       @include font-size(12);
