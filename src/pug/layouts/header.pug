@@ -89,7 +89,7 @@
   .container
     .header__content
       ='\n'
-      a.header__logo(href=dataHeader.logoLink)
+      a.header__logo.js-logo(href=dataHeader.logoLink)
         ='\n'
         img.header__logo__el(src='assets/img/logo/'+dataHeader.logoSrc, alt=dataHeader.logoAlt)/
         ='\n'
@@ -117,7 +117,7 @@
         i.rzfkomputer-cart
         ='\n'
       ='\n'
-      .cart-list
+      .cart-list.js-cart-list
         .cart-list__items
           table.cart-list__table
             each val in dataTable.list

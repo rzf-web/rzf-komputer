@@ -7,6 +7,7 @@
   &__items {
     background-color: color(white);
     position: absolute;
+    z-index: 5;
     right: 0;
     top: 12px;
     width: 35%;
@@ -18,7 +19,7 @@
     @include scroll(y, no-touch, show);
     box-shadow: 0 0 16px 12px rgba(0,0,0,.4);
     @include shadow(16);
-    transform: translateY(16px);
+    // transform: translateY(-16px);
     transition: all 350ms ease;
     opacity: 0;
     visibility: hidden;
@@ -28,20 +29,6 @@
     @include retina {
       width: 100%;
     }
-    &:hover .card__List__items {
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(-14px);
-      transition: transform 350ms ease opacity 150ms ease;
-      transition-delay: 150ms;
-    }
-    // &.showed .card__List__items {
-    //   opacity: 1;
-    //   visibility: visible;
-    //   transform: translateX(-14px);
-    //   transition: transform 350ms ease opacity 150ms ease;
-    //   transition-delay: 150ms;
-    // }
   }
 
   &__table {
@@ -122,4 +109,12 @@
       }
     }
   }
+}
+
+.cart-list.showed > .cart-list__items {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-14px);
+  transition: transform 350ms ease opacity 150ms ease;
+  transition-delay: 150ms;
 }
