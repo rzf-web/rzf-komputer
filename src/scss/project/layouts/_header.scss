@@ -7,6 +7,7 @@
   width: 100%;
   background-color: color(white);
   z-index: zi(header);
+  height: 72px;
   transition: transform .35s ease;
   @include shadow(10);
   .window-scrolled & {
@@ -133,6 +134,8 @@
     top: 0;
     left: 0;
     transform: translateY(40%);
+    transition: all 350ms ease;
+    transition-delay: 0ms;
     @include remove-tap-highlight;
     @include medium {
       height: 32px;
@@ -415,7 +418,7 @@
   }
 
   .cart {
-    visibillity: visible;
+    visibility: visible;
     opacity: 1;
     position: absolute;
     top: 28px;
@@ -427,14 +430,8 @@
     padding: 0;
     margin: 0;
     z-index: 6;
-    // transition: all 250ms ease;
-    // transition-delay: 450ms;
-    // &:hover .card__List__items {
-    //   background-color: red;
-    //   visibility: visible;
-    //   opacity: 1;
-    //   transform: none;
-    // }
+    transition: all 250ms ease;
+    transition-delay: 505ms;
     &::after {
       position: absolute;
       content: '1';
@@ -453,6 +450,9 @@
     @include medium {
       right: 12px;
       top: 24px;
+    }
+    &.showed {
+      transition-delay: 0ms;
     }
   }
 }

@@ -29,6 +29,7 @@
       &-title {
          font-weight: fw(semi-bold);
          padding-bottom: 12px;
+         text-transform: uppercase;
          border-bottom: solid 1px color(grey, 6);
       }
    }
@@ -139,17 +140,29 @@
    &__title {
       text-align: center;
       margin-bottom: 24px;
+      text-transform: uppercase;
    }
-   &__table, td {
-      width: 80%;
-      padding: 12px;
+   &__table {
+      width: 100%;
       &-list {
          padding-bottom: 18px;
       }
+      &-name {
+         padding-left: 12px;
+      }
+      &-count {
+         padding-left: 34px;
+      }
+      &-price {
+         padding: 6px 0;
+         padding-left: 14px;
+      }
       th {
          padding: 12px;
-         width: 100%;
-         font-weight: fw(semi-bold);
+         font-weight: fw(regular);
+      }
+      tr {
+         border-bottom: solid 1px color(grey, 5);
       }
    }
 }
