@@ -35,8 +35,9 @@
   margin: 0;
   background-color: transparent;
   position: absolute;
-  left: 8px;
-  top: 8px;
+  right: 8px;
+  top: 4px;
+  @include font-size(24);
   transition: all 350ms ease;
   &:hover {
     color: color(green, 1);
@@ -55,6 +56,10 @@
   @include mq(1500px) {
     padding: 0 36px;
   }
+  @include small {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .header-search-section__submit {
@@ -64,7 +69,7 @@
   margin: 0;
   background-color: transparent;
   position: absolute;
-  right: 8px;
+  left: 8px;
   top: 8px;
   transition: all 350ms ease;
   &:hover {

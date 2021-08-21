@@ -432,6 +432,7 @@
     z-index: 6;
     transition: all 250ms ease;
     transition-delay: 505ms;
+    transform: scale(1.1);
     &::after {
       position: absolute;
       content: '1';
@@ -453,6 +454,9 @@
     }
     &.showed {
       transition-delay: 00ms;
+      transform: scale(0.85);
+      transition: all 350ms;
+      transition-delay: 150ms;
     }
   }
 }
