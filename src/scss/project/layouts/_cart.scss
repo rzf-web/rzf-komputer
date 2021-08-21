@@ -28,6 +28,7 @@
       }
       &-title {
          font-weight: fw(semi-bold);
+         @include font-size(18)
          padding-bottom: 12px;
          text-transform: uppercase;
          border-bottom: solid 1px color(grey, 6);
@@ -57,12 +58,12 @@
          cursor: pointer;
       }
       &__img-wrapper {
-         // width: 146px;
          float: left;
       }
       &__img-el {
          width: 210px;
          display: block;
+         border-radius: 8px;
       }
       &__name {
          float: left;
@@ -91,7 +92,7 @@
          border: solid 1px color(grey, 5);
          margin-right: 8px;
          text-align: center;
-         border-radius: 4px;
+         border-radius: 8px;
       }
       &__btn-chevron-down, &__btn-chevron-up {
          width: 40px;
@@ -99,7 +100,7 @@
          border: none;
          outline: 0;
          margin-right: 4px;
-         border-radius: 4px;
+         border-radius: 8px;
          &:last-child {
             margin-right: 0;
          }
@@ -122,8 +123,13 @@
    &__form {
       float: left;
       width: 50%;
+      @include small {
+         width: 100%;
+      }
       &-title {
+         @include font-size(20);
          margin-bottom: 16px;
+         text-transform: uppercase;
       }
    }
 
@@ -131,13 +137,19 @@
       float: left;
       padding-left: 40px;
       width: 50%;
+      @include small {
+         width: 100%;
+         padding: 32px 0;
+      }
    }
    &__box {
-      padding: 56px 32px;
+      padding: 12px 24px;
       background-color: color(green, 3);
       text-align: left;
+      border-radius: 8px;
    }
    &__title {
+      @include font-size(20);
       text-align: center;
       margin-bottom: 24px;
       text-transform: uppercase;
