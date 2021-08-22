@@ -128,7 +128,7 @@
       }
       &-title {
          @include font-size(20);
-         margin-bottom: 16px;
+         margin-bottom: 2.4rem;
          text-transform: uppercase;
       }
    }
@@ -163,14 +163,13 @@
          padding-left: 12px;
       }
       &-count {
-         padding-left: 34px;
+         padding-left: 28px;
       }
       &-price {
          padding: 6px 0;
-         padding-left: 14px;
       }
       th {
-         padding: 12px;
+         padding: 12px 0;
          font-weight: fw(regular);
       }
       tr {

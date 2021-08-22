@@ -46,33 +46,11 @@ const Header = (() => {
     }
   }
 
-  // --- handleClick
-// const handleClick = () => {
-//   // let _this = $('.js-button-cart');
-//     $('body').on('click', function() {
-//       $('.js-cart').removeClass('showed');
-//     });
-
-//     $('.js-cart').on('click', function(e) {
-//       e.stopPropagation();
-//     });
-
-//     $('.js-cart').on('click', function() {
-//       // alert(100000);
-//       if($(this).find('.cart-list__items').hasClass('showed')) {
-//         $(this).find('.cart-list__items').removeClass('showed');
-//       } else {
-//         $('.cart-list__items').removeClass('showed');
-//         $(this).find('.cart-list__items').addClass('showed');
-//       }
-//     });
-//   }
 
   // --- init
   const init = () => {
     handleMobileNav();
     handleScrollMobileMenu();
-    // handleClick();
   }
 
   // --- return

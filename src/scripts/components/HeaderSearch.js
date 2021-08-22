@@ -62,14 +62,13 @@ const HeaderSearch = (() => {
 
         });
 
-        $(_jsCartList).on('click', function(e){
+        $(_jsCartList).on('click', function(e) {
           e.stopPropagation();
         });
 
         $(window).on('click', function() {
           $('.js-cart-list').removeClass('showed');
-          // $('body').removeClass('show-nav');
-          // alert('berhasilllll...!!! selamat yaaa');
+          // console.log('berhasilllll...!!! selamat yaaa');
         });
 
 
