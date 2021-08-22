@@ -12,10 +12,7 @@ import {
   Tabs,
   CardProduct,
   WindowResize,
-  Templates,
-  TemplateBanner,
   Footer,
-  BlogBanner,
   Validation,
   HeaderSearch,
   SaleCarousel,
@@ -54,10 +51,7 @@ const App = (() => {
       HeroBanner.init();
       CardProduct.init();
       Tabs.init();
-      Templates.init();
-      TemplateBanner.init();
       Footer.init();
-      BlogBanner.init();
       Validation.init();
       HeaderSearch.init();
       Contact.init();
