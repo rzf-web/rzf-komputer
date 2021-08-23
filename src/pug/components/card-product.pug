@@ -1,0 +1,15 @@
+//-------------------------------------------------------------------------------
+  @name: Components Product Card
+  -------------------------------------------------------------------------------//
+
+// best-product-item
+.best-product__card
+  .best-product__card__box
+    .best-product__card__img
+      ='\n'
+      img.best-product__card__img__el(src='assets/img/dummy/'+data.img alt=data.title)/
+    .best-product__card__txt
+      h3.best-product__card__title !{data.title}
+      p.best-product__card__desc !{data.desc}
+      span.best-product__card__percentage !{data.percentage}
+='\n'
