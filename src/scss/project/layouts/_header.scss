@@ -203,9 +203,6 @@
     margin-bottom: 0;
     height: 64px;
     visibility: visible;
-    @include medium {
-      margin-bottom: 32px;
-    }
     @include small {
       height: 100%;
     }

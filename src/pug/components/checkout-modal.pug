@@ -1,0 +1,48 @@
+//-------------------------------------------------------------------------------
+  @name: Popup Subscribe
+  -------------------------------------------------------------------------------//
+
+// Popup Subscribe
+.rzfk-checkout__popup
+  .rzfk-checkout__popup__container
+    .rzfk-checkout__popup__box
+      .rzfk-checkout__popup__content
+        button.rzfk-checkout__popup__hide.js-hide-subscribe(type='button') Close
+        .rzfk-checkout__popup__form
+          p.rzfk-checkout__popup__form__info Join 
+            b 389 
+            | Others
+          h3.rzfk-checkout__popup__form__title Stay Updated
+          .checkout__form
+        form(action='#' method='POST' autocomplete='off')
+          h3.checkout__form-title Form Checkout
+          .form__control
+            ='\n'
+            label.form__label(for='name') Nama
+            ='\n'
+            input.form__input(type='text' id='name' name='name' placeholder="Masukkan Nama" data-target="alertName" required)/
+            p(class="form__alert" id="alertName" data-req="Nama tidak boleh kosong")
+          ='\n'
+          .form__control
+            ='\n'
+            label.form__label(for='email') Email
+            ='\n'
+            input.form__input(type='text' id='email' name='email' placeholder="Masukkan Email" data-target="alertEmail" required)/
+            p(class="form__alert" id="alertEmail" data-req="Email tidak boleh kosong" data-invalid-email="Masukkan email yang valid")
+            ='\n'
+          .form__control
+            ='\n'
+            label.form__label(for='phone') Nomor Telepon
+            ='\n'
+            input.form__input(id="phone" name='phone' placeholder='Masukkan Nomor' data-target="alertPhone" required)
+            p(class="form__alert" id="alertPhone" data-req="Nomor tidak boleh kosong" data-invalid-phone="Masukkan Nomor yang valid")
+            ='\n'
+          .form__control
+            ='\n'
+            label.form__label(for='address') Alamat Rumah/Kantor
+            ='\n'
+            textarea.form__input(id="address" name='address' placeholder='Masukkan Alamat' data-target="alertAddress" rows='5' required)
+            p(class="form__alert" id="alertAddress" data-req="Alamat tidak boleh kosong")
+            ='\n'
+='\n'
+// End Popup Subscribe

@@ -3,13 +3,13 @@
    ========================================================================== */
 
 .cart {
-   padding: 120px 0;
+   padding: 120px 0 48px;
    background-color: color(white);
-   @include large {
-      padding: 88px 0;
-   }
    @include medium {
-      padding: 64px 0;
+      padding: 48px 0;
+   }
+   @include extra-small {
+      padding: 24px 0;
    }
    &__wrapper {
 
@@ -18,10 +18,12 @@
    &__table,
    tr {
       width: 100%;
-      padding-top: 30px;
-      padding-bottom: 30px;
-      vertical-align: middle;
-      border: none;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin-bottom: 24px;
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: normal;
       td {
          padding: 20px 0;
          border-bottom: solid 1px color(grey, 6);
@@ -85,12 +87,11 @@
          position: relative;
       }
       &__input-qty {
-         width: 10%;
+         width: 38px;
          height: 40px;
          padding: 8px 6px;
          outline: 0;
          border: solid 1px color(grey, 5);
-         margin-right: 8px;
          text-align: center;
          border-radius: 8px;
       }
@@ -135,15 +136,15 @@
 
    &__summary {
       float: left;
-      padding-left: 40px;
       width: 50%;
+      padding: 24px 32px;
       @include small {
          width: 100%;
          padding: 32px 0;
       }
    }
    &__box {
-      padding: 12px 24px;
+      padding: 32px;
       background-color: color(green, 3);
       text-align: left;
       border-radius: 8px;

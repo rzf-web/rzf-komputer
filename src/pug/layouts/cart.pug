@@ -31,28 +31,28 @@
               td
                 .cart__media__product-count
                   ='\n'
-                  input.cart__media__input-qty(type='number' name='cart' id='quantity' max-length='12' title='quantity' value='1' min='1')/
                   ='\n'
                   button.cart__media__btn-chevron-down(type='button')
                     ='\n'
-                    i.rzfkomputer-chevron-down
+                    i.rzfkomputer-minus
                     ='\n'
+                  input.cart__media__input-qty(type='number' name='cart' id='quantity' max-length='12' title='quantity' value='1' min='1')/
                   ='\n'
                   button.cart__media__btn-chevron-up(type='button')
                     ='\n'
-                    i.rzfkomputer-chevron-up
+                    i.rzfkomputer-add
                     ='\n'
             tr
               td
                 p.cart__media__total Order Total :
               td
                 p.cart__media__price Rp 5.400.000-,
-              td.cart__button
-                ='\n'
-                button.btn.btn--primary.btn--update(type='button' title='Update')
-                  ='\n'
-                  i.rzfkomputer-update
-                  ='\n'
+              //- td.cart__button
+              //-   ='\n'
+                //- button.btn.btn--primary.btn--update(type='button' title='Update')
+                //-   ='\n'
+                //-   i.rzfkomputer-update
+                //-   ='\n'
 //checkout-form
 .checkout
   .container
@@ -88,9 +88,7 @@
             textarea.form__input(id="address" name='address' placeholder='Masukkan Alamat' data-target="alertAddress" rows='5' required)
             p(class="form__alert" id="alertAddress" data-req="Alamat tidak boleh kosong")
             ='\n'
-          .form__control
-            button.btn.btn--block.btn--primary(type='submit')
-              | Pesan Sekarang
+
       .checkout__summary
         .checkout__box
           h3.checkout__title Pesanan Anda
@@ -109,3 +107,5 @@
                 th Total :
                 td.checkout__table-count
                 td.checkout__table-price Rp 5.400.000-,
+          button.btn.btn--block.btn--primary(type='submit')
+            | Pesan Sekarang
