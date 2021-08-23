@@ -3,7 +3,6 @@
   position: relative;
   text-align: center;
   overflow: hidden;
-  // padding: 144px 0 96px;
   padding: 64px;
   font-size: 0;
   @include large {
@@ -16,18 +15,15 @@
     padding: 80px 0 44px;
   }
   @include extra-small {
-    padding: 72px 0 40px;
+    padding: 48px 0 40px;
   }
-  // &__head {
-  //   margin-bottom: 54px;
-  //   @include medium {
-  //     margin-bottom: 40px;
-  //   }
-  // }
+  &__head {
+    
+  }
   &__body {
     margin-right: -18px;
     margin-left: -18px;
-    margin-bottom: 54px;
+    margin-bottom: 24px;
     position: relative;
     @include extra-small {
       margin-left: -24px;
@@ -47,6 +43,8 @@
     padding: 18px;
     @include medium {
       width: 50%;
+    padding: 0 24px 0;
+      padding: 18px;
     }
     @include small {
       width: 100%;
@@ -59,6 +57,36 @@
     }
     @include retina {
       max-width: 240px;
+    }
+    &__title {
+      @include font-size(18);
+      font-weight: fw(semi-bold);
+      @include multiline-ellipsis(2);
+      @include small {
+        white-space: normal;
+      }
+    }
+    &__percentage, &__priceCarret {
+      margin-bottom: 8px;
+    }
+    &__percentage {
+      @include font-size(16);
+      font-weight: fw(semi-bold);
+      background-color: color(green, 3);
+      color: color(green, 1);
+      margin-right: 12px;
+      display: inline-block;
+      width: 40px;
+      text-align: center;
+    }
+    &__price-carret {
+      @include font-size(14);
+      text-decoration: line-through;
+    }
+    &__price-product {
+      @include font-size(20);
+      font-weight: fw(semi-bold);
+      margin: 0;
     }
   }
 }

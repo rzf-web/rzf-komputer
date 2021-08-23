@@ -24,6 +24,9 @@
       $dc: &;
       display: inline-block;
       width: 55%;
+      &::last-child {
+        margin-right: 0;
+      }
       @include small {
          width: 100%;
       }
@@ -37,7 +40,7 @@
       &:nth-child(3n-2) {
         width: 44%;
         @include small {
-         width: 85%;
+         width: 100%;
         }
       }
       &:nth-child(3n+5) {
@@ -56,7 +59,7 @@
         }
         @include small {
           height: 240px;
-          margin: 0 12px 0 0;
+          margin: 0 8px;
         }
       }
 
