@@ -1,6 +1,5 @@
 .best-product {
   $bp: &;
-  position: relative;
   text-align: center;
   overflow: hidden;
   padding: 64px;
@@ -43,7 +42,7 @@
     padding: 18px;
     @include medium {
       width: 50%;
-    padding: 0 24px 0;
+      padding: 0 24px 0;
       padding: 18px;
     }
     @include small {
@@ -54,6 +53,7 @@
       display: inline-block;
       vertical-align: top;
       max-width: 280px;
+      padding: 0 24px;
     }
     @include retina {
       max-width: 240px;
@@ -61,8 +61,9 @@
     &__title {
       @include font-size(18);
       font-weight: fw(semi-bold);
-      @include multiline-ellipsis(2);
-      @include small {
+      @include multiline-ellipsis(1);
+      transition: all 250ms ease;
+      @include medium {
         white-space: normal;
       }
     }
@@ -87,6 +88,9 @@
       @include font-size(20);
       font-weight: fw(semi-bold);
       margin: 0;
+    }
+    &:nth-child(4n - 2) {
+      clear: none;
     }
   }
 }

@@ -2,20 +2,25 @@
   $sc: &;
   &:hover #{$sc}__box {
     @include shadow(14);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     &:hover #{$sc}__img__el {
       transform: translateY(-4px);
     }
+    &:hover #{$sc}__title {
+      color: color(green, 1);
+    }
   }
   &__box {
-    @include shadow(10);
+    position: relative;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     min-height: 400px;
     transition: all .4s ease;
     border-radius: 8px;
     overflow: hidden;
-    position: relative;
     background-color: color(white);
-    @include large {
-      min-height: 340px;
+    @include remove-tap-highlight;
+    @include medium {
+      min-height: 460px;
     }
     @include small {
       min-height: 380px;
@@ -29,6 +34,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 2;
     text-decoration: none;
   }
   &__img {
