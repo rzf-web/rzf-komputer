@@ -38,11 +38,6 @@
     margin-left: -24px;
     margin-right: -24px;
     @include clearfix;
-    padding: 24px 0;
-    @include medium {
-      margin-left: -16px;
-      margin-right: -16px;
-    }
   }
 
   &__btn {
