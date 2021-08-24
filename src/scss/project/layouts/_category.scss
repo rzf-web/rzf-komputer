@@ -5,7 +5,6 @@
 .c-p {
   padding: 56px 0;
   $temp: &;
-
   &__head {
     position: relative;
     text-align: center;
@@ -39,13 +38,10 @@
     margin-left: -24px;
     margin-right: -24px;
     @include clearfix;
+    padding: 24px 0;
     @include medium {
       margin-left: -16px;
       margin-right: -16px;
-    }
-    @include small {
-      margin-left: 0;
-      margin-right: 0;
     }
   }
 
@@ -71,7 +67,7 @@
 
     &__text {
       @include font-size(18);
-      font-weight: fw(bold);
+      font-weight: fw(semi-bold);
       color: color(green, 1);
       margin-bottom: 0;
       transition: all 350ms ease;

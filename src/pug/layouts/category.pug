@@ -2,8 +2,8 @@
   @name: Category
   -------------------------------------------------------------------------------//
 
-// Category
-.card-product.c-p.c-p__tab.js-c-p
+// category
+.c-p.c-p__tab.card-product.js-c-p
   .container
     .c-p__head
       h2.text-title !{templatesData.title}
@@ -15,7 +15,7 @@
     .c-p__content
       each valTabsContent, indexContent in templatesData.tabs
         .c-p__tab__pane(data-pane=valTabsContent.name.replace(/\s+/g, '-').toLowerCase(), class=(indexContent === 0 ? 'c-p__tab__pane--active' : '' ))
-          .c-p__wrapper
+          .c-p__wrapper.card-product__body
             each valTabsItem in valTabsContent.list
               -
                 data = valTabsItem
