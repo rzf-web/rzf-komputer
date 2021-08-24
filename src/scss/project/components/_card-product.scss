@@ -41,9 +41,6 @@
     padding-bottom: 80%;
     margin-bottom: 24px;
     position: relative;
-    @include small {
-      height: 94px;
-    }
     &__el {
       position: absolute;
       max-height: 100%;
