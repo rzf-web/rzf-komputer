@@ -1,5 +1,5 @@
-.best-product {
-  $bp: &;
+.card-product {
+  $np: &;
   text-align: center;
   overflow: hidden;
   padding: 64px;
@@ -36,7 +36,7 @@
     @include clearfix;
     padding: 24px 0;
   }
-  #{$bp}__card {
+  #{$np}__card {
     float: left;
     width: 25%;
     padding: 18px;
@@ -88,9 +88,6 @@
       @include font-size(20);
       font-weight: fw(semi-bold);
       margin: 0;
-    }
-    &:nth-child(4n - 2) {
-      clear: none;
     }
   }
 }

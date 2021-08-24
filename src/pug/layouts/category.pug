@@ -1,0 +1,27 @@
+//-------------------------------------------------------------------------------
+  @name: Category
+  -------------------------------------------------------------------------------//
+
+// Category
+.card-product.c-p.c-p__tab.js-c-p
+  .container
+    .c-p__head
+      h2.text-title !{templatesData.title}
+      .c-p__select.js-c-p-select
+        p.c-p__select__text !{templatesData.tabs[0].name}
+      ul.c-p__tab__control
+        each valTabsControl, indexControl in templatesData.tabs
+          li.c-p__tab__control__item(data-target=valTabsControl.name.replace(/\s+/g, '-').toLowerCase(), class=(indexControl === 0 ? 'c-p__tab__control__item--active' : '' )) !{valTabsControl.name}
+    .c-p__content
+      each valTabsContent, indexContent in templatesData.tabs
+        .c-p__tab__pane(data-pane=valTabsContent.name.replace(/\s+/g, '-').toLowerCase(), class=(indexContent === 0 ? 'c-p__tab__pane--active' : '' ))
+          .c-p__wrapper
+            each valTabsItem in valTabsContent.list
+              -
+                data = valTabsItem
+              include ../components/card-product.pug
+          .c-p__btn
+            if templatesData.btn !== undefined
+              ='\n'
+              a.btn.btn--secondary(href=templatesData.btn.to) !{templatesData.btn.text}
+='\n'

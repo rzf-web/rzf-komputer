@@ -1,18 +1,18 @@
 //-------------------------------------------------------------------------------
-  @name: Best Product
+  @name: New Product
   -------------------------------------------------------------------------------//
-//best-product
-.best-product
+// card-product
+.card-product
   .container
-    .best-product__head
+    .card-product__head
       h3.text-title !{data.title}
-    .best-product__body
-      .best-product__list
+    .card-product__body
+      .card-product__list
         each val in data.list
           -
             data = val
           include ../components/card-product.pug
-    .best-product__footer
+    .card-product__footer
       ='\n'
       a.btn.btn--secondary(href='product.html') Lihat Selengkapnya
 ='\n'

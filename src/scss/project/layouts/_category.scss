@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Category
+   ========================================================================== */
+
+.c-p {
+  padding: 56px 0;
+  $temp: &;
+
+  &__head {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 8px;
+    @include large {
+      margin-bottom: 16px;
+    }
+    @include medium {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    @include large {
+      margin-bottom: 32px;
+    }
+    @include medium {
+      margin-bottom: 24px;
+      @include font-size(24);
+    }
+  }
+
+  &__content {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__wrapper {
+    margin-left: -24px;
+    margin-right: -24px;
+    @include clearfix;
+    @include medium {
+      margin-left: -16px;
+      margin-right: -16px;
+    }
+    @include small {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__btn {
+    @include large {
+      margin-top: 16px;
+    }
+    @include medium {
+      margin-top: 24px;
+    }
+  }
+
+  &__select {
+    display: none;
+
+    @include small {
+      position: relative;
+      display: inline-block;
+      width: 80%;
+      padding: 12px;
+      border-bottom: 1px solid color(green, 1);
+    }
+
+    &__text {
+      @include font-size(18);
+      font-weight: fw(bold);
+      color: color(green, 1);
+      margin-bottom: 0;
+      transition: all 350ms ease;
+      @include small {
+        &::after {
+          font-family: 'rzfkomputer-icons';
+          content: "\e914";
+          position: absolute;
+          top: 12px;
+          right: 12px;
+          @include font-size(20);
+          transition: all 350ms ease;
+        }
+      }
+    }
+  }
+
+  &__tab {
+    &__control {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0;
+
+      @include small {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: zi(tab-control);
+        margin: 8px 0 0;
+        background-color: color(white);
+        border-radius: 8px;
+        max-height: 185px;
+        padding: 16px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        max-width: 100%;
+        white-space: nowrap;
+        @include shadow(16);
+        @include scroll(Y, touch, hide);
+        transition: all 250ms ease 100ms;
+      }
+
+      &__item {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        @include font-size(20);
+        font-weight: fw(regular);
+        padding: 8px 0;
+        color: color(black, 3);
+        margin-right: 40px;
+        cursor: pointer;
+        user-select: none;
+        transition: color 300ms ease;
+        @include remove-tap-highlight;
+
+        @include small {
+          display: block;
+          width: 100%;
+          padding: 12px 0 6px;
+          @include font-size(16);
+        }
+
+        &:hover:not(.c-p__tab__control__item--active) {
+          color: color(black, 1);
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: zi(tab-control-item-before);
+          width: 100%;
+          height: 2px;
+          background-color: color(green, 1);
+          transform: scaleX(0);
+          transform-origin: right center;
+          transition: all 300ms ease;
+
+          @include small {
+            content: none;
+            display: none;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &--active {
+          color: color(green, 1);
+          &::after {
+            transform: none;
+            transform-origin: left center;
+          }
+        }
+
+        &--active ~ .c-p__tab__control__item {
+          &::after {
+            transform-origin: left center;
+          }
+        }
+      }
+    }
+
+
+    &__pane {
+      display: none;
+
+      &--active {
+        display: block;
+        animation: show-pane 400ms ease-in-out 100ms both;
+      }
+      @keyframes show-pane {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &--active {
+    #{$temp} {
+      &__tab {
+        &__control {
+          @include small {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+          }
+        }
+      }
+
+      &__select {
+        &__text {
+          @include small {
+            &::after {
+              transform: rotateX(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

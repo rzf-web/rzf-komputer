@@ -17,7 +17,9 @@ import {
   HeaderSearch,
   SaleCarousel,
   Contact,
-  Checkout
+  Checkout,
+  Category
+
 } from 'components';
 
 // --- App
@@ -57,6 +59,7 @@ const App = (() => {
       HeaderSearch.init();
       Contact.init();
       Checkout.init();
+      Category.init();
 
     })(jQuery);
   }

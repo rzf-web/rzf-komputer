@@ -1,12 +1,12 @@
-.best-product__card {
-  $sc: &;
-  &:hover #{$sc}__box {
+.card-product__card {
+  $npc: &;
+  &:hover #{$npc}__box {
     @include shadow(14);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    &:hover #{$sc}__img__el {
+    &:hover #{$npc}__img__el {
       transform: translateY(-4px);
     }
-    &:hover #{$sc}__title {
+    &:hover #{$npc}__title {
       color: color(green, 1);
     }
   }
