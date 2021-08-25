@@ -38,7 +38,7 @@
   }
   #{$cp}__card {
     float: left;
-    width: 25%;
+    width: 33%;
     padding: 18px;
     @include medium {
       width: 50%;
@@ -50,10 +50,7 @@
       width: 100%;
     }
     @include extra-small {
-      float: none;
-      display: inline-block;
-      vertical-align: top;
-      max-width: 280px;
+      width: 50%;
     }
     @include retina {
       max-width: 240px;
@@ -66,9 +63,15 @@
       @include medium {
         white-space: normal;
       }
+      @include small {
+        @include font-size(14);
+      }
     }
     &__percentage, &__priceCarret {
       margin-bottom: 8px;
+      @include small {
+        margin: 0;
+      }
     }
     &__percentage {
       @include font-size(16);
@@ -80,15 +83,25 @@
       display: inline-block;
       width: 40px;
       text-align: center;
+      @include small {
+        @include font-size(14);
+        margin-right: 4px;
+      }
     }
     &__price-carret {
       @include font-size(14);
       text-decoration: line-through;
+      @include small {
+        @include font-size(10);
+      }
     }
     &__price-product {
       @include font-size(20);
       font-weight: fw(semi-bold);
       margin: 0;
+      @include small {
+        @include font-size(16);
+      }
     }
   }
 }

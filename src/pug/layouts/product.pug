@@ -1,0 +1,12 @@
+//-------------------------------------------------------------------------------
+  @name: Product Page
+  -------------------------------------------------------------------------------//
+
+//product
+.card-product(class=(navActive == 'produk' ? 'product' : ''))
+  .container
+    .product__wrapper
+      each val in dataProduct.list
+        -
+          data = val
+        include ../components/card-product.pug

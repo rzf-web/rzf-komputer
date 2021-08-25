@@ -13,17 +13,23 @@
   &__box {
     position: relative;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-    min-height: 400px;
+    min-height: 440px;
     transition: all .4s ease;
     border-radius: 8px;
     overflow: hidden;
     background-color: color(white);
     @include remove-tap-highlight;
+    @include large {
+      min-height: 320px;
+    }
     @include medium {
-      min-height: 460px;
+      min-height: 320px;
     }
     @include small {
       min-height: 380px;
+    }
+    @include extra-small {
+      min-height: 240px;
     }
   }
   &__link {
@@ -38,8 +44,7 @@
     text-decoration: none;
   }
   &__img {
-    padding-bottom: 80%;
-    margin-bottom: 24px;
+    padding-bottom: 78%;
     position: relative;
     &__el {
       position: absolute;
@@ -54,5 +59,8 @@
   &__txt {
     text-align: left;
     padding: 24px;
+    @include small {
+      padding: 12px;
+    }
   }
 }

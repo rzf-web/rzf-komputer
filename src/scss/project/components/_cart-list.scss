@@ -22,6 +22,7 @@
     transition: all 350ms ease;
     opacity: 0;
     visibility: hidden;
+    @include scroll(y, touch, hide);
     @include extra-small {
       width: 90%;
     }

@@ -24,6 +24,7 @@
       $dc: &;
       display: inline-block;
       width: 55%;
+      @include remove-tap-highlight;
       &::last-child {
         margin-right: 0;
       }
