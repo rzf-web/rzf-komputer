@@ -1,0 +1,21 @@
+//-------------------------------------------------------------------------------
+  @name: Related Product
+  -------------------------------------------------------------------------------//
+
+// card-product
+.card-product.product
+  .container
+    .card-product__head
+      h3.text-title !{dataRelated.title}
+    .card-product__body
+      .card-product__list
+        each val in dataRelated.list
+          -
+            data = val
+          include ../components/card-product.pug
+    .card-product__footer
+      ='\n'
+      if dataRelated.button.status
+        a.btn.btn--secondary(href=dataRelated.button.to)
+          | !{dataRelated.button.text}
+='\n'

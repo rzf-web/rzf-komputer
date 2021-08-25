@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Layouts Persuasive
+   ========================================================================== */
+
+.persuasive {
+   position: relative;
+   &__wrapper {
+      display: table;
+   }
+   &__img {
+      float: left;
+      width: 100%;
+      &-el {
+         display: block;
+      }
+      @include extra-small {
+         display: none;
+      }
+   }
+   &__txt {
+      // float: left;
+      // width: 50%;
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 48px;
+      @include small {
+         padding: 32px 0;
+      }
+      &-title,
+      &-desc {
+         text-transform: uppercase;
+      }
+      &-title {
+         @include font-size(32);
+         margin-bottom: 24px;
+      }
+      &-desc {
+         @include font-size(16);
+         margin-bottom: 32px;
+      }
+   }
+   &__vertical-txt span {
+      text-orientation: 150deg;
+      writing-mode: vertical-lr;
+      // transform: rotate(180deg);
+      transform: rotate(-180deg);
+      font-size: 70px;
+      font-weight: fw(semi-bold);
+      left: -780px;
+      position: absolute;
+      text-transform: uppercase;
+      -webkit-text-stroke: 1px color(green, 1);
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      opacity: 0.4;
+      height: auto;
+      z-index: 0;
+   }
+}
+

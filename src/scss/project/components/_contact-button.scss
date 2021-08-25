@@ -1,9 +1,9 @@
 /* ==========================================================================
-   Components Category Card
+   Components Contact Button
 ========================================================================== */
 
-.rzfk-contact {
-  $rzfk: &;
+.floating-chat {
+  $fc: &;
   position: fixed;
   bottom: 24px;
   right: 24px;
@@ -59,7 +59,7 @@
       right: 8px;
       bottom: 64px;
     }
-}
+  }
 
   &__item {
     text-align: center;
@@ -91,11 +91,11 @@
     }
   }
   &--show {
-    #{$rzfk}__btn {
+    #{$fc}__btn {
       background-color: color(whatsapp);
       color: color(white);
     }
-    #{$rzfk}__menu {
+    #{$fc}__menu {
       opacity: 1;
       visibility: visible;
       transform: none;

@@ -1,42 +1,31 @@
 /* ------------------------------------------------------------------------------
-@name: Contact
-@description: Contact
+@name: Contact Button
+@description: Contact Button
 --------------------------------------------------------------------------------- */
 
 const Contact = (() => {
 
-  // - handleShowAlert
-  const handleShowAlert = () => {
-    if ($('body').find('.alert').hasClass('js-alert')) {
-      $('body').addClass('show-alert');
-      setTimeout( () => {
-        $('body').removeClass('show-alert');
-      }, 4000);
-    }
-  }
-
   const handleDropdown = () => {
     $(window).on('click', function() {
-      $('.js-contact-dd').removeClass('rzfk-contact--show');
+      $('.js-contact-dd').removeClass('floating-chat--show');
     });
 
-    $('.rzfk-contact').on('click', function(e) {
+    $('.floating-chat').on('click', function(e) {
       e.stopPropagation();
     });
 
-    $('.js-contact-dd .rzfk-contact__btn').on('click', function() {
-      if ($(this).parents('.js-contact-dd').hasClass('rzfk-contact--show')) {
-        $(this).parents('.js-contact-dd').removeClass('rzfk-contact--show');
+    $('.js-contact-dd .floating-chat__btn').on('click', function() {
+      if ($(this).parents('.js-contact-dd').hasClass('floating-chat--show')) {
+        $(this).parents('.js-contact-dd').removeClass('floating-chat--show');
       } else {
-        $('.js-contact-dd').removeClass('rzfk-contact--show');
-        $(this).parents('.js-contact-dd').addClass('rzfk-contact--show');
+        $('.js-contact-dd').removeClass('floating-chat--show');
+        $(this).parents('.js-contact-dd').addClass('floating-chat--show');
       }
     });
   } 
 
   // - init
   const init = () => {
-    handleShowAlert();
     handleDropdown();
   }
 

@@ -1,0 +1,12 @@
+//-------------------------------------------------------------------------------
+  @name: Promo Page
+  -------------------------------------------------------------------------------//
+
+//promo
+.card-product(class=(navActive == 'promo' ? 'Promo' : ''))
+  .container
+    .product__wrapper
+      each val in dataPromo.list
+        -
+          data = val
+        include ../components/card-product.pug

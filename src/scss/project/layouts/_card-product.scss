@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Components Card Product
+   ========================================================================== */
+   
 .card-product {
   $cp: &;
   text-align: center;
@@ -31,21 +35,15 @@
   }
   #{$cp}__card {
     float: left;
-    width: 33%;
+    width: 25%;
     padding: 18px;
     @include medium {
       width: 50%;
       padding: 0;
       padding: 12px;
     }
-    @include small {
-      width: 100%;
-    }
     @include extra-small {
       width: 50%;
-    }
-    @include retina {
-      max-width: 240px;
     }
     &__title {
       @include font-size(18);
