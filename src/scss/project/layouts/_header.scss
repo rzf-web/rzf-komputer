@@ -359,7 +359,8 @@
       z-index: zi(header-burger-menu);
       right: -12px;
       left: -12px;
-      top: 8px;
+      top: 12px;
+      @include remove-tap-highlight;
       &__bar {
         transition: all .3s ease .6s;
         .show-nav & {
@@ -405,7 +406,6 @@
     transition-delay: 450ms;
     @include medium {
       right: 44px;
-      top: 16px;
       font-size: 20px;
     }
     &:hover {
@@ -447,7 +447,6 @@
     }
     @include medium {
       right: 12px;
-      top: 24px;
     }
     &.showed {
       transition-delay: 00ms;

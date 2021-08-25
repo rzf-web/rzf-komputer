@@ -69,14 +69,17 @@
          cursor: pointer;
          border: 1px solid color(grey, 5);
          background-color: #fafafa;
+         border-radius: 8px;
       }
       &__quantity {
          outline: 0;
          border: none;
          padding: 8px;
+         margin: 0 6px;
          max-width: 44px;
          border: 1px solid color(grey, 5);
          text-align: center;
+         border-radius: 8px;
       }
       &__row {
          i.rzfkomputer-cart {
@@ -130,7 +133,7 @@
       &::after {
          content: '';
          position: absolute;
-         left: 28px;
+         left: 24px;
          right: 0;
          bottom: 0;
          transform: scale(0);
@@ -201,7 +204,7 @@
 
    table {
       width: 100%;
-      border-radius: 8px;
+      margin: 0;
    th,
    td {
       border: solid 1px color(grey, 5);

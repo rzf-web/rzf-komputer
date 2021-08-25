@@ -20,17 +20,10 @@
     
   }
   &__body {
-    margin-right: -18px;
-    margin-left: -18px;
+    margin-right: -12px;
+    margin-left: -12px;
     margin-bottom: 24px;
     position: relative;
-    @include extra-small {
-      margin-left: -24px;
-      margin-right: -24px;
-      white-space: nowrap;
-      @include scroll(x, no-touch, hide);
-      font-size: 0;
-    }
   }
   &__list {
     @include clearfix;
@@ -43,8 +36,7 @@
     @include medium {
       width: 50%;
       padding: 0;
-      padding-right: 24px;
-      padding: 18px;
+      padding: 12px;
     }
     @include small {
       width: 100%;
@@ -83,7 +75,7 @@
       display: inline-block;
       width: 40px;
       text-align: center;
-      @include small {
+      @include extra-small {
         @include font-size(14);
         margin-right: 4px;
       }
@@ -91,7 +83,7 @@
     &__price-carret {
       @include font-size(14);
       text-decoration: line-through;
-      @include small {
+      @include extra-small {
         @include font-size(10);
       }
     }
@@ -99,7 +91,7 @@
       @include font-size(20);
       font-weight: fw(semi-bold);
       margin: 0;
-      @include small {
+      @include extra-small {
         @include font-size(16);
       }
     }
