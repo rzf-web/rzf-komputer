@@ -4,6 +4,9 @@
 
 .persuasive {
    position: relative;
+   @include extra-small {
+      height: 320px;
+   }
    &__wrapper {
       display: table;
    }
@@ -25,6 +28,7 @@
       padding-left: 48px;
       @include small {
          padding: 32px 0;
+         vertical-align: top;
       }
       &-title,
       &-desc {
