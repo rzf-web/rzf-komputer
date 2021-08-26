@@ -7,6 +7,66 @@
       margin-left: -12px;
       margin-right: -12px;
    }
+   &__sorting {
+    background-color: color(green, 3);
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    border-radius: 8px;
+    &-select {
+      background-color: color(white);
+      position: relative;
+      padding: 8px 12px;
+      max-width: 160px;
+      margin-left: 24px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    &-title {
+      text-align: center;
+      color: black;
+      margin: 0;
+      @include font-size(14);
+      text-align: left;
+      &::after {
+        position: absolute;
+        content: '\e914';
+        font-family: rzfkomputer-icons;
+        @include font-size(18);
+        right: 8px;
+        top: 6px;
+      }
+    }
+    &-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      position: absolute;
+      z-index: 3;
+      padding: 16px 12px;
+      @include shadow(14);
+      min-width: 160px;
+      border-radius: 8px;
+      top: 48px;
+      left: 0;
+      background-color: color(white);
+      @include remove-tap-highlight;
+    }
+    &-item {
+      text-align: left;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: all 150ms ease;
+        @include font-size(14);
+      &:hover {
+        color: color(green, 1);
+      }
+    &:last-child {
+      margin-bottom: 0;
+      }
+    }
+  }
+
    .card-product__card {
       width: 25%;
       @include small {

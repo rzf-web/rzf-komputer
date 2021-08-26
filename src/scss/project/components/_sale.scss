@@ -6,16 +6,10 @@
    color: color(white);
    width: 50%;
    position: absolute;
-   left: 0;
+   left: 10%;
    top: 15%;
    z-index: 4;
-   padding: 120px;
-   @include mq(1400px) {
-      padding: 120px 0;
-   }
-   @include large {
-      padding: 120px 0;
-   }
+   transform: translate(0, 50%);
    @include medium {
       padding: 0 24px;
       width: 100%;

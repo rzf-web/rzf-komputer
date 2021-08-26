@@ -6,7 +6,16 @@
 .card-product(class=(navActive == 'produk' ? 'product' : ''))
   .container
     .product__wrapper
-      each val in dataProduct.list
-        -
-          data = val
-        include ../components/card-product.pug
+      .product__sorting
+        .product__sorting-select
+          p.product__sorting-title Kategori
+          ul.product__sorting-list
+            li.product__sorting-item(data-target='komputer') Komputer
+            li.product__sorting-item(data-target='laptop') Laptop
+            li.product__sorting-item(data-target='printer') Printer
+            li.product__sorting-item(data-target='lainnya') Lainnya
+      .product__section
+        each val in dataProduct.list
+          -
+            data = val
+          include ../components/card-product.pug
