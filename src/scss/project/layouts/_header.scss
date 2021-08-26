@@ -199,12 +199,13 @@
     $n: &;
     list-style: none;
     font-size: 0;
-    padding-left: 0;
     margin-bottom: 0;
     height: 70px;
+    padding: 20px 0;
     visibility: visible;
     @include small {
       height: 100%;
+      padding: 0;
     }
     &__item {
       display: inline-block;
@@ -317,10 +318,7 @@
     &__link {
       text-decoration: none;
       display: inline-block;
-      position: relative;
       transition: all .3s ease;
-      padding-top: 28px;
-      padding-bottom: 28px;
       @include font-size(12);
       color: color(black, 1);
       text-transform: uppercase;
@@ -328,8 +326,7 @@
       transition: all 350ms ease;
       @include remove-tap-highlight;
       @include medium {
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding: 8px 0;
         display: block;
       }
       &:hover {
@@ -340,7 +337,7 @@
         width: 100%;
         position: absolute;
         left: 0;
-        bottom: 26px;
+        bottom: 0;
         border-bottom: 1px solid color(green, 1);
         border-radius: 1px;
         transition: transform .45s ease;

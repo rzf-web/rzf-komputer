@@ -38,21 +38,57 @@
     }
   }
 
-  &__menu {
-    list-style: none;
-    padding: 6px;
-    margin: 0;
-    width: 160px;
-    overflow: hidden;
+  &__box {
     opacity: 0;
     visibility: hidden;
+    background-color: color(white);
+    @include shadow(14);
+    border-radius: 8px;
+    position: absolute;
+    width: 220px;
     position: absolute;
     bottom: 68px;
-    right: 10px;
-    border-radius: 4px;
+    right: 14px;
+    transform: scale(0.1);
+    transition: all 250ms ease;
+}
+
+  &__head {
+    background-color: color(whatsapp);
+    border-radius: 8px;
+    text-align: left;
+    padding: 8px 12px;
+  }
+
+  &__img {
+
+  }
+
+  &__txt {
+    &-title {
+      text-align: left;
+      @include font-size(14);
+      margin-bottom: 0;
+    }
+    &-desc {
+      text-align: left;
+      @include font-size(14);
+      margin-bottom: 8px;
+    }
+  }
+
+  &__body {
+    padding: 14px 12px;
+  }
+
+  &__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
     background-color: color(white);
-    @include shadow(10);
-    transform: translateY(16px);
     transition: all .4s ease;
     color: color(grey, 5);
     @include extra-small {
@@ -62,8 +98,10 @@
   }
 
   &__item {
-    text-align: center;
-    margin-bottom: 4px;
+    text-align: left;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background-color: color(grey, 4);
     &:last-child {
       margin-bottom: 0;
     }
@@ -79,10 +117,11 @@
     font-family: $font-main;
     @include font-size(14);
     transition: all .35s ease;
+    border-radius: 8px;
+    border-left: solid 3px color(whatsapp);
     &:hover {
       background-color: color(whatsapp);
       color: color(white);
-      border-radius: 4px;
     }
     &::before {
       content: '\e91e';
@@ -95,10 +134,15 @@
       background-color: color(whatsapp);
       color: color(white);
     }
-    #{$fc}__menu {
+    #{$fc}__box {
       opacity: 1;
       visibility: visible;
       transform: none;
+      transform: scale(1.1);
+      transition: all 250ms ease;
+      @include small {
+        transform: scale(1);
+      }
     }
   }
 }
