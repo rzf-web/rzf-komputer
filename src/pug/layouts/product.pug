@@ -6,7 +6,7 @@
 .card-product(class=(navActive == 'produk' ? 'product' : ''))
   .container
     .product__wrapper
-      .product__sorting
+      .product__sorting.js-sorting-dd
         .product__sorting-select
           p.product__sorting-title Kategori
           ul.product__sorting-list
@@ -14,6 +14,14 @@
             li.product__sorting-item(data-target='laptop') Laptop
             li.product__sorting-item(data-target='printer') Printer
             li.product__sorting-item(data-target='lainnya') Lainnya
+      //- .product__sorting__nav
+      //-   ul.product__sorting-pagination
+      //-     li.product__sorting-item
+      //-       a.product__sorting-link(href='#') 1
+      //-     li.product__sorting-item
+      //-       a.product__sorting-link(href='#') 2
+      //-     li.product__sorting-item
+      //-       a.product__sorting-link(href='#') 3
       .product__section
         each val in dataProduct.list
           -

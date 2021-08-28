@@ -11,11 +11,14 @@
    z-index: 4;
    transform: translate(0, 50%);
    @include medium {
-      padding: 0 24px;
+      padding: 86px 32px;
       width: 100%;
       left: 50%;
       right: 50%;
       transform: translate(-50%, -10%);
+   }
+   @include small {
+      padding: 48px 24px;
    }
    @include small {
       top: 15%;

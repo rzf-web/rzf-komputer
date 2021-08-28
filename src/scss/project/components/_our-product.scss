@@ -13,7 +13,7 @@
       @include clearfix;
       @include small {
         margin-left: -8px;
-        margin-right: -8px;
+        margin-right: -8px;   
       }
       @include mq(480px) {
         margin: 0;
@@ -25,6 +25,7 @@
       display: inline-block;
       width: 55%;
       @include remove-tap-highlight;
+      border-radius: 8px;
       &::last-child {
         margin-right: 0;
       }
@@ -55,6 +56,7 @@
         margin: 0 12px 24px;
         background-color: color(overlay);
         position: relative;
+        border-radius: 8px;
         @include medium {
           height: 200px;
         }

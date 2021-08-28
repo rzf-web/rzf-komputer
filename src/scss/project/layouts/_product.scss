@@ -2,17 +2,19 @@
    Layouts Product
    ========================================================================== */
 
-.product {
-   &__wrapper {
-      margin-left: -12px;
-      margin-right: -12px;
-   }
-   &__sorting {
+ .product {
+  $ps: &;
+  &__wrapper {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  &__sorting {
     background-color: color(green, 3);
-    width: 100%;
     padding: 20px 0;
     position: relative;
     border-radius: 8px;
+    margin: 0 12px;
+    @include clearfix;
     &-select {
       background-color: color(white);
       position: relative;
@@ -21,6 +23,7 @@
       margin-left: 24px;
       border-radius: 8px;
       cursor: pointer;
+      @include remove-tap-highlight;
     }
     &-title {
       text-align: center;
@@ -38,7 +41,6 @@
       }
     }
     &-list {
-      padding: 0;
       margin: 0;
       list-style: none;
       position: absolute;
@@ -51,79 +53,38 @@
       left: 0;
       background-color: color(white);
       @include remove-tap-highlight;
+      transition: all 150ms ease;
+      transform: scale(0.6);
+      visibility: hidden;
+      opacity: 0;
     }
     &-item {
       text-align: left;
       margin-bottom: 12px;
       cursor: pointer;
       transition: all 150ms ease;
-        @include font-size(14);
+      @include font-size(14);
       &:hover {
         color: color(green, 1);
       }
-    &:last-child {
-      margin-bottom: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &--show {
+     #{$ps}__sorting-list {
+      visibility: visible;
+      opacity: 1;
+      transform: none;
+      }
+      #{$ps}__sorting-select {
+        &-title {
+          &::after {
+            transform: rotateX(180deg);
+            background-color: red;
+          }
+        }
       }
     }
   }
-
-   .card-product__card {
-      width: 25%;
-      @include small {
-         width: 50%;
-      }
-      &__box {
-         @include small {
-            min-height: 240px;
-         }
-      }
-      &__title {
-      @include font-size(18);
-      font-weight: fw(semi-bold);
-      @include multiline-ellipsis(1);
-      transition: all 250ms ease;
-      @include medium {
-        white-space: normal;
-      }
-      @include small {
-        @include font-size(14);
-      }
-    }
-    &__percentage, &__priceCarret {
-      margin-bottom: 8px;
-      @include small {
-       margin: 0;
-    }
- }
-       &__percentage {
-         @include font-size(16);
-         font-weight: fw(semi-bold);
-         background-color: color(green, 3);
-         color: color(green, 1);
-         margin-right: 12px;
-         border-radius: 4px;
-         display: inline-block;
-         width: 40px;
-         text-align: center;
-         @include extra-small {
-           @include font-size(14);
-           margin-right: 4px;
-        }
-      }
-      &__price-carret {
-         @include font-size(14);
-         text-decoration: line-through;
-         @include extra-small {
-           @include font-size(10);
-        }
-      }
-      &__price-product {
-         @include font-size(20);
-         font-weight: fw(semi-bold);
-         margin: 0;
-         @include extra-small {
-           @include font-size(16);
-        }
-      }
-   }
 }

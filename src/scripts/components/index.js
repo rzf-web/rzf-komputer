@@ -13,8 +13,8 @@ import Footer from "./Footer";
 import Validation from "./Validation";
 import HeaderSearch from "./HeaderSearch";
 import Contact from "./Contact";
-import Checkout from "./Checkout";
 import Category from "./Category";
+import SortingCategory from "./SortingCategory";
 
 export {
   WindowScroll,
@@ -27,6 +27,6 @@ export {
   Validation,
   HeaderSearch,
   Contact,
-  Checkout,
-  Category
+  Category,
+  SortingCategory
 };

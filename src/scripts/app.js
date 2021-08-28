@@ -17,8 +17,8 @@ import {
   HeaderSearch,
   SaleCarousel,
   Contact,
-  Checkout,
-  Category
+  Category,
+  SortingCategory
 
 } from 'components';
 
@@ -58,8 +58,8 @@ const App = (() => {
       Validation.init();
       HeaderSearch.init();
       Contact.init();
-      Checkout.init();
       Category.init();
+      SortingCategory.init();
 
     })(jQuery);
   }
