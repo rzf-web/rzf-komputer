@@ -10,8 +10,8 @@
   width: 100%;
   position: absolute;
   left: 50%;
-  top: -50px;
-  height: 36px;
+  top: -55px;
+  height: 42px;
   transform: translateX(-50%);
   visibility: hidden;
   opacity: 0;
@@ -20,11 +20,10 @@
     opacity: 1;
     visibility: visible;
   }
-  @include small {
+  @include medium {
     position: absolute;
     z-index: 2;
-    top: -48px;
-    transform: translateX(-50%);
+    top: -50px;
   }
 }
 
