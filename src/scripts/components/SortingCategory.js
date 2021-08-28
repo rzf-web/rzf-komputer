@@ -3,7 +3,7 @@ const SortingCategory = (() => {
   // handleClick
   const handleDropdown = () => {
   $(window).on('click', function(){
-    $('.js-sorting-dd').removeClass('product__sorting--show');
+    $('.js-sorting-dd').removeClass('product__sorting--showed');
   });
 
   $('.product__sorting').on('click', function(e){
@@ -11,11 +11,11 @@ const SortingCategory = (() => {
   });
 
   $('.js-sorting-dd .product__sorting-select').on('click', function() {
-      if ($(this).parents('.js-sorting-dd').hasClass('product__sorting--show')) {
-        $(this).parents('.js-sorting-dd').removeClass('product__sorting--show');
+      if ($(this).parents('.js-sorting-dd').hasClass('product__sorting--showed')) {
+        $(this).parents('.js-sorting-dd').removeClass('product__sorting--showed');
       } else {
-        $('.js-sorting-dd').removeClass('product__sorting--show');
-        $(this).parents('.js-sorting-dd').addClass('product__sorting--show');
+        $('.js-sorting-dd').removeClass('product__sorting--showed');
+        $(this).parents('.js-sorting-dd').addClass('product__sorting--showed');
       }
     });
   }

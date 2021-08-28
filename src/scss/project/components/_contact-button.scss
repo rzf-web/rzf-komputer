@@ -60,10 +60,6 @@
     padding: 8px 12px;
   }
 
-  &__img {
-
-  }
-
   &__txt {
     &-title {
       text-align: left;
@@ -129,7 +125,7 @@
       padding-right: 6px;
     }
   }
-  &--show {
+  &--showed {
     #{$fc}__btn {
       background-color: color(whatsapp);
       color: color(white);
@@ -140,9 +136,6 @@
       transform: none;
       transform: scale(1.1);
       transition: all 250ms ease;
-      // @include small {
-        // transform: scale(1);
-      // }
     }
   }
 }

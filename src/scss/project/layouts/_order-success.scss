@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Layouts: Order Success
+   ========================================================================== */
+
+.order-success {
+   padding: 120px 0;
+   background-color: color(white);
+   @include medium {
+      padding: 60px 0;
+   }
+   &__invoice-info {
+      @include clearfix;
+      margin-left: -24px;
+      margin-right: -24px;
+   }
+   &__invoice-heading {
+      text-align: center;
+      margin-bottom: 32px;
+      @include font-size(24);
+      @include small {
+         @include font-size(20);
+      }
+   }
+   &__invoice-info {
+      padding: 24px 0;
+   }
+   &__invoice-list {
+      float: left;
+      width: 33%;
+      padding: 0 24px;
+      @include small {
+         width: 100%;
+         margin-bottom: 24px;
+      }
+   }
+   &__invoice-title {
+      @include font-size(20);
+      margin-bottom: 12px;
+      color: color(green, 1);
+      font-weight: fw(semi-bold);
+   }
+   p {
+      margin-bottom: 8px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+   &__action {
+      background-color: color(white);
+      padding: 24px 0;
+      text-align: center;
+      p {
+         margin-bottom: 24px;
+      }
+      &-transfer {
+         margin: 24px 0;
+         padding: 14px;
+         border: 2px dashed color(grey, 6);
+         display: table;
+         width: 100%;
+         text-align: center;
+      }
+
+      &-img {
+         width: 100%;
+      }
+      &-el {
+         display: block;
+         margin: 0 auto;
+         height: 160px;
+      }
+      &-txt {
+         p {
+            margin-bottom: 18px;
+            @include font-size(20);
+            font-weight: fw(semi-bold);
+            @include small {
+               @include font-size(16);
+            }
+         }
+      }
+   }
+   &__confirmation {
+      text-align: center;
+      padding: 24px 0 0;
+      p {
+         margin-bottom: 24px;
+      }
+   }
+}

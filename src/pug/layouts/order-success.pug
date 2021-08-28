@@ -1,0 +1,45 @@
+//-------------------------------------------------------------------------------
+  @name: Layouts Order Success
+  -------------------------------------------------------------------------------//
+
+//order-success
+.order-success
+  .container
+    .order-success__invoice
+      h3.order-success__invoice-heading
+        | Terima Kasih telah berbelanja di RZF Komputer. Pesanan Anda akan kami proses.
+      .order-success__invoice-info
+        .order-success__invoice-list
+          h3.order-success__invoice-title Dari
+          p RZF Komputer
+          hr
+          p Alamat: Jl. Raya Darma KM. 11 Dusun Gunungluhur Desa/Kec. Darma Kab. Kuningan
+          p No. Telepon: +62 8586 4772 039
+          p Email: rzfkomputer@gmail.com
+        .order-success__invoice-list
+          h3.order-success__invoice-title Tujuan
+          p Customer
+          hr
+          p Alamat: Jl. Raya Suci Desa Cidulang No. 01 Cikijing Kabupaten Majalengka 45466
+          p No. Telepon: +62 8572 1557 240
+          p Email: budidendi1234@@gmail.com
+        .order-success__invoice-list
+          h3.order-success__invoice-title Detail Pesanan
+          br
+          hr
+          p Order ID : 00002121
+          p Waktu Pemesanan: 2021-08-28
+          p Jumlah yang harus dibayar: Rp 5.400.000-,
+    .order-success__action
+      p Untuk menyelesaikan proses pemesanan, silakan transfer sesuai jumlah yang tertera di atas
+      .order-success__action-transfer
+        .order-success__action-img
+          img.order-success__action-el(src='assets/img/dummy/bri.png' alt='BRI Logo')/
+        .order-success__action-txt
+          p No. Rek: 427301006692531
+          p Atas Nama: Yudhi Heriyadi
+
+    .order-success__confirmation
+      p Jika telah melakukan transaksi pembayaran, klik tombol di bawah untuk konfirmasi pembayaran
+      a.btn.btn--primary.btn--confirmation(href='https://api.whatsapp.com/send?phone=6285864772042&text=Saya%20mau%20melakukan%20konfirmasi%20pembayaran.%0A%0ANama%20%3A%20Dendi Budiansyah%0ANama%20Usaha%20%3A%20Dendi Komputer%0AEmail%20%3A%20budidendi1234@gmail.com%0AAlamat%20%3A%20Jl. Raya Suci Desa Cidulang No. 01 Cikijing Kabupaten Majalengka 45466' target='_blank') 
+        | Konfirmasi Pembayaran

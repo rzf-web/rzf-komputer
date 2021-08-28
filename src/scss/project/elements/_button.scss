@@ -71,4 +71,13 @@
       padding: 10px;
     }
   }
+
+  &--confirmation {
+    min-width: 285px;
+    @include small {
+      &--confirmation {
+        width: 100%;
+      }
+    }
+  }
 }

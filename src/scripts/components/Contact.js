@@ -7,7 +7,7 @@ const Contact = (() => {
 
   const handleDropdown = () => {
     $(window).on('click', function() {
-      $('.js-contact-dd').removeClass('floating-chat--show');
+      $('.js-contact-dd').removeClass('floating-chat--showed');
     });
 
     $('.floating-chat').on('click', function(e) {
@@ -15,11 +15,11 @@ const Contact = (() => {
     });
 
     $('.js-contact-dd .floating-chat__btn').on('click', function() {
-      if ($(this).parents('.js-contact-dd').hasClass('floating-chat--show')) {
-        $(this).parents('.js-contact-dd').removeClass('floating-chat--show');
+      if ($(this).parents('.js-contact-dd').hasClass('floating-chat--showed')) {
+        $(this).parents('.js-contact-dd').removeClass('floating-chat--showed');
       } else {
-        $('.js-contact-dd').removeClass('floating-chat--show');
-        $(this).parents('.js-contact-dd').addClass('floating-chat--show');
+        $('.js-contact-dd').removeClass('floating-chat--showed');
+        $(this).parents('.js-contact-dd').addClass('floating-chat--showed');
       }
     });
   } 

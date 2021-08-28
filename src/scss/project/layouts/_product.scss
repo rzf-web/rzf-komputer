@@ -13,7 +13,7 @@
     padding: 20px 0;
     position: relative;
     border-radius: 8px;
-    margin: 0 12px;
+    margin: 0 12px 24px;
     @include clearfix;
     &-select {
       background-color: color(white);
@@ -71,7 +71,7 @@
         margin-bottom: 0;
       }
     }
-    &--show {
+    &--showed {
      #{$ps}__sorting-list {
       visibility: visible;
       opacity: 1;
