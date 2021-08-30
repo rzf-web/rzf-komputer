@@ -9,8 +9,8 @@
     position: absolute;
     z-index: 5;
     right: 0;
-    top: 34px;
-    width: 40%;
+    top: 22px;
+    width: 35%;
     padding: 18px;
     border-radius: 8px;
     overflow-y: scroll;
@@ -23,7 +23,12 @@
     opacity: 0;
     visibility: hidden;
     @include scroll(y, touch, hide);
+    @include medium {
+      width: 50%;
+      top: 42px;
+    }
     @include extra-small {
+      top: 40px;
       width: 90%;
     }
     @include retina {
@@ -58,18 +63,22 @@
       color: color(green, 1);
       margin-bottom: 8px;
       @include font-size(14);
+      @include small {
+        @include font-size(12);
+        margin-bottom: 4px;
+      }
     }
     &-price {
       margin-bottom: 8px;
       @include small {
-        @include font-size(14);
+        @include font-size(12);
         margin-bottom: 4px;
       }
     }
     &-count {
       margin: 0;
       @include small {
-        @include font-size(14);
+        @include font-size(12);
       }
     }
   }
@@ -93,11 +102,13 @@
   @include clearfix;
   &-name {
     float: left;
+    @include font-size(16);
   }
   &-price {
     font-family: source sans pro;
     float: right;
     margin: 0;
+    @include font-size(16);
   }
 }
 
