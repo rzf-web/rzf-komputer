@@ -6,7 +6,9 @@
 .features__card {
   $fc: &;
   &:hover #{$fc}__box {
-    color: color(green, 1);
+    #{$fc}__title {
+      color: color(green, 1);
+      }
     &:hover #{$fc}__img-el {
       transform: translateY(-6px);
     }
@@ -48,6 +50,7 @@
     @include font-size(18);
     font-weight: fw(bold);
     text-transform: uppercase;
+    transition: all 150ms ease;
     @include large {
       margin-bottom: 16px;
     }
