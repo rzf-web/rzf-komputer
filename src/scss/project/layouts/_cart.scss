@@ -73,15 +73,28 @@
             display: none;
          }
       }
-      &__price, 
+      &__price {
+         margin-bottom: 0;
+         @include extra-small {
+            @include font-size(14);
+            padding-left: 12px;
+         }
+      }
       &__total {
          margin-bottom: 0;
          @include font-size(16);
          font-weight: fw(regular);
+         @include extra-small {
+            @include font-size(14);
+         }
       }
       &__product-count {
          padding: 12px 0;
          position: relative;
+         @include extra-small {
+            max-width: 40px;
+            padding-left: 24px;
+         }
       }
       &__input-qty {
          width: 38px;
@@ -91,6 +104,16 @@
          border: solid 1px color(grey, 5);
          text-align: center;
          border-radius: 8px;
+         transition: all 350ms ease;
+         @include extra-small {
+            width: 30px;
+            height: 30px;
+            padding: 4px;
+            @include font-size(12);
+         }
+         &:hover {
+            border-color: color(green, 1);
+         }
       }
       &__btn-chevron-down, &__btn-chevron-up {
          width: 40px;
@@ -99,6 +122,12 @@
          outline: 0;
          margin-right: 4px;
          border-radius: 8px;
+         @include extra-small {
+            width: 30px;
+            margin: 8px 0;
+            height: 30px;
+            @include font-size(12);
+         }
          &:last-child {
             margin-right: 0;
          }
@@ -125,7 +154,7 @@
          width: 100%;
       }
       &-title {
-         @include font-size(20);
+         @include font-size(18);
          margin-bottom: 2.4rem;
          text-transform: uppercase;
       }
@@ -147,7 +176,7 @@
       border-radius: 8px;
    }
    &__title {
-      @include font-size(20);
+      @include font-size(18);
       text-align: left;
       margin-bottom: 24px;
       text-transform: uppercase;
@@ -166,9 +195,15 @@
       &-price {
          padding: 6px 0;
       }
+      &-name, &-count, &-price {
+         @include font-size(12);
+      }
       th {
          padding: 12px 0;
          font-weight: fw(regular);
+         @include extra-small {
+            @include font-size(12);
+         }
       }
       tr {
          border-bottom: solid 1px color(grey, 5);
