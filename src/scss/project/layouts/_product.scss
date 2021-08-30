@@ -30,6 +30,7 @@
       color: black;
       margin: 0;
       @include font-size(14);
+      color: color(black, 2);
       text-align: left;
       &::after {
         position: absolute;
@@ -60,12 +61,14 @@
     }
     &-item {
       text-align: left;
-      margin-bottom: 12px;
+      margin-bottom: 4px;
       cursor: pointer;
-      transition: all 150ms ease;
+      padding: 6px;
+      border-radius: 4px;
       @include font-size(14);
+      transition: all 350ms ease;
       &:hover {
-        color: color(green, 1);
+        background-color: color(grey, 4);
       }
       &:last-child {
         margin-bottom: 0;
@@ -77,12 +80,11 @@
       opacity: 1;
       transform: none;
       }
-      #{$ps}__sorting-select {
-        &-title {
-          &::after {
-            transform: rotateX(180deg);
-            background-color: red;
-          }
+      #{$ps} {
+        &-title 
+        &::after {
+          transform: rotateX(180deg);
+          background-color: red;
         }
       }
     }

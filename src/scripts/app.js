@@ -36,6 +36,11 @@ const App = (() => {
     Scrolllable.enable();
   }
 
+  // --- call vendor
+  const callVendor = () => {
+    
+  }
+
   // --- ready
   const ready = () => {
     (($) => {

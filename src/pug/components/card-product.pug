@@ -12,7 +12,8 @@
     .card-product__card__txt
       h3.card-product__card__title !{data.title}
       if data.percentage !== undefined
-        span.card-product__card__percentage !{data.percentage}
-        span.card-product__card__price-carret !{data.priceCarret}
+        .card-product__card__sale
+          span.card-product__card__percentage !{data.percentage}
+          span.card-product__card__price-carret !{data.priceCarret}
       p.card-product__card__price-product !{data.price}
 ='\n'

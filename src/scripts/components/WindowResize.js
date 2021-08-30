@@ -39,11 +39,11 @@ const WindowResize = (() => {
       _timeout = false;
       // Run Function on Resize end
       $('body').removeClass('hold-transition');
-      CardProduct.runCarouselWidget();
       Footer.setFooter();
       // Header.checkClass();
       Footer.destroyAccordion();
       WindowScroll.checkScroll();
+      CardProduct.checkHeight();
     }
 
   }

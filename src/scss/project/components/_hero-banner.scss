@@ -55,7 +55,6 @@
     z-index: zi(banner-img);
     height: 100%;
     width: 40%;
-    // top: -60px;
     right: 120px;
     @include large {
       height: 100%;
@@ -76,14 +75,13 @@
       display: block;
       height: 100%;
       width: 100%;
-      object-fit: cover;
-      object-position: center center;
       @include medium {
         position: relative;
         transform: translate(-50%);
         width: 440px;
         height: 440px;
-        top: 10%;
+      object-fit: cover;
+      object-position: center center;
       }
       @include small {
         transform: none;

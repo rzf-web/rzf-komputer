@@ -46,17 +46,19 @@
       width: 50%;
     }
     &__title {
-      @include font-size(18);
+      @include font-size(16);
       font-weight: fw(semi-bold);
-      @include multiline-ellipsis(1);
+      @include multiline-ellipsis(2);
       transition: all 250ms ease;
+      margin-bottom: 8px;
       @include medium {
         white-space: normal;
       }
-      @include small {
-        @include font-size(14);
+      @include extra-small {
+        @include font-size(12);
       }
     }
+
     &__percentage, &__priceCarret {
       margin-bottom: 8px;
       @include small {
@@ -74,7 +76,7 @@
       width: 40px;
       text-align: center;
       @include extra-small {
-        @include font-size(14);
+        @include font-size(12);
         margin-right: 4px;
       }
     }
@@ -86,12 +88,12 @@
       }
     }
     &__price-product {
-      @include font-size(20);
+      @include font-size(18);
       font-weight: fw(semi-bold);
-      margin: 0;
+      margin: 0;  
       @include extra-small {
-        @include font-size(16);
-      }
+        @include font-size(14);
+      }  
     }
   }
 }
