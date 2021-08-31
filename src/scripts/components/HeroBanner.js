@@ -45,6 +45,7 @@ const HeroBanner = (() => {
     }
   }
 
+
   // init
   const init = () => {
     handleRunCarousel();

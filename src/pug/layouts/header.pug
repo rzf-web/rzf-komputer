@@ -89,7 +89,7 @@
   .container
     .header__content
       ='\n'
-      a.header__logo.js-logo(href=dataHeader.logoLink)
+      a.header__logo(href=dataHeader.logoLink)
         ='\n'
         img.header__logo__el(src='assets/img/logo/'+dataHeader.logoSrc, alt=dataHeader.logoAlt)/
         ='\n'
@@ -161,5 +161,18 @@
             ='\n'
             i.rzfkomputer-clear
             ='\n'
+        .header__search-section__result
+          .header__search-section__result-notif
+            p Data Not Found
+          ul.header__search-section__list
+            li.header__search-section__item
+              ='\n'
+              a.header__search-section__link Komputer
+            li.header__search-section__item
+              ='\n'
+              a.header__search-section__link Printer
+            li.header__search-section__item
+              ='\n'
+              a.header__search-section__link Mouse
     .overlay
 ='\n'

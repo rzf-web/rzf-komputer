@@ -22,7 +22,6 @@ const HeaderSearch = (() => {
         _jsButtonClose = $('.js-header-search-section__close'),
         _jsCart = $('.js-cart'),
         _jsCartList = $('.js-cart-list'),
-        _jsLogo = $('.header__logo'),
         _jsNav = $ ('.burger-menu')
 
 
@@ -48,7 +47,6 @@ const HeaderSearch = (() => {
           $(_overlaySearch).removeClass('showed');
           $(_showForm).removeClass('showed');
           Scrolllable.enable();
-          $(_jsLogo).removeClass('showed');
           $(_jsNav).removeClass('showed');
         }
 
@@ -68,11 +66,8 @@ const HeaderSearch = (() => {
 
         $(window).on('click', function() {
           $('.js-cart-list').removeClass('showed');
-          // console.log('berhasilllll...!!! selamat yaaa');
         });
 
-
-        // handle button click
         $(_buttonSearch).on('click', function() {
           setTimeout(function(){
           $(_showForm).addClass('showed');
@@ -80,7 +75,6 @@ const HeaderSearch = (() => {
         }, 700);
           $(_headerContent).addClass('showed');
           $(_overlaySearch).addClass('showed');
-          $(_jsLogo).addClass('showed');
           $(_jsNav).addClass('showed');
           $('body').addClass('rm-scroll');
         });

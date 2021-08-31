@@ -15,6 +15,7 @@ import HeaderSearch from "./HeaderSearch";
 import Contact from "./Contact";
 import Category from "./Category";
 import SortingCategory from "./SortingCategory";
+import TitlePage from "./TitlePage";
 
 export {
   WindowScroll,
@@ -28,5 +29,6 @@ export {
   HeaderSearch,
   Contact,
   Category,
-  SortingCategory
+  SortingCategory,
+  TitlePage
 };

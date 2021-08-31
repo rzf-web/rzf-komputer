@@ -18,7 +18,8 @@ import {
   SaleCarousel,
   Contact,
   Category,
-  SortingCategory
+  SortingCategory,
+  // TitlePage
 
 } from 'components';
 
@@ -65,6 +66,7 @@ const App = (() => {
       Contact.init();
       Category.init();
       SortingCategory.init();
+      // TitlePage.init();
 
     })(jQuery);
   }

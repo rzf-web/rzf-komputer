@@ -71,7 +71,7 @@
     &.showed .header__nav__item {
       visibility: hidden;
       opacity: 0;
-      transform: translateX(-14px);
+      transform: translateX(-16px);
       transition: transform 350ms ease opacity 150ms ease;
       transition-delay: 150ms;
       &:nth-child(1) {
