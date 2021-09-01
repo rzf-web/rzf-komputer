@@ -79,7 +79,9 @@
 .header__search-section__result {
   background-color: color(white);
   @include shadow(18);
-  padding: 12px 24px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 14px 28px 48px;
   border-radius: 8px;
   position: absolute;
   z-index: 4;
@@ -87,7 +89,48 @@
   left: 25%;
   right: 25%;
   width: 50%;
+  transform: translateY(16px);
+  transition: all 350ms ease;
   @include medium {
     width: 100%;
+  }
+  &.showed {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+  &-notif {
+    background-color: red;
+    padding: 8px 16px;
+    display: none;
+  }
+  h3 {
+    @include font-size(18);
+    margin-bottom: 8px;
+    font-family: $font-main;
+  }
+}
+
+.header__search-section__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header__search-section__item {
+  margin-bottom: 8px;
+  // border-bottom: solid 1px color(grey, 3);
+  border-bottom: solid 1px #ddd;
+  padding: 8px 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.header__search-section__link {
+  text-decoration: none;
+  transition: all 50ms ease;
+  &:hover {
+    color: color(green, 1);
   }
 }

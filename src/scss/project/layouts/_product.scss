@@ -43,10 +43,11 @@
     }
     &-list {
       margin: 0;
+      padding: 0;
       list-style: none;
       position: absolute;
       z-index: 3;
-      padding: 16px 12px;
+      // padding: 16px 12px;
       @include shadow(14);
       min-width: 160px;
       border-radius: 8px;
@@ -63,7 +64,7 @@
       text-align: left;
       margin-bottom: 4px;
       cursor: pointer;
-      padding: 6px;
+      padding: 12px 6px;
       border-radius: 4px;
       @include font-size(14);
       transition: all 350ms ease;
@@ -74,6 +75,9 @@
         margin-bottom: 0;
       }
     }
+    &-link {
+        padding: 8px 24px;
+      }
     &--showed {
      #{$ps}__sorting-list {
       visibility: visible;

@@ -10,10 +10,22 @@
         .product__sorting-select
           h3.product__sorting-title Kategori
           ul.product__sorting-list
-            li.product__sorting-item(data-target='komputer') Komputer
-            li.product__sorting-item(data-target='laptop') Laptop
-            li.product__sorting-item(data-target='printer') Printer
-            li.product__sorting-item(data-target='lainnya') Lainnya
+            li.product__sorting-item(data-target='komputer')
+              ='\n'
+              a.product__sorting-link
+                | Komputer
+            li.product__sorting-item(data-target='laptop')
+              ='\n'
+              a.product__sorting-link
+                | Laptop
+            li.product__sorting-item(data-target='printer')
+              ='\n'
+              a.product__sorting-link
+                | Printer
+            li.product__sorting-item(data-target='lainnya')
+              ='\n'
+              a.product__sorting-link
+                | Lainnya
       .product__section
         each val in dataProduct.list
           -

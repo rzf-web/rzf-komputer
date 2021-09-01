@@ -22,7 +22,8 @@ const HeaderSearch = (() => {
         _jsButtonClose = $('.js-header-search-section__close'),
         _jsCart = $('.js-cart'),
         _jsCartList = $('.js-cart-list'),
-        _jsNav = $ ('.burger-menu')
+        _jsNav = $('.burger-menu'),
+        _jsSearchResult = $('.js-search-result')
 
 
         // handle search keyup
@@ -46,6 +47,7 @@ const HeaderSearch = (() => {
           $(_headerContent).removeClass('showed');
           $(_overlaySearch).removeClass('showed');
           $(_showForm).removeClass('showed');
+          $(_jsSearchResult).removeClass('showed');
           Scrolllable.enable();
           $(_jsNav).removeClass('showed');
         }
@@ -57,7 +59,6 @@ const HeaderSearch = (() => {
           $(_overlayCartList).addClass('showed');
           // console.log($(_jsCartList).html());
           $('body').removeClass('show-nav');
-
         });
 
         $(_jsCartList).on('click', function(e) {
@@ -71,6 +72,7 @@ const HeaderSearch = (() => {
         $(_buttonSearch).on('click', function() {
           setTimeout(function(){
           $(_showForm).addClass('showed');
+          $(_jsSearchResult).addClass('showed');
           $('body').removeClass('show-nav');
         }, 700);
           $(_headerContent).addClass('showed');
