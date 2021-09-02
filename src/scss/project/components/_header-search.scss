@@ -15,7 +15,8 @@
   transform: translateX(-50%);
   visibility: hidden;
   opacity: 0;
-  transition: all 550ms ease;
+  transition: all 450ms ease;
+  transition-delay: 0s;
   &.showed {
     opacity: 1;
     visibility: visible;
@@ -130,7 +131,8 @@
 
 .header__search-section__link {
   text-decoration: none;
-  transition: all 50ms ease;
+  transition: all 150ms ease;
+  @include remove-tap-highlight;
   &:hover {
     color: color(green, 1);
   }

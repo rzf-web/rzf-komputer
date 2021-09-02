@@ -40,7 +40,6 @@ const WindowResize = (() => {
       // Run Function on Resize end
       $('body').removeClass('hold-transition');
       Footer.setFooter();
-      // Header.checkClass();
       Footer.destroyAccordion();
       WindowScroll.checkScroll();
       CardProduct.checkHeight();

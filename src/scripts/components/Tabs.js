@@ -1,10 +1,15 @@
+/* ------------------------------------------------------------------------------
+@name: Tabs
+@description: Tabs
+--------------------------------------------------------------------------------- */
+
 const Tabs = (() => {
 
   // handleClick
   const handleClick = () => {
     $('.js-tabs .tab-item').on('click', function() {
       if (!$(this).hasClass('active')) {
-        var _target = $(this).attr('data-target');
+        let _target = $(this).attr('data-target');
         $(this).siblings().removeClass('active');
         $(this).parents('.js-tabs').find('.tab-pane').removeClass('active');
 

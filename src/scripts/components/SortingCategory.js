@@ -10,7 +10,7 @@ const SortingCategory = (() => {
     e.stopPropagation();
   });
 
-  $('.js-sorting-dd .product__sorting-select').on('click', function() {
+  $('.js-sorting-dd .product__sorting-select .product__sorting-title').on('click', function() {
       if ($(this).parents('.js-sorting-dd').hasClass('product__sorting--showed')) {
         $(this).parents('.js-sorting-dd').removeClass('product__sorting--showed');
       } else {

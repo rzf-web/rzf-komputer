@@ -19,6 +19,8 @@ import {
   Contact,
   Category,
   SortingCategory,
+  ProductDetail
+  // Sale
   // TitlePage
 
 } from 'components';
@@ -39,7 +41,8 @@ const App = (() => {
 
   // --- call vendor
   const callVendor = () => {
-    
+    // popup image
+    const $gallery = new SimpleLightbox('.js-popup-image');
   }
 
   // --- ready
@@ -52,6 +55,7 @@ const App = (() => {
       runTransition();
       showSiteContent();
       BrowserCheck.init();
+      callVendor();
 
       // --- Project
       WindowResize.init();
@@ -66,7 +70,10 @@ const App = (() => {
       Contact.init();
       Category.init();
       SortingCategory.init();
+      ProductDetail.init();
+
       // TitlePage.init();
+      // Sale.init();
 
     })(jQuery);
   }
