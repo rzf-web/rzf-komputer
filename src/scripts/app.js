@@ -44,7 +44,6 @@ const App = (() => {
     // popup image
     const $gallery = new SimpleLightbox('.js-popup-image');
     // Scroll Reveal
-    ScrollReveal().reveal('.card-product__card');
     ScrollReveal().reveal('.features__card');
     ScrollReveal().reveal('.persuasive');
     window.sr = ScrollReveal({ duration: 6000 }); 
