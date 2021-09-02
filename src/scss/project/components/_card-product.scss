@@ -45,6 +45,7 @@
   &__img {
     padding-bottom: 91%;
     position: relative;
+    overflow: hidden;
     &__el {
       position: absolute;
       max-height: 100%;

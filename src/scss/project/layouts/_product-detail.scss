@@ -3,7 +3,10 @@
    ========================================================================== */
 
 .pdetail {
-   padding: 120px 0;
+   padding: 48px 0 80px;
+   @include large {
+      padding: 120px 0;
+   }
    @include medium {
       padding: 64px 0;
    }
@@ -19,24 +22,48 @@
       @include medium {
          width: 100%;
       }
-   &-wrapper {
-      padding: 20px 0;
-      margin-right: 24px;
-      // max-width: 520px;
-      @include small {
+   &-fill {
+      margin-bottom: 8px;
+      width: 100%;
+      @include medium {
          width: 100%;
+         margin-bottom: 4px;
       }
    }
-      &-el {
-         display: block;
-         width: 100%;
+   &-detail {
+      @include clearfix;
+      @include scroll(x, no-touch, hide);
+      margin-left: -8px;
+      margin-right: -8px;
+      @include medium {
+         margin-left: -4px;
+         margin-right: -4px;
+      }
+   }
+   &-box {
+      width: 33.3333333%;
+      float: left;
+   }
+   &-img {
+      padding: 8px;
+      @include medium {
+         padding: 4px;
+      }
+   }
+   &-el {
+      display: block;
       }
    }
    &__form {
       float: left;
       width: 50%;
+      padding: 64px 0 0 48px;
+      @include large {
+         padding: 48px 0 0;
+      }
       @include small {
          width: 100%;
+         padding: 32px 0 0;
       }
       &__name {
          @include font-size(24);
@@ -96,13 +123,12 @@
       }
       .btn--cart {
          @include small {
-            width: 80%;
+            width: 90%;
          }
       }
    }
    &__related-product {
       padding: 120px;
-      background-color: salmon;
    }
 }
 

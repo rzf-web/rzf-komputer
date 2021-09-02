@@ -43,6 +43,13 @@ const App = (() => {
   const callVendor = () => {
     // popup image
     const $gallery = new SimpleLightbox('.js-popup-image');
+    // Scroll Reveal
+    ScrollReveal().reveal('.card-product__card');
+    ScrollReveal().reveal('.features__card');
+    ScrollReveal().reveal('.persuasive');
+    window.sr = ScrollReveal({ duration: 6000 }); 
+    sr.reveal('.card-product__card', 700);
+
   }
 
   // --- ready
@@ -70,7 +77,7 @@ const App = (() => {
       Contact.init();
       Category.init();
       SortingCategory.init();
-      ProductDetail.init();
+      // ProductDetail.init();
 
       // TitlePage.init();
       // Sale.init();

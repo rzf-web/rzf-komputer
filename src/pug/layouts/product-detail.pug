@@ -8,14 +8,30 @@
     .pdetail__wrapper
       .pdetail__row
         .pdetail__img
-          .pdetail__img-wrapper
+          .pdetail__img-fill
             ='\n'
             a.js-popup-image(href='assets/img/dummy/our-product-1.png' alt='Tes')
               img.pdetail__img-el(src='assets/img/dummy/our-product-1.png' alt='Tes')/
+          .pdetail__img-detail
+            .pdetail__img-box
+              .pdetail__img-img
+                ='\n'
+                a.js-popup-image(href='assets/img/dummy/our-product-2.png' alt='Tes')
+                  img.pdetail__img-el(src='assets/img/dummy/our-product-2.png' alt='Tes')/
+            .pdetail__img-box
+              .pdetail__img-img
+                ='\n'
+                a.js-popup-image(href='assets/img/dummy/our-product-3.png' alt='Tes')
+                  img.pdetail__img-el(src='assets/img/dummy/our-product-3.png' alt='Tes')/
+            .pdetail__img-box
+              .pdetail__img-img
+                ='\n'
+                a.js-popup-image(href='assets/img/dummy/our-product-4.png' alt='Tes')
+                  img.pdetail__img-el(src='assets/img/dummy/our-product-4.png' alt='Tes')/
 
         //product-detail-form
         .pdetail__form
-          form(action='keranjang-belanja.html' method='POST' autocomplete='off')
+          form(action='keranjang-belanja.html' method='get' autocomplete='off')
             h3.pdetail__form__name Asus Ryzen 3 AMD
             .pdetail__form__summary Cocok untuk Anda yang suka bermain komputer
             .pdetail__form__count-wrapper
@@ -30,14 +46,10 @@
                 ='\n'
                 i.rzfkomputer-add
             .pdetail__form__row
-              //- button.btn.btn--primary.btn--cart(type='button')
-              //-   ='\n'
-              //-   i.rzfkomputer-cart
-              //-   | Masukkan Keranjang
-              a.button.btn.btn--primary.btn--cart(href='keranjang-belanja.html')
-                  ='\n'
-                  i.rzfkomputer-cart
-                  | Masukkan Keranjang
+              button.btn.btn--primary.btn--cart(type='button')
+                ='\n'
+                i.rzfkomputer-cart
+                | Masukkan Keranjang
 
 //product-detail-tabs
 .pdetail__tab.js-tabs
