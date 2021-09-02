@@ -6,7 +6,7 @@ const SortingCategory = (() => {
     $('.js-sorting-dd').removeClass('product__sorting--showed');
   });
 
-  $('.product__sorting').on('click', function(e){
+  $('.product__sorting-select').on('click', function(e){
     e.stopPropagation();
   });
 
