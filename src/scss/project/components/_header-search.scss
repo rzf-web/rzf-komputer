@@ -106,9 +106,13 @@
     display: none;
   }
   h3 {
-    @include font-size(16);
+    @include font-size(18);
     margin-bottom: 8px;
-    font-family: $font-main;
+    font-weight: fw(bold);
+    font-family: $font-title;
+    // @include medium {
+    //   @include font-size(18);
+    // }
   }
   @include medium {
     left: 0;
