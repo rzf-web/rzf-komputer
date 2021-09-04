@@ -17,7 +17,8 @@ import Category from "./Category";
 import SortingCategory from "./SortingCategory";
 import TitlePage from "./TitlePage";
 import ProductDetail from "./ProductDetail";
-// import Sale from "./Sale";
+import Sale from "./Sale";
+import Cart from "./Cart";
 
 export {
   WindowScroll,
@@ -33,6 +34,7 @@ export {
   Category,
   SortingCategory,
   TitlePage,
-  ProductDetail
-  // Sale
+  ProductDetail,
+  Sale,
+  Cart
 };

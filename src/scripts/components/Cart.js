@@ -1,18 +1,19 @@
 /* ------------------------------------------------------------------------------
-@name: ProductDetail
-@description: ProductDetail
+@name: Cart
+@description: Cart
 --------------------------------------------------------------------------------- */
 
-const ProductDetail = (() => {
+const Cart = (() => {
 
 // variables
-let _buttonMin = $('.pdetail__form__min'),
-    _buttonMax = $('.pdetail__form__max'),
+let _buttonMin = $('.js-cart-minus'),
+    _buttonMax = $('.js-cart-plus'),
     _itemCount = 1,
-    _quantity = $('.js-input-qty'),
+    _quantity = $('.js-cart-quantity'),
     _oldPrice = 4500000,
     _newPrice = 4500000,
-    _jsPrice = $('.js-price');
+    _jsCartPrice = $('.js-cart-price'),
+    _jsCartTotal = $('.js-cart-total');
 
 // function change price
 function formatRupiah(harga, prefix) {
@@ -46,11 +47,12 @@ function formatRupiah(harga, prefix) {
 
     // handle button max
     $(_buttonMax).on('click', (e) => {
-      e.preventDefault();
-      _itemCount += 1;
-      _oldPrice = _oldPrice + _newPrice;
-      $(_quantity).val(_itemCount);
-      $(_jsPrice).text(formatRupiah(_oldPrice, ''));
+      // e.preventDefault();
+      // _itemCount += 1;
+      // _oldPrice = _oldPrice + _newPrice;
+      // $(_quantity).val(_itemCount);
+      // $(_jsPrice).text(formatRupiah(_oldPrice, ''));
+      alert(12000);
     });
   }
 
@@ -77,4 +79,4 @@ function formatRupiah(harga, prefix) {
 
 })();
 
-export default ProductDetail
+export default Cart

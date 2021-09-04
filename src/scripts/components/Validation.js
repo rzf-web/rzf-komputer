@@ -7,6 +7,7 @@ const WHITESPACE = /^ *$/;
 const EMAIL = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 const PHONE_NUMBER = /^(0|\+62)+([0-9]){4,16}/i;
 const NUMBERIC = /[0-9]+$/i;
+
 // Form Validation
 const ElementSelector = [
   {
@@ -32,9 +33,10 @@ const ElementSelector = [
     id: 'phone',
     validation: {
       required: true,
+      phone: true
     }
   },
-  {
+  { 
     id: 'address',
     validation: {
       required: true,
@@ -59,12 +61,12 @@ const Validation = (() => {
           _alertEl.removeClass('error');
           $(this).parent().removeClass('error');
 
-          // Password Validation
-          if (v.validation.minimum) {
-            if (_val.length < v.validation.minimumChar) {
-              _errorMessage = _alertEl.attr('data-invalid');
-            }
-          }
+          // // Password Validation
+          // if (v.validation.minimum) {
+          //   if (_val.length < v.validation.minimumChar) {
+          //     _errorMessage = _alertEl.attr('data-invalid');
+          //   }
+          // }
 
           // Email validation
           if (v.validation.email) {
@@ -77,6 +79,7 @@ const Validation = (() => {
           if (v.validation.phone) {
             if (!PHONE_NUMBER.test(_val)) {
               _errorMessage = _alertEl.attr('data-invalid-phone');
+              console.log(100000);
             }
           }
 

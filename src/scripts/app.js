@@ -19,8 +19,9 @@ import {
   Contact,
   Category,
   SortingCategory,
-  ProductDetail
-  // Sale
+  ProductDetail,
+  Sale,
+  Cart
   // TitlePage
 
 } from 'components';
@@ -48,7 +49,6 @@ const App = (() => {
     ScrollReveal().reveal('.persuasive');
     window.sr = ScrollReveal({ duration: 6000 }); 
     sr.reveal('.card-product__card', 700);
-
   }
 
   // --- ready
@@ -57,7 +57,7 @@ const App = (() => {
       // --- disable scroll
       Scrolllable.disable();
 
-      // --- Global
+    // --- Global
       runTransition();
       showSiteContent();
       BrowserCheck.init();
@@ -76,10 +76,10 @@ const App = (() => {
       Contact.init();
       Category.init();
       SortingCategory.init();
-      // ProductDetail.init();
-
+      ProductDetail.init();
+      Sale.init();
+      Cart.init();
       // TitlePage.init();
-      // Sale.init();
 
     })(jQuery);
   }

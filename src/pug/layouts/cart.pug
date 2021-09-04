@@ -28,18 +28,18 @@
                       img.cart__media__img-el(src='assets/img/dummy/our-product-1.png' alt='Image')/
                     p.cart__media__name ASUS PX-5402
               td
-                p.cart__media__price 5.400.000-,
+                p.cart__media__price.js-cart-price 5.400.000-,
               td
                 .cart__media__product-count
                   ='\n'
                   ='\n'
-                  button.cart__media__btn-chevron-down(type='button')
+                  button.cart__media__btn-chevron-down.js-cart-minus(type='button')
                     ='\n'
                     i.rzfkomputer-minus
                     ='\n'
-                  input.cart__media__input-qty(type='number' name='cart' id='quantity' max-length='12' title='quantity' value='1' min='1')/
+                  input.cart__media__input-qty.js-cart-quantity(type='number' name='cart' id='quantity' max-length='12' title='quantity' value='1' min='1')/
                   ='\n'
-                  button.cart__media__btn-chevron-up(type='button')
+                  button.cart__media__btn-chevron-up.js-cart-plus(type='button')
                     ='\n'
                     i.rzfkomputer-add
                     ='\n'
@@ -47,7 +47,7 @@
               td
                 p.cart__media__total Order Total :
               td
-                p.cart__media__price 5.400.000-,
+                p.cart__media__price.js-cart-total 5.400.000-,
                 ='\n'
 // end-cart
 ='\n'
@@ -77,7 +77,7 @@
             label.form__label(for='phone') Nomor Telepon
             ='\n'
             input.form__input(id="phone" name='phone' placeholder='Masukkan Nomor' data-target="alertPhone" required)
-            p(class="form__alert" id="alertPhone" data-req="Nomor tidak boleh kosong" data-invalid-phone="Masukkan Nomor yang valid")
+            p(class="form__alert" id="phone" data-req="Nomor tidak boleh kosong" data-invalid-phone="Masukkan Nomor yang valid")
             ='\n'
           .form__control
             ='\n'
