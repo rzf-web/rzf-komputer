@@ -71,8 +71,11 @@ function formatRupiah(harga, prefix) {
     $(_quantity).on('keyup', (e) => {
       let _resultCount = _newPrice * $(_quantity).val();
       $(_jsCartPrice).text(formatRupiah(_resultCount, ''));
+      $(_jsCartTotal).text(formatRupiah(_resultCount, ''));
       _oldPrice = _resultCount;
       _itemCount = parseInt(e.currentTarget.value);
+      $(_quantityCartCount).text(e.currentTarget.value == '' ? 0 : e.currentTarget.value);
+      // console.log(parseInt(e.currentTarget.value));
     });
   }
 
