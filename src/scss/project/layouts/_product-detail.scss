@@ -19,14 +19,16 @@
    &__img {
       float: left;
       width: 50%;
-      @include medium {
+      @include large {
          width: 100%;
       }
    &-fill {
       margin-bottom: 8px;
       width: 100%;
-      @include medium {
+      @include large {
          width: 100%;
+      }
+      @include medium {
          margin-bottom: 4px;
       }
    }
@@ -51,7 +53,10 @@
       }
    }
    &-el {
-      display: block;
+   display: block;
+   @include large {
+      width: 100%;
+         }
       }
    }
    &__form {

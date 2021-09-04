@@ -73,12 +73,11 @@ const HeaderSearch = (() => {
           setTimeout(function(){
           $(_showForm).addClass('showed');
           $(_jsSearchResult).addClass('showed');
-          $('body').removeClass('show-nav');
         }, 700);
           $(_headerContent).addClass('showed');
           $(_overlaySearch).addClass('showed');
           $(_jsNav).addClass('showed');
-          $('body').addClass('rm-scroll');
+          Scrolllable.disable();
         });
       }
 

@@ -145,17 +145,16 @@
             .cart-list__button--row
               ='\n'
               a.btn.btn--primary.btn--views(href='keranjang-belanja.html') Lihat Keranjang
-            .cart-list__button--row
     .header__search-section
       .header__search-section__form-wrapper
-        form.header-search-section__form.js-search-form(action='#' method='POST')
+        form.header-search-section__form.js-search-form(action='#' method='POST' autocomplete='off')
           ='\n'
           button.header-search-section__submit(type='submit')
             ='\n' 
             i.rzfkomputer-search
             ='\n'
           ='\n'
-          input.header-search__input.js-search-input(type='text' placeholder='Cari Produk')/
+          input.header-search__input.js-search-input(type='text' name='search' id='search' placeholder='Cari Produk')/
           ='\n'
           button.header-search-section__close.js-header-search-section__close(type='button')
             ='\n'
@@ -164,16 +163,16 @@
         .header__search-section__result.js-search-result
           .header__search-section__result-notif
             p Data Not Found
-          h3 Tautan Cepat 
+          h3 Produk Pilihan
           ul.header__search-section__list
             li.header__search-section__item
               ='\n'
-              a.header__search-section__link(href='#') Komputer
+              a.header__search-section__link(href='#') Asus Ryzen AMD 3
             li.header__search-section__item
               ='\n'
-              a.header__search-section__link(href='#') Printer
+              a.header__search-section__link(href='#') Printer Thermal
             li.header__search-section__item
               ='\n'
-              a.header__search-section__link(href='#') Mouse
+              a.header__search-section__link(href='#') TP-Link
     .overlay
 ='\n'

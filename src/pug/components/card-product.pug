@@ -5,6 +5,7 @@
 // card-product-item
 .card-product__card
   .card-product__card__box
+    ='\n'
     a.card-product__card__link(href=data.to)
     .card-product__card__img
       ='\n'
@@ -13,7 +14,9 @@
       h3.card-product__card__title !{data.title}
       if data.percentage !== undefined
         .card-product__card__sale
+          ='\n'
           span.card-product__card__percentage !{data.percentage}
+          ='\n'
           span.card-product__card__price-carret !{data.priceCarret}
       p.card-product__card__price-product !{data.price}
 ='\n'

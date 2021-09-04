@@ -8,11 +8,14 @@
   .container
     .persuasive__wrapper
       .persuasive__img
+        ='\n'
         img.persuasive__img-el(src='assets/img/dummy/'+dataPersuasive.img alt=dataPersuasive.alt)/
+        ='\n'
       .persuasive__txt
         h3.persuasive__txt-title !{dataPersuasive.title}
         p.persuasive__txt-desc !{dataPersuasive.desc}
         .persuasive__txt-btn
+          ='\n'
           a.btn.btn--primary(href=dataPersuasive.button.to) !{dataPersuasive.button.text}
       .persuasive__vertical-txt
         ='\n'

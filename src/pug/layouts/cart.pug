@@ -5,7 +5,7 @@
 .cart
   .container
     .cart__wrapper
-      .form(action='order-success.html' method='POST')
+      form(action='order-success.html' method='POST')
         table.cart__table
           thead
             tr
@@ -101,7 +101,5 @@
                 th Total :
                 td.checkout__table-count
                 td.checkout__table-price Rp 5.400.000-,
-          //- button.btn.btn--block.btn--primary(type='submit')
-          //-   | Pesan Sekarang
-          a.btn.btn--block.btn--primary(href='order-success.html')
+          button.btn.btn--block.btn--primary(type='submit')
             | Pesan Sekarang

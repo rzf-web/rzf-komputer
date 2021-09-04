@@ -24,6 +24,10 @@ const Scrolllable = (() => {
       const _fillGapHeader = document.querySelector('.header');
       scrollLock.addFillGapTarget(_fillGapHeader);
 
+      // handle fill gap contact button
+      const _fillGapImgPopup = document.querySelector('.pdetail__img-img .js-popup-image');
+      scrollLock.addFillGapTarget(_fillGapImgPopup);
+
       scrollLock.disablePageScroll();
 
     }

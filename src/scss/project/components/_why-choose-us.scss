@@ -7,7 +7,7 @@
   $fc: &;
   &:hover #{$fc}__box {
     #{$fc}__title {
-      color: color(green, 1);
+        color: color(green, 1);
       }
     &:hover #{$fc}__img-el {
       transform: translateY(-4px);
