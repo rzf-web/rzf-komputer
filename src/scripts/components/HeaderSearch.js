@@ -34,15 +34,16 @@ const HeaderSearch = (() => {
         });
 
         // handle click out area
-        $(_overlaySearch).on('click', function(){
+        $(_overlaySearch).on('click', () => {
             hideElement();
         });
 
         // handle button close
-        $(_jsButtonClose).on('click', function() {
+        $(_jsButtonClose).on('click', () => {
             hideElement();
         });
 
+        // function hide element groupping
         function hideElement() {
           $(_headerContent).removeClass('showed');
           $(_overlaySearch).removeClass('showed');
@@ -53,7 +54,7 @@ const HeaderSearch = (() => {
         }
 
         // handle cart on click
-        $(_jsCart).on('click', function(e){
+        $(_jsCart).on('click', (e) => {
           e.stopPropagation();
           $(_jsCartList).toggleClass('showed');
           $(_overlayCartList).addClass('showed');
@@ -61,22 +62,26 @@ const HeaderSearch = (() => {
           $('body').removeClass('show-nav');
         });
 
-        $(_jsCartList).on('click', function(e) {
+        $(_jsCartList).on('click', (e) => {
           e.stopPropagation();
         });
 
-        $(window).on('click', function() {
+        $(window).on('click', () => {
           $('.js-cart-list').removeClass('showed');
         });
 
-        $(_buttonSearch).on('click', function() {
-          setTimeout(function(){
+        // handle cart button when on click
+        $(_buttonSearch).on('click', () => {
+          setTimeout( () => {
           $(_showForm).addClass('showed');
           $(_jsSearchResult).addClass('showed');
         }, 700);
           $(_headerContent).addClass('showed');
           $(_overlaySearch).addClass('showed');
           $(_jsNav).addClass('showed');
+          setTimeout( () => {
+          $('body').removeClass('show-nav');
+        }, 400)
           Scrolllable.disable();
         });
       }

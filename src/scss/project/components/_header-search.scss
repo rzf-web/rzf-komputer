@@ -95,6 +95,9 @@
   @include medium {
     width: 100%;
   }
+  @include extra-small {
+    padding: 16px 24px 32px;
+  }
   &.showed {
     visibility: visible;
     opacity: 1;
