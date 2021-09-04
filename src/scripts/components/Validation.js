@@ -77,9 +77,9 @@ const Validation = (() => {
 
           // Phone validation
           if (v.validation.phone) {
-            if (!PHONE_NUMBER.test(_val)) {
+            if (!_val.match(PHONE_NUMBER)) {
               _errorMessage = _alertEl.attr('data-invalid-phone');
-              console.log(100000);
+              console.log(_target);
             }
           }
 

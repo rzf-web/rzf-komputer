@@ -10,6 +10,7 @@ let _buttonMin = $('.js-cart-minus'),
     _buttonMax = $('.js-cart-plus'),
     _itemCount = 1,
     _quantity = $('.js-cart-quantity'),
+    _quantityCartCount = $('.js-cart-count'),
     _oldPrice = 4500000,
     _newPrice = 4500000,
     _jsCartPrice = $('.js-cart-price'),
@@ -41,19 +42,27 @@ function formatRupiah(harga, prefix) {
         _itemCount -= 1;
         _oldPrice = _oldPrice - _newPrice;
         $(_quantity).val(_itemCount);
-        $(_jsPrice).text(formatRupiah(_oldPrice, ''));
+        $(_quantityCartCount).text(_itemCount);
+        changePrice(_jsCartPrice);
+        changePrice(_jsCartTotal);
       }
     });
 
     // handle button max
     $(_buttonMax).on('click', (e) => {
-      // e.preventDefault();
-      // _itemCount += 1;
-      // _oldPrice = _oldPrice + _newPrice;
-      // $(_quantity).val(_itemCount);
-      // $(_jsPrice).text(formatRupiah(_oldPrice, ''));
-      alert(12000);
+      e.preventDefault();
+      _itemCount += 1;
+      _oldPrice = _oldPrice + _newPrice;
+      $(_quantity).val(_itemCount);
+      $(_quantityCartCount).text(_itemCount);
+      changePrice(_jsCartPrice);
+      changePrice(_jsCartTotal);
     });
+
+    // change price
+    const changePrice = (v) => {
+      $(v).text(formatRupiah(_oldPrice, ''));
+    }
   }
 
   // handle keyup
@@ -61,7 +70,7 @@ function formatRupiah(harga, prefix) {
     // handle on keyup
     $(_quantity).on('keyup', (e) => {
       let _resultCount = _newPrice * $(_quantity).val();
-      $(_jsPrice).text(formatRupiah(_resultCount, ''));
+      $(_jsCartPrice).text(formatRupiah(_resultCount, ''));
       _oldPrice = _resultCount;
       _itemCount = parseInt(e.currentTarget.value);
     });

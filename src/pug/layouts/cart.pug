@@ -77,7 +77,7 @@
             label.form__label(for='phone') Nomor Telepon
             ='\n'
             input.form__input(id="phone" name='phone' placeholder='Masukkan Nomor' data-target="alertPhone" required)
-            p(class="form__alert" id="phone" data-req="Nomor tidak boleh kosong" data-invalid-phone="Masukkan Nomor yang valid")
+            p(class="form__alert" id="alertPhone" data-req="Nomor tidak boleh kosong" data-invalid-phone="Masukkan Nomor yang valid")
             ='\n'
           .form__control
             ='\n'
@@ -99,12 +99,12 @@
             tbody
               tr
                 th.checkout__table-name ASUS
-                td.checkout__table-count 1
-                td.checkout__table-price Rp 5.400.000-,
+                td.checkout__table-count.js-cart-count 1
+                td.checkout__table-price.js-cart-price Rp 5.400.000-,
               tr
                 th Total :
                 td.checkout__table-count
-                td.checkout__table-price Rp 5.400.000-,
+                td.checkout__table-price.js-cart-total Rp 5.400.000-,
           button.btn.btn--block.btn--primary(type='submit')
             | Pesan Sekarang
 ='\n'
