@@ -4,9 +4,6 @@
 
 .pdetail {
    padding: 48px 0 80px;
-   @include large {
-      padding: 120px 0;
-   }
    @include medium {
       padding: 64px 0;
    }
@@ -90,7 +87,9 @@
    }
    &__form {
       &__price,
-      &__count {
+      &__count,
+      &__category,
+      &__inventory, {
          @include font-size(16);
          margin-right: 64px;
          margin-bottom: 8px;
