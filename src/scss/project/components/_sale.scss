@@ -7,24 +7,39 @@
    width: 50%;
    position: absolute;
    left: 10%;
-   top: 15%;
+   top: 25%;
    z-index: 4;
    transform: translate(0, 50%);
+   @include large {
+      top: 30%;
+   }
    @include medium {
-      padding: 86px 32px;
       width: 100%;
       left: 50%;
       right: 50%;
+      top: 45%;
       transform: translate(-50%, -10%);
    }
    @include small {
       padding: 48px 24px;
    }
    @include small {
-      top: 15%;
+      top: 25%;
    }
    @include extra-small {
-      top: 15%;
+      top: 25%;
+   }
+   &__alert-limited {
+      padding: 48px 24px;
+      margin: 64px 0;
+      transition: all 350ms ease;
+      font-weight: fw(semi-bold);
+      text-transform: uppercase;
+      @include font-size(24);
+      .main-site--hide & {
+         opacity: 0;
+         transform: translate(-4px);
+      }
    }
    &__title {
       text-transform: uppercase;

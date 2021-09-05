@@ -25,7 +25,6 @@ const Scrolllable = (() => {
       scrollLock.addFillGapTarget(_fillGapHeader);
 
       scrollLock.disablePageScroll();
-
     }
   }
 

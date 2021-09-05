@@ -5,24 +5,25 @@
 
 const Sale = (() => {
   
-  const HandleCountdown = () => {
-    let countDownDate = new Date("Sep 29, 2021 20:04:25").getTime();
-    // Update the count down every 1 second
+  const handleCountDown = () => {
+    let countDownDate = new Date("Sep 15, 2021 10:10:25").getTime();
+
+    // update the count down every 1 second
     let x = setInterval( () => {
 
-    // Get today's date and time
+    // get today's date and time
     let _now = new Date().getTime();
 
-    // Find the distance between now and the count down date
+    // find the distance between now and the count down date
     let _distance = countDownDate - _now;
 
-    // Time calculations for days, hours, minutes and seconds
+    // time calculations for days, hours, minutes and seconds
     let _days = Math.floor(_distance / (1000 * 60 * 60 * 24));
     let _hours = Math.floor((_distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let _minutes = Math.floor((_distance % (1000 * 60 * 60)) / (1000 * 60));
     let _seconds = Math.floor((_distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
+  // set result into html
   $('.js-countdown-set').html(`
     <li class="sale__content__countdown__item">
     <h5 class="sale__content__countdown__item__number">${_days}</h5> hari</li>
@@ -33,19 +34,24 @@ const Sale = (() => {
     <li class="sale__content__countdown__item">
     <h5 class="sale__content__countdown__item__number">${_seconds}</h5> detik</li>`);
 
-  // If the count down is finished, write some text
+  // when countdown is finished
   if (_distance < 0) {
     clearInterval(x);
-    $('.js-countdown-set').html(`
-      <p>Maaf, promo sudah habis!!</p>`);
-  }
-}, 1000);
+    $('.sale__content__txt').html(`
+      <p class='sale__content__txt__alert-limited'>Maaf, promo sudah habis. Nantikan promo berikutnya. Terimakasih...</p>`);
+    }
+    // $('.js-button-sale').remove();
 
-  } 
+    // $('.js-countdown-set').html(`
+    //   <p>Maaf, promo sudah habis. Nantikan promo berikutnya</p>`);
+    // }
+
+  }, 1000);
+} 
 
   // - init
   const init = () => {
-    HandleCountdown();
+    handleCountDown();
   }
 
   return {

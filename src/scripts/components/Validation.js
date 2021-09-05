@@ -61,13 +61,6 @@ const Validation = (() => {
           _alertEl.removeClass('error');
           $(this).parent().removeClass('error');
 
-          // // Password Validation
-          // if (v.validation.minimum) {
-          //   if (_val.length < v.validation.minimumChar) {
-          //     _errorMessage = _alertEl.attr('data-invalid');
-          //   }
-          // }
-
           // Email validation
           if (v.validation.email) {
             if (!EMAIL.test(_val)) {
@@ -77,9 +70,8 @@ const Validation = (() => {
 
           // Phone validation
           if (v.validation.phone) {
-            if (!_val.match(PHONE_NUMBER)) {
+            if (!PHONE_NUMBER.test(_val)) {
               _errorMessage = _alertEl.attr('data-invalid-phone');
-              console.log(_target);
             }
           }
 

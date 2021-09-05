@@ -4,6 +4,7 @@
 ='\n'
 // sale
 .sale
+  h3.text-title Promo
   each val in dataSale.list
     -
       data = val
@@ -33,6 +34,6 @@
               span.sale__content__countdown__item__title__text Detik
             ='\n'
           ='\n'
-          a.btn.btn--primary(href='promo.html') Lihat Promo
+          a.btn.btn--primary.js-button-sale(href='promo.html') Lihat Promo
 ='\n'
 // end sale
