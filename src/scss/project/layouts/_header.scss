@@ -447,10 +447,8 @@
       right: 12px;
     }
     &.showed {
-      transition-delay: 00ms;
       transform: scale(0.85);
-      transition: all 350ms;
-      transition-delay: 150ms;
+      transition-delay: 0ms;
     }
   }
 }
