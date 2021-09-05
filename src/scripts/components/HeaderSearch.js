@@ -49,6 +49,9 @@ const HeaderSearch = (() => {
           $(_overlaySearch).removeClass('showed');
           $(_showForm).removeClass('showed');
           $(_jsSearchResult).removeClass('showed');
+          setTimeout( () => {
+            
+          }, 400)
           Scrolllable.enable();
           $(_jsNav).removeClass('showed');
         }
@@ -75,7 +78,7 @@ const HeaderSearch = (() => {
           setTimeout( () => {
           $(_showForm).addClass('showed');
           $(_jsSearchResult).addClass('showed');
-        }, 700);
+        }, 600);
           $(_headerContent).addClass('showed');
           $(_overlaySearch).addClass('showed');
           $(_jsNav).addClass('showed');
