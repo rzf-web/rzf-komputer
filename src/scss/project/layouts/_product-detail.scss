@@ -45,15 +45,11 @@
       float: left;
    }
    &-img {
-      padding: 8px;
       margin: 0 8px;
       // @include shadow(10);
       border: solid 1px color(grey, 5);
       border-radius: 8px;
       @include remove-tap-highlight;
-      @include medium {
-         padding: 4px;
-      }
       @include extra-small {
          margin: 0 6px;
       }
