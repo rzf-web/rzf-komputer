@@ -22,14 +22,12 @@
       }
    }
    &__txt {
-      // float: left;
-      // width: 50%;
       display: table-cell;
       vertical-align: middle;
       padding-left: 48px;
       @include small {
          padding: 32px 0;
-         vertical-align: top;
+         display: inline-block;
       }
       &-title,
       &-desc {
