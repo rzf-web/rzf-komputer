@@ -48,17 +48,16 @@
     position: absolute;
     bottom: 68px;
     right: 14px;
-    // transform: scale(0.1);
     transform: translateY(-16px);
     transition: all 250ms ease;
-    cursor: grab;
 }
 
   &__head {
     background-color: color(whatsapp);
+    color: color(white);
     border-radius: 8px;
     text-align: left;
-    padding: 8px 12px;
+    padding: 14px;
   }
 
   &__txt {
@@ -66,8 +65,6 @@
       text-align: left;
       @include font-size(14);
       margin-bottom: 0;
-      cursor: text;
-      user-select: text;
     }
     &-desc {
       text-align: left;
