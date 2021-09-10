@@ -8,7 +8,7 @@ const Scrolllable = (() => {
   // --- handleEnable
   const handleEnable = () => {
     $('body').removeClass('rm-scroll');
-        // --- vendor scrollLock for solve (position changed when on hover) in window/mac show scrollbar
+    // --- vendor scrollLock for solve (position changed when on hover) in window/mac show scrollbar
     scrollLock.enablePageScroll();
   }
 

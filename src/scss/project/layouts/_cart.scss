@@ -97,8 +97,8 @@
          }
       }
       &__input-qty {
-         width: 38px;
-         height: 40px;
+         width: 40px;
+         height: 44px;
          padding: 8px 6px;
          outline: 0;
          border: solid 2px color(grey, 5);
@@ -111,17 +111,20 @@
             padding: 4px;
             @include font-size(12);
          }
-         &:hover {
+         &:focus {
             border: solid 2px color(green, 1);
          }
       }
       &__btn-chevron-down, &__btn-chevron-up {
          width: 40px;
-         height: 40px;
+         height: 44px;
          border: none;
          outline: 0;
          margin-right: 4px;
          border-radius: 8px;
+         background-color: #fafafa;
+         border: 1px solid color(grey, 5);
+         transition: all 150ms ease;
          @include extra-small {
             width: 30px;
             margin: 8px 0;
@@ -130,6 +133,9 @@
          }
          &:last-child {
             margin-right: 0;
+         }
+         &:hover {
+            background-color: #f2f2f2;
          }
       }
       &__btn-min {
