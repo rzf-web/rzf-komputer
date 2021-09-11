@@ -12,7 +12,6 @@
   @include small {
     right: 16px;
   }
-
   &__wrapper {
     position: relative;
   }
@@ -50,8 +49,7 @@
     right: 14px;
     transform: translateY(-16px);
     transition: all 250ms ease;
-}
-
+  }
   &__head {
     background-color: color(whatsapp);
     color: color(white);
