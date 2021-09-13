@@ -1,0 +1,229 @@
+# The crawlers listed below are allowed on the Rzfsoftware.com site.  
+# Rzfsoftware.com allows other crawlers on a case by case basis. 
+
+User-agent: Mediapartners-Google*
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: googlemediabot*
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: googlebot
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: gulliver
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: slurp
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: fast
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: scooter
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: vscooter
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: ia_archiver
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: Nutch
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: FAST-WebCrawler
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: teoma
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: Lycos_Spider_(T-Rex)
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: bingbot
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: MSNBot
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: MSNPTC
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: msnbot-media/1.0
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: ArchitextSpider
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: ZyBorg
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: SurveyBot
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: AlexaBot
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: Baiduspider
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: Yandex
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: JikeSpider
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: naverbot
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: yeti
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+User-agent: coccoc
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+# Setup Other crawlers
+User-agent: *
+Allow: /
+Allow: /admin/files/
+Allow: /assets/
+Disallow: /cgi-bin/
+Disallow: /system/
+
+
+Sitemap: http://www.grandlazzuardiclinic.com/sitemap.xml
