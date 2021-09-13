@@ -19,13 +19,13 @@ import pug from "gulp-pug";
 import htmlBeautify from "gulp-html-beautify";
 
 // style
+// sass v4
+import sass from "gulp-sass";
+// sass v5
+// const sass = require('gulp-sass')(require('sass'));
 import postcss from "gulp-postcss";
 import postcssScss from "postcss-scss";
 import autoprefixer from "autoprefixer";
-import gulpSass from "gulp-sass";
-import nodeSass from "node-sass";
-
-const sass = gulpSass(nodeSass);
 
 // optimize style
 import stripCssComments from "gulp-strip-css-comments";
@@ -127,7 +127,7 @@ const BUILD_PATH = {
       `${BUILD}/assets/img/bg`,
       `${BUILD}/assets/img/dummy`,
       `${BUILD}/assets/img/homescreen`,
-      `${BUILD}/assets/img/icon`,
+      `${BUILD}/assets/img/icons`,
       `${BUILD}/assets/img/logo`,
       `${BUILD}/assets/js`,
       `${BUILD}/assets/js/data`,
@@ -325,12 +325,10 @@ export const compressImage = () => {
       }),
       // svg
       imagemin.svgo({
-        plugins: [{
-            removeViewBox: true
-          },
-          {
-            cleanupIDs: false
-          }
+        plugins: [
+          { removeViewBox: true },
+          { cleanupIDs: false },
+          { removeUnknownsAndDefaults: false }
         ]
       }),
       // gif
