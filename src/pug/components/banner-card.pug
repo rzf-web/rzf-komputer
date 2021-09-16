@@ -1,0 +1,17 @@
+//-------------------------------------------------------------------------------
+  @name: Banner Card
+  -------------------------------------------------------------------------------//
+  
+//banner-card
+.banner__card
+  ='\n'
+  a.banner__card__link(href=val.to)
+  if val.sale !== undefined
+    .banner__card__sale
+      p !{val.sale} 
+  .banner__card__img
+    ='\n'
+    img.banner__card__img__el(src="assets/img/dummy/"+val.img alt=val.alt)/
+  if val.text !== undefined
+    .banner__card__txt
+      p.banner__card__txt__desc !{val.text}

@@ -8,7 +8,7 @@ import {
 import {
   WindowScroll,
   Header,
-  HeroBanner,
+  Banner,
   Tabs,
   CardProduct,
   WindowResize,
@@ -68,7 +68,7 @@ const App = (() => {
       WindowResize.init();
       WindowScroll.init();
       Header.init();
-      HeroBanner.init();
+      Banner.init();
       CardProduct.init();
       Tabs.init();
       Footer.init();

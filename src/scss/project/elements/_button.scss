@@ -74,6 +74,10 @@
 
   &--confirmation {
     min-width: 285px;
+    margin-right: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
     @include small {
       &--confirmation {
         width: 100%;

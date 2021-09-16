@@ -7,8 +7,8 @@ const HeroBanner = (() => {
 
   // handleRunCarousel
   const handleRunCarousel = () => {
-    const _selector =  $('.js-hero-banner');
-    const _itemLength = $('.js-hero-banner .hero-banner__item').length;
+    const _selector = $('.js-banner-promo');
+    const _itemLength = $('.js-banner-promo .banner__card').length;
     const _itemRun = 1;
 
     // destroy carousel
@@ -21,36 +21,34 @@ const HeroBanner = (() => {
       // --- init carousel
       _selector.addClass('owl-carousel').owlCarousel({
         items: 1,
-        rewind: true,
         autoplay: true,
-        autoHeight: true,
         dots: true,
-        nav: false,
-        loop: true,
-        touchDrag: true,
-        mouseDrag: false,
-        autoplayHoverPause: true,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
+        nav: true,
+        loop: false,
+        navText: ["<i class='rzfkomputer-chevron-left'></i>","<i class='rzfkomputer-chevron-right'></i>"],
+        mouseDrag: true,
+        touchGrant: true,
+        autoplayHoverPause: false,
+        autoplayTimeout: 6000,
         dotsSpeed: 1000,
         autoplaySpeed: 1000,
         dragEndSpeed: 750,
-        autoplayTimeout: 8000
+        smartSpeed: 750
       });
     } else {
-      if (_selector.hasClass('owl-carousel')) {
+      if(_selector.hasClass('owl-carousel')) {
         _selector.removeClass('owl-carousel');
       }
       _selector.addClass('hero-banner--single');
     }
   }
 
-
-  // init
+  // --- init
   const init = () => {
     handleRunCarousel();
   }
 
+  // --- return
   return {
     init
   }

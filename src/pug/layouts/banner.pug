@@ -1,0 +1,19 @@
+//-------------------------------------------------------------------------------
+  @name: Banner
+  -------------------------------------------------------------------------------//
+
+//banner
+.banner
+  .container
+    .banner__content
+      .banner__promo.js-banner-promo
+        each val in dataPromo
+          -
+            data = val
+          include ../components/banner-card.pug
+      .banner__category
+        each val in dataCategory
+          -
+            data = val
+          include ../components/banner-card.pug
+          

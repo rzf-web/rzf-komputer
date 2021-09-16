@@ -1,0 +1,316 @@
+/* ==========================================================================
+Layout: Banner
+========================================================================== */
+
+.banner {
+  $b: &;
+  padding: 40px 0;
+  &__content {
+    margin: 0 -12px;
+    @include clearfix;
+    @include small {
+      margin: 0;
+    }
+  }
+  &__promo {
+    float: left;
+    width: 50%;
+    padding: 0 12px;
+    position: relative;
+    // &:hover {
+      &.owl-carousel {
+        .owl-nav {
+          .owl-prev,
+          .owl-next {
+            transition: all 350ms ease;
+            opacity: 1;
+            background-color: color(white);
+            @include shadow(14);
+            padding: 0;
+          }
+          .owl-prev {
+            right: 208px;
+            @include large {
+              right: 176px;
+            }
+            @include medium {
+              right: 280px;
+            }
+            @include extra-small {
+              right: 112px;
+            }
+          }
+          .owl-next {
+            left: 208px;
+            @include large {
+              left: 176px;
+            }
+            @include medium {
+              left: 280px;
+            }
+            @include extra-small {
+              left: 112px;
+            }
+          }
+        }
+      }
+    // }
+    @include medium {
+      float: none;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+    @include small {
+      padding: 0;
+    }
+    #{$b}__card {
+      width: 100%;
+      height: 500px;
+      position: relative;
+      @include large {
+        height: 468px;
+      }
+      @include small {
+        // height: 260px;
+        height: 280px;
+      }
+      &__img {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        padding-bottom: 75%;
+        @include large {
+          padding-bottom: 84%;
+        }
+        @include small {
+          padding-bottom: 88%;
+        }
+        &__el {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          overflow: hidden;
+        }
+      }
+      &__sale {
+        background-color: color(white);
+        padding: 6px 12px;
+        display: inline-block;
+        position: absolute;
+        transform: translate(20px, 20px);
+        z-index: 3;
+        border-radius: 8px;
+        color: color(green, 1);
+        text-align: center;
+        p {
+          @include font-size(16);
+          font-weight: fw(bold);
+          margin: 0;
+        }
+      }
+    }
+  }
+  &__category {
+    float: right;
+    width: 50%;
+    padding: 24px 0;
+    @include clearfix;
+    @include medium {
+      float: none;
+      width: auto;
+    }
+    @include small {
+      font-size: 0;
+      @include scroll(x, touch, hide);
+    }
+    #{$b}__card {
+      float: left;
+      position: relative;
+      padding: 0 12px;
+      width: 50%;
+      height: 262px;
+      height: 100%;
+      margin-bottom: 24px;
+      overflow: hidden;
+      @include large {
+        height: 222px;
+      }
+      @include small {
+        float: none;
+        display: inline-block;
+        padding: 0;
+        height: 224px;
+        width: 224px;
+        margin-right: 16px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      &__img {
+        border-radius: 8px;
+        overflow: hidden;
+        &__el {
+          transition: all .3s ease;
+        }
+      }
+      &:last-child {
+        display: block;
+        width: 50%;
+        margin-bottom: 0;
+        @include small {
+          display: inline-block;
+          width: 224px;
+        }
+      }
+      &:hover {
+        #{$b}__card__img__el {
+          filter: blur(2px);
+        }
+        #{$b}__card__txt p {
+          opacity: 1;
+          transform: none;
+          transition-delay: 50ms;
+        }
+      }
+      &__txt {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: zi(portfolio-middle-align);
+        transform: translate(-50%, -50%);
+        &__desc {
+          margin-bottom: 0;
+          display: inline-block;
+          vertical-align: middle;
+          opacity: 0;
+          transform: translateY(12px);
+          transition: all .3s ease;
+          transition-delay: 0s;
+          color: color(white);
+        }
+      }
+      &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        content: '';
+        opacity: 0;
+      }
+    }
+  }
+  .owl-carousel {
+    .owl-nav,
+    .owl-dots {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    .rzfkomputer-chevron-right,
+    .rzfkomputer-chevron-left {
+      vertical-align: middle;
+      display: inline-block;
+      @include font-size(20);
+      @include small {
+        vertical-align: top;
+      }
+    }
+    .owl-nav {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .owl-dots {
+      bottom: 32px;
+    }
+    .owl-nav {
+      .owl-prev,
+      .owl-next {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        // opacity: 0;
+        color: color(black, 1);
+        @include font-size(24);
+        background-color: color(white);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 350ms ease;
+        @include medium {
+          opacity: 1;
+        }
+        @include small {
+          width: 32px;
+          height: 32px;
+          border: 2px solid color(white);
+        }
+        &.disabled {
+          transform: translateX(-8px);
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      .owl-prev {
+        right: 222px;
+        @include large {
+          right: 160px;
+        }
+        @include medium {
+          right: 256px;
+        }
+        @include extra-small {
+          right: 112px;
+        }
+      }
+      .owl-next {
+        left: 222px;
+        @include large {
+          left: 160px;
+        }
+        @include medium {
+          left: 256px;
+        }
+        @include extra-small {
+          left: 112px;
+        }
+      }
+    }
+    .owl-dot {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+      width: 24px;
+      height: 8px;
+      border-radius: 12px;
+      opacity: 0.2;
+      z-index: 3;
+      background-color: color(black, 1);
+      transition: all 500ms ease;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        width: 48px;
+        background-color: color(green, 1);
+        opacity: 1;
+      }
+      &s {
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        line-height: 1;
+        transform: translateX(-50%);
+        @include small {
+          bottom: -18px;
+        }
+      }
+    }
+  }
+}
