@@ -1,0 +1,14 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    navActive = "status-pemesanan";
+    siteTitle = 'Status Pemesanan';
+
+//- Body
+block siteContent
+  //- Title Page
+  include status-pemesanan/title-page.pug
+  //- Status Pemesanan
+  include ../layouts/status-pemesanan.pug

@@ -19,6 +19,7 @@ import TitlePage from "./TitlePage";
 import ProductDetail from "./ProductDetail";
 import Sale from "./Sale";
 import Cart from "./Cart";
+import OrderStatus from "./OrderStatus";
 
 export {
   WindowScroll,
@@ -36,5 +37,6 @@ export {
   TitlePage,
   ProductDetail,
   Sale,
-  Cart
+  Cart,
+  OrderStatus
 };
