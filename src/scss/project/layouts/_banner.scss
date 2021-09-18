@@ -5,6 +5,7 @@ Layout: Banner
 .banner {
   $b: &;
   padding: 40px 0;
+  background-color: color(green, 3);
   &__content {
     margin: 0 -12px;
     @include clearfix;

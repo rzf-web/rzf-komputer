@@ -35,6 +35,7 @@
     }
   }
 
+
   &--secondary {
     background-color: transparent;
     color: color(green, 1);
@@ -84,4 +85,24 @@
       }
     }
   }
+}
+
+// button sweet-alert
+
+.mr-12 {
+  margin-right: 12px;
+  @include small {
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+}
+
+.w-100 {
+  @include small {
+  width: 100%;
+  }
+}
+
+.swal2-title {
+  @include font-size(36);
 }

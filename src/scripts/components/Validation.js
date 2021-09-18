@@ -97,9 +97,29 @@ const Validation = (() => {
       $.each(ElementSelector, (i, v) => {
         $('#'+v.id).blur();
       });
+      console.log(ElementSelector);
 
       if ($('.error').length > 0) {
         e.preventDefault();
+      } else {
+        e.preventDefault();
+        if ($(e.currentTarget).hasClass('js-message')) {
+          $.each(ElementSelector, (i, v) => {
+            $('#'+v.id).val('');
+          });
+          Swal.fire({
+            title: 'Pesan Terkirim!',
+            text: 'Terimakasih atas masukan Anda!',
+            icon: 'success',
+            confirmButtonText: 'Tutup',
+            confirmButtonColor: '#388e3c',
+            width: 500,
+            height: 800,
+            customClass: {
+              confirmButton: 'btn btn-danger'
+            },
+          });
+        }
       }
       // console.log(WHITESPACE);
     });

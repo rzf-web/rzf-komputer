@@ -35,6 +35,38 @@ function formatRupiah(harga, prefix) {
 
   // handleClick
   const handleClick = () => {
+    // handle delete product
+    $('.js-delete').on('click', (e) => {
+      e.preventDefault();
+      const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn--primary mr-12 w-100',
+          cancelButton: 'btn btn--secondary w-100',
+        },
+        buttonsStyling: false
+      })
+      swalWithBootstrapButtons.fire({
+        showCancelButton: true,
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        confirmButtonColor: '#388e3c',
+        cancelButtonColor: '#ff0000',
+        confirmButtonText: 'Yes, delete it!',
+        width: 550,
+        padding: '22px'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          swalWithBootstrapButtons.fire({
+            title: 'Deleted!',
+            text: 'Your file has been deleted.',
+            icon: 'success',
+            width: 550
+          })
+        }
+      })
+    });
+
     // handle button min
     $(_buttonMin).on('click', (e) => {
       e.preventDefault();
