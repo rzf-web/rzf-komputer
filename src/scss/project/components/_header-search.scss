@@ -104,18 +104,45 @@
     transform: none;
   }
   &-notif {
-    background-color: red;
-    padding: 8px 16px;
+    padding: 32px 24px;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: color(white);
     display: none;
+    visibility: hidden;
+    opacity: 0;
+    p {
+      text-align: center;
+      color: #000;
+      margin: 0;
+    }
+    &.show {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
   }
-  h3 {
+  &-img-wrapper {
+    position: relative;
+    padding: 22px 24px;
+    margin: 0 auto;
+    img {
+      display: block;
+      margin: 0 auto 20px;
+    }
+  }
+  .header__search-section-title {
     @include font-size(18);
     margin-bottom: 8px;
     font-weight: fw(bold);
     font-family: $font-title;
-    // @include medium {
-    //   @include font-size(18);
-    // }
+    visibility: hidden;
+    opacity: 0;
+    &.show {
+      visibility: visible;
+      opacity: 1;
+    }
   }
   @include medium {
     left: 0;

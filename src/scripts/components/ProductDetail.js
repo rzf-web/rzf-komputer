@@ -59,6 +59,7 @@ function formatRupiah(harga, prefix) {
     // handle on keyup
     $(_quantity).on('keyup', (e) => {
       let _resultCount = _newPrice * $(_quantity).val();
+      $(_quantity).val(Math.abs($(_quantity).val()));
       $(_jsPrice).text(formatRupiah(_resultCount, ''));
       _oldPrice = _resultCount;
       _itemCount = parseInt(e.currentTarget.value);

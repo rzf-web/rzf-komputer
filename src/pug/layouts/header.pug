@@ -161,9 +161,12 @@
             i.rzfkomputer-clear
             ='\n'
         .header__search-section__result.js-search-result
-          .header__search-section__result-notif
-            p Data Not Found
-          h3 Produk Pilihan
+          .header__search-section__result-notif.js-notif-show
+            .header__search-section__result-img-wrapper
+              ='\n'
+              img(src='assets/img/dummy/no-result.svg')
+              p Data Not Found
+          h3.header__search-section-title.show Produk Pilihan
           ul.header__search-section__list.js-search-popup-input
             li.header__search-section__item
               ='\n'

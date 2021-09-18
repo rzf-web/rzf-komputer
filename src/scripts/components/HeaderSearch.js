@@ -87,11 +87,50 @@ const HeaderSearch = (() => {
         }, 400)
           Scrolllable.disable();
         });
+      },
+
+      handleSortingSearch = () => {
+        let _inputSearch = $('.js-search-popup-input'),
+            _content = '',
+            _input = $('.js-search-input');
+        
+        // arrayProduct
+        const dataProduct = ['Asus', 'Hp', 'Printer Thermal', 'TP-link'];
+
+        $(dataProduct).each((i, v) => {
+          _content += `<li class='header__search-section__item'>
+                        <a class='header__search-section__link' href='#'>${v}</a>
+                      </li>`
+        });
+        _inputSearch.html(_content);
+
+
+        $(_input).on('keyup', () => {
+          _content = '';
+          $(dataProduct).each((i, v) => {
+            if (v.toLowerCase().indexOf(_input.val().toLowerCase()) != -1) {
+              _content += `<li class='header__search-section__item'>
+                              <a class='header__search-section__link' href='#'>${v}</a>
+                            </li>`
+            }
+          });
+          if (_content == '') {
+            if($('.header__search-section-title').hasClass('show')) {
+              $('.header__search-section-title').removeClass('show');
+              $('.js-notif-show').addClass('show');
+            }
+          } else {
+              $('.header__search-section-title').addClass('show');
+              $('.js-notif-show').removeClass('show');
+          }
+            _inputSearch.html(_content);
+        });
       }
 
   // init
   const init = () => {
     handleClick();
+    handleSortingSearch();
   }
 
   return {
