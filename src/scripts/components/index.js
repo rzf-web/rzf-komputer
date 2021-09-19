@@ -5,7 +5,7 @@
 
 import WindowScroll from "./WindowScroll";
 import Header from "./Header";
-import Banner from "./Banner";
+import HeroBanner from "./HeroBanner";
 import Tabs from "./Tabs";
 import CardProduct from "./CardProduct";
 import WindowResize from "./WindowResize";
@@ -24,7 +24,7 @@ import OrderStatus from "./OrderStatus";
 export {
   WindowScroll,
   Header,
-  Banner,
+  HeroBanner,
   Tabs,
   CardProduct,
   WindowResize,

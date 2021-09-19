@@ -91,50 +91,50 @@ const Validation = (() => {
     });
   }
 
-  // handleClick
-  const handleClick = () => {
-    $('button[type="submit"]').on('click', (e) => {
-      $.each(ElementSelector, (i, v) => {
-        $('#'+v.id).blur();
-      });
-      console.log(ElementSelector);
+  // // handleClick
+  // const handleClick = () => {
+  //   $('button[type="submit"]').on('click', (e) => {
+  //     $.each(ElementSelector, (i, v) => {
+  //       $('#'+v.id).blur();
+  //     });
+  //     console.log(ElementSelector);
 
-      if ($('.error').length > 0) {
-        e.preventDefault();
-      } else {
-        e.preventDefault();
-        if ($(e.currentTarget).hasClass('js-message')) {
-          $.each(ElementSelector, (i, v) => {
-            $('#'+v.id).val('');
-          });
-          const swalWithBootstrapButton = Swal.mixin({
-            customClass: {
-              confirmButton: 'btn btn--primary mr-12 w-100',
-            },
-            buttonsStyling: false
-          })
-          swalWithBootstrapButton.fire({
-            title: 'Pesan Terkirim!',
-            text: 'Terimakasih. Semoga hari-hari Anda menyenangkan!',
-            icon: 'success',
-            confirmButtonColor: '#388e3c',
-            confirmButtonText: 'Tutup',
-            confirmButtonColor: '#388e3c',
-            width: 500,
-            height: 800,
-            width: 550,
-            padding: '22px',
-          })
-        }
-      }
-      // console.log(WHITESPACE);
-    });
-  }
+  //     if ($('.error').length > 0) {
+  //       e.preventDefault();
+  //     } else {
+  //       e.preventDefault();
+  //       if ($(e.currentTarget).hasClass('js-message')) {
+  //         $.each(ElementSelector, (i, v) => {
+  //           $('#'+v.id).val('');
+  //         });
+  //         const swalWithBootstrapButton = Swal.mixin({
+  //           customClass: {
+  //             confirmButton: 'btn btn--primary mr-12 w-100',
+  //           },
+  //           buttonsStyling: false
+  //         })
+  //         swalWithBootstrapButton.fire({
+  //           title: 'Pesan Terkirim!',
+  //           text: 'Terimakasih Sobat RZF. Semoga hari-hari Anda menyenangkan',
+  //           icon: 'success',
+  //           confirmButtonColor: '#388e3c',
+  //           confirmButtonText: 'Tutup',
+  //           confirmButtonColor: '#388e3c',
+  //           width: 500,
+  //           height: 800,
+  //           width: 550,
+  //           padding: '22px',
+  //         })
+  //       }
+  //     }
+  //     // console.log(WHITESPACE);
+  //   });
+  // }
 
   // - init
   const init = () => {
     handleInput();
-    handleClick();
+    // handleClick();
   }
 
   return {

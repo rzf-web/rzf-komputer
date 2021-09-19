@@ -41,14 +41,15 @@ function formatRupiah(harga, prefix) {
       const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
           confirmButton: 'btn btn--primary mr-12 w-100',
-          cancelButton: 'btn btn--secondary w-100',
+        cancelButton: 'btn btn--secondary w-100',
         },
         buttonsStyling: false
       })
       swalWithBootstrapButtons.fire({
         showCancelButton: true,
-        title: 'Apakah Anda yakin akan menghapus item ini?',
-        text: "Tindakan ini tidak bisa dibatalkan lagi!",
+        cancelButtonText: 'Batal',
+        title: 'Hapus item ini?',
+        text: "Tindakan ini tidak bisa diurungkan!",
         icon: 'warning',
         confirmButtonColor: '#388e3c',
         cancelButtonColor: '#ff0000',

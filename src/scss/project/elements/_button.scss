@@ -91,6 +91,9 @@
   }
 }
 
+
+// --- sweet-alert config custom
+
 // button sweet-alert
 
 .mr-12 {
@@ -107,6 +110,22 @@
   }
 }
 
+// font-size sweet-alert
 .swal2-title {
-  @include font-size(26);
+  font-size: 28px !important;
+}
+
+.swal2-html-container {
+  font-size: 16px !important;
+}
+
+// color success sweet-alert
+.swal2-success-ring {
+  color: #388e3c;
+  border: solid 2px #388e3c !important;
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+  color: #388e3c ;
+  border: solid 2px #388e3c;
 }

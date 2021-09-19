@@ -92,9 +92,13 @@
 .sticky {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 11.5%;
+  right: 11.5%;
   z-index: 3;
   margin: 0;
-  border-radius: 0;
+  transition: all 350ms ease;
+  @include small {
+    left: 0;
+    width: 100%;
+  }
 }
