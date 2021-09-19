@@ -107,18 +107,24 @@ const Validation = (() => {
           $.each(ElementSelector, (i, v) => {
             $('#'+v.id).val('');
           });
-          Swal.fire({
+          const swalWithBootstrapButton = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn--primary mr-12 w-100',
+            },
+            buttonsStyling: false
+          })
+          swalWithBootstrapButton.fire({
             title: 'Pesan Terkirim!',
-            text: 'Terimakasih atas masukan Anda!',
+            text: 'Terimakasih. Semoga hari-hari Anda menyenangkan!',
             icon: 'success',
+            confirmButtonColor: '#388e3c',
             confirmButtonText: 'Tutup',
             confirmButtonColor: '#388e3c',
             width: 500,
             height: 800,
-            customClass: {
-              confirmButton: 'btn btn-danger'
-            },
-          });
+            width: 550,
+            padding: '22px',
+          })
         }
       }
       // console.log(WHITESPACE);

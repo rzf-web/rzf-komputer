@@ -47,21 +47,21 @@ function formatRupiah(harga, prefix) {
       })
       swalWithBootstrapButtons.fire({
         showCancelButton: true,
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
+        title: 'Apakah Anda yakin akan menghapus item ini?',
+        text: "Tindakan ini tidak bisa dibatalkan lagi!",
         icon: 'warning',
         confirmButtonColor: '#388e3c',
         cancelButtonColor: '#ff0000',
-        confirmButtonText: 'Yes, delete it!',
+        confirmButtonText: 'Ya, Hapus',
         width: 550,
         padding: '22px'
       }).then((result) => {
         if (result.isConfirmed) {
           swalWithBootstrapButtons.fire({
-            title: 'Deleted!',
-            text: 'Your file has been deleted.',
+            title: 'Terhapus!',
+            text: 'Item Anda sudah terhapus',
             icon: 'success',
-            width: 550
+            width: 420
           })
         }
       })

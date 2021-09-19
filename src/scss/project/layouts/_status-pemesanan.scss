@@ -23,7 +23,7 @@
     margin-right: 48px;
     padding: 32px 148px 56px;
     margin: 48px auto 0;
-    background-color: color(grey, 4);
+    background-color: color(green, 3);
     border-radius: 8px;
     @include medium {
       padding-right: 96px;
@@ -45,6 +45,11 @@
     padding: 0;
     margin: 0;
     text-align: left;
+    &.active {
+      &::before {
+        border-color: 2px solid color(green, 1);
+      }
+    }
     &::before {
       content: '';
       position: absolute;
@@ -53,6 +58,7 @@
       z-index: 1;
       height: 220px;
       border-left: 2px solid color(green, 1);
+      border-left: 2px solid #ddd;
     }
   }
   &__item {
@@ -60,6 +66,11 @@
     font-weight: fw(semi-bold);
     padding-left: 56px;
     margin-bottom: 40px;
+    &.active {
+      &::before {
+        border-color: color(green, 1);
+      }
+    }
     &::before {
       content: '';
       position: absolute;

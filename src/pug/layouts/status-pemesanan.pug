@@ -5,11 +5,11 @@
 //Order status
 .order
   .container
-    h3.order__title Nomor Order
+    h3.order__title Order ID
     .order__form(action='#' method='get')
       input.form__input(type='number' placeholder='Masukkan Nomor Order')/
       p(class="form__alert" id="alertPhone" data-req="Nomor tidak boleh kosong!" data-invalid-phone="Masukkan nomor yang valid!")
-      p.form__desc Nomor dapat dilihat di e-receipt yang dikirimkan ke email, apabila sudah membayar namun tidak menerima e-receipt Anda dapat menghubungi kami ke rzfkomputer@gmail.com
+      p.form__desc Nomor dapat dilihat di e-receipt yang dikirimkan ke email. Apabila sudah membayar namun tidak menerima e-receipt, Anda dapat menghubungi kami di rzfkomputer@gmail.com
       .fi-row
         button.btn.btn--primary.btn--payment.js-show-order(type='submit') Cek Status
     .order__box
@@ -17,5 +17,5 @@
       ul.order__list
         li.order__item.active Menunggu Pembayaran
         li.order__item Pembayaran Diterima
-        li.order__item Prok Sedang dalam pengantaran
+        li.order__item Produk sedang dalam pengantaran
         li.order__item Produk telah sampai
