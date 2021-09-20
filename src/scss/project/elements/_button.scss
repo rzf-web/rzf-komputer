@@ -121,11 +121,11 @@
 
 // color success sweet-alert
 .swal2-success-ring {
-  color: #388e3c;
+  color: #388e3c !important;
   border: solid 2px #388e3c !important;
 }
 
 .swal2-icon.swal2-success [class^=swal2-success-line] {
-  color: #388e3c ;
-  border: solid 2px #388e3c;
+  background-color: #388e3c !important;
+  border: solid 2px #388e3c !important;
 }

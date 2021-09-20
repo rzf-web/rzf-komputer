@@ -58,7 +58,11 @@
       z-index: 1;
       height: 220px;
       border-left: 2px solid color(green, 1);
-      border-left: 2px solid #ddd;
+      border-left: 2px solid color(green, 1);
+      @include extra-small {
+        top: 4px;
+        height: 100%;
+      }
     }
   }
   &__item {
