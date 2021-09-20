@@ -124,6 +124,7 @@ Layout: Banner
       width: auto;
     }
     @include small {
+      padding-bottom: 0;
       font-size: 0;
       @include scroll(x, touch, hide);
     }
@@ -163,7 +164,12 @@ Layout: Banner
         #{$b}__card__img__el {
           filter: blur(2px);
         }
-        #{$b}__card__txt p {
+        #{$b}__card__txt .banner__card__txt__desc {
+          opacity: 1;
+          transform: none;
+          transition-delay: 50ms;
+        }
+        #{$b}__card__txt .banner__card__txt__button {
           opacity: 1;
           transform: none;
           transition-delay: 50ms;
@@ -173,8 +179,23 @@ Layout: Banner
         position: absolute;
         top: 50%;
         left: 50%;
-        z-index: zi(portfolio-middle-align);
+        z-index: 3;
         transform: translate(-50%, -50%);
+        &__button {
+          padding: 0;
+          margin: 0;
+          background-color: color(white);
+          transform: translateY(12px);
+          opacity: 0;
+          outline: 0;
+          border: none;
+          padding: 8px;
+          border-radius: 8px;
+          min-width: 120px;
+          transform: translateY(12px);
+          transition: all .3s ease;
+          transition-delay: 0s;
+        }
         &__desc {
           margin-bottom: 0;
           display: inline-block;
@@ -183,7 +204,8 @@ Layout: Banner
           transform: translateY(12px);
           transition: all .3s ease;
           transition-delay: 0s;
-          color: color(white);
+          color: color(green, 1);
+          font-weight: fw(semi-bold);
         }
       }
       &__link {
