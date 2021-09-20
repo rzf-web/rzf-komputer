@@ -132,22 +132,23 @@ const HeaderSearch = (() => {
         const dataProduct = ['Asus', 'Hp', 'Printer Thermal', 'TP-link'];
 
         $(dataProduct).each((i, v) => {
-          _content += `<li class='header__search-section__item'>
-                        <a class='header__search-section__link' href='#'>${v}</a>
-                      </li>`
+          _content +=
+          `<li class='header__search-section__item'>
+            <a class='header__search-section__link' href='#'>${v}</a>
+            </li>`
         });
         _inputSearch.html(_content);
-
 
         $(_input).on('keyup', () => {
           _content = '';
           $(dataProduct).each((i, v) => {
             if (v.toLowerCase().indexOf(_input.val().toLowerCase()) != -1) {
-              _content += `<li class='header__search-section__item'>
-                              <a class='header__search-section__link' href='#'>${v}</a>
-                            </li>`
-            }
-          });
+              _content += 
+              `<li class='header__search-section__item'>
+                <a class='header__search-section__link' href='#'>${v}</a>
+                </li>`
+              }
+            });
           if (_content == '') {
             if($('.header__search-section-title').hasClass('show')) {
               $('.header__search-section-title').removeClass('show');
