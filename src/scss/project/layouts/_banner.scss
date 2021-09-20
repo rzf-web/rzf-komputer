@@ -137,14 +137,16 @@ Layout: Banner
       height: 100%;
       margin-bottom: 24px;
       overflow: hidden;
+      @include remove-tap-highlight;
       @include large {
         height: 222px;
       }
       @include small {
-        float: none;
         display: inline-block;
+        vertical-align: middle;
         padding: 0;
-        height: 224px;
+        float: none;
+        height: 100%;
         width: 224px;
         margin-right: 16px;
         &:last-child {
@@ -156,15 +158,6 @@ Layout: Banner
         overflow: hidden;
         &__el {
           transition: all .3s ease;
-        }
-      }
-      &:last-child {
-        display: block;
-        width: 50%;
-        margin-bottom: 0;
-        @include small {
-          display: inline-block;
-          width: 224px;
         }
       }
       &:hover {
