@@ -33,7 +33,7 @@ function formatRupiah(harga, prefix) {
   return prefix == undefined ? rupiah : (rupiah ? 'Rp' + rupiah : '');
 }
 
-  // handleClick
+  // handle click
   const handleClick = () => {
     // handle delete product
     $('.js-delete').on('click', (e) => {
@@ -49,7 +49,7 @@ function formatRupiah(harga, prefix) {
         showCancelButton: true,
         cancelButtonText: 'Batal',
         title: 'Hapus item ini?',
-        text: "Tindakan ini tidak bisa diurungkan!",
+        text: "Tindakan ini tidak dapat diurungkan!",
         icon: 'warning',
         confirmButtonColor: '#388e3c',
         cancelButtonColor: '#ff0000',

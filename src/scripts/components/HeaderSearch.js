@@ -87,8 +87,42 @@ const HeaderSearch = (() => {
         }, 400)
           Scrolllable.disable();
         });
+
+        // handle delete product
+        $('.js-cart-list-delete').on('click', (e) => {
+          e.preventDefault();
+          const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn--primary mr-12 w-100',
+            cancelButton: 'btn btn--secondary w-100',
+            },
+            buttonsStyling: false
+          })
+          swalWithBootstrapButtons.fire({
+            showCancelButton: true,
+            cancelButtonText: 'Batal',
+            title: 'Hapus item ini?',
+            text: "Tindakan ini tidak dapat diurungkan!",
+            icon: 'warning',
+            confirmButtonColor: '#388e3c',
+            cancelButtonColor: '#ff0000',
+            confirmButtonText: 'Ya, Hapus',
+            width: 550,
+            padding: '22px'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              swalWithBootstrapButtons.fire({
+                title: 'Terhapus!',
+                text: 'Item Anda sudah terhapus',
+                icon: 'success',
+                width: 420
+              })
+            }
+          })
+        });
       },
 
+      // handle sorting product
       handleSortingSearch = () => {
         let _inputSearch = $('.js-search-popup-input'),
             _content = '',
