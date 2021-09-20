@@ -6,7 +6,7 @@
 const Sale = (() => {
   
   const handleCountDown = () => {
-    let countDownDate = new Date("Sep 15, 2021 10:10:25").getTime();
+    let countDownDate = new Date("Oct 16, 2021 10:10:25").getTime();
 
     // update the count down every 1 second
     let x = setInterval( () => {
