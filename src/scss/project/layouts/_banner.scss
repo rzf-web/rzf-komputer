@@ -189,7 +189,7 @@ Layout: Banner
           opacity: 0;
           outline: 0;
           border: none;
-          padding: 8px;
+          padding: 6px 12px;
           border-radius: 8px;
           min-width: 120px;
           transform: translateY(12px);
@@ -206,6 +206,7 @@ Layout: Banner
           transition-delay: 0s;
           color: color(green, 1);
           font-weight: fw(semi-bold);
+          @include font-size(14);
         }
       }
       &__link {
