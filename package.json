@@ -1,7 +1,7 @@
 {
-  "name": "rzf-komputer",
+  "name": "rzfkomputer",
   "version": "1.0.0",
-  "description": "Official RZF Komputer Website",
+  "description": "Official RZF Komputer Website's",
   "main": "gulpfile.babel.js",
   "scripts": {
     "start": "gulp",
@@ -21,7 +21,7 @@
     "using",
     "jquery"
   ],
-  "author": "bilik dev",
+  "author": "dendidb",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rzf-web/rzf-komputer/issues"
