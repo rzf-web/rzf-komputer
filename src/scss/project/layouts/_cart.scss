@@ -27,7 +27,7 @@
       }
       &-title {
          font-weight: fw(semi-bold);
-         @include font-size(18)
+         @include font-size(18);
          padding-bottom: 12px;
          text-transform: uppercase;
          border-bottom: solid 1px color(grey, 6);
