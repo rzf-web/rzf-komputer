@@ -6791,6 +6791,7 @@ Layout: Banner
   font-size: 24px;
   margin: 0 0 24px;
   text-align: left;
+  text-transform: uppercase;
 }
 .contact__map {
   position: absolute;
@@ -7708,6 +7709,16 @@ Layout: Banner
     margin-left: 24px;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .product__sorting-select {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .product__sorting-select {
+    margin-left: 0;
+  }
+}
 .product__sorting-title {
   text-align: center;
   color: black;
@@ -7839,6 +7850,15 @@ Layout: Banner
         -ms-transform: translate(10vw, 0);
          -o-transform: translate(10vw, 0);
             transform: translate(10vw, 0);
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .sticky .product__sorting-select {
+    -webkit-transform: translate(7vw, 0);
+       -moz-transform: translate(7vw, 0);
+        -ms-transform: translate(7vw, 0);
+         -o-transform: translate(7vw, 0);
+            transform: translate(7vw, 0);
   }
 }
 @media only screen and (max-width: 1300px) {

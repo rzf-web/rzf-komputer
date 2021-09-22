@@ -34,6 +34,12 @@
       @include mq(1280px) {
         margin-left: 24px;
       }
+      @include mq(1024px) {
+        margin-left: 0;
+      }
+      @include extra-small {
+        margin-left: 0;
+      }
     }
     &-title {
       text-align: center;
@@ -118,7 +124,10 @@
     transform: translate(100%, 0);
     @include mq(1680px) {
       transform: translate(10vw, 0);
-    } 
+    }
+    @include mq(1400px) {
+      transform: translate(7vw, 0);
+    }
     @include mq(1300px) {
       transform: translate(30%);
     }
