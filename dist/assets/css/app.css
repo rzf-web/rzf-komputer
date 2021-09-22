@@ -3080,7 +3080,7 @@ b {
   }
 }
 .form__control:last-child {
-  margin-bottom: 0;
+  margin-bottom: 48px;
 }
 .form__label {
   display: block;
@@ -6873,9 +6873,16 @@ Layout: Banner
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 2.6rem;
-  padding-bottom: 12px;
   text-transform: uppercase;
-  border-bottom: solid 1px #bbb;
+  border-bottom: solid 1px #ced4da;
+  padding-bottom: 8px;
+}
+@media only screen and (max-width: 575.86px) {
+  .cart__table-title,
+.cart tr-title {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 }
 .cart__media {
   max-width: 546px;
@@ -6890,22 +6897,44 @@ Layout: Banner
 }
 .cart__media__delete-btn {
   position: absolute;
-  top: 0;
+  top: 4px;
   left: 8px;
   bottom: 0;
-  width: 45px;
+  width: 40px;
   height: 40px;
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%;
   background-color: #ff0000;
-  width: 40px;
   color: #fff;
-  outline: 0;
   border: none;
+  outline: 0;
   padding: 0;
   margin: 0;
   cursor: pointer;
+}
+.cart__media__delete-btn i.rzfkomputer-trashcan {
+  vertical-align: middle;
+}
+@media only screen and (max-width: 1199.98px) {
+  .cart__media__delete-btn {
+    padding-left: 3px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .cart__media__delete-btn {
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .cart__media__delete-btn {
+    width: 20px;
+    height: 20px;
+    top: -12px;
+    left: 0;
+    background-color: transparent;
+    color: #ff0000;
+  }
 }
 .cart__media__img-wrapper {
   float: left;
@@ -6948,6 +6977,11 @@ Layout: Banner
   .cart__media__total {
     font-size: 1.4rem;
     line-height: 2rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .cart__media__total {
+    white-space: nowrap;
   }
 }
 .cart__media__product-count {
@@ -7073,16 +7107,16 @@ Layout: Banner
 .checkout__summary {
   float: left;
   width: 50%;
-  padding: 24px 32px;
+  padding: 24px 0 0 24px;
 }
 @media only screen and (max-width: 767.98px) {
   .checkout__summary {
     width: 100%;
-    padding: 32px 0;
+    padding: 24px 0;
   }
 }
 .checkout__box {
-  padding: 32px;
+  padding: 24px;
   background-color: #eff5ef;
   text-align: left;
   -webkit-border-radius: 8px;
@@ -7093,17 +7127,32 @@ Layout: Banner
   font-size: 1.8rem;
   line-height: 2.6rem;
   text-align: left;
-  margin-bottom: 24px;
+  margin-bottom: 0;
+  padding-bottom: 8px;
   text-transform: uppercase;
+  border-bottom: 2px solid #ced4da;
+}
+@media only screen and (max-width: 575.86px) {
+  .checkout__title {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 }
 .checkout__table {
   width: 100%;
 }
 .checkout__table-list {
   padding-bottom: 18px;
+  font-weight: 700;
 }
 .checkout__table-name {
-  padding-left: 12px;
+  padding: 12px 0;
+  border: none;
+}
+@media only screen and (max-width: 575.86px) {
+  .checkout__table-name {
+    padding: 12px 12px 12px 0;
+  }
 }
 .checkout__table-count {
   padding-left: 18px;
@@ -7121,15 +7170,21 @@ Layout: Banner
     line-height: 1.7rem;
   }
 }
+@media only screen and (max-width: 991.98px) {
+  .checkout__table-price {
+    white-space: nowrap;
+  }
+}
 @media only screen and (max-width: 575.86px) {
   .checkout__table-price {
     font-size: 1.2rem;
     line-height: 1.7rem;
+    white-space: nowrap;
   }
 }
 .checkout__table th {
   padding: 12px 0;
-  font-weight: 400;
+  font-weight: 600;
 }
 @media only screen and (max-width: 575.86px) {
   .checkout__table th {

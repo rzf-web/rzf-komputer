@@ -34,9 +34,12 @@
       &-title {
          font-weight: fw(semi-bold);
          @include font-size(18);
-         padding-bottom: 12px;
          text-transform: uppercase;
-         border-bottom: solid 1px color(grey, 6);
+         border-bottom: solid 1px color(grey, 5);
+         padding-bottom: 8px;
+         @include extra-small {
+            @include font-size(14);
+         }
       }
    }
    &__media {
@@ -47,20 +50,36 @@
       }
       &__delete-btn {
          position: absolute;
-         top: 0;
+         top: 4px;
          left: 8px;
          bottom: 0;
-         width: 45px;
+         width: 40px;
          height: 40px;
          border-radius: 50%;
          background-color: color(danger);
-         width: 40px;
          color: color(white);
-         outline: 0;
          border: none;
+         outline: 0;
          padding: 0;
          margin: 0;
          cursor: pointer;
+         i.rzfkomputer-trashcan {
+          vertical-align: middle;
+         }
+         @include large {
+          padding-left: 3px;
+         }
+         @include medium {
+            padding-left: 0;
+         }
+         @include retina {
+            width: 20px;
+            height: 20px;
+            top: -12px;
+            left: 0;
+            background-color: transparent;
+            color: color(danger);
+         }
       }
       &__img-wrapper {
          float: left;
@@ -92,6 +111,9 @@
          font-weight: fw(regular);
          @include extra-small {
             @include font-size(14);
+         }
+         @include retina {
+            white-space: nowrap;
          }
       }
       &__product-count {
@@ -187,14 +209,14 @@
    &__summary {
       float: left;
       width: 50%;
-      padding: 24px 32px;
+      padding: 24px 0 0 24px;
       @include small {
          width: 100%;
-         padding: 32px 0;
+         padding: 24px 0;
       }
    }
    &__box {
-      padding: 32px;
+      padding: 24px;
       background-color: color(green, 3);
       text-align: left;
       border-radius: 8px;
@@ -202,16 +224,26 @@
    &__title {
       @include font-size(18);
       text-align: left;
-      margin-bottom: 24px;
+      margin-bottom: 0;
+      padding-bottom: 8px;
       text-transform: uppercase;
+      border-bottom: 2px solid color(grey, 5);
+      @include extra-small {
+         @include font-size(14);
+      }
    }
    &__table {
       width: 100%;
       &-list {
          padding-bottom: 18px;
+         font-weight: 700;
       }
       &-name {
-         padding-left: 12px;
+         padding: 12px 0;
+         border: none;
+         @include extra-small {
+          padding: 12px 12px 12px 0;
+        }
       }
       &-count {
          padding-left: 18px;
@@ -226,13 +258,17 @@
          }
       }
       &-price {
+         @include medium {
+            white-space: nowrap;
+         }
          @include extra-small {
             @include font-size(12);
+            white-space: nowrap;
          }
       }
       th {
          padding: 12px 0;
-         font-weight: fw(regular);
+         font-weight: fw(semi-bold);
          @include extra-small {
             @include font-size(12);
          }

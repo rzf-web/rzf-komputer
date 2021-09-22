@@ -86,6 +86,9 @@
             textarea.form__input(id="address" name='address' placeholder='Masukkan Alamat' data-target="alertAddress" rows='5' required)
             p(class="form__alert" id="alertAddress" data-req="Alamat tidak boleh kosong!")
             ='\n'
+          button.btn.btn--block.btn--primary#js-submit(type='submit')
+            ='\n' 
+            | Pesan Sekarang
 
       .checkout__summary
         .checkout__box
@@ -94,18 +97,13 @@
             thead
               tr.checkout__table-list
                 th(scope='col') Produk
-                th(scope='col') Jumlah
-                th(scope='col') Harga
+                th(scope='col') Subtotal
             tbody
               tr
-                th.checkout__table-name ASUS
-                td.checkout__table-count.js-cart-count 1
+                td.checkout__table-name ASUS AMD Ryzen 3 RAM 3GB All-in One
                 td.checkout__table-price.js-cart-price Rp 5.400.000-,
               tr
-                th Total :
-                td.checkout__table-count
+                th Grand Total :
                 td.checkout__table-price.js-cart-total Rp 5.400.000-,
-          button.btn.btn--block.btn--primary#js-submit(type='submit')
-            | Pesan Sekarang
 ='\n'
 // end-checkout-form

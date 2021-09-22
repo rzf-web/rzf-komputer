@@ -325,7 +325,8 @@
                 <label class="form__label" for="address">Alamat Rumah/Kantor</label>
                 <textarea class="form__input" id="address" name="address" placeholder="Masukkan Alamat" data-target="alertAddress" rows="5" required></textarea>
                 <p class="form__alert" id="alertAddress" data-req="Alamat tidak boleh kosong!"></p>
-              </div>
+              </div><button class="btn btn--block btn--primary" id="js-submit" type="submit">
+                Pesan Sekarang</button>
             </form>
           </div>
           <div class="checkout__summary">
@@ -335,23 +336,20 @@
                 <thead>
                   <tr class="checkout__table-list">
                     <th scope="col">Produk</th>
-                    <th scope="col">Jumlah</th>
-                    <th scope="col">Harga</th>
+                    <th scope="col">Subtotal</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th class="checkout__table-name">ASUS</th>
-                    <td class="checkout__table-count js-cart-count">1</td>
+                    <td class="checkout__table-name">ASUS AMD Ryzen 3 RAM 3GB All-in One</td>
                     <td class="checkout__table-price js-cart-price">Rp 5.400.000-,</td>
                   </tr>
                   <tr>
-                    <th>Total :</th>
-                    <td class="checkout__table-count"></td>
+                    <th>Grand Total :</th>
                     <td class="checkout__table-price js-cart-total">Rp 5.400.000-,</td>
                   </tr>
                 </tbody>
-              </table><button class="btn btn--block btn--primary" id="js-submit" type="submit">Pesan Sekarang</button>
+              </table>
             </div>
           </div>
         </div>
