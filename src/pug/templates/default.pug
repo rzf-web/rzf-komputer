@@ -125,13 +125,13 @@ html(lang='id')
 
   body(class=holdTransitionClass)
 
-    if !isDesignSystem
+    if !isFrontWeb
       //- header
       include ../layouts/header.pug
     .main-site.main-site--hide.js-main-site
       //- site-content
       block siteContent
-    if !isDesignSystem
+    if !isFrontWeb
       //- footer
       include ../layouts/footer.pug
       //- whatsapp button

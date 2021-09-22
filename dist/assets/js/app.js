@@ -454,11 +454,10 @@ var Contact = function () {
   var ElementEvents = ['input', 'blur']; // handleClick
 
   var handleClick = function handleClick() {
-    $('button[type="submit"]').on('click', function (e) {
+    $('#js-submit').on('click', function (e) {
       $.each(ElementSelector, function (i, v) {
         $('#' + v.id).blur();
-      });
-      console.log(ElementSelector);
+      }); // console.log(ElementSelector);
 
       if ($('.error').length > 0) {
         e.preventDefault();

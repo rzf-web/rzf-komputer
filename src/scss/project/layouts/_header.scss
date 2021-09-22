@@ -428,7 +428,7 @@
     transition: all 250ms ease;
     transition-delay: 505ms;
     transform: scale(1.1);
-    &::after {
+    &__count {
       position: absolute;
       content: '1';
       display: block;

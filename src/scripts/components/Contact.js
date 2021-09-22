@@ -63,11 +63,11 @@ const ElementEvents = ['input', 'blur'];
 
   // handleClick
   const handleClick = () => {
-    $('button[type="submit"]').on('click', (e) => {
+    $('#js-submit').on('click', (e) => {
       $.each(ElementSelector, (i, v) => {
         $('#'+v.id).blur();
       });
-      console.log(ElementSelector);
+      // console.log(ElementSelector);
 
       if ($('.error').length > 0) {
         e.preventDefault();

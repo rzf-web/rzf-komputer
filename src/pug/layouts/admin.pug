@@ -1,0 +1,48 @@
+//-------------------------------------------------------------------------------
+  @name: Admin Login Page
+  -------------------------------------------------------------------------------//
+
+// login-wallpaper
+.login-bg
+='\n'
+// login-container
+.login-container
+  .login-wrapper
+    .login-form
+      ='\n'
+      a.logo-brand(href='index.html')
+        ='\n'
+        img(src='assets/img/logo/login-logo.svg')/
+        ='\n'
+        span RZF Komputer
+        ='\n'
+      .login-head
+        h1.login-title
+          | Welcome
+        p.login-description
+          | Login to access your 
+          br
+          |  Content Management System Account
+        ='\n'
+      ='\n'
+      // login-form
+      ='\n'
+      form(action='#' method='post')
+        .login-input
+          ='\n'
+          label.input-label Username
+          ='\n'
+          input.form-control.input-block(name='username' type='text' placeholder='Enter Here' autofocus='on' autocomplete='off')/
+          ='\n'
+        .login-input
+          ='\n'
+          label.input-label Password
+          ='\n'
+          input.form-control.input-block(name='password' type='password' autofocus='on' placeholder='Enter Here')/
+        .login-input.mt-4
+          ='\n'
+          button.login-button.btn-block.btn-success(type='submit')
+            | Login
+          ='\n'
+='\n'
+//end-login
