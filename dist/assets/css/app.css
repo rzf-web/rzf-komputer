@@ -4754,8 +4754,8 @@ b {
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   padding: 2px 4px 0;
   top: -12px;
   right: -14px;
@@ -5184,7 +5184,7 @@ Layout: Admin Login Page
   left: 0;
   top: 0;
   z-index: 1;
-  background: url(../img/bg/login-background.jpg) no-repeat left center/cover;
+  background: url(../img/dummy/login-background.jpg) no-repeat left center/cover;
   background-color: #000;
 }
 .login-bg::after {
@@ -5239,23 +5239,12 @@ Layout: Admin Login Page
 
 .logo-brand {
   display: block;
-  position: relative;
-  z-index: 2;
-  font-size: 0;
   margin-bottom: 48px;
 }
 
 .logo-brand img {
-  width: 60px;
-  height: 60px;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
-  overflow: hidden;
-  background-color: #fff;
-  padding: 6px;
+  display: block;
+  width: 240px;
 }
 @media only screen and (max-width: 320px) {
   .logo-brand img {
@@ -7699,11 +7688,6 @@ Layout: Banner
        -o-transform: translate(0);
           transform: translate(0);
 }
-@media only screen and (max-width: 1440px) {
-  .product__sorting-select {
-    margin-left: 0;
-  }
-}
 @media only screen and (max-width: 1280px) {
   .product__sorting-select {
     margin-left: 24px;
@@ -7714,9 +7698,9 @@ Layout: Banner
     margin-left: 0;
   }
 }
-@media only screen and (max-width: 575.86px) {
+@media only screen and (max-width: 767.98px) {
   .product__sorting-select {
-    margin-left: 0;
+    margin-left: 24px;
   }
 }
 .product__sorting-title {
@@ -7842,6 +7826,8 @@ Layout: Banner
       -ms-transform: translate(100%, 0);
        -o-transform: translate(100%, 0);
           transform: translate(100%, 0);
+  float: left;
+  width: 100%;
 }
 @media only screen and (max-width: 1680px) {
   .sticky .product__sorting-select {
@@ -7854,11 +7840,12 @@ Layout: Banner
 }
 @media only screen and (max-width: 1400px) {
   .sticky .product__sorting-select {
-    -webkit-transform: translate(7vw, 0);
-       -moz-transform: translate(7vw, 0);
-        -ms-transform: translate(7vw, 0);
-         -o-transform: translate(7vw, 0);
-            transform: translate(7vw, 0);
+    -webkit-transform: translate(10vw, 0);
+       -moz-transform: translate(10vw, 0);
+        -ms-transform: translate(10vw, 0);
+         -o-transform: translate(10vw, 0);
+            transform: translate(10vw, 0);
+    margin-left: 0;
   }
 }
 @media only screen and (max-width: 1300px) {

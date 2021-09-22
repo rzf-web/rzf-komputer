@@ -1,0 +1,12 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    siteTitle = 'Login System';
+    isFrontWeb = true;
+
+//- Body
+block siteContent
+  //- login admin
+  include ../layouts/login.pug
