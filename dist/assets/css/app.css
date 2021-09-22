@@ -5246,10 +5246,14 @@ Layout: Admin Login Page
   display: block;
   width: 240px;
 }
+@media only screen and (max-width: 575.86px) {
+  .logo-brand img {
+    width: 200px;
+  }
+}
 @media only screen and (max-width: 320px) {
   .logo-brand img {
-    width: 50px;
-    height: 50px;
+    width: 160px;
   }
 }
 
@@ -5280,6 +5284,12 @@ Layout: Admin Login Page
 }
 .login-title span {
   color: #5f9e5f;
+}
+@media only screen and (max-width: 320px) {
+  .login-title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
 }
 
 .login-description {
