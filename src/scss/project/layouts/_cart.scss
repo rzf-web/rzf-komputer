@@ -168,9 +168,15 @@
       }
       &__btn-min {
          top: 0;
+         i.rzfkomputer-minus, i.rzfkomputer-add {
+            vertical-align: middle;
+         }
       }
       &__btn-plus {
          bottom: 0;
+         i.rzfkomputer-add {
+            vertical-align: middle;
+         }
       }
    }
 }   

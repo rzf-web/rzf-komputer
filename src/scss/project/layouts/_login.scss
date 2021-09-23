@@ -57,6 +57,7 @@ Layout: Admin Login Page
 .logo-brand {
   display: block;
   margin-bottom: 48px;
+  @include remove-tap-highlight;
 }
 
 .logo-brand img {
