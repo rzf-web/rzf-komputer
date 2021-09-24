@@ -47,7 +47,7 @@ Layout: Admin Login Page
   display: table;
   z-index: 1;
   overflow-x: hidden !important;
-  overflow-y: auto !important;
+  overflow-y: hidden !important;
   -webkit-overflow-scrolling: touch !important;
   -ms-overflow-style: none !important;
 }
@@ -56,15 +56,21 @@ Layout: Admin Login Page
   padding: 32px;
   display: table-cell;
   vertical-align: middle;
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
-  -webkit-overflow-scrolling: touch !important;
-  -ms-overflow-style: none !important;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0; 
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
 }
 
 .logo-brand {
   display: block;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
   @include remove-tap-highlight;
 }
 
@@ -116,7 +122,7 @@ Layout: Admin Login Page
   margin-bottom: 0;
 }
 
-.alert-error-auth {
+.invalid-feedback-error {
   background-color: color(danger);
   padding: 12px;
   border-radius: 4px;
@@ -127,9 +133,23 @@ Layout: Admin Login Page
     @include font-size(14);
   }
 }
+.invalid-feedback {
+  padding: 6px 0 0;
+  border-radius: 4px;
+  color: color(white);
+  p {
+    margin: 0;
+    @include font-size(14);
+    &::before {
+      content: '\e91d';
+      font-family: rzfkomputer-icons;
+      margin-right: 2px;
+    }
+  }
+}
 
 .login-head {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .login-input {

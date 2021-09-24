@@ -26,19 +26,23 @@
       // login-form
       ='\n'
       form(action='#' method='post')
-        .alert-error-auth
+        .invalid-feedback-error
           p Authentication that you've entered is incorrect!
         .login-input
           ='\n'
           label.input-label Username
           ='\n'
-          input.form-control.input-block(name='username' type='text' placeholder='Enter Here' autofocus='on' autocomplete='off')/
+          input.form-control.input-block(name='username' type='text' placeholder='Enter here' autofocus='on' autocomplete='off')/
+          .invalid-feedback
+            p Username is required!
           ='\n'
         .login-input
           ='\n'
           label.input-label Password
           ='\n' 
-          input.form-control.input-block(name='password' type='password' autofocus='on' placeholder='Enter Here')/
+          input.form-control.input-block(name='password' type='password' autofocus='on' placeholder='Enter here')/
+          .invalid-feedback
+            p Password is required!
         .login-input.mt-4
           ='\n'
           button.login-button.btn-block.btn-success(type='submit')

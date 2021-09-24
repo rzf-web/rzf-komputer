@@ -98,16 +98,22 @@
           </div>
           <!-- login-form-->
           <form action="#" method="post">
-            <div class="alert-error-auth">
+            <div class="invalid-feedback-error">
               <p>Authentication that you've entered is incorrect!</p>
             </div>
             <div class="login-input">
               <label class="input-label">Username</label>
-              <input class="form-control input-block" name="username" type="text" placeholder="Enter Here" autofocus="on" autocomplete="off" />
+              <input class="form-control input-block" name="username" type="text" placeholder="Enter here" autofocus="on" autocomplete="off" />
+              <div class="invalid-feedback">
+                <p>Username is required!</p>
+              </div>
             </div>
             <div class="login-input">
               <label class="input-label">Password</label>
-              <input class="form-control input-block" name="password" type="password" autofocus="on" placeholder="Enter Here" />
+              <input class="form-control input-block" name="password" type="password" autofocus="on" placeholder="Enter here" />
+              <div class="invalid-feedback">
+                <p>Password is required!</p>
+              </div>
             </div>
             <div class="login-input mt-4">
               <button class="login-button btn-block btn-success" type="submit">Login</button>
