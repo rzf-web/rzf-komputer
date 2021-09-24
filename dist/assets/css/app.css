@@ -5713,7 +5713,6 @@ Layout: Banner
 .banner__category {
   float: right;
   width: 50%;
-  padding: 24px 0;
 }
 .banner__category::before, .banner__category::after {
   content: " ";
@@ -5737,11 +5736,17 @@ Layout: Banner
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
+    padding: 12px 0;
   }
   .banner__category::-webkit-scrollbar {
     -webkit-appearance: none;
     display: none;
     width: 0;
+  }
+}
+@media only screen and (max-width: 575.86px) {
+  .banner__category {
+    padding: 24px 0 0;
   }
 }
 .banner__category .banner__card {
@@ -5759,11 +5764,6 @@ Layout: Banner
       -ms-user-select: none;
           user-select: none;
 }
-@media only screen and (max-width: 1199.98px) {
-  .banner__category .banner__card {
-    height: 222px;
-  }
-}
 @media only screen and (max-width: 767.98px) {
   .banner__category .banner__card {
     display: inline-block;
@@ -5778,13 +5778,32 @@ Layout: Banner
     margin-right: 0;
   }
 }
+@media only screen and (max-width: 575.86px) {
+  .banner__category .banner__card {
+    margin-bottom: 0;
+  }
+}
 .banner__category .banner__card__img {
   -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
           border-radius: 8px;
   overflow: hidden;
+  padding-bottom: 74%;
+  position: relative;
+}
+@media only screen and (max-width: 575.86px) {
+  .banner__category .banner__card__img {
+    padding-bottom: 70%;
+  }
 }
 .banner__category .banner__card__img__el {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
