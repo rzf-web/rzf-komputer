@@ -252,7 +252,7 @@
         }
       }
       &-count {
-         padding-left: 18px;
+         padding-left: 22px;
       }
       &-price {
          padding: 6px 0;
@@ -277,6 +277,12 @@
          font-weight: fw(semi-bold);
          @include extra-small {
             @include font-size(12);
+         }
+         &:nth-child(2) {
+            padding: 12px 16px 12px 0;
+            @include retina {
+               padding: 12px 12px 12px 0;
+            }
          }
       }
       tr {

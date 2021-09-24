@@ -46,17 +46,25 @@ Layout: Admin Login Page
   height: 100%;
   display: table;
   z-index: 1;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  -ms-overflow-style: none !important;
 }
 
 .login-form {
   padding: 32px;
   display: table-cell;
   vertical-align: middle;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  -ms-overflow-style: none !important;
 }
 
 .logo-brand {
   display: block;
-  margin-bottom: 48px;
+  margin-bottom: 36px;
   @include remove-tap-highlight;
 }
 
@@ -106,6 +114,18 @@ Layout: Admin Login Page
   line-height: 22px;
   color: #fff;
   margin-bottom: 0;
+}
+
+.alert-error-auth {
+  background-color: color(danger);
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  p {
+    color: color(white);
+    margin: 0;
+    @include font-size(14);
+  }
 }
 
 .login-head {

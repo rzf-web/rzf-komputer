@@ -22,14 +22,21 @@
           hr
           p Alamat: Jl. Raya Suci Desa Cidulang No. 01 Cikijing Kabupaten Majalengka 45466
           p No. Telepon: +62 8572 1557 240
-          p Email: budidendi1234@@gmail.com
+          p Email: budidendi1234@gmail.com
         .order-success__invoice-list
           h3.order-success__invoice-title Detail Pesanan
           br
           hr
           p Order ID : 00002121
           p Waktu Pemesanan: 2021-08-28
-          p Jumlah yang harus dibayar: Rp 5.400.000-,
+          p Jumlah yang harus dibayar: Rp5.400.000-,
+      .order-success__invoice-download
+        ='\n'
+        button.btn.btn--primary.btn--invoice(type='submit')
+          ='\n'
+          i.rzfkomputer-arrow-down
+          | Download Invoice
+          ='\n'
     .order-success__action
       p Untuk menyelesaikan proses pemesanan, silakan transfer sesuai jumlah yang tertera di atas
       .order-success__action-transfer

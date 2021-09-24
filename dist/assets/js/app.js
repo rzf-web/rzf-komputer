@@ -256,6 +256,8 @@ var Cart = function () {
         changePrice(_jsCartPrice);
         changePrice(_jsCartTotal);
       }
+
+      "";
     }); // handle button max
 
     $(_buttonMax).on('click', function (e) {
@@ -955,7 +957,8 @@ var ProductDetail = function () {
       _quantity = $('.js-input-qty'),
       _oldPrice = 4500000,
       _newPrice = 4500000,
-      _jsPrice = $('.js-price'); // function change price
+      _jsPrice = $('.js-price'),
+      _jsInventory = Number($('.js-inventory').text()); // function change price
 
 
   function formatRupiah(harga, prefix) {
@@ -985,13 +988,29 @@ var ProductDetail = function () {
         _oldPrice = _oldPrice - _newPrice;
         $(_quantity).val(_itemCount);
         $(_jsPrice).text(formatRupiah(_oldPrice, ''));
+      } // handle when inventory limit
+
+
+      if (_itemCount > _jsInventory) {
+        $('.inventory-alert').addClass('showed');
+      } else {
+        $('.inventory-alert').removeClass('showed');
       }
     }); // handle button max
 
     $(_buttonMax).on('click', function (e) {
       e.preventDefault();
-      _itemCount += 1;
-      _oldPrice = _oldPrice + _newPrice;
+      _itemCount += 1; // handle when inventory limit
+
+      if (_itemCount > _jsInventory) {
+        _itemCount = _jsInventory;
+        $('.inventory-alert').addClass('showed');
+        $('.inventory-alert').text("Maks. pembelian barang ini ".concat(_jsInventory, " item, kurangi pembelianmu, ya!"));
+      } else {
+        $('.inventory-alert').removeClass('showed');
+        _oldPrice = _oldPrice + _newPrice;
+      }
+
       $(_quantity).val(_itemCount);
       $(_jsPrice).text(formatRupiah(_oldPrice, ''));
     });
@@ -1001,12 +1020,26 @@ var ProductDetail = function () {
   var handleKeyup = function handleKeyup() {
     // handle on keyup
     $(_quantity).on('keyup', function (e) {
-      var _resultCount = _newPrice * $(_quantity).val();
+      var _resultCount = _newPrice * $(_quantity).val(); // handle quantity
+
 
       $(_quantity).val(Math.abs($(_quantity).val()));
-      $(_jsPrice).text(formatRupiah(_resultCount, ''));
       _oldPrice = _resultCount;
       _itemCount = parseInt(e.currentTarget.value);
+      $(_jsPrice).text(formatRupiah(_resultCount, '')); // handle when inventory limit
+
+      if (_itemCount == 0) {
+        $('.inventory-alert').addClass('showed');
+        $('.inventory-alert').text('Minimal pembelian produk ini adalah 1 barang');
+      } else if (_itemCount > _jsInventory) {
+        _itemCount = _jsInventory;
+        $(_quantity).val(_jsInventory);
+        $(_jsPrice).text(formatRupiah(_newPrice * _jsInventory, ''));
+        $('.inventory-alert').addClass('showed');
+        $('.inventory-alert').text("Maks. pembelian barang ini ".concat(_jsInventory, " item, kurangi pembelianmu, ya!"));
+      } else {
+        $('.inventory-alert').removeClass('showed');
+      }
     });
   }; // init 
 

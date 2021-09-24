@@ -437,10 +437,10 @@
       border-radius: 50%;
       width: 20px;
       height: 20px;
-      padding: 2px 4px 0;
+      padding: 3px 0 0;
       top: -12px;
       right: -14px;
-      @include font-size(12);
+      @include font-size(10);
       font-family: sans-serif;
     }
     @include medium {

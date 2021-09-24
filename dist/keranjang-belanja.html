@@ -11,7 +11,7 @@
   <!-- primary information-->
   <title>Keranjang Belanja | RZF Komputer | Computer and Peripheral Support</title>
   <meta name="description" content="Keranjang Belanja | RZF Komputer merupakan sebuah usaha yang berfokus pada produk, inovasi dan layanan jasa di bidang teknologi dan informasi khususnya di bidang perangkat komputer, percetakan, jaringan, kasir dan lain-lain" />
-  <meta name="keywords" content="Keranjang Belanja, | jasa service komputer, printer, perangkat kasir, pemasangan cctv, pemasangan wi-fi atau jaringan, rzf, rzf komputer, percetakan, bandung, sumedang, kuningan, majalengka, cirebon, tasikmalaya, jawa barat indonesia" />
+  <meta name="keywords" content="Keranjang Belanja, | rzf, rzf komputer, jasa service komputer kuningan jawa barat, printer kasir, perangkat kasir kuningan jawa barat, pemasangan cctv jawa barat, pemasangan wi-fi jaringan jawa barat, jasa percetakan kuningan bandung sumedang kuningan majalengka cirebon tasikmalaya jawa barat indonesia" />
 
   <!-- ie fix for html5 tags-->
   <!--[if lt IE 9]><script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
@@ -121,7 +121,7 @@
         <div class="cart-list js-cart-list">
           <div class="cart-list__items">
             <table class="cart-list__table">
-              <tbody>
+              <tbody class="jsTbody">
                 <tr class="cart-list__row">
                   <td class="cart-list__img-wrapper">
                     <img class="cart-list__img-el" src="assets/img/dummy/lenovo-1.png" alt="Lenovo" />
@@ -242,7 +242,8 @@
           <h2 class="title-page__title">Keranjang Belanja</h2>
         </div>
       </div>
-    </div><!-- cart-->
+    </div>
+    <!-- cart-->
     <div class="cart">
       <div class="container">
         <div class="cart__wrapper">
@@ -271,7 +272,36 @@
                     </div>
                   </td>
                   <td>
-                    <p class="cart__media__price js-cart-price">5.400.000-,</p>
+                    <p class="cart__media__price js-cart-price">Rp5.400.000-,</p>
+                  </td>
+                  <td>
+                    <div class="cart__media__product-count">
+
+                      <button class="cart__media__btn-chevron-down js-cart-minus" type="button">
+                        <i class="rzfkomputer-minus"></i>
+                      </button><input class="cart__media__input-qty js-cart-quantity" type="number" name="cart" id="quantity" max-length="12" title="quantity" value="1" min="1" />
+                      <button class="cart__media__btn-chevron-up js-cart-plus" type="button">
+                        <i class="rzfkomputer-add"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="cart__media">
+                      <div class="cart__media__content">
+                        <button class="cart__media__delete-btn js-delete" type="button" title="Delete">
+                          <i class="rzfkomputer-trashcan"></i>
+                        </button>
+                        <div class="cart__media__img-wrapper">
+                          <img class="cart__media__img-el" src="assets/img/dummy/our-product-1.png" alt="Image" />
+                        </div>
+                        <p class="cart__media__name">ASUS PX-5402</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="cart__media__price js-cart-price">Rp5.400.000-,</p>
                   </td>
                   <td>
                     <div class="cart__media__product-count">
@@ -290,7 +320,7 @@
                     <p class="cart__media__total">Order Total :</p>
                   </td>
                   <td>
-                    <p class="cart__media__price js-cart-total">5.400.000-,</p>
+                    <p class="cart__media__price js-cart-total">Rp5.400.000-,</p>
                   </td>
                 </tr>
               </tbody>
@@ -298,7 +328,8 @@
           </form>
         </div>
       </div>
-    </div><!-- end-cart-->
+    </div>
+    <!-- end-cart-->
     <!--checkout-form-->
     <div class="checkout">
       <div class="container">
@@ -336,17 +367,20 @@
                 <thead>
                   <tr class="checkout__table-list">
                     <th scope="col">Produk</th>
+                    <th scope="col">Jumlah</th>
                     <th scope="col">Subtotal</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="checkout__table-name">ASUS AMD Ryzen 3 RAM 3GB All-in One</td>
-                    <td class="checkout__table-price js-cart-price">Rp 5.400.000-,</td>
+                    <td class="checkout__table-name">ASUS AMD Ryzen 3 RAM 3GB All-in One </td>
+                    <td class="checkout__table-count js-cart-count">1</td>
+                    <td class="checkout__table-price js-cart-price">Rp5.400.000-,</td>
                   </tr>
                   <tr>
                     <th>Grand Total :</th>
-                    <td class="checkout__table-price js-cart-total">Rp 5.400.000-,</td>
+                    <td></td>
+                    <td class="checkout__table-price js-cart-total">Rp5.400.000-,</td>
                   </tr>
                 </tbody>
               </table>
@@ -356,7 +390,8 @@
       </div>
     </div>
     <!-- end-checkout-form-->
-  </div><!-- footer-->
+  </div>
+  <!-- footer-->
   <div class="footer">
     <div class="container">
       <div class="footer__wrapper">
@@ -436,7 +471,8 @@
   <div class="floating-chat js-floating-chat-dd">
     <div class="floating-chat__wrapper">
       <button class="floating-chat__btn">
-        <i class="rzfkomputer-whatsapp"></i></button>
+        <i class="rzfkomputer-whatsapp"></i>
+      </button>
       <div class="floating-chat__box">
         <div class="floating-chat__head">
           <div class="floating-chat__img">
@@ -458,7 +494,8 @@
         </div>
       </div>
     </div>
-  </div><!-- end-floating-chat-->
+  </div>
+  <!-- end-floating-chat-->
 
   <!-- script-->
   <script src="assets/js/vendor.min.js"></script>

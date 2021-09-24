@@ -17,17 +17,17 @@
               .pdetail__img-img
                 ='\n'
                 a.js-popup-image(href='assets/img/dummy/best-product-2.png' alt='Tes')
-                  img.pdetail__img-el(src='assets/img/dummy/best-product-2.png' alt='Tes')/
+                  img.pdetail__img-el-d(src='assets/img/dummy/best-product-2.png' alt='Tes')/
             .pdetail__img-box
               .pdetail__img-img
                 ='\n'
                 a.js-popup-image(href='assets/img/dummy/best-product-3.png' alt='Tes')
-                  img.pdetail__img-el(src='assets/img/dummy/best-product-3.png' alt='Tes')/
+                  img.pdetail__img-el-d(src='assets/img/dummy/best-product-3.png' alt='Tes')/
             .pdetail__img-box
               .pdetail__img-img
                 ='\n'
                 a.js-popup-image(href='assets/img/dummy/best-product-4.png' alt='Tes')
-                  img.pdetail__img-el(src='assets/img/dummy/best-product-4.png' alt='Tes')/
+                  img.pdetail__img-el-d(src='assets/img/dummy/best-product-4.png' alt='Tes')/
 
         //product-detail-form
         .pdetail__form
@@ -35,13 +35,66 @@
             h3.pdetail__form__name Asus Ryzen 3 AMD
             .pdetail__form__summary Cocok untuk Anda yang suka bermain komputer
             .pdetail__form__count-wrapper
-              h3.pdetail__form__price Harga :
-              p.js-price Rp 4.500.000-,
-              h3.pdetail__form__category Kategori :
+              h3.pdetail__form__info Ukuran :
+              ul.pdetail__size
+                li.pdetail__size__item
+                  ='\n'
+                  input.pdetail__size__input(type='radio' name='size' value='16GB')/
+                  ='\n'
+                  span.pdetail__size__box 16GB
+                  ='\n'
+                li.pdetail__size__item
+                  ='\n'
+                  input.pdetail__size__input(type='radio' name='size' value='32GB')/
+                  ='\n'
+                  span.pdetail__size__box 32GB
+                  ='\n'
+                li.pdetail__size__item
+                  ='\n'
+                  input.pdetail__size__input(type='radio' name='size' value='64GB')/
+                  ='\n'
+                  span.pdetail__size__box 64GB
+                  ='\n'
+                li.pdetail__size__item
+                  ='\n'
+                  input.pdetail__size__input(type='radio' name='size' value='72GB')/
+                  ='\n'
+                  span.pdetail__size__box 72GB
+                  ='\n'
+              h3.pdetail__form__info Warna :
+              ul.pdetail__color
+                li.pdetail__color__item
+                  ='\n'
+                  input.pdetail__color__input(type='radio' name='color' value='Blue Black')/
+                  ='\n'
+                  span.pdetail__color__box Blue Black
+                  ='\n'
+                li.pdetail__color__item
+                  ='\n'
+                  input.pdetail__color__input(type='radio' name='color' value='Green')/
+                  ='\n'
+                  span.pdetail__color__box Green
+                  ='\n'
+                li.pdetail__color__item
+                  ='\n'
+                  input.pdetail__color__input(type='radio' name='color' value='Red')/
+                  ='\n'
+                  span.pdetail__color__box Red
+                  ='\n'
+                li.pdetail__color__item
+                  ='\n'
+                  input.pdetail__color__input(type='radio' name='color' value='Gold')/
+                  ='\n'
+                  span.pdetail__color__box Gold
+                  ='\n'
+              h3.pdetail__form__info Kategori :
               p Komputer
-              h3.pdetail__form__inventory Stok : 
-              p 15
+              h3.pdetail__form__info Harga :
+              p.js-price Rp 4.500.000-,
+              h3.pdetail__form__info Stok Tersedia : 
+              p.js-inventory 6
               h3.pdetail__form__count Jumlah :
+            .pdetail__form__row
               button.pdetail__form__min(type='button' class='btnMin')
                 ='\n'
                 i.rzfkomputer-minus
@@ -49,11 +102,8 @@
               button.pdetail__form__max(type='button' class='btnMax')
                 ='\n'
                 i.rzfkomputer-add
+              p.inventory-alert Maks. pembelian barang ini 1 item, kurangi pembelianmu, ya!
             .pdetail__form__row
-              //- button.btn.btn--primary.btn--cart(type='button')
-              //-   ='\n'
-              //-   i.rzfkomputer-cart
-              //-   | Masukkan Keranjang
               a.btn.btn--primary.btn--cart(href='keranjang-belanja.html')
                 ='\n'
                 i.rzfkomputer-cart

@@ -78,7 +78,7 @@ function formatRupiah(harga, prefix) {
         $(_quantityCartCount).text(_itemCount);
         changePrice(_jsCartPrice);
         changePrice(_jsCartTotal);
-      }
+      }`` 
     });
 
     // handle button max

@@ -26,6 +26,8 @@
       // login-form
       ='\n'
       form(action='#' method='post')
+        .alert-error-auth
+          p Authentication that you've entered is incorrect!
         .login-input
           ='\n'
           label.input-label Username
@@ -35,7 +37,7 @@
         .login-input
           ='\n'
           label.input-label Password
-          ='\n'
+          ='\n' 
           input.form-control.input-block(name='password' type='password' autofocus='on' placeholder='Enter Here')/
         .login-input.mt-4
           ='\n'
