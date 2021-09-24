@@ -6550,8 +6550,8 @@ Layout: Banner
   line-height: 3.2rem;
 }
 .pdetail__form__summary {
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   margin-bottom: 18px;
 }
 .pdetail__form__price, .pdetail__form__count, .pdetail__form__info, .pdetail__form__inventory {
@@ -6659,6 +6659,9 @@ Layout: Banner
   min-width: 40px;
   min-height: 40px;
   background-color: #eff5ef;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
 }
 @media only screen and (max-width: 575.86px) {
   .pdetail__size__item, .pdetail__color__item {
@@ -6683,6 +6686,9 @@ Layout: Banner
 .pdetail__size__input:checked + span, .pdetail__color__input:checked + span {
   background-color: #388e3c;
   color: #fff;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
 }
 .pdetail__size__box, .pdetail__color__box {
   display: inline-block;
@@ -6785,23 +6791,34 @@ Layout: Banner
 }
 .pdetail__tab .tab-item::after {
   content: "";
-  position: absolute;
-  left: 24px;
-  right: 0;
-  bottom: 0;
-  -webkit-transform: scale(0);
-     -moz-transform: scale(0);
-      -ms-transform: scale(0);
-       -o-transform: scale(0);
-          transform: scale(0);
   display: block;
-  width: 36px;
-  height: 2px;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  width: 44px;
+  height: 4px;
   background-color: #388e3c;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -24px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: scaleX(0);
+     -moz-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+       -o-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center center;
+     -moz-transform-origin: center center;
+      -ms-transform-origin: center center;
+       -o-transform-origin: center center;
+          transform-origin: center center;
+}
+@media only screen and (max-width: 575.86px) {
+  .pdetail__tab .tab-item::after {
+    height: 3px;
+  }
 }
 .pdetail__tab .tab-item:hover {
   color: #388e3c;
