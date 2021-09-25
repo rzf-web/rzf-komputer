@@ -1,293 +1,306 @@
 /* ==========================================================================
-   Layouts Cart
-   ========================================================================== */
+Layouts Cart
+========================================================================== */
+
+.cart__empty {
+  &__content {
+    text-align: center;
+    padding: 64px 0;
+    @include small {
+      padding: 48px 0;
+    }
+  }
+  &__row {
+    padding: 20px 0 0;
+  }
+}
 
 .cart {
-   padding: 120px 0 48px;
-   padding: 64px 0;
-   background-color: color(white);
-   @include large {
-       padding: 56px 0;
+  padding: 120px 0 48px;
+  padding: 64px 0;
+  background-color: color(white);
+  @include large {
+    padding: 56px 0;
+  }
+  @include medium {
+    padding: 48px 0;
+  }
+  @include small {
+    padding: 32px 0;
+  }
+  @include retina {
+    padding: 30px 0;
+  }
+  &__table,
+  tr {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: normal;
+    td {
+      padding: 20px 0;
+      border-bottom: solid 1px color(grey, 6);
     }
-    @include medium {
-       padding: 48px 0;
+    &-title {
+      font-weight: fw(semi-bold);
+      @include font-size(18);
+      text-transform: uppercase;
+      border-bottom: solid 1px color(grey, 5);
+      padding-bottom: 8px;
+      @include extra-small {
+        @include font-size(14);
+      }
     }
-    @include small {
-       padding: 32px 0;
+  }
+  &__media {
+    max-width: 546px;
+    position: relative;
+    &__content {
+      @include clearfix;
     }
-    @include retina {
-       padding: 30px 0;
+    &__delete-btn {
+      position: absolute;
+      top: 4px;
+      left: 8px;
+      bottom: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: color(danger);
+      color: color(white);
+      border: none;
+      outline: 0;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      i.rzfkomputer-trashcan {
+        vertical-align: middle;
+      }
+      @include large {
+        padding-left: 3px;
+      }
+      @include medium {
+        padding-left: 0;
+      }
+      @include retina {
+        width: 20px;
+        height: 20px;
+        top: -12px;
+        left: 0;
+        background-color: transparent;
+        color: color(danger);
+      }
     }
-   &__table,
-   tr {
-      width: 100%;
-      border-collapse: collapse;
-      border-spacing: 0;
+    &__img-wrapper {
+      float: left;
+    }
+    &__img-el {
+      width: 210px;
+      display: block;
+      border-radius: 8px;
+    }
+    &__name {
+      float: left;
+      padding: 34px 0;
       margin-bottom: 0;
-      font-size: 12px;
-      line-height: 1.2;
-      font-weight: normal;
-      td {
-         padding: 20px 0;
-         border-bottom: solid 1px color(grey, 6);
+      padding-left: 20px;
+      @include medium {
+        display: none;
       }
-      &-title {
-         font-weight: fw(semi-bold);
-         @include font-size(18);
-         text-transform: uppercase;
-         border-bottom: solid 1px color(grey, 5);
-         padding-bottom: 8px;
-         @include extra-small {
-            @include font-size(14);
-         }
+    }
+    &__price {
+      margin-bottom: 0;
+      @include extra-small {
+        @include font-size(14);
+        padding-left: 12px;
       }
-   }
-   &__media {
-      max-width: 546px;
+    }
+    &__total {
+      margin-bottom: 0;
+      @include font-size(16);
+      font-weight: fw(regular);
+      @include extra-small {
+        @include font-size(14);
+      }
+      @include retina {
+        white-space: nowrap;
+      }
+    }
+    &__product-count {
+      padding: 12px 0;
       position: relative;
-      &__content {
-         @include clearfix;
+      @include extra-small {
+        max-width: 40px;
+        padding-left: 24px;
       }
-      &__delete-btn {
-         position: absolute;
-         top: 4px;
-         left: 8px;
-         bottom: 0;
-         width: 40px;
-         height: 40px;
-         border-radius: 50%;
-         background-color: color(danger);
-         color: color(white);
-         border: none;
-         outline: 0;
-         padding: 0;
-         margin: 0;
-         cursor: pointer;
-         i.rzfkomputer-trashcan {
-          vertical-align: middle;
-         }
-         @include large {
-          padding-left: 3px;
-         }
-         @include medium {
-            padding-left: 0;
-         }
-         @include retina {
-            width: 20px;
-            height: 20px;
-            top: -12px;
-            left: 0;
-            background-color: transparent;
-            color: color(danger);
-         }
+    }
+    &__input-qty {
+      width: 40px;
+      height: 44px;
+      padding: 8px 6px;
+      outline: 0;
+      border: solid 2px color(grey, 5);
+      text-align: center;
+      border-radius: 8px;
+      transition: all 350ms ease;
+      @include extra-small {
+        width: 30px;
+        height: 30px;
+        padding: 4px;
+        @include font-size(12);
       }
-      &__img-wrapper {
-         float: left;
+      &:focus {
+        border: solid 2px color(green, 1);
       }
-      &__img-el {
-         width: 210px;
-         display: block;
-         border-radius: 8px;
+    }
+    &__btn-chevron-down, &__btn-chevron-up {
+      width: 40px;
+      height: 44px;
+      border: none;
+      outline: 0;
+      margin-right: 4px;
+      border-radius: 8px;
+      background-color: #fafafa;
+      border: 1px solid color(grey, 5);
+      transition: all 150ms ease;
+      @include extra-small {
+        width: 30px;
+        margin: 8px 0;
+        height: 30px;
+        @include font-size(12);
       }
-      &__name {
-         float: left;
-         padding: 34px 0;
-         margin-bottom: 0;
-         padding-left: 20px;
-         @include medium {
-            display: none;
-         }
+      &:last-child {
+        margin-right: 0;
       }
-      &__price {
-         margin-bottom: 0;
-         @include extra-small {
-            @include font-size(14);
-            padding-left: 12px;
-         }
+      &:hover {
+        background-color: #f2f2f2;
       }
-      &__total {
-         margin-bottom: 0;
-         @include font-size(16);
-         font-weight: fw(regular);
-         @include extra-small {
-            @include font-size(14);
-         }
-         @include retina {
-            white-space: nowrap;
-         }
+    }
+    &__btn-min {
+      top: 0;
+      i.rzfkomputer-minus, i.rzfkomputer-add {
+        vertical-align: middle;
       }
-      &__product-count {
-         padding: 12px 0;
-         position: relative;
-         @include extra-small {
-            max-width: 40px;
-            padding-left: 24px;
-         }
+    }
+    &__btn-plus {
+      bottom: 0;
+      i.rzfkomputer-add {
+        vertical-align: middle;
       }
-      &__input-qty {
-         width: 40px;
-         height: 44px;
-         padding: 8px 6px;
-         outline: 0;
-         border: solid 2px color(grey, 5);
-         text-align: center;
-         border-radius: 8px;
-         transition: all 350ms ease;
-         @include extra-small {
-            width: 30px;
-            height: 30px;
-            padding: 4px;
-            @include font-size(12);
-         }
-         &:focus {
-            border: solid 2px color(green, 1);
-         }
-      }
-      &__btn-chevron-down, &__btn-chevron-up {
-         width: 40px;
-         height: 44px;
-         border: none;
-         outline: 0;
-         margin-right: 4px;
-         border-radius: 8px;
-         background-color: #fafafa;
-         border: 1px solid color(grey, 5);
-         transition: all 150ms ease;
-         @include extra-small {
-            width: 30px;
-            margin: 8px 0;
-            height: 30px;
-            @include font-size(12);
-         }
-         &:last-child {
-            margin-right: 0;
-         }
-         &:hover {
-            background-color: #f2f2f2;
-         }
-      }
-      &__btn-min {
-         top: 0;
-         i.rzfkomputer-minus, i.rzfkomputer-add {
-            vertical-align: middle;
-         }
-      }
-      &__btn-plus {
-         bottom: 0;
-         i.rzfkomputer-add {
-            vertical-align: middle;
-         }
-      }
-   }
+    }
+  }
 }   
 
 
 .checkout {
-   padding: 64px 0;
-    @include large {
-     padding: 56px 0;
-   }
-   @include medium {
-     padding: 48px 0;
-   }
-   @include small {
-     padding: 32px 0;
-   }
-   @include retina {
-     padding: 30px 0;
-   }
-   &__wrapper {
-      @include clearfix;
-   }
-   &__form {
-      float: left;
-      width: 50%;
-      @include small {
-         width: 100%;
-      }
-      &-title {
-         @include font-size(18);
-         margin-bottom: 2.4rem;
-         text-transform: uppercase;
-      }
-   }
-
-   &__summary {
-      float: left;
-      width: 50%;
-      padding: 24px 0 0 24px;
-      @include small {
-         width: 100%;
-         padding: 24px 0;
-      }
-   }
-   &__box {
-      padding: 24px;
-      background-color: color(green, 3);
-      text-align: left;
-      border-radius: 8px;
-   }
-   &__title {
-      @include font-size(18);
-      text-align: left;
-      margin-bottom: 0;
-      padding-bottom: 8px;
-      text-transform: uppercase;
-      border-bottom: 2px solid color(grey, 5);
-      @include extra-small {
-         @include font-size(14);
-      }
-   }
-   &__table {
+  padding: 64px 0;
+  @include large {
+    padding: 56px 0;
+  }
+  @include medium {
+    padding: 48px 0;
+  }
+  @include small {
+    padding: 32px 0;
+  }
+  @include retina {
+    padding: 30px 0;
+  }
+  &__wrapper {
+    @include clearfix;
+  }
+  &__form {
+    float: left;
+    width: 50%;
+    @include small {
       width: 100%;
-      &-list {
-         padding-bottom: 18px;
-         font-weight: 700;
+    }
+    &-title {
+      @include font-size(18);
+      margin-bottom: 2.4rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__summary {
+    float: left;
+    width: 50%;
+    padding: 24px 0 0 24px;
+    @include small {
+      width: 100%;
+      padding: 24px 0;
+    }
+  }
+  &__box {
+    padding: 24px;
+    background-color: color(green, 3);
+    text-align: left;
+    border-radius: 8px;
+  }
+  &__title {
+    @include font-size(18);
+    text-align: left;
+    margin-bottom: 0;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    border-bottom: 2px solid color(grey, 5);
+    @include extra-small {
+      @include font-size(14);
+    }
+  }
+  &__table {
+    width: 100%;
+    &-list {
+      padding-bottom: 18px;
+      font-weight: 700;
+    }
+    &-name {
+      padding: 12px 0;
+      border: none;
+      @include extra-small {
+        padding: 12px 12px 12px 0;
       }
-      &-name {
-         padding: 12px 0;
-         border: none;
-         @include extra-small {
+    }
+    &-count {
+      padding-left: 22px;
+    }
+    &-price {
+      padding: 6px 0;
+    }
+    &-name, &-count, &-price {
+      @include font-size(14);
+      @include extra-small {
+        @include font-size(12);
+      }
+    }
+    &-price {
+      @include medium {
+        white-space: nowrap;
+      }
+      @include extra-small {
+        @include font-size(12);
+        white-space: nowrap;
+      }
+    }
+    th {
+      padding: 12px 0;
+      font-weight: fw(semi-bold);
+      @include extra-small {
+        @include font-size(12);
+      }
+      &:nth-child(2) {
+        padding: 12px 16px 12px 0;
+        @include retina {
           padding: 12px 12px 12px 0;
         }
       }
-      &-count {
-         padding-left: 22px;
-      }
-      &-price {
-         padding: 6px 0;
-      }
-      &-name, &-count, &-price {
-         @include font-size(14);
-         @include extra-small {
-         @include font-size(12);
-         }
-      }
-      &-price {
-         @include medium {
-            white-space: nowrap;
-         }
-         @include extra-small {
-            @include font-size(12);
-            white-space: nowrap;
-         }
-      }
-      th {
-         padding: 12px 0;
-         font-weight: fw(semi-bold);
-         @include extra-small {
-            @include font-size(12);
-         }
-         &:nth-child(2) {
-            padding: 12px 16px 12px 0;
-            @include retina {
-               padding: 12px 12px 12px 0;
-            }
-         }
-      }
-      tr {
-         border-bottom: solid 1px color(grey, 5);
-      }
-   }
+    }
+    tr {
+      border-bottom: solid 1px color(grey, 5);
+    }
+  }
 }
 

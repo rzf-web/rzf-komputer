@@ -671,7 +671,24 @@ var HeaderSearch = function () {
         _jsCart = $('.js-cart'),
         _jsCartList = $('.js-cart-list'),
         _jsNav = $('.burger-menu'),
-        _jsSearchResult = $('.js-search-result'); // handle search keyup
+        _jsSearchResult = $('.js-search-result'); // when cartlist is empty
+
+
+    var _dataEmpty = 0; // console.log(Number($(_jsCartList).attr('dataempty')));
+
+    if (Number($(_jsCartList).attr('dataEmpty')) == _dataEmpty) {
+      $('.cart-list__table__wrapper').removeClass('showed');
+      $('.cart-list__alert-empty').addClass('showed');
+      $('.js-cart-list__items').removeClass('showed');
+      $('.js-cart-wrapper').hide();
+      $('.empty').show();
+    } else {
+      $('.empty').hide();
+      $('.js-cart-wrapper').show();
+      $('.js-cart-list__items').addClass('showed');
+      $('.cart-list__table__wrapper').addClass('showed');
+      $('.cart-list__alert-empty').removeClass('showed');
+    } // handle search keyup
 
 
     $('body').on('keyup', function (e) {

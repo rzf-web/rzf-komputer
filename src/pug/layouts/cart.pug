@@ -3,141 +3,149 @@
   -------------------------------------------------------------------------------//
 ='\n'
 // cart
-.cart
-  .container
-    .cart__wrapper
-      form(action='pesanan-berhasil.html' method='POST')
-        table.cart__table
-          thead
-            tr
-              th.cart__table-title(scope='col') Produk
-              th.cart__table-title(scope='col') Harga
-              th.cart__table-title(scope='col') Jumlah
-          tbody
-            tr
-              td
-                .cart__media
-                  .cart__media__content
-                    ='\n'
-                    button.cart__media__delete-btn.js-delete(type='button' title='Delete')
-                      ='\n'
-                      i.rzfkomputer-trashcan
-                      ='\n'
-                    .cart__media__img-wrapper
-                      ='\n'
-                      img.cart__media__img-el(src='assets/img/dummy/our-product-1.png' alt='Image')/
-                    p.cart__media__name ASUS PX-5402
-              td
-                p.cart__media__price.js-cart-price Rp5.400.000-,
-              td
-                .cart__media__product-count
-                  ='\n'
-                  ='\n'
-                  button.cart__media__btn-chevron-down.js-cart-minus(type='button')
-                    ='\n'
-                    i.rzfkomputer-minus
-                    ='\n'
-                  input.cart__media__input-qty.js-cart-quantity(type='number' name='cart' id='quantity' max-length='12' title='quantity' value='1' min='1')/
-                  ='\n'
-                  button.cart__media__btn-chevron-up.js-cart-plus(type='button')
-                    ='\n'
-                    i.rzfkomputer-add
-                    ='\n'
-            tr
-              td
-                .cart__media
-                  .cart__media__content
-                    ='\n'
-                    button.cart__media__delete-btn.js-delete(type='button' title='Delete')
-                      ='\n'
-                      i.rzfkomputer-trashcan
-                      ='\n'
-                    .cart__media__img-wrapper
-                      ='\n'
-                      img.cart__media__img-el(src='assets/img/dummy/our-product-1.png' alt='Image')/
-                    p.cart__media__name ASUS PX-5402
-              td
-                p.cart__media__price.js-cart-price Rp5.400.000-,
-              td
-                .cart__media__product-count
-                  ='\n'
-                  ='\n'
-                  button.cart__media__btn-chevron-down.js-cart-minus(type='button')
-                    ='\n'
-                    i.rzfkomputer-minus
-                    ='\n'
-                  input.cart__media__input-qty.js-cart-quantity(type='number' name='cart' id='quantity' max-length='12' title='quantity' value='1' min='1')/
-                  ='\n'
-                  button.cart__media__btn-chevron-up.js-cart-plus(type='button')
-                    ='\n'
-                    i.rzfkomputer-add
-                    ='\n'
-            tr
-              td
-                p.cart__media__total Order Total :
-              td
-                p.cart__media__price.js-cart-total Rp5.400.000-,
-                ='\n'
-='\n'
-// end-cart
-='\n'
-//checkout-form
-.checkout
-  .container
-    .checkout__wrapper
-      .checkout__form
-        form(action='#' method='POST' autocomplete='off')
-          h3.checkout__form-title Form Checkout
-          .form__control
-            ='\n'
-            label.form__label(for='name') Nama
-            ='\n'
-            input.form__input(type='text' id='name' name='name' placeholder="Masukkan Nama" data-target="alertName" required)/
-            p(class="form__alert" id="alertName" data-req="Nama tidak boleh kosong!")
-          ='\n'
-          .form__control
-            ='\n'
-            label.form__label(for='email') Email
-            ='\n'
-            input.form__input(type='text' id='email' name='email' placeholder="Masukkan Email" data-target="alertEmail" required)/
-            p(class="form__alert" id="alertEmail" data-req="Email tidak boleh kosong!" data-invalid-email="Masukkan email yang valid!")
-            ='\n'
-          .form__control
-            ='\n'
-            label.form__label(for='phone') Nomor Telepon
-            ='\n'
-            input.form__input(id="phone" name='phone' placeholder='Masukkan Nomor' data-target="alertPhone" required)
-            p(class="form__alert" id="alertPhone" data-req="Nomor tidak boleh kosong!" data-invalid-phone="Masukkan nomor yang valid!")
-            ='\n'
-          .form__control
-            ='\n'
-            label.form__label(for='address') Alamat Rumah/Kantor
-            ='\n'
-            textarea.form__input(id="address" name='address' placeholder='Masukkan Alamat' data-target="alertAddress" rows='5' required)
-            p(class="form__alert" id="alertAddress" data-req="Alamat tidak boleh kosong!")
-            ='\n'
-          button.btn.btn--block.btn--primary#js-submit(type='submit')
-            ='\n' 
-            | Pesan Sekarang
-
-      .checkout__summary
-        .checkout__box
-          h3.checkout__title Pesanan Anda
-          table.checkout__table
+.cart__empty
+  .cart__empty__content
+    .container
+      p Ups, Keranjang Anda masih kosong!
+      ='\n'
+      .cart__empty__row
+        a.btn.btn--primary.btn--backshop(href='produk.html') Kembali Belanja
+        ='\n'
+  .cart.js-cart-wrapper
+    .container
+      .cart__wrapper
+        form(action='pesanan-berhasil.html' method='POST')
+          table.cart__table
             thead
-              tr.checkout__table-list
-                th(scope='col') Produk
-                th(scope='col') Jumlah
-                th(scope='col') Subtotal
+              tr
+                th.cart__table-title(scope='col') Produk
+                th.cart__table-title(scope='col') Harga
+                th.cart__table-title(scope='col') Jumlah
             tbody
               tr
-                td.checkout__table-name ASUS AMD Ryzen 3 RAM 3GB All-in One 
-                td.checkout__table-count.js-cart-count 1
-                td.checkout__table-price.js-cart-price Rp5.400.000-,
-              tr
-                th Grand Total :
                 td
-                td.checkout__table-price.js-cart-total Rp5.400.000-,
+                  .cart__media
+                    .cart__media__content
+                      ='\n'
+                      button.cart__media__delete-btn.js-delete(type='button' title='Delete')
+                        ='\n'
+                        i.rzfkomputer-trashcan
+                        ='\n'
+                      .cart__media__img-wrapper
+                        ='\n'
+                        img.cart__media__img-el(src='assets/img/dummy/our-product-1.png' alt='Image')/
+                      p.cart__media__name ASUS PX-5402
+                td
+                  p.cart__media__price.js-cart-price Rp5.400.000-,
+                td
+                  .cart__media__product-count
+                    ='\n'
+                    ='\n'
+                    button.cart__media__btn-chevron-down.js-cart-minus(type='button')
+                      ='\n'
+                      i.rzfkomputer-minus
+                      ='\n'
+                    input.cart__media__input-qty.js-cart-quantity(type='number' name='cart' id='quantity' max-length='12' title='quantity' value='1' min='1')/
+                    ='\n'
+                    button.cart__media__btn-chevron-up.js-cart-plus(type='button')
+                      ='\n'
+                      i.rzfkomputer-add
+                      ='\n'
+              tr
+                td
+                  .cart__media
+                    .cart__media__content
+                      ='\n'
+                      button.cart__media__delete-btn.js-delete(type='button' title='Delete')
+                        ='\n'
+                        i.rzfkomputer-trashcan
+                        ='\n'
+                      .cart__media__img-wrapper
+                        ='\n'
+                        img.cart__media__img-el(src='assets/img/dummy/our-product-1.png' alt='Image')/
+                      p.cart__media__name ASUS PX-5402
+                td
+                  p.cart__media__price.js-cart-price Rp5.400.000-,
+                td
+                  .cart__media__product-count
+                    ='\n'
+                    ='\n'
+                    button.cart__media__btn-chevron-down.js-cart-minus(type='button')
+                      ='\n'
+                      i.rzfkomputer-minus
+                      ='\n'
+                    input.cart__media__input-qty.js-cart-quantity(type='number' name='cart' id='quantity' max-length='12' title='quantity' value='1' min='1')/
+                    ='\n'
+                    button.cart__media__btn-chevron-up.js-cart-plus(type='button')
+                      ='\n'
+                      i.rzfkomputer-add
+                      ='\n'
+              tr
+                td
+                  p.cart__media__total Order Total :
+                td
+                  p.cart__media__price.js-cart-total Rp5.400.000-,
+                  ='\n'
+    ='\n'
+    // end-cart
+    ='\n'
+    //checkout-form
+    .checkout
+      .container
+        .checkout__wrapper
+          .checkout__form
+            form(action='#' method='POST' autocomplete='off')
+              h3.checkout__form-title Form Checkout
+              .form__control
+                ='\n'
+                label.form__label(for='name') Nama
+                ='\n'
+                input.form__input(type='text' id='name' name='name' placeholder="Masukkan Nama" data-target="alertName" required)/
+                p(class="form__alert" id="alertName" data-req="Nama tidak boleh kosong!")
+              ='\n'
+              .form__control
+                ='\n'
+                label.form__label(for='email') Email
+                ='\n'
+                input.form__input(type='text' id='email' name='email' placeholder="Masukkan Email" data-target="alertEmail" required)/
+                p(class="form__alert" id="alertEmail" data-req="Email tidak boleh kosong!" data-invalid-email="Masukkan email yang valid!")
+                ='\n'
+              .form__control
+                ='\n'
+                label.form__label(for='phone') Nomor Telepon
+                ='\n'
+                input.form__input(id="phone" name='phone' placeholder='Masukkan Nomor' data-target="alertPhone" required)
+                p(class="form__alert" id="alertPhone" data-req="Nomor tidak boleh kosong!" data-invalid-phone="Masukkan nomor yang valid!")
+                ='\n'
+              .form__control
+                ='\n'
+                label.form__label(for='address') Alamat Rumah/Kantor
+                ='\n'
+                textarea.form__input(id="address" name='address' placeholder='Masukkan Alamat' data-target="alertAddress" rows='5' required)
+                p(class="form__alert" id="alertAddress" data-req="Alamat tidak boleh kosong!")
+                ='\n'
+              button.btn.btn--block.btn--primary#js-submit(type='submit')
+                ='\n' 
+                | Pesan Sekarang
+
+          .checkout__summary
+            .checkout__box
+              h3.checkout__title Pesanan Anda
+              table.checkout__table
+                thead
+                  tr.checkout__table-list
+                    th(scope='col') Produk
+                    th(scope='col') Jumlah
+                    th(scope='col') Subtotal
+                tbody
+                  tr
+                    td.checkout__table-name ASUS AMD Ryzen 3 RAM 3GB All-in One 
+                    td.checkout__table-count.js-cart-count 1
+                    td.checkout__table-price.js-cart-price Rp5.400.000-,
+                  tr
+                    th Grand Total :
+                    td
+                    td.checkout__table-price.js-cart-total Rp5.400.000-,
 ='\n'
 // end-checkout-form
 ='\n'

@@ -16,7 +16,7 @@
     border-radius: 8px;
     overflow-y: scroll;
     overflow-x: hidden;
-    max-height: 320px;
+    height: 100px;
     @include scroll(y, no-touch, show);
     box-shadow: 0 0 16px 12px rgba(0,0,0,.4);
     @include shadow(16);
@@ -34,6 +34,34 @@
     }
     @include retina {
       width: 100%;
+    }
+    &.showed {
+      height: 320px;
+    }
+  }
+  &__alert-empty {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    padding: 20px 0;
+    p {
+      margin: 0;
+    }
+    &.showed {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__table__wrapper {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    &.showed {
+      opacity: 1;
+      visibility: visible;
+      display: block;
     }
   }
 
@@ -113,18 +141,18 @@
 }
 
 &__button {
-  margin-top: 16px;
   text-align: center;
   display: block;
   width: 100%;
+  margin-top: 40px;
     &--row {
-      margin-bottom: 0;
       &:last-child {
         margin-bottom: 0;
       }
       .btn--views,
       .btn--checkout {
         width: 100%;
+        box-shadow: none;
       }
     }
   }

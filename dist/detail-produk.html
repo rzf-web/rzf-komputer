@@ -118,79 +118,114 @@
         <button class="cart js-cart" type="button">
           <span class="cart__count">1</span><i class="rzfkomputer-cart"></i>
         </button>
-        <div class="cart-list js-cart-list">
-          <div class="cart-list__items">
-            <table class="cart-list__table">
-              <tbody class="jsTbody">
-                <tr class="cart-list__row">
-                  <td class="cart-list__img-wrapper">
-                    <img class="cart-list__img-el" src="assets/img/dummy/lenovo-1.png" alt="Lenovo" />
-                  </td>
-                  <td class="cart-list__product">
-                    <h6 class="cart-list__product-name">Lenovo Ultra Made 1500mx Ease Super</h6>
-                    <p class="cart-list__product-price">Rp 4.500.000</p>
-                    <p class="cart-list__product-count">Total : 1</p>
-                  </td>
-                  <td class="cart-list__delete">
-                    <button class="cart-list__delete-btn js-cart-list-delete" type="submit">
-                      <i class="rzfkomputer-trashcan"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="cart-list__row">
-                  <td class="cart-list__img-wrapper">
-                    <img class="cart-list__img-el" src="assets/img/dummy/printer.png" alt="Lenovo" />
-                  </td>
-                  <td class="cart-list__product">
-                    <h6 class="cart-list__product-name">Printer Epson</h6>
-                    <p class="cart-list__product-price">Rp 2.500.000</p>
-                    <p class="cart-list__product-count">Total : 1</p>
-                  </td>
-                  <td class="cart-list__delete">
-                    <button class="cart-list__delete-btn js-cart-list-delete" type="submit">
-                      <i class="rzfkomputer-trashcan"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="cart-list__row">
-                  <td class="cart-list__img-wrapper">
-                    <img class="cart-list__img-el" src="assets/img/dummy/lenovo-1.png" alt="Lenovo" />
-                  </td>
-                  <td class="cart-list__product">
-                    <h6 class="cart-list__product-name">PC Fullset</h6>
-                    <p class="cart-list__product-price">Rp 4.500.000</p>
-                    <p class="cart-list__product-count">Total : 1</p>
-                  </td>
-                  <td class="cart-list__delete">
-                    <button class="cart-list__delete-btn js-cart-list-delete" type="submit">
-                      <i class="rzfkomputer-trashcan"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr class="cart-list__row">
-                  <td class="cart-list__img-wrapper">
-                    <img class="cart-list__img-el" src="assets/img/dummy/lenovo-1.png" alt="Lenovo" />
-                  </td>
-                  <td class="cart-list__product">
-                    <h6 class="cart-list__product-name">Asus Ryzen 5</h6>
-                    <p class="cart-list__product-price">Rp 4.500.000</p>
-                    <p class="cart-list__product-count">Total : 1</p>
-                  </td>
-                  <td class="cart-list__delete">
-                    <button class="cart-list__delete-btn js-cart-list-delete" type="submit">
-                      <i class="rzfkomputer-trashcan"></i>
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="cart-list__total">
-              <span class="cart-list__total-name">Total:</span>
-              <h5 class="cart-list__total-price">Rp. 4.500.000</h5>
+        <div class="cart-list js-cart-list" dataEmpty="0">
+          <div class="cart-list__items js-cart-list__items">
+            <div class="cart-list__alert-empty">
+              <p>Saat ini, Keranjang Anda kosong</p>
             </div>
-            <div class="cart-list__button">
-              <div class="cart-list__button--row">
-                <a class="btn btn--primary btn--views" href="keranjang-belanja.html">Lihat Keranjang</a>
+            <div class="cart-list__table__wrapper">
+              <table class="cart-list__table">
+                <tbody class="jsTbody">
+                  <tr class="cart-list__row">
+                    <td class="cart-list__img-wrapper">
+                      <img class="cart-list__img-el" src="assets/img/dummy/lenovo-1.png" alt="Lenovo" />
+                    </td>
+                    <td class="cart-list__product">
+                      <h6 class="cart-list__product-name">Lenovo Ultra Made 1500mx Ease Super</h6>
+                      <p class="cart-list__product-price">Rp 4.500.000</p>
+                      <p class="cart-list__product-count">Total : 1</p>
+                    </td>
+                    <td class="cart-list__delete">
+                      <button class="cart-list__delete-btn js-cart-list-delete" type="submit">
+                        <i class="rzfkomputer-trashcan"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="cart-list__row">
+                    <td class="cart-list__img-wrapper">
+                      <img class="cart-list__img-el" src="assets/img/dummy/printer.png" alt="Lenovo" />
+                    </td>
+                    <td class="cart-list__product">
+                      <h6 class="cart-list__product-name">Printer Epson</h6>
+                      <p class="cart-list__product-price">Rp 2.500.000</p>
+                      <p class="cart-list__product-count">Total : 1</p>
+                    </td>
+                    <td class="cart-list__delete">
+                      <button class="cart-list__delete-btn js-cart-list-delete" type="submit">
+                        <i class="rzfkomputer-trashcan"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="cart-list__row">
+                    <td class="cart-list__img-wrapper">
+                      <img class="cart-list__img-el" src="assets/img/dummy/lenovo-1.png" alt="Lenovo" />
+                    </td>
+                    <td class="cart-list__product">
+                      <h6 class="cart-list__product-name">PC Fullset</h6>
+                      <p class="cart-list__product-price">Rp 4.500.000</p>
+                      <p class="cart-list__product-count">Total : 1</p>
+                    </td>
+                    <td class="cart-list__delete">
+                      <button class="cart-list__delete-btn js-cart-list-delete" type="submit">
+                        <i class="rzfkomputer-trashcan"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="cart-list__row">
+                    <td class="cart-list__img-wrapper">
+                      <img class="cart-list__img-el" src="assets/img/dummy/lenovo-1.png" alt="Lenovo" />
+                    </td>
+                    <td class="cart-list__product">
+                      <h6 class="cart-list__product-name">Asus Ryzen 5</h6>
+                      <p class="cart-list__product-price">Rp 4.500.000</p>
+                      <p class="cart-list__product-count">Total : 1</p>
+                    </td>
+                    <td class="cart-list__delete">
+                      <button class="cart-list__delete-btn js-cart-list-delete" type="submit">
+                        <i class="rzfkomputer-trashcan"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="cart-list__row">
+                    <td class="cart-list__img-wrapper">
+                      <img class="cart-list__img-el" src="assets/img/dummy/lenovo-1.png" alt="Lenovo" />
+                    </td>
+                    <td class="cart-list__product">
+                      <h6 class="cart-list__product-name">Asus Ryzen 5</h6>
+                      <p class="cart-list__product-price">Rp 4.500.000</p>
+                      <p class="cart-list__product-count">Total : 1</p>
+                    </td>
+                    <td class="cart-list__delete">
+                      <button class="cart-list__delete-btn js-cart-list-delete" type="submit">
+                        <i class="rzfkomputer-trashcan"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="cart-list__row">
+                    <td class="cart-list__img-wrapper">
+                      <img class="cart-list__img-el" src="assets/img/dummy/lenovo-1.png" alt="Lenovo" />
+                    </td>
+                    <td class="cart-list__product">
+                      <h6 class="cart-list__product-name">Asus Ryzen 5</h6>
+                      <p class="cart-list__product-price">Rp 4.500.000</p>
+                      <p class="cart-list__product-count">Total : 1</p>
+                    </td>
+                    <td class="cart-list__delete">
+                      <button class="cart-list__delete-btn js-cart-list-delete" type="submit">
+                        <i class="rzfkomputer-trashcan"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="cart-list__total">
+                <span class="cart-list__total-name">Total:</span>
+                <h5 class="cart-list__total-price">Rp. 4.500.000</h5>
+                <div class="cart-list__button">
+                  <div class="cart-list__button--row">
+                    <a class="btn btn--primary btn--views" href="keranjang-belanja.html">Lihat Keranjang</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -202,7 +237,7 @@
             <button class="header-search-section__submit" type="submit">
               <i class="rzfkomputer-search"></i>
             </button>
-            <input class="header-search__input js-search-input" type="text" name="search" id="search" placeholder="Cari Produk" />
+            <input class="header-search__input js-search-input" type="text" name="search" id="search" placeholder="Cari Produk" autofocus />
             <button class="header-search-section__close js-header-search-section__close" type="button">
               <i class="rzfkomputer-clear"></i>
             </button>
