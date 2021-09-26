@@ -41,7 +41,15 @@
   <meta property="og:image" content="assets/img/default/og-facebook.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
 
-
+  <!-- twitter card-->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Keranjang Belanja | RZF Komputer | Computer and Peripheral Support" />
+  <meta name="twitter:description" content="Keranjang Belanja | RZF Komputer merupakan sebuah usaha yang berfokus pada produk, inovasi dan layanan jasa di bidang teknologi dan informasi khususnya di bidang perangkat komputer, percetakan, jaringan, kasir dan lain-lain" />
+  <meta name="twitter:site" content="@rzfkomputer" />
+  <meta name="twitter:site:id" content="@rzfkomputer" />
+  <meta name="twitter:domain" content="rzfkomputer.com" />
+  <meta name="twitter:image:src" content="assets/img/default/twitter-card.jpg" />
+  <meta name="twitter:creator" content="@rzfkomputer" />
 
   <!-- ============ icon ============-->
   <!-- web favicon-->
@@ -121,11 +129,16 @@
         <div class="cart-list js-cart-list" dataEmpty="1">
           <div class="cart-list__items js-cart-list__items">
             <div class="cart-list__alert-empty">
-              <p>Saat ini, Keranjang Anda kosong</p>
+              <div class="cart-list__alert-empty-img">
+                <img class="cart-list__alert-empty-img-el" src="assets/img/dummy/empty-cart.svg" alt="Saat ini, Keranjang Anda kosong" />
+              </div>
+              <div class="cart-list__alert-empty-txt">
+                <p>Saat ini, Keranjang Anda kosong</p>
+              </div>
             </div>
             <div class="cart-list__table__wrapper">
               <table class="cart-list__table">
-                <tbody class="jsTbody">
+                <tbody>
                   <tr class="cart-list__row">
                     <td class="cart-list__img-wrapper">
                       <img class="cart-list__img-el" src="assets/img/dummy/lenovo-1.png" alt="Lenovo" />
@@ -381,22 +394,22 @@
                   <h3 class="checkout__form-title">Form Checkout</h3>
                   <div class="form__control">
                     <label class="form__label" for="name">Nama</label>
-                    <input class="form__input" type="text" id="name" name="name" placeholder="Masukkan Nama" data-target="alertName" required />
+                    <input class="form__input" type="text" id="name" name="name" placeholder="Masukkan Nama" data-target="alertName" />
                     <p class="form__alert" id="alertName" data-req="Nama tidak boleh kosong!"></p>
                   </div>
                   <div class="form__control">
                     <label class="form__label" for="email">Email</label>
-                    <input class="form__input" type="text" id="email" name="email" placeholder="Masukkan Email" data-target="alertEmail" required />
+                    <input class="form__input" type="text" id="email" name="email" placeholder="Masukkan Email" data-target="alertEmail" />
                     <p class="form__alert" id="alertEmail" data-req="Email tidak boleh kosong!" data-invalid-email="Masukkan email yang valid!"></p>
                   </div>
                   <div class="form__control">
                     <label class="form__label" for="phone">Nomor Telepon</label>
-                    <input class="form__input" id="phone" name="phone" placeholder="Masukkan Nomor" data-target="alertPhone" required>
+                    <input class="form__input" id="phone" name="phone" placeholder="Masukkan Nomor" data-target="alertPhone">
                     <p class="form__alert" id="alertPhone" data-req="Nomor tidak boleh kosong!" data-invalid-phone="Masukkan nomor yang valid!"></p>
                   </div>
                   <div class="form__control">
                     <label class="form__label" for="address">Alamat Rumah/Kantor</label>
-                    <textarea class="form__input" id="address" name="address" placeholder="Masukkan Alamat" data-target="alertAddress" rows="5" required></textarea>
+                    <textarea class="form__input" id="address" name="address" placeholder="Masukkan Alamat" data-target="alertAddress" rows="5"></textarea>
                     <p class="form__alert" id="alertAddress" data-req="Alamat tidak boleh kosong!"></p>
                   </div><button class="btn btn--block btn--primary" id="js-submit" type="submit">
                     Pesan Sekarang</button>

@@ -100,28 +100,28 @@
                 ='\n'
                 label.form__label(for='name') Nama
                 ='\n'
-                input.form__input(type='text' id='name' name='name' placeholder="Masukkan Nama" data-target="alertName" required)/
+                input.form__input(type='text' id='name' name='name' placeholder="Masukkan Nama" data-target="alertName")/
                 p(class="form__alert" id="alertName" data-req="Nama tidak boleh kosong!")
               ='\n'
               .form__control
                 ='\n'
                 label.form__label(for='email') Email
                 ='\n'
-                input.form__input(type='text' id='email' name='email' placeholder="Masukkan Email" data-target="alertEmail" required)/
+                input.form__input(type='text' id='email' name='email' placeholder="Masukkan Email" data-target="alertEmail")/
                 p(class="form__alert" id="alertEmail" data-req="Email tidak boleh kosong!" data-invalid-email="Masukkan email yang valid!")
                 ='\n'
               .form__control
                 ='\n'
                 label.form__label(for='phone') Nomor Telepon
                 ='\n'
-                input.form__input(id="phone" name='phone' placeholder='Masukkan Nomor' data-target="alertPhone" required)
+                input.form__input(id="phone" name='phone' placeholder='Masukkan Nomor' data-target="alertPhone")
                 p(class="form__alert" id="alertPhone" data-req="Nomor tidak boleh kosong!" data-invalid-phone="Masukkan nomor yang valid!")
                 ='\n'
               .form__control
                 ='\n'
                 label.form__label(for='address') Alamat Rumah/Kantor
                 ='\n'
-                textarea.form__input(id="address" name='address' placeholder='Masukkan Alamat' data-target="alertAddress" rows='5' required)
+                textarea.form__input(id="address" name='address' placeholder='Masukkan Alamat' data-target="alertAddress" rows='5')
                 p(class="form__alert" id="alertAddress" data-req="Alamat tidak boleh kosong!")
                 ='\n'
               button.btn.btn--block.btn--primary#js-submit(type='submit')

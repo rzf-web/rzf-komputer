@@ -135,10 +135,15 @@
       .cart-list.js-cart-list(dataEmpty='1')
         .cart-list__items.js-cart-list__items
           .cart-list__alert-empty
-            p Saat ini, Keranjang Anda kosong
+            .cart-list__alert-empty-img
+              ='\n'
+              img.cart-list__alert-empty-img-el(src='assets/img/dummy/empty-cart.svg' alt='Saat ini, Keranjang Anda kosong')/
+              ='\n'
+            .cart-list__alert-empty-txt
+              p Saat ini, Keranjang Anda kosong
           .cart-list__table__wrapper
             table.cart-list__table
-              tbody.jsTbody
+              tbody
                 each val in dataTable.list
                   tr.cart-list__row
                     td.cart-list__img-wrapper

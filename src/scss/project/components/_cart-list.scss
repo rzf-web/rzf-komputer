@@ -16,15 +16,15 @@
     border-radius: 8px;
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 100px;
+    min-height: 180px;
     @include scroll(y, no-touch, show);
-    box-shadow: 0 0 16px 12px rgba(0,0,0,.4);
-    @include shadow(16);
+    box-shadow: 0 4px 18px 0 rgba(0,0,0,.1);
     transition: all 350ms ease;
     opacity: 0;
     visibility: hidden;
-    display: none;
-    @include scroll(y, touch, hide);
+    pointer-events: none;
+    // @include scroll(y, touch, hide);
+    overflow: hidden;
     @include medium {
       width: 50%;
       top: 42px;
@@ -45,7 +45,10 @@
     text-align: center;
     opacity: 0;
     visibility: hidden;
-    padding: 12px 0;
+    padding: 20px 0;
+    @include extra-small {
+      padding: 6px 0;
+    }
     p {
       margin: 0;
     }
@@ -53,12 +56,20 @@
       opacity: 1;
       visibility: visible;
     }
+    &-img {
+      padding: 8px;
+      margin-bottom: 8px;
+      &-el {
+        width: 40px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
   }
 
   &__table__wrapper {
     visibility: hidden;
     opacity: 0;
-    display: none;
     &.showed {
       opacity: 1;
       visibility: visible;
@@ -162,5 +173,6 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(-12px);
+    pointer-events: initial;
   }
 }

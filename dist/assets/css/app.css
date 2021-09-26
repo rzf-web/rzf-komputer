@@ -1813,9 +1813,6 @@ b {
     margin-bottom: 8px;
   }
 }
-.page-not-found__content .btn--page-not-found {
-  min-width: 320px;
-}
 @media only screen and (max-width: 575.86px) {
   .page-not-found__content .btn--page-not-found {
     width: 75%;
@@ -1842,31 +1839,20 @@ b {
           border-radius: 8px;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 100px;
+  min-height: 180px;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-box-shadow: 0 0 16px 12px rgba(0, 0, 0, 0.4);
-     -moz-box-shadow: 0 0 16px 12px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 16px 12px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 4px 16px rgba(97, 71, 74, 0.4);
-     -moz-box-shadow: 0 4px 16px rgba(97, 71, 74, 0.4);
-          box-shadow: 0 4px 16px rgba(97, 71, 74, 0.4);
+  -webkit-box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.1);
   -webkit-transition: all 350ms ease;
   -o-transition: all 350ms ease;
   -moz-transition: all 350ms ease;
   transition: all 350ms ease;
   opacity: 0;
   visibility: hidden;
-  display: none;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none;
-}
-.cart-list__items::-webkit-scrollbar {
-  -webkit-appearance: none;
-  display: none;
-  width: 0;
+  pointer-events: none;
+  overflow: hidden;
 }
 @media only screen and (max-width: 991.98px) {
   .cart-list__items {
@@ -1893,7 +1879,12 @@ b {
   text-align: center;
   opacity: 0;
   visibility: hidden;
-  padding: 12px 0;
+  padding: 20px 0;
+}
+@media only screen and (max-width: 575.86px) {
+  .cart-list__alert-empty {
+    padding: 6px 0;
+  }
 }
 .cart-list__alert-empty p {
   margin: 0;
@@ -1902,10 +1893,18 @@ b {
   opacity: 1;
   visibility: visible;
 }
+.cart-list__alert-empty-img {
+  padding: 8px;
+  margin-bottom: 8px;
+}
+.cart-list__alert-empty-img-el {
+  width: 40px;
+  margin: 0 auto;
+  display: block;
+}
 .cart-list__table__wrapper {
   visibility: hidden;
   opacity: 0;
-  display: none;
 }
 .cart-list__table__wrapper.showed {
   opacity: 1;
@@ -2024,6 +2023,7 @@ b {
       -ms-transform: translateY(-12px);
        -o-transform: translateY(-12px);
           transform: translateY(-12px);
+  pointer-events: initial;
 }
 
 /* ==========================================================================
@@ -5306,7 +5306,7 @@ b {
           user-select: none;
 }
 .footer__nav .facebook:hover i {
-  background-color: #4267b2;
+  background-color: #1877f2;
   color: #fff;
 }
 .footer__nav .instagram:hover i {

@@ -6,7 +6,9 @@
 const Sale = (() => {
   
   const handleCountDown = () => {
-    let countDownDate = new Date("Oct 10, 2021 10:10:25").getTime();
+    let _dataTimeSale = $('.sale__content__countdown').attr('setSaleTime');
+
+    let countDownDate = new Date(_dataTimeSale).getTime();
 
     // update the count down every 1 second
     let x = setInterval( () => {
