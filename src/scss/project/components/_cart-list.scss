@@ -23,6 +23,7 @@
     transition: all 350ms ease;
     opacity: 0;
     visibility: hidden;
+    display: none;
     @include scroll(y, touch, hide);
     @include medium {
       width: 50%;
@@ -44,7 +45,7 @@
     text-align: center;
     opacity: 0;
     visibility: hidden;
-    padding: 20px 0;
+    padding: 12px 0;
     p {
       margin: 0;
     }

@@ -1088,7 +1088,7 @@ exports["default"] = void 0;
 --------------------------------------------------------------------------------- */
 var Sale = function () {
   var handleCountDown = function handleCountDown() {
-    var countDownDate = new Date("Oct 16, 2021 10:10:25").getTime(); // update the count down every 1 second
+    var countDownDate = new Date("Oct 10, 2021 10:10:25").getTime(); // update the count down every 1 second
 
     var x = setInterval(function () {
       // get today's date and time
