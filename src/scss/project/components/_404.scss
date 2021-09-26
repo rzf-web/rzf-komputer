@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Components Checkout Modal
+   ========================================================================== */
+
+.page-not-found {
+  padding: 120px 0;
+  @include large {
+    padding: 56px 0;
+  }
+  @include medium {
+    padding: 48px 0;
+  }
+  &__content {
+    text-align: center;
+    &__img {
+      margin-bottom: 32px;
+      &__el {
+        width: 320px;
+        margin: 0 auto;
+        display: block;
+        @include extra-small {
+          width: 220px;
+        }
+      }
+    }
+    &__txt {
+     &__title {
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      @include font-size(24);
+      @include extra-small {
+        margin-bottom: 8px;
+      }
+     } 
+     &__desc {
+      margin-bottom: 32px;
+      @include font-size(16);
+     }
+      @include extra-small {
+        margin-bottom: 8px;
+      }
+    }
+    .btn--page-not-found {
+      min-width: 320px;
+      @include extra-small {
+        width: 75%;
+      }
+    }
+  }
+}
