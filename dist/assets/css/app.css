@@ -1905,6 +1905,7 @@ b {
 .cart-list__table__wrapper {
   visibility: hidden;
   opacity: 0;
+  display: none;
 }
 .cart-list__table__wrapper.showed {
   opacity: 1;

@@ -177,10 +177,119 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 /* ------------------------------------------------------------------------------
 @name: Cart
 @description: Cart
 --------------------------------------------------------------------------------- */
+var products = [{
+  id: 1,
+  name: 'Asus',
+  price: 4500000,
+  stock: 2,
+  total: 2
+}, {
+  id: 2,
+  name: 'Printer',
+  price: 700000,
+  stock: 5,
+  total: 1
+}, {
+  id: 3,
+  name: 'Laptop',
+  price: 3000000,
+  stock: 3,
+  total: 1
+}]; // let products = JSON.parse($('.js-tesss').attr('dataProductCart'));
+
+console.log($('.js-tesss').attr('dataProductCart'));
+
+function renderTotal(total, qty, type) {
+  if (type == 'increment') {
+    if (total >= qty) {
+      return qty;
+    }
+
+    return total + 1;
+  } else {
+    if (total < qty) {
+      return 1;
+    }
+
+    return total - 1;
+  }
+}
+
+function loadData(datas) {
+  var html = '';
+  datas.map(function (product) {
+    html += loadHtml(product);
+  });
+  $('.js-tesss').html(html);
+} // console.log($('.js-tesss').attr('dataProductCart'))
+
+
+function loadHtml(product) {
+  return "\n    <tr>\n      <td>\n        <div class='cart__media'>\n          <div class='cart__media__content'>\n            <button onclick='popupDelete()' class='cart__media__delete-btn js-delete' type='button' title='Delete'>\n              <i class='rzfkomputer-trashcan'></i>\n            </button>\n            <div class='cart__media__img-wrapper'>\n              <img class='cart__media__img-el' src='assets/img/dummy/our-product-1.png' alt='Image' />\n            </div>\n            <p class='cart__media__name'> ".concat(product.name, "</p>\n          </div>\n        </td>\n        <td>\n          <p class=\"cart__media__img-el\">Rp ").concat(product.price, "</p>\n        </td>\n        <td>\n          <div class=\"cart__media__product-count\">\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'decrement')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-minus\"></i>\n            </button>\n            <input onchange='handleChangeInput(this)' type=\"number\" class='cart__media__input-qty' id=\"quantity\" name=\"cart\" max-length='12' title='Quantity' min='1' value='").concat(product.total, "' />\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'increment')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-add\"></i>\n            </button>\n          </div>\n        </td>\n      </tr>\n  ");
+}
+
+window.load = loadData(products);
+
+window.popupDelete = function () {
+  var swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: 'btn btn--primary mr-12 w-100',
+      cancelButton: 'btn btn--secondary w-100'
+    },
+    buttonsStyling: false
+  });
+  swalWithBootstrapButtons.fire({
+    showCancelButton: true,
+    cancelButtonText: 'Batal',
+    title: 'Hapus item ini?',
+    text: "Tindakan ini tidak dapat diurungkan!",
+    icon: 'warning',
+    confirmButtonColor: '#388e3c',
+    cancelButtonColor: '#ff0000',
+    confirmButtonText: 'Ya, Hapus',
+    width: 550,
+    padding: '22px'
+  }).then(function (result) {
+    if (result.isConfirmed) {
+      swalWithBootstrapButtons.fire({
+        title: 'Terhapus!',
+        text: 'Item Anda sudah terhapus',
+        icon: 'success',
+        width: 420
+      });
+    }
+  });
+};
+
+window.handleChangeInput = function () {
+  // alert($(this).val());
+  console.log($(this).val());
+};
+
+window.handleChangeTotal = function (index, type) {
+  var newProduct = products.map(function (product) {
+    if (index == product.id) {
+      return _objectSpread(_objectSpread({}, product), {}, {
+        total: renderTotal(product.total, product.qty, type)
+      });
+    }
+
+    return _objectSpread({}, product);
+  });
+  products = newProduct;
+  loadData(newProduct);
+};
+
 var Cart = function () {
   // variables
   var _buttonMin = $('.js-cart-minus'),
@@ -212,39 +321,7 @@ var Cart = function () {
 
 
   var handleClick = function handleClick() {
-    // handle delete product
-    $('.js-delete').on('click', function (e) {
-      e.preventDefault();
-      var swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-          confirmButton: 'btn btn--primary mr-12 w-100',
-          cancelButton: 'btn btn--secondary w-100'
-        },
-        buttonsStyling: false
-      });
-      swalWithBootstrapButtons.fire({
-        showCancelButton: true,
-        cancelButtonText: 'Batal',
-        title: 'Hapus item ini?',
-        text: "Tindakan ini tidak dapat diurungkan!",
-        icon: 'warning',
-        confirmButtonColor: '#388e3c',
-        cancelButtonColor: '#ff0000',
-        confirmButtonText: 'Ya, Hapus',
-        width: 550,
-        padding: '22px'
-      }).then(function (result) {
-        if (result.isConfirmed) {
-          swalWithBootstrapButtons.fire({
-            title: 'Terhapus!',
-            text: 'Item Anda sudah terhapus',
-            icon: 'success',
-            width: 420
-          });
-        }
-      });
-    }); // handle button min
-
+    // handle button min
     $(_buttonMin).on('click', function (e) {
       e.preventDefault();
 

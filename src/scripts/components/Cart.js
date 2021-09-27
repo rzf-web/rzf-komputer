@@ -3,6 +3,126 @@
 @description: Cart
 --------------------------------------------------------------------------------- */
 
+
+let products = [
+  { id: 1, name: 'Asus', price: 4500000, stock: 2, total: 2 },
+  { id: 2, name: 'Printer', price: 700000, stock: 5, total: 1 },
+  { id: 3, name: 'Laptop', price: 3000000, stock: 3, total: 1 }
+]
+
+let products = JSON.parse($('.js-tesss').attr('dataProductCart'));
+
+console.log($('.js-tesss').attr('dataProductCart'));
+function renderTotal(total, qty, type){
+  if(type == 'increment'){
+    if(total >= qty){
+      return qty;
+    }
+    return total + 1;
+  } else {
+    if(total < qty){
+      return 1;
+    }
+    return total - 1;
+  }
+}
+
+function loadData(datas) {
+  let html = '';
+  datas.map((product) => {
+    html += loadHtml(product)
+  })
+  $('.js-tesss').html(html);
+  }
+  // console.log($('.js-tesss').attr('dataProductCart'))
+
+function loadHtml(product) {
+  return `
+    <tr>
+      <td>
+        <div class='cart__media'>
+          <div class='cart__media__content'>
+            <button onclick='popupDelete()' class='cart__media__delete-btn js-delete' type='button' title='Delete'>
+              <i class='rzfkomputer-trashcan'></i>
+            </button>
+            <div class='cart__media__img-wrapper'>
+              <img class='cart__media__img-el' src='assets/img/dummy/our-product-1.png' alt='Image' />
+            </div>
+            <p class='cart__media__name'> ${product.name}</p>
+          </div>
+        </td>
+        <td>
+          <p class="cart__media__img-el">Rp ${product.price}</p>
+        </td>
+        <td>
+          <div class="cart__media__product-count">
+            <button type="button" onclick="handleChangeTotal(${product.id}, 'decrement')" class="cart__media__btn-chevron-down js-cart-minus">
+            <i class="rzfkomputer-minus"></i>
+            </button>
+            <input onchange='handleChangeInput(this)' type="number" class='cart__media__input-qty' id="quantity" name="cart" max-length='12' title='Quantity' min='1' value='${product.total}' />
+            <button type="button" onclick="handleChangeTotal(${product.id}, 'increment')" class="cart__media__btn-chevron-down js-cart-minus">
+            <i class="rzfkomputer-add"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+  `
+}
+
+    window.load = loadData(products);
+    window.popupDelete = () => {
+      const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn--primary mr-12 w-100',
+        cancelButton: 'btn btn--secondary w-100',
+        },
+        buttonsStyling: false
+      })
+      swalWithBootstrapButtons.fire({
+        showCancelButton: true,
+        cancelButtonText: 'Batal',
+        title: 'Hapus item ini?',
+        text: "Tindakan ini tidak dapat diurungkan!",
+        icon: 'warning',
+        confirmButtonColor: '#388e3c',
+        cancelButtonColor: '#ff0000',
+        confirmButtonText: 'Ya, Hapus',
+        width: 550,
+        padding: '22px'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          swalWithBootstrapButtons.fire({
+            title: 'Terhapus!',
+            text: 'Item Anda sudah terhapus',
+            icon: 'success',
+            width: 420
+          })
+        }
+      })
+    }
+    window.handleChangeInput = function() {
+      // alert($(this).val());
+      console.log($(this).val());
+    }
+
+window.handleChangeTotal = (index, type) => {
+  const newProduct = products.map(product => {
+    if (index == product.id) {
+      return {
+        ...product,
+        total: renderTotal(product.total, product.qty, type)
+      }
+    }
+    return {
+      ...product
+    }
+  })
+  products = newProduct;
+  loadData(newProduct);
+}
+
+
+
 const Cart = (() => {
 
 // variables
@@ -35,39 +155,6 @@ function formatRupiah(harga, prefix) {
 
   // handle click
   const handleClick = () => {
-    // handle delete product
-    $('.js-delete').on('click', (e) => {
-      e.preventDefault();
-      const swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-          confirmButton: 'btn btn--primary mr-12 w-100',
-        cancelButton: 'btn btn--secondary w-100',
-        },
-        buttonsStyling: false
-      })
-      swalWithBootstrapButtons.fire({
-        showCancelButton: true,
-        cancelButtonText: 'Batal',
-        title: 'Hapus item ini?',
-        text: "Tindakan ini tidak dapat diurungkan!",
-        icon: 'warning',
-        confirmButtonColor: '#388e3c',
-        cancelButtonColor: '#ff0000',
-        confirmButtonText: 'Ya, Hapus',
-        width: 550,
-        padding: '22px'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          swalWithBootstrapButtons.fire({
-            title: 'Terhapus!',
-            text: 'Item Anda sudah terhapus',
-            icon: 'success',
-            width: 420
-          })
-        }
-      })
-    });
-
     // handle button min
     $(_buttonMin).on('click', (e) => {
       e.preventDefault();
@@ -126,3 +213,4 @@ function formatRupiah(harga, prefix) {
 })();
 
 export default Cart
+

@@ -70,6 +70,7 @@
   &__table__wrapper {
     visibility: hidden;
     opacity: 0;
+    display: none;
     &.showed {
       opacity: 1;
       visibility: visible;
