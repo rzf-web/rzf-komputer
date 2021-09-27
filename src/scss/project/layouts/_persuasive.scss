@@ -78,5 +78,14 @@
       height: auto;
       z-index: 0;
    }
+   .btn--persuasive {
+      width: 55%;
+      @include extra-small {
+         width: 70%;
+      }
+      @include retina {
+         width: 100%;
+      }
+   }
 }
 

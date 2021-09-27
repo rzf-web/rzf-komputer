@@ -139,8 +139,14 @@
     @include small {
       margin-bottom: 16px;
     }
+    @include extra-small {
+      text-align: left;
+    }
   }
   .btn--payment {
-    width: 100%;
+    width: 60%;
+    @include extra-small {
+      width: 100%;
+    }
   }
 }

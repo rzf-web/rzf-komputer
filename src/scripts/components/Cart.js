@@ -12,7 +12,7 @@ let products = [
 
 // let dataProducts = JSON.parse($('.js-tesss').attr('dataProductCart'));
 
-console.log($('.js-product-item').attr('dataProductCart'));
+console.log($('.js-tesss').attr('dataProductCart'));
 function renderTotal(total, qty, type){
   if(type == 'increment'){
     if(total >= qty){
@@ -66,7 +66,6 @@ function loadHtml(product) {
           </div>
         </td>
       </tr>
-
   `
 }
 

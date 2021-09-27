@@ -7,7 +7,7 @@
   width: 100%;
   background-color: color(white);
   z-index: zi(header);
-  height: 70px;
+  height: 72px;
   transition: transform .35s ease;
   @include shadow(10);
   .window-scrolled & {

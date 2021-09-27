@@ -6,7 +6,7 @@
 .card-product(class=(navActive == 'produk' ? 'product' : ''))
   .container
     .product__wrapper
-      .product__sorting.js-sorting-dd.js-sticky
+      .product__sorting.js-sorting-dd
         .product__sorting-select
           h3.product__sorting-title Kategori
           .product__sorting-list
@@ -22,6 +22,27 @@
             ='\n'
             a.product__sorting-link(href='lainnya')
               | Lainnya
+            ='\n'
+        ul.product__paginate 
+          li.product__paginate__item
+            ='\n'
+            a.product__paginate__pagenumber(href='next-page.html')
+              ='\n'
+              i.rzfkomputer-chevron-left
+            ='\n'
+          li.product__paginate__item
+            ='\n'
+            a.product__paginate__pagenumber(href='next-page.html') 1
+            ='\n'
+          li.product__paginate__item
+            ='\n'
+            a.product__paginate__pagenumber(href='next-page.html') 2
+            ='\n'
+          li.product__paginate__item
+            ='\n'
+            a.product__paginate__pagenumber(href='next-page.html')
+              ='\n'
+              i.rzfkomputer-chevron-right
             ='\n'
       .product__section
         each val in dataProduct.list
