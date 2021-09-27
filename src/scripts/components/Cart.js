@@ -66,6 +66,7 @@ function loadHtml(product) {
           </div>
         </td>
       </tr>
+
   `
 }
 

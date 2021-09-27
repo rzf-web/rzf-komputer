@@ -7385,6 +7385,11 @@ Layouts Cart
      -moz-border-radius: 8px;
           border-radius: 8px;
 }
+@media only screen and (max-width: 575.86px) {
+  .cart__media__img-el {
+    width: 120px;
+  }
+}
 .cart__media__name {
   float: left;
   padding: 34px 0;
