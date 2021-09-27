@@ -7298,10 +7298,10 @@ Layouts Cart
   font-size: 12px;
   line-height: 1.2;
   font-weight: normal;
+  padding: 20px 0;
 }
 .cart__table td,
 .cart tr td {
-  padding: 20px 0;
   border-bottom: solid 1px #bbb;
 }
 .cart__table-title,
@@ -7324,6 +7324,9 @@ Layouts Cart
   max-width: 546px;
   position: relative;
 }
+.cart__media__content {
+  padding: 20px 0;
+}
 .cart__media__content::before, .cart__media__content::after {
   content: " ";
   display: table;
@@ -7333,7 +7336,7 @@ Layouts Cart
 }
 .cart__media__delete-btn {
   position: absolute;
-  top: 4px;
+  top: 14px;
   left: 8px;
   bottom: 0;
   width: 40px;
@@ -7627,6 +7630,8 @@ Layouts Cart
 .checkout__table th {
   padding: 12px 0;
   font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
 }
 @media only screen and (max-width: 575.86px) {
   .checkout__table th {

@@ -205,7 +205,7 @@ var products = [{
   price: 3000000,
   stock: 3,
   total: 1
-}]; // let products = JSON.parse($('.js-tesss').attr('dataProductCart'));
+}]; // let dataProducts = JSON.parse($('.js-tesss').attr('dataProductCart'));
 
 console.log($('.js-tesss').attr('dataProductCart'));
 
