@@ -5,14 +5,14 @@
 
 
 let products = [
-  { id: 1, name: 'Asus', price: 4500000, stock: 2, total: 2 },
-  { id: 2, name: 'Printer', price: 700000, stock: 5, total: 1 },
-  { id: 3, name: 'Laptop', price: 3000000, stock: 3, total: 1 }
+  { id: 1, img: 'laptop-asus-3.jpg', name: 'Asus Ryzen 3 AMD III SSD 500GB', price: 4500000, stock: 2, total: 2 },
+  { id: 2, img: 'laptop-asus-2.jpg', name: 'HP Ryzen 3 AMD III SSD 500GB', price: 700000, stock: 5, total: 1 },
+  { id: 3, img: 'laptop-asus-1.jpg', name: 'Lenovo Ryzen 3 AMD III SSD 500GB', price: 3000000, stock: 3, total: 1 }
 ]
 
 // let dataProducts = JSON.parse($('.js-tesss').attr('dataProductCart'));
 
-console.log($('.js-tesss').attr('dataProductCart'));
+console.log($('.js-tableCart').attr('dataProductCart'));
 function renderTotal(total, qty, type){
   if(type == 'increment'){
     if(total >= qty){
@@ -32,7 +32,7 @@ function loadData(datas) {
   datas.map((product) => {
     html += loadHtml(product)
   })
-  $('.js-tesss').html(html);
+  $('.js-tableCart').html(html);
   }
   // console.log($('.js-tesss').attr('dataProductCart'))
 
@@ -46,16 +46,28 @@ function loadHtml(product) {
               <i class='rzfkomputer-trashcan'></i>
             </button>
             <div class='cart__media__img-wrapper'>
-              <img class='cart__media__img-el' src='assets/img/dummy/our-product-1.png' alt='Image' />
+              <img class='cart__media__img-el' src='assets/img/dummy/${product.img}' alt='Image' />
             </div>
-            <p class='cart__media__name'> ${product.name}</p>
           </div>
         </td>
         <td>
-          <p class="cart__media__img-el">Rp ${product.price}</p>
+          <p class='cart__media__name'> ${product.name}</p>
+        </td>
+        <td>
+          <p class="cart__media__price">Rp ${product.price}</p>
         </td>
         <td>
           <div class="cart__media__product-count">
+            <button type="button" onclick="handleChangeTotal(${product.id}, 'decrement')" class="cart__media__btn-chevron-down js-cart-minus">
+            <i class="rzfkomputer-minus"></i>
+            </button>
+            <input onchange='handleChangeInput(this)' type="number" class='cart__media__input-qty' id="quantity" name="cart" max-length='12' title='Quantity' min='1' value='${product.total}' />
+            <button type="button" onclick="handleChangeTotal(${product.id}, 'increment')" class="cart__media__btn-chevron-down js-cart-minus">
+            <i class="rzfkomputer-add"></i>
+            </button>
+          </div>
+        </td>
+        <div class="cart__media__product-count">
             <button type="button" onclick="handleChangeTotal(${product.id}, 'decrement')" class="cart__media__btn-chevron-down js-cart-minus">
             <i class="rzfkomputer-minus"></i>
             </button>

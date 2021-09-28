@@ -40,10 +40,7 @@ Layouts Cart
     font-size: 12px;
     line-height: 1.2;
     font-weight: normal;
-    padding: 20px 0;
-    td {
-      border-bottom: solid 1px color(grey, 6);
-    }
+    border-bottom: solid 1px color(grey, 6);
     &-title {
       font-weight: fw(semi-bold);
       @include font-size(18);
@@ -53,11 +50,15 @@ Layouts Cart
       @include extra-small {
         @include font-size(14);
       }
+      &:nth-child(2) {
+        padding-left: 12px;
+      }
     }
   }
   &__media {
     max-width: 546px;
     position: relative;
+    padding: 20px 0;
     &__content {
       @include clearfix;
       padding: 20px 0;
@@ -69,6 +70,7 @@ Layouts Cart
       bottom: 0;
       width: 40px;
       height: 40px;
+      z-index: 2;
       border-radius: 50%;
       background-color: color(danger);
       color: color(white);
@@ -86,40 +88,46 @@ Layouts Cart
       @include medium {
         padding-left: 0;
       }
-      @include retina {
-        width: 20px;
-        height: 20px;
-        top: -12px;
+      @include extra-small {
+        width: 30px;
+        height: 30px;
+        top: 8px;
         left: 0;
-        background-color: transparent;
-        color: color(danger);
+        background-color: color(danger);
+        color: color(white);
+        i.rzfkomputer-trashcan {
+          font-size: 12px;
+        }
       }
     }
     &__img-wrapper {
-      float: left;
+      padding-bottom: 40%;
+      width: 100px;
     }
     &__img-el {
-      width: 210px;
       display: block;
-      border-radius: 8px;
-      @include extra-small {
-        width: 120px;
-      }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 20px 0;
     }
     &__name {
       float: left;
       padding: 34px 0;
       margin-bottom: 0;
-      padding-left: 20px;
-      @include medium {
-        display: none;
+      padding: 6px 12px 0;
+      @include extra-small {
+        @include font-size(12);
       }
     }
     &__price {
       margin-bottom: 0;
       @include extra-small {
-        @include font-size(14);
-        padding-left: 12px;
+        @include font-size(12);
+        white-space: nowrap;
       }
     }
     &__total {
@@ -136,7 +144,7 @@ Layouts Cart
     &__product-count {
       padding: 12px 0;
       position: relative;
-      @include extra-small {
+      @include medium {
         max-width: 40px;
         padding-left: 24px;
       }
@@ -144,16 +152,19 @@ Layouts Cart
     &__input-qty {
       width: 40px;
       height: 44px;
-      padding: 8px 6px;
       outline: 0;
       border: solid 2px color(grey, 5);
       text-align: center;
       border-radius: 8px;
       transition: all 350ms ease;
-      @include extra-small {
-        width: 30px;
-        height: 30px;
+      @include font-size(16);
+      @include medium {
+        width: 34px;
+        height: 34px;
         padding: 4px;
+        @include font-size(14);
+      }
+      @include extra-small {
         @include font-size(12);
       }
       &:focus {
@@ -165,15 +176,14 @@ Layouts Cart
       height: 44px;
       border: none;
       outline: 0;
-      margin-right: 4px;
       border-radius: 8px;
       background-color: #fafafa;
       border: 1px solid color(grey, 5);
       transition: all 150ms ease;
-      @include extra-small {
-        width: 30px;
+      @include medium {
+        width: 34px;
+        height: 34px;
         margin: 8px 0;
-        height: 30px;
         @include font-size(12);
       }
       &:last-child {
@@ -262,14 +272,11 @@ Layouts Cart
       font-weight: 700;
     }
     &-name {
-      padding: 12px 0;
       border: none;
-      @include extra-small {
-        padding: 12px 12px 12px 0;
-      }
+      padding: 12px 0;
     }
     &-count {
-      padding-left: 22px;
+      padding-left: 20px;
     }
     &-price {
       padding: 6px 0;

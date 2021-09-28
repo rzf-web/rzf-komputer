@@ -40,13 +40,8 @@ const Sale = (() => {
   if (_distance < 0) {
     clearInterval(x);
     $('.sale__content__txt').html(`
-      <p class='sale__content__txt__alert-limited'>Maaf, promo sudah habis. Nantikan promo berikutnya. Terimakasih...</p>`);
+      <p class='sale__content__txt__alert-limited'>Maaf, saat ini sedang tidak ada promo. Nantikan promo berikutnya. Terima kasih Sobat RZF...</p>`);
     }
-    // $('.js-button-sale').remove();
-
-    // $('.js-countdown-set').html(`
-    //   <p>Maaf, promo sudah habis. Nantikan promo berikutnya</p>`);
-    // }
 
   }, 1000);
 } 

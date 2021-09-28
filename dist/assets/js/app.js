@@ -189,25 +189,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 --------------------------------------------------------------------------------- */
 var products = [{
   id: 1,
-  name: 'Asus',
+  img: 'laptop-asus-3.jpg',
+  name: 'Asus Ryzen 3 AMD III SSD 500GB',
   price: 4500000,
   stock: 2,
   total: 2
 }, {
   id: 2,
-  name: 'Printer',
+  img: 'laptop-asus-2.jpg',
+  name: 'HP Ryzen 3 AMD III SSD 500GB',
   price: 700000,
   stock: 5,
   total: 1
 }, {
   id: 3,
-  name: 'Laptop',
+  img: 'laptop-asus-1.jpg',
+  name: 'Lenovo Ryzen 3 AMD III SSD 500GB',
   price: 3000000,
   stock: 3,
   total: 1
 }]; // let dataProducts = JSON.parse($('.js-tesss').attr('dataProductCart'));
 
-console.log($('.js-tesss').attr('dataProductCart'));
+console.log($('.js-tableCart').attr('dataProductCart'));
 
 function renderTotal(total, qty, type) {
   if (type == 'increment') {
@@ -230,12 +233,12 @@ function loadData(datas) {
   datas.map(function (product) {
     html += loadHtml(product);
   });
-  $('.js-tesss').html(html);
+  $('.js-tableCart').html(html);
 } // console.log($('.js-tesss').attr('dataProductCart'))
 
 
 function loadHtml(product) {
-  return "\n    <tr>\n      <td>\n        <div class='cart__media'>\n          <div class='cart__media__content'>\n            <button onclick='popupDelete()' class='cart__media__delete-btn js-delete' type='button' title='Delete'>\n              <i class='rzfkomputer-trashcan'></i>\n            </button>\n            <div class='cart__media__img-wrapper'>\n              <img class='cart__media__img-el' src='assets/img/dummy/our-product-1.png' alt='Image' />\n            </div>\n            <p class='cart__media__name'> ".concat(product.name, "</p>\n          </div>\n        </td>\n        <td>\n          <p class=\"cart__media__img-el\">Rp ").concat(product.price, "</p>\n        </td>\n        <td>\n          <div class=\"cart__media__product-count\">\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'decrement')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-minus\"></i>\n            </button>\n            <input onchange='handleChangeInput(this)' type=\"number\" class='cart__media__input-qty' id=\"quantity\" name=\"cart\" max-length='12' title='Quantity' min='1' value='").concat(product.total, "' />\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'increment')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-add\"></i>\n            </button>\n          </div>\n        </td>\n      </tr>\n  ");
+  return "\n    <tr>\n      <td>\n        <div class='cart__media'>\n          <div class='cart__media__content'>\n            <button onclick='popupDelete()' class='cart__media__delete-btn js-delete' type='button' title='Delete'>\n              <i class='rzfkomputer-trashcan'></i>\n            </button>\n            <div class='cart__media__img-wrapper'>\n              <img class='cart__media__img-el' src='assets/img/dummy/".concat(product.img, "' alt='Image' />\n            </div>\n          </div>\n        </td>\n        <td>\n          <p class='cart__media__name'> ").concat(product.name, "</p>\n        </td>\n        <td>\n          <p class=\"cart__media__price\">Rp ").concat(product.price, "</p>\n        </td>\n        <td>\n          <div class=\"cart__media__product-count\">\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'decrement')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-minus\"></i>\n            </button>\n            <input onchange='handleChangeInput(this)' type=\"number\" class='cart__media__input-qty' id=\"quantity\" name=\"cart\" max-length='12' title='Quantity' min='1' value='").concat(product.total, "' />\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'increment')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-add\"></i>\n            </button>\n          </div>\n        </td>\n        <div class=\"cart__media__product-count\">\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'decrement')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-minus\"></i>\n            </button>\n            <input onchange='handleChangeInput(this)' type=\"number\" class='cart__media__input-qty' id=\"quantity\" name=\"cart\" max-length='12' title='Quantity' min='1' value='").concat(product.total, "' />\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'increment')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-add\"></i>\n            </button>\n          </div>\n        </td>\n      </tr>\n  ");
 }
 
 window.load = loadData(products);
@@ -1190,12 +1193,8 @@ var Sale = function () {
 
       if (_distance < 0) {
         clearInterval(x);
-        $('.sale__content__txt').html("\n      <p class='sale__content__txt__alert-limited'>Maaf, promo sudah habis. Nantikan promo berikutnya. Terimakasih...</p>");
-      } // $('.js-button-sale').remove();
-      // $('.js-countdown-set').html(`
-      //   <p>Maaf, promo sudah habis. Nantikan promo berikutnya</p>`);
-      // }
-
+        $('.sale__content__txt').html("\n      <p class='sale__content__txt__alert-limited'>Maaf, saat ini sedang tidak ada promo. Nantikan promo berikutnya. Terima kasih Sobat RZF...</p>");
+      }
     }, 1000);
   }; // - init
 
