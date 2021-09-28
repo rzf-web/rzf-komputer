@@ -6803,11 +6803,12 @@ Layout: Banner
 }
 .pdetail__form .price-ori {
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   text-decoration: line-through;
+  padding-left: 6px;
 }
 .pdetail__form .price-discount {
-  padding-left: 8px;
   text-decoration: none;
 }
 .pdetail__form__count-wrapper {

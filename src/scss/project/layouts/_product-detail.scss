@@ -134,11 +134,11 @@
       }
       .price-ori {
          display: inline-block;
-         font-size: 16px;
+         @include font-size(16);
          text-decoration: line-through;
+         padding-left: 6px;
       }
       .price-discount {
-         padding-left: 8px;
          text-decoration: none;
       }
       &__count-wrapper {
