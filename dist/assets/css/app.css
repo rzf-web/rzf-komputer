@@ -1820,6 +1820,47 @@ b {
 }
 
 /* ==========================================================================
+   Components No Result
+   ========================================================================== */
+.no-result-page {
+  padding: 120px 0;
+}
+@media only screen and (max-width: 1199.98px) {
+  .no-result-page {
+    padding: 56px 0;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .no-result-page {
+    padding: 48px 0;
+  }
+}
+.no-result-page__content {
+  text-align: center;
+}
+.no-result-page__img {
+  margin-bottom: 24px;
+}
+.no-result-page__img__el {
+  width: 80px;
+}
+.no-result-page__txt {
+  padding: 0 24px;
+}
+.no-result-page__txt__caption {
+  margin: 0;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: #333;
+}
+@media only screen and (max-width: 991.98px) {
+  .no-result-page__txt__caption {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+
+/* ==========================================================================
    Components Cart Lists
    ========================================================================== */
 .cart-list {

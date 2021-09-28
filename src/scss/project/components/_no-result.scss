@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Components No Result
+   ========================================================================== */
+
+.no-result-page {
+ padding: 120px 0;
+ @include large {
+  padding: 56px 0;
+}
+@include medium {
+  padding: 48px 0;
+}
+ &__content {
+  text-align: center;
+ }
+ &__img {
+  margin-bottom: 24px;
+  &__el {
+    width: 80px;
+  }
+ }
+ &__txt {
+  padding: 0 24px;
+  &__caption {
+    margin: 0;
+    @include font-size(24);
+    color: color(black, 1);
+    @include medium {
+      @include font-size(16);
+    }
+  }
+ }
+}

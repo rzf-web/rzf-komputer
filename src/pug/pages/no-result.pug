@@ -1,0 +1,13 @@
+extends ../templates/default.pug
+
+//- Head
+block siteHeader
+  -
+    siteTitle = 'Halaman Tidak Ditemukan';
+
+//- Body
+block siteContent
+  //- Title Page
+  include no-result/title-page.pug
+  //- no result page
+  include ../layouts/no-result.pug
