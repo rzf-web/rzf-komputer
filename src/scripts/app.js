@@ -20,8 +20,7 @@ import {
   SortingCategory,
   ProductDetail,
   Sale,
-  Cart,
-  OrderStatus
+  Cart
   // TitlePage
 
 } from 'components';
@@ -93,7 +92,6 @@ const App = (() => {
       ProductDetail.init();
       Sale.init();
       Cart.init();
-      OrderStatus.init();
       // TitlePage.init();
 
     })(jQuery);

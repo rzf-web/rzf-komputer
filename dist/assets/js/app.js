@@ -92,9 +92,7 @@ var App = function () {
 
       _components.Sale.init();
 
-      _components.Cart.init();
-
-      _components.OrderStatus.init(); // TitlePage.init();
+      _components.Cart.init(); // TitlePage.init();
 
     })(jQuery);
   }; // --- load
@@ -121,7 +119,7 @@ var App = function () {
 
 App.init();
 
-},{"./components":19,"./utilities":22}],2:[function(require,module,exports){
+},{"./components":18,"./utilities":21}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -722,7 +720,7 @@ var Header = function () {
 var _default = Header;
 exports["default"] = _default;
 
-},{"../utilities":22}],8:[function(require,module,exports){
+},{"../utilities":21}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -909,7 +907,7 @@ var HeaderSearch = function () {
 var _default = HeaderSearch;
 exports["default"] = _default;
 
-},{"../utilities":22}],9:[function(require,module,exports){
+},{"../utilities":21}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -996,45 +994,6 @@ var _default = HeroBanner;
 exports["default"] = _default;
 
 },{}],10:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-/* ------------------------------------------------------------------------------
-@name: OrderStatus
-@description: OrderStatus
---------------------------------------------------------------------------------- */
-var OrderStatus = function () {
-  // handleClick
-  var handleClick = function handleClick() {
-    $('.js-show-order').on('click', function (e) {
-      var _val = $(e.currentTarget);
-
-      if ($('body').hasClass('show-order')) {
-        $('body').removeClass('show-order').find('.order__box').fadeOut(500);
-      } else {
-        $('body').addClass('show-order').find('.order__box').fadeIn(300);
-      }
-    });
-  }; // init
-
-
-  var init = function init() {
-    handleClick();
-  };
-
-  return {
-    init: init
-  };
-}();
-
-var _default = OrderStatus;
-exports["default"] = _default;
-
-},{}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1154,7 +1113,7 @@ var ProductDetail = function () {
 var _default = ProductDetail;
 exports["default"] = _default;
 
-},{}],12:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1211,7 +1170,7 @@ var Sale = function () {
 var _default = Sale;
 exports["default"] = _default;
 
-},{}],13:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1267,7 +1226,7 @@ var SortingCategory = function () {
 var _default = SortingCategory;
 exports["default"] = _default;
 
-},{}],14:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1307,7 +1266,7 @@ var Tabs = function () {
 var _default = Tabs;
 exports["default"] = _default;
 
-},{}],15:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 // /* ------------------------------------------------------------------------------
 // @name: Title Page
 // @description: Title Page
@@ -1330,7 +1289,7 @@ exports["default"] = _default;
 // export default TitlePage;
 "use strict";
 
-},{}],16:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1475,7 +1434,7 @@ var Validation = function () {
 var _default = Validation;
 exports["default"] = _default;
 
-},{}],17:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1546,7 +1505,7 @@ var WindowResize = function () {
 var _default = WindowResize;
 exports["default"] = _default;
 
-},{"./WindowScroll":18,"./index":19}],18:[function(require,module,exports){
+},{"./WindowScroll":17,"./index":18}],17:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1636,7 +1595,7 @@ var WindowScroll = function () {
 var _default = WindowScroll;
 exports["default"] = _default;
 
-},{}],19:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1738,12 +1697,6 @@ Object.defineProperty(exports, "Cart", {
     return _Cart["default"];
   }
 });
-Object.defineProperty(exports, "OrderStatus", {
-  enumerable: true,
-  get: function get() {
-    return _OrderStatus["default"];
-  }
-});
 
 var _WindowScroll = _interopRequireDefault(require("./WindowScroll"));
 
@@ -1777,11 +1730,9 @@ var _Sale = _interopRequireDefault(require("./Sale"));
 
 var _Cart = _interopRequireDefault(require("./Cart"));
 
-var _OrderStatus = _interopRequireDefault(require("./OrderStatus"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./CardProduct":2,"./Cart":3,"./Category":4,"./Contact":5,"./Footer":6,"./Header":7,"./HeaderSearch":8,"./HeroBanner":9,"./OrderStatus":10,"./ProductDetail":11,"./Sale":12,"./SortingCategory":13,"./Tabs":14,"./TitlePage":15,"./Validation":16,"./WindowResize":17,"./WindowScroll":18}],20:[function(require,module,exports){
+},{"./CardProduct":2,"./Cart":3,"./Category":4,"./Contact":5,"./Footer":6,"./Header":7,"./HeaderSearch":8,"./HeroBanner":9,"./ProductDetail":10,"./Sale":11,"./SortingCategory":12,"./Tabs":13,"./TitlePage":14,"./Validation":15,"./WindowResize":16,"./WindowScroll":17}],19:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1827,7 +1778,7 @@ var BrowserCheck = function () {
 var _default = BrowserCheck;
 exports["default"] = _default;
 
-},{}],21:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1873,7 +1824,7 @@ var Scrolllable = function () {
 var _default = Scrolllable;
 exports["default"] = _default;
 
-},{}],22:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1906,7 +1857,7 @@ var _Scrolllable = _interopRequireDefault(require("./Scrolllable"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-},{"./BrowserCheck":20,"./Scrolllable":21,"./isOS":23}],23:[function(require,module,exports){
+},{"./BrowserCheck":19,"./Scrolllable":20,"./isOS":22}],22:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

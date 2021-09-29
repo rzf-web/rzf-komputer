@@ -8816,7 +8816,6 @@ Layouts Cart
   }
 }
 .order__box {
-  display: none;
   width: 100%;
   max-width: 720px;
   margin-right: 48px;
