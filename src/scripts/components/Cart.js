@@ -58,7 +58,7 @@ function loadHtml(product) {
         </td>
         <td>
           <div class="cart__media__product-count">
-            <button type="button" onclick="handleChangeTotal(${product.id}, 'decrement')" class="cart__media__btn-chevron-down js-cart-minus">
+            <button class='cart__media__btn-chevron-down' type="button" onclick="handleChangeTotal(${product.id}, 'decrement')" class="cart__media__btn-chevron-down js-cart-minus">
             <i class="rzfkomputer-minus"></i>
             </button>
             <input onchange='handleChangeInput(this)' type="number" class='cart__media__input-qty' id="quantity" name="cart" max-length='12' title='Quantity' min='1' value='${product.total}' />

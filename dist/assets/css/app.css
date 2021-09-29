@@ -1939,9 +1939,18 @@ b {
   margin-bottom: 8px;
 }
 .cart-list__alert-empty-img-el {
-  width: 40px;
+  width: 42px;
   margin: 0 auto;
   display: block;
+}
+@media only screen and (max-width: 575.86px) {
+  .cart-list__alert-empty-img-el {
+    width: 40px;
+  }
+}
+.cart-list__alert-empty-img-txt p {
+  margin: 0;
+  text-align: center;
 }
 .cart-list__table__wrapper {
   visibility: hidden;
@@ -1962,17 +1971,16 @@ b {
   border-bottom: solid 1px #eff2f3;
 }
 .cart-list__img-wrapper {
-  padding-bottom: 8%;
   width: 100px;
   position: relative;
-  padding: 12px 0;
+  padding-bottom: 8%;
 }
 @media only screen and (max-width: 575.86px) {
   .cart-list__img-wrapper {
     width: 80px;
   }
 }
-.cart-list__img-wrapper__img-el {
+.cart-list__img-el {
   display: block;
   position: absolute;
   top: 0;
@@ -1981,16 +1989,16 @@ b {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 20px 0;
+  padding: 8px 0;
 }
 .cart-list__product {
-  padding-left: 12px;
+  padding: 8px 20px 12px;
 }
 .cart-list__product-name {
   color: #2f8e4a;
   margin-bottom: 8px;
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   overflow: hidden;
   display: block;
   display: -webkit-box;
@@ -2446,9 +2454,15 @@ b {
   transition: all 350ms ease;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 1.8rem;
-  line-height: 2.6rem;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
   text-align: left;
+}
+@media only screen and (max-width: 575.86px) {
+  .sale__content__txt__alert-limited {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
 }
 .main-site--hide .sale__content__txt__alert-limited {
   opacity: 0;
@@ -5900,10 +5914,10 @@ Layout: Banner
      -moz-animation-name: textSale;
        -o-animation-name: textSale;
           animation-name: textSale;
-  -webkit-animation-duration: 1s;
-     -moz-animation-duration: 1s;
-       -o-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 1.2s;
+     -moz-animation-duration: 1.2s;
+       -o-animation-duration: 1.2s;
+          animation-duration: 1.2s;
   -webkit-animation-iteration-count: infinite;
      -moz-animation-iteration-count: infinite;
        -o-animation-iteration-count: infinite;
@@ -5915,12 +5929,14 @@ Layout: Banner
 }
 @-webkit-keyframes textSale {
   0% {
+    opacity: 0;
     -webkit-transform: scale(0.69);
             transform: scale(0.69);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    opacity: 1;
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99);
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
     -o-transition: -o-transform 0.3s ease;
@@ -5931,12 +5947,14 @@ Layout: Banner
 }
 @-moz-keyframes textSale {
   0% {
+    opacity: 0;
     -moz-transform: scale(0.69);
          transform: scale(0.69);
   }
   100% {
-    -moz-transform: scale(1);
-         transform: scale(1);
+    opacity: 1;
+    -moz-transform: scale(0.99);
+         transform: scale(0.99);
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
     -o-transition: -o-transform 0.3s ease;
@@ -5947,12 +5965,14 @@ Layout: Banner
 }
 @-o-keyframes textSale {
   0% {
+    opacity: 0;
     -o-transform: scale(0.69);
        transform: scale(0.69);
   }
   100% {
-    -o-transform: scale(1);
-       transform: scale(1);
+    opacity: 1;
+    -o-transform: scale(0.99);
+       transform: scale(0.99);
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
     -o-transition: -o-transform 0.3s ease;
@@ -5963,16 +5983,18 @@ Layout: Banner
 }
 @keyframes textSale {
   0% {
+    opacity: 0;
     -webkit-transform: scale(0.69);
        -moz-transform: scale(0.69);
          -o-transform: scale(0.69);
             transform: scale(0.69);
   }
   100% {
-    -webkit-transform: scale(1);
-       -moz-transform: scale(1);
-         -o-transform: scale(1);
-            transform: scale(1);
+    opacity: 1;
+    -webkit-transform: scale(0.99);
+       -moz-transform: scale(0.99);
+         -o-transform: scale(0.99);
+            transform: scale(0.99);
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
     -o-transition: -o-transform 0.3s ease;
@@ -8815,6 +8837,18 @@ Layouts Cart
     width: 100%;
   }
 }
+.order__row p {
+  color: #ff0000;
+  margin: 0;
+}
+.order__row p::before {
+  content: "\e91b";
+  font-family: rzfkomputer-icons;
+  margin-right: 2px;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-right: 6px;
+}
 .order__box {
   width: 100%;
   max-width: 720px;
@@ -8937,12 +8971,14 @@ Layouts Cart
 .order .form__input {
   text-align: center;
   max-width: 680px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
 .order .form__desc {
   margin-bottom: 32px;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
 }
 @media only screen and (max-width: 767.98px) {
   .order .form__desc {
@@ -8952,6 +8988,8 @@ Layouts Cart
 @media only screen and (max-width: 575.86px) {
   .order .form__desc {
     text-align: left;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
   }
 }
 .order .btn--payment {
