@@ -38,7 +38,8 @@
       transition: all 350ms ease;
       font-weight: fw(semi-bold);
       text-transform: uppercase;
-      @include font-size(24);
+      @include font-size(18);
+      text-align: left;
       .main-site--hide & {
          opacity: 0;
          transform: translate(-4px);

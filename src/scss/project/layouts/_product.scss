@@ -28,7 +28,6 @@
       border-radius: 8px;
       cursor: pointer;
       @include remove-tap-highlight;
-      transform: translate(0);
       @include mq(1280px) {
         margin-left: 24px;
       }
@@ -224,22 +223,8 @@
     width: 100%;
   }
   .product__sorting-select {
-    transform: translate(100%, 0);
     float: left;
     width: 100%;
-    @include mq(1680px) {
-      transform: translate(10vw, 0);
-    }
-    @include mq(1400px) {
-      transform: translate(10vw, 0);
-      margin-left: 0;
-    }
-    @include mq(1300px) {
-      transform: translate(30%);
-    }
-    @include mq(1280px) {
-      transform: translate(20%);
-    }
     }
   }
 }

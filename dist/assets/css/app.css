@@ -2446,8 +2446,9 @@ b {
   transition: all 350ms ease;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 2.4rem;
-  line-height: 3.2rem;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  text-align: left;
 }
 .main-site--hide .sale__content__txt__alert-limited {
   opacity: 0;
@@ -8241,11 +8242,6 @@ Layouts Cart
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-transform: translate(0);
-     -moz-transform: translate(0);
-      -ms-transform: translate(0);
-       -o-transform: translate(0);
-          transform: translate(0);
 }
 @media only screen and (max-width: 1280px) {
   .product__sorting-select {
@@ -8527,50 +8523,8 @@ Layouts Cart
 }
 @media only screen and (max-width: 575.86px) {
   .sticky .product__sorting-select {
-    -webkit-transform: translate(100%, 0);
-       -moz-transform: translate(100%, 0);
-        -ms-transform: translate(100%, 0);
-         -o-transform: translate(100%, 0);
-            transform: translate(100%, 0);
     float: left;
     width: 100%;
-  }
-}
-@media only screen and (max-width: 575.86px) and (max-width: 1680px) {
-  .sticky .product__sorting-select {
-    -webkit-transform: translate(10vw, 0);
-       -moz-transform: translate(10vw, 0);
-        -ms-transform: translate(10vw, 0);
-         -o-transform: translate(10vw, 0);
-            transform: translate(10vw, 0);
-  }
-}
-@media only screen and (max-width: 575.86px) and (max-width: 1400px) {
-  .sticky .product__sorting-select {
-    -webkit-transform: translate(10vw, 0);
-       -moz-transform: translate(10vw, 0);
-        -ms-transform: translate(10vw, 0);
-         -o-transform: translate(10vw, 0);
-            transform: translate(10vw, 0);
-    margin-left: 0;
-  }
-}
-@media only screen and (max-width: 575.86px) and (max-width: 1300px) {
-  .sticky .product__sorting-select {
-    -webkit-transform: translate(30%);
-       -moz-transform: translate(30%);
-        -ms-transform: translate(30%);
-         -o-transform: translate(30%);
-            transform: translate(30%);
-  }
-}
-@media only screen and (max-width: 575.86px) and (max-width: 1280px) {
-  .sticky .product__sorting-select {
-    -webkit-transform: translate(20%);
-       -moz-transform: translate(20%);
-        -ms-transform: translate(20%);
-         -o-transform: translate(20%);
-            transform: translate(20%);
   }
 }
 /* ==========================================================================
