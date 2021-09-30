@@ -129,7 +129,7 @@
         <button class="cart js-cart" type="button">
           <span class="cart__count">1</span><i class="rzfkomputer-cart"></i>
         </button>
-        <div class="cart-list js-cart-list" dataEmpty="1">
+        <div class="cart-list js-cart-list" dataEmpty="0">
           <div class="cart-list__items js-cart-list__items">
             <div class="cart-list__alert-empty">
               <div class="cart-list__alert-empty-img">
@@ -316,7 +316,45 @@
                     <th class="cart__table-title" scope="col">Jumlah</th>
                   </tr>
                 </thead>
-                <tbody class="js-tableCart" dataProductCart="[{ &quot;id&quot;: 1, &quot;name&quot;: &quot;Asus&quot;, &quot;price&quot;: 4500000, &quot;stock&quot;: 2, &quot;total&quot;: 2 }]"></tbody>
+                <tbody class="js-tableCart" dataProductCart="[{ &quot;id&quot;: 1, &quot;img&quot;: &quot;laptop-asus-3.jpg&quot;, &quot;name&quot;: &quot;Asus&quot;, &quot;price&quot;: 4500000, &quot;stock&quot;: 2, &quot;total&quot;: 2 }, { &quot;id&quot;: 2, &quot;img&quot;: &quot;laptop-asus-3.jpg&quot;, &quot;name&quot;: &quot;Asus&quot;, &quot;price&quot;: 4500000, &quot;stock&quot;: 2, &quot;total&quot;: 2 }]">
+                  <tr>
+                    <td class="table__data__media">
+                      <div class="cart__media">
+                        <div class="cart__media__content">
+                          <button class="cart__media__delete-btn js-delete" type="button" title="Delete">
+                            <i class="rzfkomputer-trashcan"></i>
+                          </button>
+                          <div class="cart__media__img-wrapper">
+                            <img class="cart__media__img-el" src="assets/img/dummy/tes-8.jpg" alt="Image" />
+                          </div>
+                          <p class="cart__media__name">ASUS PX-5402</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="table__data__media">
+                      <p class="cart__media__price js-cart-price">Rp5.400.000-,</p>
+                    </td>
+                    <td class="table__data__media">
+                      <div class="cart__media__product-count">
+
+                        <button class="cart__media__btn-chevron-down js-cart-minus" type="button">
+                          <i class="rzfkomputer-minus"></i>
+                        </button><input class="cart__media__input-qty js-cart-quantity" type="number" name="cart" id="quantity" max-length="12" title="quantity" value="1" min="1" />
+                        <button class="cart__media__btn-chevron-up js-cart-plus" type="button">
+                          <i class="rzfkomputer-add"></i>
+                        </button>
+                      </div>
+                    </td>
+                  <tr>
+                    <td>
+                      <p class="cart__media__total">Order Total :</p>
+                    </td>
+                    <td>
+                      <p class="cart__media__total js-cart-total-price">Rp5.400.000</p>
+                    </td>
+                  </tr>
+                  </tr>
+                </tbody>
               </table>
             </form>
           </div>

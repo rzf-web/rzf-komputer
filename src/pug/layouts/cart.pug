@@ -22,70 +22,43 @@
                 th.cart__table-title(scope='col') Nama
                 th.cart__table-title(scope='col') Harga
                 th.cart__table-title(scope='col') Jumlah
-            tbody.js-tableCart(dataProductCart='[{ "id": 1, "name": "Asus", "price": 4500000, "stock": 2, "total": 2 }]')
-              //- tr
-              //-   td.table__data__media
-              //-     .cart__media
-              //-       .cart__media__content
-              //-         ='\n'
-              //-         button.cart__media__delete-btn.js-delete(type='button' title='Delete')
-              //-           ='\n'
-              //-           i.rzfkomputer-trashcan
-              //-           ='\n'
-              //-         .cart__media__img-wrapper
-              //-           ='\n'
-              //-           img.cart__media__img-el(src='assets/img/dummy/tes-8.jpg' alt='Image')/
-              //-         p.cart__media__name ASUS PX-5402
-              //-   td.table__data__media
-              //-     p.cart__media__price.js-cart-price Rp5.400.000-,
-              //-   td.table__data__media
-              //-     .cart__media__product-count
-              //-       ='\n'
-              //-       ='\n'
-              //-       button.cart__media__btn-chevron-down.js-cart-minus(type='button')
-              //-         ='\n'
-              //-         i.rzfkomputer-minus
-              //-         ='\n'
-              //-       input.cart__media__input-qty.js-cart-quantity(type='number' name='cart' id='quantity' max-length='12' title='quantity' value='1' min='1')/
-              //-       ='\n'
-              //-       button.cart__media__btn-chevron-up.js-cart-plus(type='button')
-              //-         ='\n'
-              //-         i.rzfkomputer-add
-              //-         ='\n'
-              //- tr
-              //-   td.table__data__media
-              //-     .cart__media
-              //-       .cart__media__content
-              //-         ='\n'
-              //-         button.cart__media__delete-btn.js-delete(type='button' title='Delete')
-              //-           ='\n'
-              //-           i.rzfkomputer-trashcan
-              //-           ='\n'
-              //-         .cart__media__img-wrapper
-              //-           ='\n'
-              //-           img.cart__media__img-el(src='assets/img/dummy/our-product-1.png' alt='Image')/
-              //-   td.table__data__media
-              //-     p.cart__media__price.js-cart-price Rp5.400.000-,
-              //-   td.table__data__media
-              //-     .cart__media__product-count
-              //-       ='\n'
-              //-       ='\n'
-              //-       button.cart__media__btn-chevron-down.js-cart-minus(type='button')
-              //-         ='\n'
-              //-         i.rzfkomputer-minus
-              //-         ='\n'
-              //-       input.cart__media__input-qty.js-cart-quantity(type='number' name='cart' id='quantity' max-length='12' title='quantity' value='1' min='1')/
-              //-       ='\n'
-              //-       button.cart__media__btn-chevron-up.js-cart-plus(type='button')
-              //-         ='\n'
-              //-         i.rzfkomputer-add
-              //-         ='\n'
-              //- tr
-              //-   td
-              //-     p.cart__media__total Order Total :
-              //-   td
-              //-     p.cart__media__price.js-cart-total Rp5.400.000-,
-              //-     ='\n'
+            //- products json id - name - img - price - stock - total
+            tbody.js-tableCart(dataProductCart='[{ "id": 1, "img": "laptop-asus-3.jpg", "name": "Asus", "price": 4500000, "stock": 2, "total": 2 }, { "id": 2, "img": "laptop-asus-3.jpg", "name": "Asus", "price": 4500000, "stock": 2, "total": 2 }]')
+              tr
+                td.table__data__media
+                  .cart__media
+                    .cart__media__content
+                      ='\n'
+                      button.cart__media__delete-btn.js-delete(type='button' title='Delete')
+                        ='\n'
+                        i.rzfkomputer-trashcan
+                        ='\n'
+                      .cart__media__img-wrapper
+                        ='\n'
+                        img.cart__media__img-el(src='assets/img/dummy/tes-8.jpg' alt='Image')/
+                      p.cart__media__name ASUS PX-5402
+                td.table__data__media
+                  p.cart__media__price.js-cart-price Rp5.400.000-,
+                td.table__data__media
+                  .cart__media__product-count
+                    ='\n'
+                    ='\n'
+                    button.cart__media__btn-chevron-down.js-cart-minus(type='button')
+                      ='\n'
+                      i.rzfkomputer-minus
+                      ='\n'
+                    input.cart__media__input-qty.js-cart-quantity(type='number' name='cart' id='quantity' max-length='12' title='quantity' value='1' min='1')/
+                    ='\n'
+                    button.cart__media__btn-chevron-up.js-cart-plus(type='button')
+                      ='\n'
+                      i.rzfkomputer-add
+                      ='\n'
+                tr
+                  td
+                    p.cart__media__total Order Total :
+                  td
+                    p.cart__media__total.js-cart-total-price Rp5.400.000
+                    ='\n'
     ='\n'
     // end-cart
     ='\n'

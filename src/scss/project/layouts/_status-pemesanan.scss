@@ -32,6 +32,7 @@
     p {
       color: color(danger);
       margin: 0;
+      @include font-size(14);
       &::before {
         content: '\e91b';
         font-family: rzfkomputer-icons;
@@ -144,7 +145,7 @@
     text-align: center;
     max-width: 680px;
     margin-bottom: 20px;
-    @include font-size(16);
+    @include font-size(14);
   }
   .form__desc {
     margin-bottom: 32px;
@@ -154,7 +155,7 @@
     }
     @include extra-small {
       text-align: left;
-      @include font-size(16);
+      @include font-size(14);
     }
   }
   .btn--payment {

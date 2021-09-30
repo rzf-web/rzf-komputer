@@ -53,6 +53,12 @@ Layouts Cart
       &:nth-child(2) {
         padding-left: 12px;
       }
+      &:nth-child(3) {
+        padding-left: 12px;
+      }
+      &:nth-child(4) {
+        padding-right: 32px;
+      }
     }
   }
   &__media {
@@ -121,6 +127,7 @@ Layouts Cart
       padding: 6px 12px 0;
       @include extra-small {
         @include font-size(12);
+        width: 92px;
       }
     }
     &__price {
@@ -128,6 +135,7 @@ Layouts Cart
       @include extra-small {
         @include font-size(12);
         white-space: nowrap;
+        padding: 0 6px 0 12px;
       }
     }
     &__total {
@@ -140,13 +148,18 @@ Layouts Cart
       @include retina {
         white-space: nowrap;
       }
+      @include extra-small {
+        td:nth-child(2) {
+          display: none;
+        }
+      }
     }
     &__product-count {
       padding: 12px 0;
       position: relative;
       @include medium {
         max-width: 40px;
-        padding-left: 24px;
+        padding-left: 14px;
       }
     }
     &__input-qty {
@@ -266,7 +279,6 @@ Layouts Cart
     }
   }
   &__table {
-    width: 100%;
     &-list {
       padding-bottom: 18px;
       font-weight: 700;
@@ -313,6 +325,12 @@ Layouts Cart
     tr {
       border-bottom: solid 1px color(grey, 5);
     }
+  }
+}
+.table-total {
+  padding: 20px 0;
+  @include extra-small {
+    width: 100vw;
   }
 }
 

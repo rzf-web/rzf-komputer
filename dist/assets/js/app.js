@@ -185,40 +185,26 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 @name: Cart
 @description: Cart
 --------------------------------------------------------------------------------- */
-var products = [{
-  id: 1,
-  img: 'laptop-asus-3.jpg',
-  name: 'Asus Ryzen 3 AMD III SSD 500GB',
-  price: 4500000,
-  stock: 2,
-  total: 2
-}, {
-  id: 2,
-  img: 'laptop-asus-2.jpg',
-  name: 'HP Ryzen 3 AMD III SSD 500GB',
-  price: 700000,
-  stock: 5,
-  total: 1
-}, {
-  id: 3,
-  img: 'laptop-asus-1.jpg',
-  name: 'Lenovo Ryzen 3 AMD III SSD 500GB',
-  price: 3000000,
-  stock: 3,
-  total: 1
-}]; // let dataProducts = JSON.parse($('.js-tesss').attr('dataProductCart'));
+// let products = [
+//   { id: 1, img: 'laptop-asus-3.jpg', name: 'Asus Ryzen 3 AMD III SSD 500GB', price: 4500000, stock: 2, total: 2 },
+//   { id: 2, img: 'laptop-asus-2.jpg', name: 'HP Ryzen 3 AMD III SSD 500GB', price: 700000, stock: 5, total: 1 },
+//   { id: 3, img: 'laptop-asus-1.jpg', name: 'Lenovo Ryzen 3 AMD III SSD 500GB', price: 3000000, stock: 3, total: 1 }
+// ]
+var products = [];
 
-console.log($('.js-tableCart').attr('dataProductCart'));
+if ($('.js-tableCart').length > 0) {
+  products = JSON.parse($('.js-tableCart').attr('dataProductCart'));
+}
 
-function renderTotal(total, qty, type) {
+function renderTotal(total, stock, type) {
   if (type == 'increment') {
-    if (total >= qty) {
-      return qty;
+    if (total >= stock) {
+      return stock;
     }
 
     return total + 1;
   } else {
-    if (total < qty) {
+    if (total < stock) {
       return 1;
     }
 
@@ -226,22 +212,40 @@ function renderTotal(total, qty, type) {
   }
 }
 
+var formatRupiah = function formatRupiah(harga, prefix) {
+  var number_string = String(harga).replace(/[^,\d]/g, '').toString(),
+      split = number_string.split(','),
+      sisa = split[0].length % 3,
+      rupiah = split[0].substr(0, sisa),
+      ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+  if (ribuan) {
+    var separator = sisa ? '.' : '';
+    rupiah += separator + ribuan.join('.');
+  }
+
+  rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+  return prefix == undefined ? rupiah : rupiah ? 'Rp' + rupiah : '';
+};
+
 function loadData(datas) {
+  var total = 0;
   var html = '';
   datas.map(function (product) {
+    total += Number(product.total) * Number(product.price);
     html += loadHtml(product);
   });
+  html += "\n  <td class='table-total'>\n    <p class='cart__media__total'> Order Total :</p>\n  </td>\n  <td class='table-total'>\n    <p class='cart__media__total js-cart-total-price'>Rp ".concat(formatRupiah(total), "</p>\n  </td>");
   $('.js-tableCart').html(html);
-} // console.log($('.js-tesss').attr('dataProductCart'))
-
+}
 
 function loadHtml(product) {
-  return "\n    <tr>\n      <td>\n        <div class='cart__media'>\n          <div class='cart__media__content'>\n            <button onclick='popupDelete()' class='cart__media__delete-btn js-delete' type='button' title='Delete'>\n              <i class='rzfkomputer-trashcan'></i>\n            </button>\n            <div class='cart__media__img-wrapper'>\n              <img class='cart__media__img-el' src='assets/img/dummy/".concat(product.img, "' alt='Image' />\n            </div>\n          </div>\n        </td>\n        <td>\n          <p class='cart__media__name'> ").concat(product.name, "</p>\n        </td>\n        <td>\n          <p class=\"cart__media__price\">Rp ").concat(product.price, "</p>\n        </td>\n        <td>\n          <div class=\"cart__media__product-count\">\n            <button class='cart__media__btn-chevron-down' type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'decrement')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-minus\"></i>\n            </button>\n            <input onchange='handleChangeInput(this)' type=\"number\" class='cart__media__input-qty' id=\"quantity\" name=\"cart\" max-length='12' title='Quantity' min='1' value='").concat(product.total, "' />\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'increment')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-add\"></i>\n            </button>\n          </div>\n        </td>\n        <div class=\"cart__media__product-count\">\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'decrement')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-minus\"></i>\n            </button>\n            <input onchange='handleChangeInput(this)' type=\"number\" class='cart__media__input-qty' id=\"quantity\" name=\"cart\" max-length='12' title='Quantity' min='1' value='").concat(product.total, "' />\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'increment')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-add\"></i>\n            </button>\n          </div>\n        </td>\n      </tr>\n  ");
+  return "\n    <tr>\n      <td>\n        <div class='cart__media'>\n          <div class='cart__media__content'>\n            <button onclick='popupDelete(".concat(product.id, ")' class='cart__media__delete-btn js-delete' type='button' title='Delete'>\n              <i class='rzfkomputer-trashcan'></i>\n            </button>\n            <div class='cart__media__img-wrapper'>\n              <img class='cart__media__img-el' src='assets/img/dummy/").concat(product.img, "' alt='Image' />\n            </div>\n          </div>\n        </td>\n        <td>\n          <p class='cart__media__name'> ").concat(product.name, "</p>\n        </td>\n        <td>\n          <p class=\"cart__media__price\">Rp ").concat(formatRupiah(product.price), "</p>\n        </td>\n        <td>\n          <div class=\"cart__media__product-count\">\n            <button class='cart__media__btn-chevron-down' type=\"button\" onclick=\"handleChangeTotal(").concat(Number(product.id), ", 'decrement')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-minus\"></i>\n            </button>\n            <input onkeyup='handleChangeInput(this, ").concat(product.stock, ")' type=\"number\" class='cart__media__input-qty js-cart-quantity' id=\"quantity\" name=\"cart\" max-length='12' title='Quantity' min='1' value='").concat(product.total, "' />\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'increment')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-add\"></i>\n            </button>\n          </div>\n        </td>\n        <div class=\"cart__media__product-count\">\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(product.id, ", 'decrement')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkomputer-minus\"></i>\n            </button>\n            <input onchange='handleChangeInput(this, ").concat(product.stock, ")' type=\"number\" class='cart__media__input-qty' id=\"quantity\" name=\"cart\" max-length='12' title='Quantity' min='1' value='").concat(product.total, "' />\n            <button type=\"button\" onclick=\"handleChangeTotal(").concat(Number(product.id), ", 'increment')\" class=\"cart__media__btn-chevron-down js-cart-minus\">\n            <i class=\"rzfkompu5.400.000ter-add\"></i>\n            </button>\n          </div>\n        </td>\n      </tr>\n  ");
 }
 
 window.load = loadData(products);
 
-window.popupDelete = function () {
+window.popupDelete = function (id) {
   var swalWithBootstrapButtons = Swal.mixin({
     customClass: {
       confirmButton: 'btn btn--primary mr-12 w-100',
@@ -262,26 +266,57 @@ window.popupDelete = function () {
     padding: '22px'
   }).then(function (result) {
     if (result.isConfirmed) {
-      swalWithBootstrapButtons.fire({
-        title: 'Terhapus!',
-        text: 'Item Anda sudah terhapus',
-        icon: 'success',
-        width: 420
+      $.ajax({
+        url: "/product/".concat(id, "/delete"),
+        type: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        success: function success() {
+          // ketika sukses
+          swalWithBootstrapButtons.fire({
+            title: 'Terhapus!',
+            text: 'Item Anda sudah terhapus',
+            icon: 'success',
+            width: 420
+          });
+          var newProduct = products.filter(function (item) {
+            return item.id != id;
+          });
+          products = newProduct;
+          loadData(newProduct);
+        },
+        error: function error() {
+          swalWithBootstrapButtons.fire({
+            title: 'Gagal!',
+            text: 'Item Anda gagal terhapus',
+            icon: 'error',
+            width: 420
+          });
+        }
       });
     }
   });
 };
 
-window.handleChangeInput = function () {
-  // alert($(this).val());
-  console.log($(this).val());
+window.handleChangeInput = function (e, stock) {
+  var value = $(e).val();
+
+  if (value > stock) {
+    $(e).val(stock);
+  } else if (value == 0) {
+    $(e).val(1);
+  } else {
+    $(e).val(value);
+  }
 };
 
 window.handleChangeTotal = function (index, type) {
   var newProduct = products.map(function (product) {
-    if (index == product.id) {
+    if (Number(index) == Number(product.id)) {
       return _objectSpread(_objectSpread({}, product), {}, {
-        total: renderTotal(product.total, product.qty, type)
+        total: renderTotal(product.total, product.stock, type)
       });
     }
 

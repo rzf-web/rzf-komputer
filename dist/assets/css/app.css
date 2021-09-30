@@ -1873,7 +1873,6 @@ b {
   right: 0;
   top: 22px;
   width: 35%;
-  padding: 18px;
   padding: 18px 18px 20px;
   -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
@@ -6722,7 +6721,7 @@ Layout: Banner
 .pdetail__img-fill {
   margin-bottom: 8px;
   width: 100%;
-  padding-bottom: 72%;
+  padding-bottom: 96%;
   position: relative;
 }
 @media only screen and (max-width: 1199.98px) {
@@ -7418,6 +7417,14 @@ Layouts Cart
 .cart tr-title:nth-child(2) {
   padding-left: 12px;
 }
+.cart__table-title:nth-child(3),
+.cart tr-title:nth-child(3) {
+  padding-left: 12px;
+}
+.cart__table-title:nth-child(4),
+.cart tr-title:nth-child(4) {
+  padding-right: 32px;
+}
 .cart__media {
   max-width: 546px;
   position: relative;
@@ -7503,6 +7510,7 @@ Layouts Cart
   .cart__media__name {
     font-size: 1.2rem;
     line-height: 1.7rem;
+    width: 92px;
   }
 }
 .cart__media__price {
@@ -7513,6 +7521,7 @@ Layouts Cart
     font-size: 1.2rem;
     line-height: 1.7rem;
     white-space: nowrap;
+    padding: 0 6px 0 12px;
   }
 }
 .cart__media__total {
@@ -7532,6 +7541,11 @@ Layouts Cart
     white-space: nowrap;
   }
 }
+@media only screen and (max-width: 575.86px) {
+  .cart__media__total td:nth-child(2) {
+    display: none;
+  }
+}
 .cart__media__product-count {
   padding: 12px 0;
   position: relative;
@@ -7539,7 +7553,7 @@ Layouts Cart
 @media only screen and (max-width: 991.98px) {
   .cart__media__product-count {
     max-width: 40px;
-    padding-left: 24px;
+    padding-left: 14px;
   }
 }
 .cart__media__input-qty {
@@ -7698,9 +7712,6 @@ Layouts Cart
     line-height: 2rem;
   }
 }
-.checkout__table {
-  width: 100%;
-}
 .checkout__table-list {
   padding-bottom: 18px;
   font-weight: 700;
@@ -7759,6 +7770,15 @@ Layouts Cart
 }
 .checkout__table tr {
   border-bottom: solid 1px #ced4da;
+}
+
+.table-total {
+  padding: 20px 0;
+}
+@media only screen and (max-width: 575.86px) {
+  .table-total {
+    width: 100vw;
+  }
 }
 
 /* ==========================================================================
@@ -8840,6 +8860,8 @@ Layouts Cart
 .order__row p {
   color: #ff0000;
   margin: 0;
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
 .order__row p::before {
   content: "\e91b";
@@ -8972,8 +8994,8 @@ Layouts Cart
   text-align: center;
   max-width: 680px;
   margin-bottom: 20px;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
 .order .form__desc {
   margin-bottom: 32px;
@@ -8988,8 +9010,8 @@ Layouts Cart
 @media only screen and (max-width: 575.86px) {
   .order .form__desc {
     text-align: left;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 }
 .order .btn--payment {
