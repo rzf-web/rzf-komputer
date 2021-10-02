@@ -1912,7 +1912,7 @@ b {
   }
 }
 .cart-list__items.showed {
-  height: 320px;
+  height: 260px;
 }
 .cart-list__alert-empty {
   width: 100%;
@@ -3176,6 +3176,11 @@ b {
           border-radius: 8px;
   margin-bottom: 8px;
   background-color: #f2f2f2;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .floating-chat__item:last-child {
   margin-bottom: 0;
@@ -8994,8 +8999,14 @@ Layouts Cart
   text-align: center;
   max-width: 680px;
   margin-bottom: 20px;
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+}
+@media only screen and (max-width: 575.86px) {
+  .order .form__input {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 }
 .order .form__desc {
   margin-bottom: 32px;

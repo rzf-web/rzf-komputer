@@ -96,6 +96,7 @@
     border-radius: 8px;
     margin-bottom: 8px;
     background-color: color(grey, 4);
+    @include remove-tap-highlight;
     &:last-child {
       margin-bottom: 0;
     }
