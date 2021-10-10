@@ -79,6 +79,7 @@ const HeaderSearch = (() => {
           $(_overlayCartList).addClass('showed');
           // console.log($(_jsCartList).html());
           $('body').removeClass('show-nav');
+          Scrolllable.enable();
         });
 
         $(_jsCartList).on('click', (e) => {

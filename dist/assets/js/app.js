@@ -837,6 +837,8 @@ var HeaderSearch = function () {
       $(_overlayCartList).addClass('showed'); // console.log($(_jsCartList).html());
 
       $('body').removeClass('show-nav');
+
+      _utilities.Scrolllable.enable();
     });
     $(_jsCartList).on('click', function (e) {
       e.stopPropagation();
